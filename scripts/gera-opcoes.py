@@ -117,9 +117,12 @@ DIAS = [
             {'nome': 'Galeria Arte e Memória', 'rec': 3, 'tipo': 'leve', 'status': 'disponivel',
              'onde': 'Igatu',
              'desc': 'Museu a céu aberto com peças do garimpo e exposição de arte contemporânea, com café anexo. Ter a dom, 10h às 18h.'},
-            {'nome': 'Rampa do Caim', 'rec': 3, 'tipo': 'leve', 'status': 'disponivel',
-             'onde': 'Igatu',
-             'desc': 'Mirante sobre o vale a partir de Igatu, citado nos relatos como a melhor vista da vila. Entra na conta se a tarde em Igatu for inteira.'},
+            {'nome': 'Rampa do Caim', 'rec': 4, 'tipo': 'principal', 'status': 'disponivel',
+             'onde': 'Igatu · trilha de ~10 km',
+             'desc': 'Entrega uma das melhores vistas do Vale do Pati e do Paraguaçu. <strong>Correção de 23/08:</strong> '
+                     'estava aqui como "mirante de Igatu", como se fosse uma parada curta — não é. As operadoras a vendem '
+                     'como trilha de cerca de 10 km, classificada como fácil, mas que consome o dia inteiro. Isso a tira '
+                     'do perfil do grupo e do dia de mudança de base.'},
             {'nome': 'Casa de Lindaura', 'rec': 3, 'tipo': 'leve', 'status': 'disponivel',
              'onde': 'Igatu',
              'desc': 'Histórias de família do garimpo contadas em casa, com bolinho de chuva e café. O tipo de parada de 30 minutos que não entra em roteiro de agência.'},
@@ -241,17 +244,164 @@ FONTES_CURADORIA = [
 ]
 
 
+# ─────────────────────────────────────────────────────────────────────────────
+# Material de avaliação por opção — blogs e vídeos, todos verificados em
+# 23/08/2026 (HTTP 200 e, no caso dos vídeos, título conferido via oEmbed).
+# A chave é o nome da opção; opção sem entrada aqui simplesmente não mostra links.
+# ─────────────────────────────────────────────────────────────────────────────
+
+MATERIAL = {
+    'Morro do Pai Inácio': [
+        ('blog', 'Guia Chapada Diamantina', 'https://www.guiachapadadiamantina.com.br/morro-do-pai-inacio/'),
+        ('blog', 'Um Viajante', 'https://www.umviajante.com.br/bahia/7779-morro-do-pai-inacio-na-chapada-diamantina'),
+        ('video', 'O Descobridor — Lapa Doce, Pratinha, Gruta Azul e Pai Inácio',
+         'https://www.youtube.com/watch?v=W670KR_7TX0'),
+    ],
+    'Gruta da Lapa Doce': [
+        ('blog', 'Guia Chapada Diamantina', 'https://www.guiachapadadiamantina.com.br/gruta-da-lapa-doce/'),
+        ('blog', 'Um Viajante — Lapa Doce, Pratinha e Gruta Azul',
+         'https://www.umviajante.com.br/bahia/7755-gruta-lapa-doce-pratinha-e-gruta-azul-na-chapada-diamantina'),
+        ('blog', 'Melhores Destinos', 'https://guia.melhoresdestinos.com.br/gruta-da-lapa-doce-221-6130-l.html'),
+        ('video', 'Chapada Adventure Daniel — o circuito das grutas em um dia',
+         'https://www.youtube.com/watch?v=mCM1Fgfu-hA'),
+    ],
+    'Fazenda Pratinha e Gruta Azul': [
+        ('blog', 'Guia Chapada Diamantina — Rio e Gruta Pratinha',
+         'https://www.guiachapadadiamantina.com.br/rio-e-gruta-pratinha/'),
+        ('blog', 'Melhores Destinos — Pratinha e Gruta Azul',
+         'https://guia.melhoresdestinos.com.br/gruta-da-pratinha-e-gruta-azul-221-6131-l.html'),
+        ('video', 'O Descobridor — o feixe de luz da Gruta Azul',
+         'https://www.youtube.com/watch?v=W670KR_7TX0'),
+    ],
+    'Ribeirão do Meio': [
+        ('blog', 'Guia Chapada Diamantina', 'https://www.guiachapadadiamantina.com.br/ribeirao-do-meio/'),
+        ('blog', 'Melhores Destinos',
+         'https://guia.melhoresdestinos.com.br/ribeirao-do-meio-ribeirao-de-cima-e-ribeirao-de-baixo-221-6127-l.html'),
+    ],
+    'Cachoeira do Mosquito + Fazenda Santo Antônio': [
+        ('blog', 'Guia Chapada Diamantina', 'https://www.guiachapadadiamantina.com.br/cachoeira-do-mosquito/'),
+        ('blog', 'Melhores Destinos', 'https://guia.melhoresdestinos.com.br/cachoeira-do-mosquito-221-6126-l.html'),
+    ],
+    'Marimbus — canoa no "pantanal baiano"': [
+        ('blog', 'Guia Chapada Diamantina', 'https://www.guiachapadadiamantina.com.br/marimbus/'),
+    ],
+    'Poço Azul — flutuação na caverna alagada': [
+        ('blog', 'Guia Chapada Diamantina', 'https://www.guiachapadadiamantina.com.br/poco-azul/'),
+        ('video', 'Vamos Trilhar — Poço Azul e Poço Encantado',
+         'https://www.youtube.com/watch?v=mWiTlT0Estw'),
+        ('video', 'Lyla Pinheiro — como é a flutuação, do começo ao fim',
+         'https://www.youtube.com/watch?v=jNV9DsaheLI'),
+    ],
+    'Vila de Igatu e as ruínas': [
+        ('blog', 'Viaje com Norma', 'https://viajecomnorma.com.br/igatu-ba-vila-de-pedra-chapada-diamantina/'),
+        ('blog', 'Como Viajei — ruínas, Gruna do Brejo e Mirante do Cruzeiro',
+         'https://comoviajeiblog.wordpress.com/2022/10/04/a-gruna-do-brejo-as-ruinas-de-igatu-a-cidade-de-pedra-e-o-mirante-do-cruzeiro/'),
+        ('video', 'Três mochilas pelo mundo — a vila inteira a pé',
+         'https://www.youtube.com/watch?v=yrujBN-p4q4'),
+        ('video', 'Rolê Família — documentário sobre a vila',
+         'https://www.youtube.com/watch?v=GH43k6q9xQc'),
+    ],
+    'Gruna do Brejo': [
+        ('blog', 'Como Viajei — a mina visitada no escuro',
+         'https://comoviajeiblog.wordpress.com/2022/10/04/a-gruna-do-brejo-as-ruinas-de-igatu-a-cidade-de-pedra-e-o-mirante-do-cruzeiro/'),
+    ],
+    'Rampa do Caim': [
+        ('blog', 'Chapada Trekking — a trilha como as operadoras vendem',
+         'https://chapadatrekking.com.br/roteiros-de-2-dias/igatu-rampa-do-caim-andarai/'),
+    ],
+    'Cachoeira do Buracão': [
+        ('blog', 'Guia Chapada Diamantina', 'https://www.guiachapadadiamantina.com.br/cachoeira-do-buracao/'),
+        ('blog', 'Conecta Chapada — a trilha passo a passo',
+         'https://conectachapada.com.br/trilha-da-cachoeira-do-buracao/'),
+        ('video', 'Vamos Trilhar — a trilha inteira, boa para calibrar o esforço',
+         'https://www.youtube.com/watch?v=lAvhDwxt8F4'),
+    ],
+    'Cachoeira do Licuri': [
+        ('blog', 'Guia Chapada Diamantina', 'https://www.guiachapadadiamantina.com.br/cachoeira-do-licuri/'),
+    ],
+    'Projeto Sempre-Viva e Cachoeira do Tiburtino': [
+        ('blog', 'Guia Chapada Diamantina — Parque Municipal de Mucugê',
+         'https://www.guiachapadadiamantina.com.br/parque-municipal-de-mucuge/'),
+    ],
+    'Rio Serrano e Salão de Areias Coloridas': [
+        ('blog', 'Viagens e Caminhos — o que fazer em Lençóis',
+         'https://www.viagensecaminhos.com/lencois-ba/'),
+        ('video', 'Prefiro Viajar — caldeirões do Serrano e o salão de areias',
+         'https://www.youtube.com/watch?v=zH-MD2jO-js'),
+        ('video', 'Mixileiros — Serrano, areias coloridas e Poço Halley',
+         'https://www.youtube.com/watch?v=YTe9OsczhRA'),
+    ],
+    'Cemitério Santa Isabel ("Bizantino")': [
+        ('blog', 'Vem Pra Bahia — história e como visitar',
+         'https://vemprabahia.com.br/cemiterio-bizantino-de-mucuge-saiba-a-historia-e-como-visitar/'),
+    ],
+    'Centro histórico de Mucugê': [
+        ('video', 'Trip Partiu — Mucugê e Igatu no mesmo episódio',
+         'https://www.youtube.com/watch?v=alSONfBSk0k'),
+    ],
+    'Igatu, o que faltou da segunda': [
+        ('blog', 'Viaje com Norma', 'https://viajecomnorma.com.br/igatu-ba-vila-de-pedra-chapada-diamantina/'),
+        ('video', 'Trip Partiu — Mucugê e Igatu no mesmo episódio',
+         'https://www.youtube.com/watch?v=alSONfBSk0k'),
+    ],
+    'Volta pelo centro histórico iluminado': [
+        ('blog', 'Viagens e Caminhos — o que fazer em Lençóis',
+         'https://www.viagensecaminhos.com/lencois-ba/'),
+    ],
+    'Casa de Cultura Afrânio Peixoto + Mercado Cultural': [
+        ('blog', 'Viagens e Caminhos — o que fazer em Lençóis',
+         'https://www.viagensecaminhos.com/lencois-ba/'),
+    ],
+    'Buraco do Possidônio': [
+        ('blog', 'Guia Chapada Diamantina', 'https://www.guiachapadadiamantina.com.br/buraco-do-possidonio/'),
+    ],
+    'Cachoeira do Ferro Doido': [
+        ('blog', 'Guia Chapada Diamantina', 'https://www.guiachapadadiamantina.com.br/cachoeira-do-ferro-doido/'),
+        ('blog', 'TripAdvisor — as avaliações que apontam a falta de água',
+         'https://www.tripadvisor.com.br/Attraction_Review-g2347287-d7182501-Reviews-Cachoeira_Ferro_Doido-Morro_Do_Chapeu_State_of_Bahia.html'),
+        ('video', 'Três mochilas pelo mundo — Morro do Chapéu e o Ferro Doido',
+         'https://www.youtube.com/watch?v=oEiFHZ_AfHE'),
+    ],
+}
+
+# Fotos dos cabeçalhos — Wikimedia Commons, baixadas para o projeto em 23/08/2026.
+CREDITOS = [
+    ('Capa do roteiro — Morro do Pai Inácio', 'Anne Moraes', 'CC BY-SA 3.0',
+     'https://commons.wikimedia.org/wiki/File:Morro_do_Pai_In%C3%A1cio_2015.jpg'),
+    ('Cardápio de opções — Cachoeira do Buracão', 'Evandro César Cardoso', 'CC BY-SA 4.0',
+     'https://commons.wikimedia.org/wiki/File:CACHOEIRA_DO_BURAC%C3%83O.jpg'),
+    ('Hospedagem — centro histórico de Lençóis', 'Patricia Laraia', 'CC BY-SA 4.0',
+     'https://commons.wikimedia.org/wiki/File:Centro_hist%C3%B3rico_de_Len%C3%A7%C3%B3is_por_Patricia_Laraia.jpg'),
+    ('Mapa — Vale do Pai Inácio', 'Joedison Rocha', 'CC BY-SA 4.0',
+     'https://commons.wikimedia.org/wiki/File:Vale_do_Pai_In%C3%A1cio.jpg'),
+]
+
+
+def links_html(nome):
+    itens = MATERIAL.get(nome)
+    if not itens:
+        return ''
+    chips = ''.join(
+        f'<a class="opt-link {tipo}" href="{B.esc(url)}" target="_blank" rel="noopener" '
+        f'title="{B.esc(rotulo)}">{"▶" if tipo == "video" else "📄"} {B.esc(rotulo)}</a>'
+        for tipo, rotulo, url in itens)
+    return f'<div class="opt-links">{chips}</div>'
+
+
 def card(op):
     emoji, rotulo, cls = SELOS[op['status']]
     r_emoji, r_rotulo, r_cls = REC[op['rec']]
     tipo = 'Principal' if op['tipo'] == 'principal' else 'Leve'
+    material = links_html(op['nome'])
     return (
-        f'<article class="opt-card fade-in {cls}" data-rec="{op["rec"]}">'
+        f'<article class="opt-card fade-in {cls}" data-rec="{op["rec"]}" '
+        f'data-status="{op["status"]}" data-material="{"sim" if material else "nao"}">'
         f'<div class="opt-top"><span class="opt-rec {r_cls}">{r_emoji} {B.esc(r_rotulo)}</span>'
         f'<span class="opt-tipo">{tipo}</span></div>'
         f'<h3 class="opt-nome">{B.esc(op["nome"])}</h3>'
         f'<p class="opt-onde">{B.esc(op["onde"])} · <span class="opt-selo">{emoji} {B.esc(rotulo)}</span></p>'
         f'<p class="opt-nota">{op["desc"]}</p>'
+        f'{material}'
         f'</article>'
     )
 
@@ -264,6 +414,7 @@ def bloco_dia(d):
         f'<div class="dia-cab"><h2 class="dia-tit"><span class="dia-chip">{d["rotulo"]}</span>{B.esc(d["titulo"])}</h2>'
         f'<p class="dia-ancora">⚓ {B.esc(d["ancora"])}</p></div>'
         f'<div class="opt-grid">{cards}</div>'
+        f'<p class="dia-vazio">Nenhuma opção deste dia passa no filtro atual.</p>'
         f'</div>'
     )
 
@@ -277,8 +428,39 @@ legenda = ''.join(
     f'<span class="leg-item"><b>{e}</b> {B.esc(r)}</span>' for e, r, _ in REC.values()
 )
 
-filtros = ''.join(
+com_material = sum(1 for o in todas if MATERIAL.get(o['nome']))
+por_rec = {n: sum(1 for o in todas if o['rec'] == n) for n in REC}
+
+filtros_dia = ''.join(
     f'<button class="filtro-btn" data-dia="{d["id"]}">{d["rotulo"]}</button>' for d in DIAS
+)
+
+filtros_rec = ''.join(
+    f'<button class="filtro-btn rec-btn {cls}" data-rec="{n}">{emoji} {B.esc(rot)} '
+    f'<span class="filtro-n">{por_rec[n]}</span></button>'
+    for n, (emoji, rot, cls) in REC.items()
+)
+
+filtros_extra = (
+    f'<button class="filtro-btn" data-extra="escolhida">✅ Só as escolhidas '
+    f'<span class="filtro-n">{escolhidas}</span></button>'
+    f'<button class="filtro-btn" data-extra="decidir">❓ Precisa de decisão</button>'
+    f'<button class="filtro-btn" data-extra="material">🔗 Com blog ou vídeo '
+    f'<span class="filtro-n">{com_material}</span></button>'
+)
+
+barra_filtros = (
+    '<div class="filtro-grupo"><span class="filtro-rot">Recomendação</span>'
+    '<div class="filtros"><button class="filtro-btn ativo" data-rec="todos">Todas</button>'
+    f'{filtros_rec}</div></div>'
+    '<div class="filtro-grupo"><span class="filtro-rot">Dia</span>'
+    '<div class="filtros"><button class="filtro-btn ativo" data-dia="todos">Todos</button>'
+    f'{filtros_dia}</div></div>'
+    '<div class="filtro-grupo"><span class="filtro-rot">Atalhos</span>'
+    '<div class="filtros"><button class="filtro-btn ativo" data-extra="todos">Tudo</button>'
+    f'{filtros_extra}</div></div>'
+    '<p class="filtro-saida"><span id="filtro-conta"></span>'
+    '<button class="filtro-limpa" type="button">limpar filtros</button></p>'
 )
 
 fora_html = ''.join(
@@ -298,6 +480,13 @@ fontes_html = ''.join(
     for n, u, o in FONTES_CURADORIA
 )
 
+creditos_html = ''.join(
+    f'<div class="kv"><span class="k">{B.esc(onde)}</span>'
+    f'<span class="v">{B.esc(autor)} · <a href="{B.esc(url)}" target="_blank" rel="noopener">'
+    f'{B.esc(lic)}</a></span></div>'
+    for onde, autor, lic, url in CREDITOS
+)
+
 corpo = (
     B.page_header(
         trip, 'Tudo o que está sobre a mesa',
@@ -314,9 +503,12 @@ corpo = (
       'geograficamente e no relógio. A regra do ritmo tranquilo é <strong>no máximo uma principal e uma leve por dia</strong>. '
       'A recomendação combina o consenso de blogs, guias e vídeos com o perfil do grupo: esforço de médio a baixo, '
       'ritmo tranquilo e outubro no fim da seca. Nada aqui está reservado.</p>'
+      '<p class="section-desc">Os filtros abaixo se combinam: dá para pedir, por exemplo, '
+      '<em>só as imperdíveis da segunda-feira</em>. Cada card traz os links de blog (📄) e de vídeo (▶) '
+      'que sustentam a nota — abrir dois ou três antes de decidir vale mais do que qualquer resumo.</p>'
       f'<div class="legenda">{legenda}</div>'
       '</div>'
-      f'<div class="filtros"><button class="filtro-btn ativo" data-dia="todos">Todos os dias</button>{filtros}</div>'
+      f'<div class="filtro-barra">{barra_filtros}</div>'
     + ''.join(bloco_dia(d) for d in DIAS)
     + '</section>'
     + '<section class="section">'
@@ -344,27 +536,94 @@ corpo = (
       '</div>'
       f'<div class="info-card fade-in">{fontes_html}</div>'
       '</section>'
+    + '<section class="section">'
+      '<div class="section-header fade-in">'
+      '<span class="section-tag">Fotos</span>'
+      '<h2 class="section-title">Créditos das imagens</h2>'
+      '<p class="section-desc">As fotos dos cabeçalhos vêm do Wikimedia Commons, sob licença Creative Commons, '
+      'e estão baixadas no projeto — o site não depende de servidor de terceiros para exibi-las.</p>'
+      '</div>'
+      f'<div class="info-card fade-in">{creditos_html}</div>'
+      '</section>'
     + B.footer_html(trip, PAGES)
 )
 
 SCRIPT = """
 (function () {
-  var botoes = document.querySelectorAll('.filtro-btn');
+  // Tres eixos independentes que se combinam por E: recomendacao, dia e atalho.
+  var estado = { rec: 'todos', dia: 'todos', extra: 'todos' };
   var blocos = document.querySelectorAll('.dia-bloco');
-  botoes.forEach(function (b) {
-    b.addEventListener('click', function () {
-      botoes.forEach(function (o) { o.classList.remove('ativo'); });
-      b.classList.add('ativo');
-      var alvo = b.getAttribute('data-dia');
-      blocos.forEach(function (bl) {
-        var mostrar = alvo === 'todos' || bl.getAttribute('data-dia') === alvo;
-        bl.style.display = mostrar ? '' : 'none';
-        if (mostrar && window.revelar) {
-          bl.querySelectorAll('.fade-in').forEach(function (el) { window.revelar(el); });
-        }
+  var conta = document.getElementById('filtro-conta');
+  var total = document.querySelectorAll('.opt-card').length;
+
+  function passaExtra(card) {
+    if (estado.extra === 'todos') return true;
+    if (estado.extra === 'material') return card.getAttribute('data-material') === 'sim';
+    if (estado.extra === 'decidir') {
+      var s = card.getAttribute('data-status');
+      return s === 'ambigua' || s === 'conflito';
+    }
+    return card.getAttribute('data-status') === estado.extra;
+  }
+
+  function aplicar() {
+    var visiveis = 0;
+    blocos.forEach(function (bl) {
+      var diaOk = estado.dia === 'todos' || bl.getAttribute('data-dia') === estado.dia;
+      var nesteBloco = 0;
+      bl.querySelectorAll('.opt-card').forEach(function (card) {
+        var ok = diaOk
+          && (estado.rec === 'todos' || card.getAttribute('data-rec') === estado.rec)
+          && passaExtra(card);
+        card.style.display = ok ? '' : 'none';
+        if (ok) { nesteBloco++; visiveis++; if (window.revelar) window.revelar(card); }
       });
+      bl.style.display = diaOk ? '' : 'none';
+      bl.classList.toggle('sem-resultado', diaOk && nesteBloco === 0);
+      if (diaOk && window.revelar) {
+        bl.querySelectorAll('.dia-cab .fade-in').forEach(function (el) { window.revelar(el); });
+      }
+    });
+    if (conta) {
+      var limpo = estado.rec === 'todos' && estado.dia === 'todos' && estado.extra === 'todos';
+      conta.textContent = limpo
+        ? total + ' opções na mesa'
+        : visiveis + ' de ' + total + ' opções';
+    }
+    var botao = document.querySelector('.filtro-limpa');
+    if (botao) {
+      botao.style.visibility =
+        (estado.rec === 'todos' && estado.dia === 'todos' && estado.extra === 'todos')
+          ? 'hidden' : 'visible';
+    }
+  }
+
+  document.querySelectorAll('.filtro-btn').forEach(function (b) {
+    var eixo = b.hasAttribute('data-rec') ? 'rec'
+             : b.hasAttribute('data-dia') ? 'dia' : 'extra';
+    b.addEventListener('click', function () {
+      estado[eixo] = b.getAttribute('data-' + eixo);
+      document.querySelectorAll('.filtro-btn[data-' + eixo + ']').forEach(function (o) {
+        o.classList.toggle('ativo', o === b);
+      });
+      aplicar();
     });
   });
+
+  var limpa = document.querySelector('.filtro-limpa');
+  if (limpa) {
+    limpa.addEventListener('click', function () {
+      estado = { rec: 'todos', dia: 'todos', extra: 'todos' };
+      document.querySelectorAll('.filtro-btn').forEach(function (o) {
+        o.classList.toggle('ativo', o.getAttribute('data-rec') === 'todos'
+          || o.getAttribute('data-dia') === 'todos'
+          || o.getAttribute('data-extra') === 'todos');
+      });
+      aplicar();
+    });
+  }
+
+  aplicar();
 })();
 """
 

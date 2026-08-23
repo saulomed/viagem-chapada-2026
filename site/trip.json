@@ -70,7 +70,13 @@
       "decisionMaker": "Saulo"
     },
     "budget": null,
-    "customCss": "\n/* ─── opcoes.html — cardápio de opções ─── */\n.filtros { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 2rem; }\n.filtro-btn {\n  font: inherit; font-size: .85rem; font-weight: 600; cursor: pointer;\n  padding: .45rem .9rem; border-radius: 999px;\n  border: 1px solid var(--border); background: var(--surface); color: var(--text-muted);\n  transition: background .15s, color .15s, border-color .15s;\n}\n.filtro-btn:hover { border-color: var(--primary); color: var(--text); }\n.filtro-btn.ativo { background: var(--primary); border-color: var(--primary); color: var(--white); }\n\n.dia-bloco { margin: 0 0 2.75rem; }\n.dia-cab { margin: 0 0 1rem; }\n.dia-tit {\n  display: flex; align-items: center; gap: .6rem; flex-wrap: wrap;\n  margin: 0 0 .35rem; font-size: 1.25rem;\n}\n.dia-chip {\n  font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;\n  padding: .25rem .6rem; border-radius: 999px;\n  background: var(--bg-alt); color: var(--primary); border: 1px solid var(--border);\n}\n.dia-ancora { margin: 0; font-size: .9rem; color: var(--text-muted); }\n\n.opt-grid {\n  display: grid; gap: 1rem;\n  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));\n}\n.opt-card {\n  border: 1px solid var(--border); border-left: 3px solid var(--border);\n  border-radius: var(--radius); background: var(--surface); padding: 1rem 1.1rem;\n}\n.opt-card.sel-ok { border-left-color: var(--ok); }\n.opt-card.sel-duv { border-left-color: var(--warn); }\n.opt-card.sel-conf { border-left-color: var(--danger); }\n.opt-top {\n  display: flex; align-items: center; justify-content: space-between;\n  gap: .5rem; margin: 0 0 .5rem;\n}\n.opt-selo { font-size: .75rem; font-weight: 700; color: var(--text-muted); }\n.sel-ok .opt-selo { color: var(--ok); }\n.sel-duv .opt-selo { color: var(--warn); }\n.sel-conf .opt-selo { color: var(--danger); }\n.opt-tipo {\n  font-size: .68rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;\n  color: var(--text-light);\n}\n.opt-nome { margin: 0 0 .3rem; font-size: 1rem; line-height: 1.35; }\n.opt-onde { margin: 0 0 .5rem; font-size: .8rem; font-weight: 600; color: var(--primary); }\n.opt-nota { margin: 0; font-size: .88rem; line-height: 1.55; color: var(--text-muted); }\n\n.rest-lista { margin: .5rem 0 0; padding-left: 1.1rem; }\n.rest-lista li { font-size: .88rem; line-height: 1.6; color: var(--text-muted); }\n\n@media (max-width: 640px) {\n  .opt-grid { grid-template-columns: 1fr; }\n  .filtros { gap: .4rem; }\n  .filtro-btn { font-size: .8rem; padding: .4rem .75rem; }\n}\n\n/* níveis de recomendação */\n.opt-rec { font-size: .72rem; font-weight: 800; letter-spacing: .02em; }\n.opt-rec.rec1 { color: var(--ok); }\n.opt-rec.rec2 { color: var(--primary); }\n.opt-rec.rec3 { color: var(--text-muted); }\n.opt-rec.rec4 { color: var(--warn); }\n.opt-card { border-left-color: var(--border); }\n.opt-selo { font-weight: 700; }\n.sel-ok .opt-selo { color: var(--ok); }\n.sel-duv .opt-selo { color: var(--warn); }\n.sel-conf .opt-selo { color: var(--danger); }\n.legenda { display: flex; flex-wrap: wrap; gap: .35rem 1.1rem; margin: .9rem 0 0; }\n.leg-item { font-size: .8rem; color: var(--text-muted); }\n.leg-item b { margin-right: .2rem; }\n.opt-onde { display: block; }\n"
+    "customCss": "\n/* ─── opcoes.html — cardápio de opções ─── */\n.filtros { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 2rem; }\n.filtro-btn {\n  font: inherit; font-size: .85rem; font-weight: 600; cursor: pointer;\n  padding: .45rem .9rem; border-radius: 999px;\n  border: 1px solid var(--border); background: var(--surface); color: var(--text-muted);\n  transition: background .15s, color .15s, border-color .15s;\n}\n.filtro-btn:hover { border-color: var(--primary); color: var(--text); }\n.filtro-btn.ativo { background: var(--primary); border-color: var(--primary); color: var(--white); }\n\n.dia-bloco { margin: 0 0 2.75rem; }\n.dia-cab { margin: 0 0 1rem; }\n.dia-tit {\n  display: flex; align-items: center; gap: .6rem; flex-wrap: wrap;\n  margin: 0 0 .35rem; font-size: 1.25rem;\n}\n.dia-chip {\n  font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;\n  padding: .25rem .6rem; border-radius: 999px;\n  background: var(--bg-alt); color: var(--primary); border: 1px solid var(--border);\n}\n.dia-ancora { margin: 0; font-size: .9rem; color: var(--text-muted); }\n\n.opt-grid {\n  display: grid; gap: 1rem;\n  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));\n}\n.opt-card {\n  border: 1px solid var(--border); border-left: 3px solid var(--border);\n  border-radius: var(--radius); background: var(--surface); padding: 1rem 1.1rem;\n}\n.opt-card.sel-ok { border-left-color: var(--ok); }\n.opt-card.sel-duv { border-left-color: var(--warn); }\n.opt-card.sel-conf { border-left-color: var(--danger); }\n.opt-top {\n  display: flex; align-items: center; justify-content: space-between;\n  gap: .5rem; margin: 0 0 .5rem;\n}\n.opt-selo { font-size: .75rem; font-weight: 700; color: var(--text-muted); }\n.sel-ok .opt-selo { color: var(--ok); }\n.sel-duv .opt-selo { color: var(--warn); }\n.sel-conf .opt-selo { color: var(--danger); }\n.opt-tipo {\n  font-size: .68rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;\n  color: var(--text-light);\n}\n.opt-nome { margin: 0 0 .3rem; font-size: 1rem; line-height: 1.35; }\n.opt-onde { margin: 0 0 .5rem; font-size: .8rem; font-weight: 600; color: var(--primary); }\n.opt-nota { margin: 0; font-size: .88rem; line-height: 1.55; color: var(--text-muted); }\n\n.rest-lista { margin: .5rem 0 0; padding-left: 1.1rem; }\n.rest-lista li { font-size: .88rem; line-height: 1.6; color: var(--text-muted); }\n\n@media (max-width: 640px) {\n  .opt-grid { grid-template-columns: 1fr; }\n  .filtros { gap: .4rem; }\n  .filtro-btn { font-size: .8rem; padding: .4rem .75rem; }\n}\n\n/* níveis de recomendação */\n.opt-rec { font-size: .72rem; font-weight: 800; letter-spacing: .02em; }\n.opt-rec.rec1 { color: var(--ok); }\n.opt-rec.rec2 { color: var(--primary); }\n.opt-rec.rec3 { color: var(--text-muted); }\n.opt-rec.rec4 { color: var(--warn); }\n.opt-card { border-left-color: var(--border); }\n.opt-selo { font-weight: 700; }\n.sel-ok .opt-selo { color: var(--ok); }\n.sel-duv .opt-selo { color: var(--warn); }\n.sel-conf .opt-selo { color: var(--danger); }\n.legenda { display: flex; flex-wrap: wrap; gap: .35rem 1.1rem; margin: .9rem 0 0; }\n.leg-item { font-size: .8rem; color: var(--text-muted); }\n.leg-item b { margin-right: .2rem; }\n.opt-onde { display: block; }\n\n\n/* ─── barra de filtros combinados ─── */\n.filtro-barra {\n  border: 1px solid var(--border); border-radius: var(--radius);\n  background: var(--bg-alt); padding: 1rem 1.1rem .35rem; margin: 0 0 2rem;\n}\n.filtro-grupo { display: flex; align-items: baseline; gap: .85rem; margin: 0 0 .35rem; }\n.filtro-rot {\n  flex: 0 0 6.5rem; font-size: .7rem; font-weight: 700;\n  letter-spacing: .07em; text-transform: uppercase; color: var(--text-light);\n}\n.filtro-barra .filtros { margin: 0 0 .55rem; }\n.filtro-n {\n  display: inline-block; margin-left: .3rem; padding: 0 .35rem;\n  border-radius: 999px; background: var(--bg-alt);\n  font-size: .7rem; font-weight: 700; color: var(--text-light);\n}\n.filtro-btn.ativo .filtro-n { background: rgba(255, 255, 255, .22); color: var(--white); }\n.rec-btn.rec1:not(.ativo) { color: var(--ok); }\n.rec-btn.rec2:not(.ativo) { color: var(--primary); }\n.rec-btn.rec4:not(.ativo) { color: var(--warn); }\n.filtro-saida {\n  display: flex; align-items: center; justify-content: space-between; gap: 1rem;\n  margin: .25rem 0 .65rem; font-size: .8rem; color: var(--text-muted);\n}\n.filtro-limpa {\n  font: inherit; font-size: .78rem; cursor: pointer; padding: 0;\n  border: 0; background: none; color: var(--primary); text-decoration: underline;\n}\n.dia-vazio { display: none; margin: 0; font-size: .85rem; color: var(--text-light); font-style: italic; }\n.dia-bloco.sem-resultado .dia-vazio { display: block; }\n.dia-bloco.sem-resultado .opt-grid { display: none; }\n\n/* ─── links de blog e vídeo dentro do card ─── */\n.opt-links {\n  display: flex; flex-wrap: wrap; gap: .35rem;\n  margin: .85rem 0 0; padding-top: .75rem; border-top: 1px solid var(--border);\n}\n.opt-link {\n  display: inline-block; max-width: 100%; overflow: hidden;\n  text-overflow: ellipsis; white-space: nowrap;\n  font-size: .74rem; font-weight: 600; text-decoration: none;\n  padding: .28rem .6rem; border-radius: 999px;\n  border: 1px solid var(--border); background: var(--bg-alt); color: var(--text-muted);\n  transition: border-color .15s, color .15s;\n}\n.opt-link:hover { border-color: var(--primary); color: var(--primary); }\n.opt-link.video { color: var(--danger); }\n.opt-link.video:hover { border-color: var(--danger); }\n\n@media (max-width: 640px) {\n  .filtro-grupo { display: block; }\n  .filtro-rot { display: block; margin: 0 0 .35rem; }\n  .filtro-barra { padding: .9rem .8rem .3rem; }\n  .opt-link { font-size: .72rem; }\n}\n",
+    "heroImage": "imagens/cabecalhos/hero-pai-inacio.jpg",
+    "pageImages": {
+      "hospedagem.html": "imagens/cabecalhos/hospedagem-lencois.jpg",
+      "mapa.html": "imagens/cabecalhos/mapa-vale-pai-inacio.jpg",
+      "opcoes.html": "imagens/cabecalhos/opcoes-buracao.jpg"
+    }
   },
   "features": {
     "currency": false,
@@ -570,7 +576,14 @@
               "status": "estimado",
               "source": "penaestrada"
             },
-            "rating": "8,9 Booking"
+            "rating": "8,9 Booking",
+            "url": "https://www.booking.com/hotel/br/portal-lencois.pt-br.html",
+            "confirmationUrls": [
+              {
+                "label": "Site do hotel",
+                "url": "https://portal.bahiatophotels.com/"
+              }
+            ]
           },
           {
             "name": "Pouso da Trilha",
@@ -580,7 +593,14 @@
               "status": "estimado",
               "source": "penaestrada"
             },
-            "rating": "8,9 Booking"
+            "rating": "8,9 Booking",
+            "url": "https://www.pousodatrilha.com.br/",
+            "confirmationUrls": [
+              {
+                "label": "Booking",
+                "url": "https://www.booking.com/hotel/br/pouso-da-trilha-hospedagem.pt-br.html"
+              }
+            ]
           },
           {
             "name": "Pousada Vila Serrano",
@@ -590,17 +610,19 @@
               "status": "estimado",
               "source": "conecta"
             },
-            "rating": "sem nota consolidada"
+            "rating": "sem nota consolidada",
+            "url": "https://www.vilaserrano.com/",
+            "confirmationUrls": [
+              {
+                "label": "Booking",
+                "url": "https://www.booking.com/hotel/br/pousada-vila-serrano.pt-br.html"
+              }
+            ]
           },
           {
-            "name": "Pousada Sincorá",
-            "desc": "No centro, só 8 quartos. Atendimento pessoal, do tipo em que o dono indica trilha e restaurante.",
-            "price": {
-              "text": "~R$ 250–350/quarto",
-              "status": "estimado",
-              "source": "conecta"
-            },
-            "rating": "sem nota consolidada"
+            "name": "Vila Pugliesi Hotel Boutique",
+            "desc": "A 100 m do centro histórico. Quartos amplos, decoração entre o rústico e o moderno, piscina e bar — é a primeira indicação do Pé na Estrada para Lençóis, com nota 8,9. Entrou no lugar da Pousada Sincorá, que fica em Andaraí. <strong>Sem diária levantada: o preço só sai cotando.</strong>",
+            "url": "https://www.booking.com/hotel/br/vila-pugliesi-boutique.pt-br.html"
           },
           {
             "name": "Hotel Canto das Águas",
@@ -610,7 +632,14 @@
               "status": "estimado",
               "source": "penaestrada"
             },
-            "rating": "8,9 Booking"
+            "rating": "8,9 Booking",
+            "url": "https://lencois.com.br/",
+            "confirmationUrls": [
+              {
+                "label": "Booking",
+                "url": "https://www.booking.com/hotel/br/canto-das-aguas.pt-br.html"
+              }
+            ]
           }
         ]
       },
@@ -635,7 +664,8 @@
               "status": "estimado",
               "source": "classeturista"
             },
-            "rating": "9,3 Booking"
+            "rating": "9,3 Booking",
+            "url": "https://www.booking.com/hotel/br/villa-santo-antonio-mucuge-mucuge.pt-br.html"
           },
           {
             "name": "O Forasteiro",
@@ -645,7 +675,8 @@
               "status": "estimado",
               "source": "classeturista"
             },
-            "rating": "9,7 Booking"
+            "rating": "9,7 Booking",
+            "url": "https://www.booking.com/hotel/br/estalagem-oforasteiro.pt-br.html"
           },
           {
             "name": "Pousada Monte Azul",
@@ -655,7 +686,14 @@
               "status": "estimado",
               "source": "classeturista"
             },
-            "rating": "9,0 Booking"
+            "rating": "9,0 Booking",
+            "url": "https://www.pousadamonteazul.com.br/",
+            "confirmationUrls": [
+              {
+                "label": "Booking",
+                "url": "https://www.booking.com/hotel/br/pousada-monte-azul.pt-br.html"
+              }
+            ]
           },
           {
             "name": "Pousada Primavera",
@@ -665,7 +703,14 @@
               "status": "estimado",
               "source": "classeturista"
             },
-            "rating": "8,3 Booking"
+            "rating": "8,3 Booking",
+            "url": "https://www.booking.com/hotel/br/pousada-recanto-das-flores-mucuge1.pt-br.html",
+            "confirmationUrls": [
+              {
+                "label": "Site da pousada",
+                "url": "https://pousadaprimaveramucuge.com.br/"
+              }
+            ]
           }
         ]
       },
@@ -690,7 +735,14 @@
               "status": "estimado",
               "source": "penaestrada"
             },
-            "rating": "8,9 Booking"
+            "rating": "8,9 Booking",
+            "url": "https://www.booking.com/hotel/br/portal-lencois.pt-br.html",
+            "confirmationUrls": [
+              {
+                "label": "Site do hotel",
+                "url": "https://portal.bahiatophotels.com/"
+              }
+            ]
           },
           {
             "name": "Pouso da Trilha",
@@ -700,7 +752,14 @@
               "status": "estimado",
               "source": "penaestrada"
             },
-            "rating": "8,9 Booking"
+            "rating": "8,9 Booking",
+            "url": "https://www.pousodatrilha.com.br/",
+            "confirmationUrls": [
+              {
+                "label": "Booking",
+                "url": "https://www.booking.com/hotel/br/pouso-da-trilha-hospedagem.pt-br.html"
+              }
+            ]
           },
           {
             "name": "Pousada Vila Serrano",
@@ -710,7 +769,14 @@
               "status": "estimado",
               "source": "conecta"
             },
-            "rating": "sem nota consolidada"
+            "rating": "sem nota consolidada",
+            "url": "https://www.vilaserrano.com/",
+            "confirmationUrls": [
+              {
+                "label": "Booking",
+                "url": "https://www.booking.com/hotel/br/pousada-vila-serrano.pt-br.html"
+              }
+            ]
           }
         ]
       }
@@ -720,7 +786,8 @@
       "Padrão definido em 23/08/2026: dois quartos de casal, categoria intermediária.",
       "Diárias são \"a partir de\" e vêm de consultas sem as datas da viagem — cotar 17–19/10, 19–21/10 e 21–22/10 antes de fechar.",
       "Confirmar se a diária é por quarto ou por pessoa. Para 4 pessoas em 2 quartos, o total dobra.",
-      "Lençóis aparece em duas estadias (17–19 e 21–22): perguntar se a mesma pousada segura as três noites com o intervalo de Mucugê no meio."
+      "Lençóis aparece em duas estadias (17–19 e 21–22): perguntar se a mesma pousada segura as três noites com o intervalo de Mucugê no meio.",
+      "Correção de 23/08/2026: a Pousada Sincorá saiu da lista de Lençóis — o site oficial e o TripAdvisor a situam em Andaraí, a ~100 km. O blog Conecta Chapada a colocou em Lençóis por engano. No lugar entrou a Vila Pugliesi, ainda sem diária levantada."
     ]
   },
   "transport": {},
@@ -923,6 +990,11 @@
         "emoji": "🔁",
         "title": "Lençóis aparece duas vezes",
         "text": "Dias 17–19 e 21–22, com Mucugê no meio. Se a mesma pousada segurar as duas estadias, dá para negociar as três noites juntas e deixar mala guardada."
+      },
+      {
+        "emoji": "🔗",
+        "title": "Cada opção tem link para cotar",
+        "text": "O botão <strong>Ver oferta</strong> abre a página de reserva — Booking quando existe, site próprio quando a pousada vende direto. Onde havia os dois, o segundo entra como link extra no card. Abrir com as datas reais (17–19, 19–21 e 21–22/10) e <strong>2 quartos para 2 adultos cada</strong> é o que transforma o \"a partir de\" em preço de verdade."
       }
     ]
   }
