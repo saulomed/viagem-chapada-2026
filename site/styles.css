@@ -584,3 +584,19 @@ a.fato-selo:hover { opacity: 0.75; }
   .filtros { gap: .4rem; }
   .filtro-btn { font-size: .8rem; padding: .4rem .75rem; }
 }
+
+/* níveis de recomendação */
+.opt-rec { font-size: .72rem; font-weight: 800; letter-spacing: .02em; }
+.opt-rec.rec1 { color: var(--ok); }
+.opt-rec.rec2 { color: var(--primary); }
+.opt-rec.rec3 { color: var(--text-muted); }
+.opt-rec.rec4 { color: var(--warn); }
+.opt-card { border-left-color: var(--border); }
+.opt-selo { font-weight: 700; }
+.sel-ok .opt-selo { color: var(--ok); }
+.sel-duv .opt-selo { color: var(--warn); }
+.sel-conf .opt-selo { color: var(--danger); }
+.legenda { display: flex; flex-wrap: wrap; gap: .35rem 1.1rem; margin: .9rem 0 0; }
+.leg-item { font-size: .8rem; color: var(--text-muted); }
+.leg-item b { margin-right: .2rem; }
+.opt-onde { display: block; }

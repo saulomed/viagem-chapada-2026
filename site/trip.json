@@ -70,7 +70,7 @@
       "decisionMaker": "Saulo"
     },
     "budget": null,
-    "customCss": "\n/* ─── opcoes.html — cardápio de opções ─── */\n.filtros { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 2rem; }\n.filtro-btn {\n  font: inherit; font-size: .85rem; font-weight: 600; cursor: pointer;\n  padding: .45rem .9rem; border-radius: 999px;\n  border: 1px solid var(--border); background: var(--surface); color: var(--text-muted);\n  transition: background .15s, color .15s, border-color .15s;\n}\n.filtro-btn:hover { border-color: var(--primary); color: var(--text); }\n.filtro-btn.ativo { background: var(--primary); border-color: var(--primary); color: var(--white); }\n\n.dia-bloco { margin: 0 0 2.75rem; }\n.dia-cab { margin: 0 0 1rem; }\n.dia-tit {\n  display: flex; align-items: center; gap: .6rem; flex-wrap: wrap;\n  margin: 0 0 .35rem; font-size: 1.25rem;\n}\n.dia-chip {\n  font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;\n  padding: .25rem .6rem; border-radius: 999px;\n  background: var(--bg-alt); color: var(--primary); border: 1px solid var(--border);\n}\n.dia-ancora { margin: 0; font-size: .9rem; color: var(--text-muted); }\n\n.opt-grid {\n  display: grid; gap: 1rem;\n  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));\n}\n.opt-card {\n  border: 1px solid var(--border); border-left: 3px solid var(--border);\n  border-radius: var(--radius); background: var(--surface); padding: 1rem 1.1rem;\n}\n.opt-card.sel-ok { border-left-color: var(--ok); }\n.opt-card.sel-duv { border-left-color: var(--warn); }\n.opt-card.sel-conf { border-left-color: var(--danger); }\n.opt-top {\n  display: flex; align-items: center; justify-content: space-between;\n  gap: .5rem; margin: 0 0 .5rem;\n}\n.opt-selo { font-size: .75rem; font-weight: 700; color: var(--text-muted); }\n.sel-ok .opt-selo { color: var(--ok); }\n.sel-duv .opt-selo { color: var(--warn); }\n.sel-conf .opt-selo { color: var(--danger); }\n.opt-tipo {\n  font-size: .68rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;\n  color: var(--text-light);\n}\n.opt-nome { margin: 0 0 .3rem; font-size: 1rem; line-height: 1.35; }\n.opt-onde { margin: 0 0 .5rem; font-size: .8rem; font-weight: 600; color: var(--primary); }\n.opt-nota { margin: 0; font-size: .88rem; line-height: 1.55; color: var(--text-muted); }\n\n.rest-lista { margin: .5rem 0 0; padding-left: 1.1rem; }\n.rest-lista li { font-size: .88rem; line-height: 1.6; color: var(--text-muted); }\n\n@media (max-width: 640px) {\n  .opt-grid { grid-template-columns: 1fr; }\n  .filtros { gap: .4rem; }\n  .filtro-btn { font-size: .8rem; padding: .4rem .75rem; }\n}\n"
+    "customCss": "\n/* ─── opcoes.html — cardápio de opções ─── */\n.filtros { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 2rem; }\n.filtro-btn {\n  font: inherit; font-size: .85rem; font-weight: 600; cursor: pointer;\n  padding: .45rem .9rem; border-radius: 999px;\n  border: 1px solid var(--border); background: var(--surface); color: var(--text-muted);\n  transition: background .15s, color .15s, border-color .15s;\n}\n.filtro-btn:hover { border-color: var(--primary); color: var(--text); }\n.filtro-btn.ativo { background: var(--primary); border-color: var(--primary); color: var(--white); }\n\n.dia-bloco { margin: 0 0 2.75rem; }\n.dia-cab { margin: 0 0 1rem; }\n.dia-tit {\n  display: flex; align-items: center; gap: .6rem; flex-wrap: wrap;\n  margin: 0 0 .35rem; font-size: 1.25rem;\n}\n.dia-chip {\n  font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;\n  padding: .25rem .6rem; border-radius: 999px;\n  background: var(--bg-alt); color: var(--primary); border: 1px solid var(--border);\n}\n.dia-ancora { margin: 0; font-size: .9rem; color: var(--text-muted); }\n\n.opt-grid {\n  display: grid; gap: 1rem;\n  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));\n}\n.opt-card {\n  border: 1px solid var(--border); border-left: 3px solid var(--border);\n  border-radius: var(--radius); background: var(--surface); padding: 1rem 1.1rem;\n}\n.opt-card.sel-ok { border-left-color: var(--ok); }\n.opt-card.sel-duv { border-left-color: var(--warn); }\n.opt-card.sel-conf { border-left-color: var(--danger); }\n.opt-top {\n  display: flex; align-items: center; justify-content: space-between;\n  gap: .5rem; margin: 0 0 .5rem;\n}\n.opt-selo { font-size: .75rem; font-weight: 700; color: var(--text-muted); }\n.sel-ok .opt-selo { color: var(--ok); }\n.sel-duv .opt-selo { color: var(--warn); }\n.sel-conf .opt-selo { color: var(--danger); }\n.opt-tipo {\n  font-size: .68rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;\n  color: var(--text-light);\n}\n.opt-nome { margin: 0 0 .3rem; font-size: 1rem; line-height: 1.35; }\n.opt-onde { margin: 0 0 .5rem; font-size: .8rem; font-weight: 600; color: var(--primary); }\n.opt-nota { margin: 0; font-size: .88rem; line-height: 1.55; color: var(--text-muted); }\n\n.rest-lista { margin: .5rem 0 0; padding-left: 1.1rem; }\n.rest-lista li { font-size: .88rem; line-height: 1.6; color: var(--text-muted); }\n\n@media (max-width: 640px) {\n  .opt-grid { grid-template-columns: 1fr; }\n  .filtros { gap: .4rem; }\n  .filtro-btn { font-size: .8rem; padding: .4rem .75rem; }\n}\n\n/* níveis de recomendação */\n.opt-rec { font-size: .72rem; font-weight: 800; letter-spacing: .02em; }\n.opt-rec.rec1 { color: var(--ok); }\n.opt-rec.rec2 { color: var(--primary); }\n.opt-rec.rec3 { color: var(--text-muted); }\n.opt-rec.rec4 { color: var(--warn); }\n.opt-card { border-left-color: var(--border); }\n.opt-selo { font-weight: 700; }\n.sel-ok .opt-selo { color: var(--ok); }\n.sel-duv .opt-selo { color: var(--warn); }\n.sel-conf .opt-selo { color: var(--danger); }\n.legenda { display: flex; flex-wrap: wrap; gap: .35rem 1.1rem; margin: .9rem 0 0; }\n.leg-item { font-size: .8rem; color: var(--text-muted); }\n.leg-item b { margin-right: .2rem; }\n.opt-onde { display: block; }\n"
   },
   "features": {
     "currency": false,
@@ -92,6 +92,24 @@
       "label": "Poço Azul — janela dos raios de sol e taxa de entrada",
       "consultadoEm": "2026-08-08",
       "kind": "operador"
+    },
+    "penaestrada": {
+      "label": "Pé na Estrada — onde ficar em Lençóis",
+      "url": "https://www.penaestrada.blog.br/onde-ficar-em-lencois/",
+      "consultadoEm": "2026-08-23",
+      "kind": "blog"
+    },
+    "classeturista": {
+      "label": "Classe Turista — onde ficar em Mucugê",
+      "url": "https://classeturista.com/pt/brasil/mucuge/onde-ficar-em-mucuge/",
+      "consultadoEm": "2026-08-23",
+      "kind": "blog"
+    },
+    "conecta": {
+      "label": "Conecta Chapada — pousadas e atrativos",
+      "url": "https://conectachapada.com.br/melhores-pousadas-na-chapada-diamantina/",
+      "consultadoEm": "2026-08-23",
+      "kind": "blog"
     }
   },
   "days": [
@@ -434,16 +452,18 @@
           "time": "10h45 – 11h30 · PARADA OPCIONAL",
           "title": "💦 Cachoeira do Ferro Doido, em Morro do Chapéu",
           "items": [
-            "💡 <strong>Ela voltou ao roteiro.</strong> Com a volta pela BR-407, Morro do Chapéu está no caminho de casa — a cachoeira fica a 18 km do centro e custa cerca de 40 minutos ida e volta.",
-            "Mirante sobre uma queda de 90 m dentro de um cânion. Abre de segunda a sexta, 8h às 18h — quinta é dia útil.",
-            "⚠️ Horário vindo de agregador, não de fonte oficial. Confirmar por telefone com a prefeitura antes de contar com ele.",
-            "⚠️ Só entra se o grupo estiver disposto a chegar em casa por volta das 17h em vez de 16h."
+            "💡 <strong>Ela voltou a ser possível.</strong> Com a volta pela BR-407, Morro do Chapéu está no caminho de casa — a cachoeira fica a 18 km do centro e custa cerca de 40 minutos ida e volta. Do estacionamento são 650 m de caminhada, ~10 min, esforço leve.",
+            "⚠️ <strong>Mas a curadoria de 23/08 derrubou a recomendação:</strong> os relatos são consistentes em dizer que só vale na estação chuvosa — fora dela é raro ter água. Outubro fecha a estação seca, então há chance real de encontrar o cânion sem queda.",
+            "⚠️ O local não tem sinalização nem estrutura de segurança. Ficar no mirante.",
+            "⚠️ Abre de segunda a sexta, 8h às 18h — quinta serve. Horário de agregador: confirmar por telefone com a prefeitura.",
+            "💡 Tratar como aposta de 40 minutos, não como programa contado. Se entrar, a chegada em casa passa das 16h para as 17h."
           ],
           "duration": {
             "text": "177 km de Lençóis · ~2h40",
             "status": "cotado",
             "source": "rotas"
-          }
+          },
+          "tip": "Pode estar seca"
         },
         {
           "time": "13h – 14h · ALMOÇO",
@@ -541,7 +561,58 @@
             "label": "Dias 1 e 2"
           }
         ],
-        "options": []
+        "options": [
+          {
+            "name": "Portal Lençóis",
+            "desc": "A 200 m do centro histórico. Piscina, jardim, estacionamento e o café da manhã mais elogiado da faixa. O equilíbrio mais seguro entre preço, estrutura e localização.",
+            "price": {
+              "text": "~R$ 300–400/quarto",
+              "status": "estimado",
+              "source": "penaestrada"
+            },
+            "rating": "8,9 Booking"
+          },
+          {
+            "name": "Pouso da Trilha",
+            "desc": "Dentro do centro histórico, a pé de tudo. Quarto duplo com ar-condicionado na faixa de R$ 200 — o melhor custo-benefício levantado.",
+            "price": {
+              "text": "~R$ 200/quarto",
+              "status": "estimado",
+              "source": "penaestrada"
+            },
+            "rating": "8,9 Booking"
+          },
+          {
+            "name": "Pousada Vila Serrano",
+            "desc": "A 500 m do centro. Piscina, jardim e aluguel de bicicletas; organiza passeios. Mais silenciosa que as da Rua das Pedras.",
+            "price": {
+              "text": "~R$ 300–400/quarto",
+              "status": "estimado",
+              "source": "conecta"
+            },
+            "rating": "sem nota consolidada"
+          },
+          {
+            "name": "Pousada Sincorá",
+            "desc": "No centro, só 8 quartos. Atendimento pessoal, do tipo em que o dono indica trilha e restaurante.",
+            "price": {
+              "text": "~R$ 250–350/quarto",
+              "status": "estimado",
+              "source": "conecta"
+            },
+            "rating": "sem nota consolidada"
+          },
+          {
+            "name": "Hotel Canto das Águas",
+            "desc": "A 200 m do centro, à beira do rio. Piscina, sauna, academia e spa — o mais estruturado da cidade, e o mais caro desta lista. A Michele citou ~R$ 651/noite em 09/08.",
+            "price": {
+              "text": "~R$ 480–650/quarto",
+              "status": "estimado",
+              "source": "penaestrada"
+            },
+            "rating": "8,9 Booking"
+          }
+        ]
       },
       {
         "id": "mucuge",
@@ -555,7 +626,48 @@
             "label": "Dias 3 e 4"
           }
         ],
-        "options": []
+        "options": [
+          {
+            "name": "Villa Santo Antônio",
+            "desc": "Casarão tombado na rua principal do centro. Suítes pequenas mas confortáveis, quiosque nos fundos. A melhor nota da cidade entre as intermediárias.",
+            "price": {
+              "text": "a partir de R$ 297/quarto",
+              "status": "estimado",
+              "source": "classeturista"
+            },
+            "rating": "9,3 Booking"
+          },
+          {
+            "name": "O Forasteiro",
+            "desc": "Chalés de pedra no centro, com cozinha própria e quintal bem cuidado. A nota mais alta de Mucugê.",
+            "price": {
+              "text": "a partir de R$ 375/quarto",
+              "status": "estimado",
+              "source": "classeturista"
+            },
+            "rating": "9,7 Booking"
+          },
+          {
+            "name": "Pousada Monte Azul",
+            "desc": "No centro, toda em madeira, com bar e lareira. Quartos amplos e rústicos.",
+            "price": {
+              "text": "a partir de R$ 305/quarto",
+              "status": "estimado",
+              "source": "classeturista"
+            },
+            "rating": "9,0 Booking"
+          },
+          {
+            "name": "Pousada Primavera",
+            "desc": "No centro, na beira da rodovia. Restaurante próprio e varanda com rede. A opção mais barata da faixa.",
+            "price": {
+              "text": "a partir de R$ 200/quarto",
+              "status": "estimado",
+              "source": "classeturista"
+            },
+            "rating": "8,3 Booking"
+          }
+        ]
       },
       {
         "id": "lencois-volta",
@@ -569,14 +681,46 @@
             "label": "Dia 5"
           }
         ],
-        "options": []
+        "options": [
+          {
+            "name": "Portal Lençóis",
+            "desc": "A 200 m do centro histórico. Piscina, jardim, estacionamento e o café da manhã mais elogiado da faixa. O equilíbrio mais seguro entre preço, estrutura e localização.",
+            "price": {
+              "text": "~R$ 300–400/quarto",
+              "status": "estimado",
+              "source": "penaestrada"
+            },
+            "rating": "8,9 Booking"
+          },
+          {
+            "name": "Pouso da Trilha",
+            "desc": "Dentro do centro histórico, a pé de tudo. Quarto duplo com ar-condicionado na faixa de R$ 200 — o melhor custo-benefício levantado.",
+            "price": {
+              "text": "~R$ 200/quarto",
+              "status": "estimado",
+              "source": "penaestrada"
+            },
+            "rating": "8,9 Booking"
+          },
+          {
+            "name": "Pousada Vila Serrano",
+            "desc": "A 500 m do centro. Piscina, jardim e aluguel de bicicletas; organiza passeios. Mais silenciosa que as da Rua das Pedras.",
+            "price": {
+              "text": "~R$ 300–400/quarto",
+              "status": "estimado",
+              "source": "conecta"
+            },
+            "rating": "sem nota consolidada"
+          }
+        ]
       }
     ],
     "pendente": "Padrão de hospedagem não definido: categoria, faixa de diária e se serão dois quartos ou uma casa para os quatro. Lençóis aparece em duas estadias separadas (17–19 e 21–22) — vale perguntar à mesma pousada se ela segura as três noites, mesmo com o intervalo em Mucugê.",
     "pendencias": [
-      "Padrão de hospedagem: categoria, faixa de diária, dois quartos ou casa inteira",
-      "Segunda 19/10 é o dia mais carregado do roteiro — decidir se o Poço Azul entra e o que sai de Igatu em troca",
-      "Ponto de almoço da volta: Jacobina é o encaixe natural de horário, restaurante ainda não escolhido"
+      "Padrão definido em 23/08/2026: dois quartos de casal, categoria intermediária.",
+      "Diárias são \"a partir de\" e vêm de consultas sem as datas da viagem — cotar 17–19/10, 19–21/10 e 21–22/10 antes de fechar.",
+      "Confirmar se a diária é por quarto ou por pessoa. Para 4 pessoas em 2 quartos, o total dobra.",
+      "Lençóis aparece em duas estadias (17–19 e 21–22): perguntar se a mesma pousada segura as três noites com o intervalo de Mucugê no meio."
     ]
   },
   "transport": {},
@@ -703,6 +847,16 @@
       ]
     },
     {
+      "emoji": "💧",
+      "title": "O Ferro Doido pode estar seco em outubro",
+      "level": "medium",
+      "items": [
+        "Curadoria de 23/08/2026: as avaliações são consistentes em dizer que a cachoeira só vale na estação chuvosa, porque fora dela é raro ter água.",
+        "Outubro fecha a estação seca. A parada continua barata (40 min, no caminho de casa), mas é aposta — não conte com a queda.",
+        "O mirante e o cânion de mais de 100 m seguem lá de qualquer forma. O local não tem sinalização nem estrutura de segurança."
+      ]
+    },
+    {
       "emoji": "🌅",
       "title": "Todo deslocamento de carro à luz do dia",
       "level": "high",
@@ -730,6 +884,15 @@
         "Outubro fecha a estação seca. Cachoeiras com volume mais baixo e trilhas de leito de rio menos escorregadias.",
         "Já começa a haver pancadas de chuva — os 30 km de cascalho do Buracão são o trecho mais sensível a isso."
       ]
+    },
+    {
+      "emoji": "🕐",
+      "title": "Duas atrações têm hora certa, além do Poço Azul",
+      "level": "medium",
+      "items": [
+        "Gruta Azul (dia 18): o feixe de sol entra pela abertura superior entre 14h e 15h. Vale organizar o circuito de Iraquara para chegar nela nessa janela.",
+        "Poço Azul (dia 19): além dos raios entre 12h30 e 14h, a permanência é curta — 20 a 30 minutos por grupo. É um momento, não um programa de meio período."
+      ]
     }
   ],
   "notes": {
@@ -747,14 +910,19 @@
     ],
     "hospedagem": [
       {
-        "emoji": "🎯",
-        "title": "Primeiro o padrão, depois a busca",
-        "text": "Antes de cotar pousada vale fechar: categoria, faixa de diária por noite e se serão dois quartos de casal ou uma casa inteira para os quatro. São 5 noites em 3 estadias."
+        "emoji": "🛏️",
+        "title": "Dois quartos de casal, padrão intermediário",
+        "text": "É o padrão definido pelo grupo em 23/08. As opções abaixo estão nessa faixa — as econômicas e as de luxo ficaram de fora de propósito."
+      },
+      {
+        "emoji": "⚠️",
+        "title": "Os preços ainda não são cotação",
+        "text": "São diárias \"a partir de\", levantadas em blogs e guias em 23/08/2026, sem as datas da viagem. Outubro é baixa temporada na Chapada, mas o valor real só sai cotando 17–19, 19–21 e 21–22/10. <strong>Confirmar também se é por quarto ou por pessoa.</strong>"
       },
       {
         "emoji": "🔁",
         "title": "Lençóis aparece duas vezes",
-        "text": "Dias 17–19 e 21–22. Se a mesma pousada segurar as duas estadias, dá para negociar as três noites juntas e deixar mala guardada."
+        "text": "Dias 17–19 e 21–22, com Mucugê no meio. Se a mesma pousada segurar as duas estadias, dá para negociar as três noites juntas e deixar mala guardada."
       }
     ]
   }
