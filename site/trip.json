@@ -1,0 +1,761 @@
+{
+  "_state": {
+    "phase": "roteiro",
+    "completed": [
+      "descoberta",
+      "pesquisa"
+    ],
+    "updatedAt": "2026-08-23"
+  },
+  "meta": {
+    "slug": "chapada-diamantina-2026",
+    "title": "Chapada Diamantina 2026",
+    "subtitle": "Saulo, Lorena, Ricardo & Michele · 17 a 22 de outubro",
+    "destination": "Chapada Diamantina, Bahia",
+    "startDate": "2026-10-17",
+    "endDate": "2026-10-22",
+    "travelers": [
+      {
+        "name": "Saulo"
+      },
+      {
+        "name": "Lorena"
+      },
+      {
+        "name": "Ricardo"
+      },
+      {
+        "name": "Michele"
+      }
+    ],
+    "modes": [
+      "roadtrip"
+    ],
+    "currency": {
+      "display": "BRL",
+      "local": "BRL",
+      "home": "BRL"
+    },
+    "storagePrefix": "chapada2026",
+    "palette": "desert",
+    "extraPages": [
+      {
+        "file": "opcoes.html",
+        "label": "🍽️ Cardápio de opções"
+      }
+    ],
+    "profile": {
+      "objective": "misto",
+      "secondary": [
+        "gastronomia"
+      ],
+      "intensity": "media",
+      "pace": "tranquilo",
+      "trekLimit": "trilhas curtas e planas como padrão; trilhas mais longas só como opção para quem quiser, nunca obrigatórias para o grupo",
+      "sports": [],
+      "mustDo": [
+        "Chegar em Juazeiro na quinta 22/10 ainda com sol, para emendar quinta à noite, sexta e o fim de semana inteiro em casa (decisão de 23/08/2026)",
+        "Cachoeira do Buracão (escolha da Michele para 20/10)",
+        "Grutas de Iraquara — Lapa Doce, Pratinha e Gruta Azul (escolha da Michele para 18/10)"
+      ],
+      "wontDo": [
+        "Trilhas longas de alto desnível como programa obrigatório",
+        "Poço Encantado (Itaetê) — descartado pelo grupo em 08/08/2026: fora da janela dos raios de sol em outubro",
+        "Cachoeira do Sossego (Lençóis) — 14 km de trilha, fora do perfil",
+        "Cachoeira da Fumaça (Vale do Capão) — descartada pelo grupo em 09/08/2026: 12 km ida e volta, primeiros 2 km de subida íngreme, guia obrigatório",
+        "Vale do Capão — cai junto com a Fumaça, que era o único motivo de entrar como pernoite",
+        "Dirigir à noite — deslocamentos de carro devem acontecer à luz do dia, salvo caso extremo (decisão de 09/08/2026)",
+        "Pernoite em Morro do Chapéu — cortado em 23/08/2026 com a antecipação da volta; a cidade vira parada da estrada de volta"
+      ],
+      "decisionMaker": "Saulo"
+    },
+    "budget": null,
+    "customCss": "\n/* ─── opcoes.html — cardápio de opções ─── */\n.filtros { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 2rem; }\n.filtro-btn {\n  font: inherit; font-size: .85rem; font-weight: 600; cursor: pointer;\n  padding: .45rem .9rem; border-radius: 999px;\n  border: 1px solid var(--border); background: var(--surface); color: var(--text-muted);\n  transition: background .15s, color .15s, border-color .15s;\n}\n.filtro-btn:hover { border-color: var(--primary); color: var(--text); }\n.filtro-btn.ativo { background: var(--primary); border-color: var(--primary); color: var(--white); }\n\n.dia-bloco { margin: 0 0 2.75rem; }\n.dia-cab { margin: 0 0 1rem; }\n.dia-tit {\n  display: flex; align-items: center; gap: .6rem; flex-wrap: wrap;\n  margin: 0 0 .35rem; font-size: 1.25rem;\n}\n.dia-chip {\n  font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;\n  padding: .25rem .6rem; border-radius: 999px;\n  background: var(--bg-alt); color: var(--primary); border: 1px solid var(--border);\n}\n.dia-ancora { margin: 0; font-size: .9rem; color: var(--text-muted); }\n\n.opt-grid {\n  display: grid; gap: 1rem;\n  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));\n}\n.opt-card {\n  border: 1px solid var(--border); border-left: 3px solid var(--border);\n  border-radius: var(--radius); background: var(--surface); padding: 1rem 1.1rem;\n}\n.opt-card.sel-ok { border-left-color: var(--ok); }\n.opt-card.sel-duv { border-left-color: var(--warn); }\n.opt-card.sel-conf { border-left-color: var(--danger); }\n.opt-top {\n  display: flex; align-items: center; justify-content: space-between;\n  gap: .5rem; margin: 0 0 .5rem;\n}\n.opt-selo { font-size: .75rem; font-weight: 700; color: var(--text-muted); }\n.sel-ok .opt-selo { color: var(--ok); }\n.sel-duv .opt-selo { color: var(--warn); }\n.sel-conf .opt-selo { color: var(--danger); }\n.opt-tipo {\n  font-size: .68rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;\n  color: var(--text-light);\n}\n.opt-nome { margin: 0 0 .3rem; font-size: 1rem; line-height: 1.35; }\n.opt-onde { margin: 0 0 .5rem; font-size: .8rem; font-weight: 600; color: var(--primary); }\n.opt-nota { margin: 0; font-size: .88rem; line-height: 1.55; color: var(--text-muted); }\n\n.rest-lista { margin: .5rem 0 0; padding-left: 1.1rem; }\n.rest-lista li { font-size: .88rem; line-height: 1.6; color: var(--text-muted); }\n\n@media (max-width: 640px) {\n  .opt-grid { grid-template-columns: 1fr; }\n  .filtros { gap: .4rem; }\n  .filtro-btn { font-size: .8rem; padding: .4rem .75rem; }\n}\n"
+  },
+  "features": {
+    "currency": false,
+    "map": true
+  },
+  "sources": {
+    "rotas": {
+      "label": "Consultas de rota — distâncias e tempos entre cidades",
+      "consultadoEm": "2026-08-23",
+      "kind": "agregador"
+    },
+    "guia-chapada": {
+      "label": "Guia Chapada Diamantina — atrativos, acessos e horários",
+      "url": "https://www.guiachapadadiamantina.com.br/",
+      "consultadoEm": "2026-08-23",
+      "kind": "blog"
+    },
+    "poco-azul": {
+      "label": "Poço Azul — janela dos raios de sol e taxa de entrada",
+      "consultadoEm": "2026-08-08",
+      "kind": "operador"
+    }
+  },
+  "days": [
+    {
+      "num": 1,
+      "date": "2026-10-17",
+      "emoji": "🚗",
+      "city": "Lençóis",
+      "title": "A estrada",
+      "route": "Juazeiro → Lençóis",
+      "location": "lencois",
+      "blocks": [
+        {
+          "time": "06h30 – 14h · DIA INTEIRO",
+          "title": "🚗 Juazeiro → Lençóis",
+          "items": [
+            "BR-407 até o sul, depois BR-242 para o oeste. É o trecho mais longo da viagem inteira.",
+            "⚠️ Saída às 6h30 para chegar por volta das 14h com o sol alto. Saindo depois das 10h, a última hora cai no escuro.",
+            "💡 Abastecer e almoçar no caminho — Senhor do Bonfim e Jacobina têm a melhor estrutura da rota.",
+            "📍 <a href=\"https://www.google.com/maps/dir/Juazeiro,+BA/Len%C3%A7%C3%B3is,+BA\" target=\"_blank\">Google Maps</a> · <a href=\"https://www.waze.com/live-map/directions?to=ll.-12.5614%2C-41.3903\" target=\"_blank\">Waze</a>"
+          ],
+          "duration": {
+            "text": "489 km · ~7h10",
+            "status": "cotado",
+            "source": "rotas"
+          }
+        },
+        {
+          "time": "14h – 18h · TARDE",
+          "title": "🏨 Chegada e check-in em Lençóis",
+          "items": [
+            "Base das duas primeiras noites, dentro do conjunto tombado pelo IPHAN.",
+            "Tarde sem programa: depois de 7h de estrada, o dia acabou."
+          ]
+        },
+        {
+          "time": "19h em diante · NOITE",
+          "title": "🍽️ Opções de jantar",
+          "items": [
+            "✅ Escolha da Michele: jantar no Quilombola e volta pelo centro histórico iluminado.",
+            "💡 O menu degustação do Paraguassu é tradicional aos sábados — este é o único sábado da viagem, então escolher o Quilombola significa abrir mão dele."
+          ],
+          "options": [
+            {
+              "title": "✅ Quilombola",
+              "text": "Godó de banana verde, cortado de palma. Cozinha baiana que quase não se acha fora daqui."
+            },
+            {
+              "title": "✅ Volta pelo centro histórico iluminado",
+              "text": "Mesa na calçada, costuma ter música ao vivo. Tudo a pé, sem pegar o carro."
+            },
+            {
+              "title": "Paraguassu — menu degustação",
+              "text": "Tradicional aos sábados. Alternativa ao Quilombola, não soma."
+            },
+            {
+              "title": "Direto para a pousada",
+              "text": "Escolha legítima depois de 7h ao volante."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "num": 2,
+      "date": "2026-10-18",
+      "emoji": "🕳️",
+      "city": "Lençóis",
+      "title": "Grutas de Iraquara e Pai Inácio",
+      "route": "Lençóis → Iraquara → Pai Inácio → Lençóis",
+      "location": "lencois",
+      "blocks": [
+        {
+          "time": "08h30 – 10h · MANHÃ",
+          "title": "🚗 Lençóis → Grutas de Iraquara",
+          "items": [
+            "Pela BR-242 para o oeste. O Morro do Pai Inácio fica nesta mesma estrada, no km 232 — dá para deixá-lo para a volta.",
+            "📍 <a href=\"https://www.google.com/maps/dir/Len%C3%A7%C3%B3is,+BA/Gruta+da+Lapa+Doce,+Iraquara,+BA\" target=\"_blank\">Google Maps</a>"
+          ],
+          "duration": {
+            "text": "68 km · ~1h30",
+            "status": "cotado",
+            "source": "rotas"
+          }
+        },
+        {
+          "time": "10h – 16h · DIA",
+          "title": "🕳️ As três grutas",
+          "items": [
+            "✅ Escolha da Michele: Lapa Doce, Pratinha e Gruta Azul, no mesmo circuito.",
+            "⚠️ Guia obrigatório na Lapa Doce, contratado na portaria. Levar lanterna e calçado fechado com aderência.",
+            "💡 A Pratinha resolve o almoço e tem flutuação de máscara no rio de água transparente.",
+            "⚠️ As três num dia é um combo cheio — se o grupo estiver lento, a Gruta Azul é a que sai."
+          ],
+          "price": {
+            "text": "entrada por atrativo, cobrada na hora",
+            "status": "estimado",
+            "source": "guia-chapada"
+          }
+        },
+        {
+          "time": "16h – 18h · FIM DE TARDE",
+          "title": "⛰️ Morro do Pai Inácio, no caminho de volta",
+          "items": [
+            "✅ Escolha da Michele. 26 km de Lençóis, na beira da BR-242 — fica exatamente no caminho de volta das grutas, sem quilômetro extra.",
+            "Subida de 20 a 30 minutos por escadaria e trilha curta até o platô.",
+            "⚠️ <strong>O conflito do dia:</strong> no pôr do sol (17h42) a descida e os 26 km de volta a Lençóis caem por volta das 18h45, no escuro — contra a regra da luz do dia. Subindo por volta das 16h, dá para ver a vista com o sol baixo e ainda voltar claro."
+          ],
+          "duration": {
+            "text": "26 km · ~30–40 min até Lençóis",
+            "status": "cotado",
+            "source": "rotas"
+          }
+        }
+      ]
+    },
+    {
+      "num": 3,
+      "date": "2026-10-19",
+      "emoji": "💧",
+      "city": "Mucugê",
+      "title": "Poço Azul e Igatu, descendo para o sul",
+      "route": "Lençóis → Nova Redenção → Igatu → Mucugê",
+      "location": "mucuge",
+      "blocks": [
+        {
+          "time": "09h – 10h40 · MANHÃ",
+          "title": "🚗 Lençóis → Poço Azul (Nova Redenção)",
+          "items": [
+            "Mudança de base: as malas vão no carro, a próxima cama é em Mucugê.",
+            "📍 <a href=\"https://www.google.com/maps/dir/Len%C3%A7%C3%B3is,+BA/Po%C3%A7o+Azul,+Nova+Reden%C3%A7%C3%A3o,+BA\" target=\"_blank\">Google Maps</a>"
+          ],
+          "duration": {
+            "text": "~95 km · ~1h40",
+            "status": "cotado",
+            "source": "rotas"
+          }
+        },
+        {
+          "time": "12h30 – 14h · MEIO-DIA",
+          "title": "💧 Poço Azul — flutuação na caverna alagada",
+          "items": [
+            "⚠️ <strong>Hora marcada de verdade:</strong> os raios de sol entram na água entre 12h30 e 14h, e a janela do ano fecha em 20/10. É o único compromisso com horário da viagem inteira.",
+            "⚠️ Banho obrigatório antes de entrar, para tirar o protetor solar. Colete e máscara inclusos na taxa.",
+            "💡 O APA Restaurante fica anexo e resolve o almoço depois da flutuação."
+          ],
+          "price": {
+            "text": "R$ 30 por pessoa",
+            "status": "estimado",
+            "source": "poco-azul"
+          },
+          "tip": "Janela fecha 20/10"
+        },
+        {
+          "time": "14h30 – 15h50 · TARDE",
+          "title": "🚗 Poço Azul → Igatu",
+          "items": [
+            "Passando por Andaraí. Os últimos 8 km até Igatu são de estrada de pedra.",
+            "📍 <a href=\"https://www.google.com/maps/dir/Nova+Reden%C3%A7%C3%A3o,+BA/Igatu,+Andara%C3%AD,+BA\" target=\"_blank\">Google Maps</a>"
+          ],
+          "duration": {
+            "text": "~60 km · ~1h20",
+            "status": "cotado",
+            "source": "rotas"
+          }
+        },
+        {
+          "time": "16h – 17h15 · FIM DE TARDE",
+          "title": "🏚️ Igatu — o que couber antes do sol cair",
+          "items": [
+            "⚠️ <strong>Só cabe uma coisa aqui.</strong> Com o Poço Azul de manhã, sobra pouco mais de uma hora em Igatu antes de pegar os 22 km até Mucugê ainda claro.",
+            "✅ A Michele escolheu a Gruna do Brejo — visita com guia, à luz de velas, na mina escavada à mão.",
+            "💡 Se o Poço Azul sair do dia, Igatu ganha a tarde inteira e todas as opções abaixo entram."
+          ],
+          "options": [
+            {
+              "title": "✅ Gruna do Brejo",
+              "text": "Mina de garimpo visitada à luz de velas, com guia. Escolha da Michele."
+            },
+            {
+              "title": "Vila de Igatu e as ruínas",
+              "text": "Becos de pedra encaixada sem argamassa e as ruínas do bairro Luís dos Santos. Acesso livre, tudo a pé."
+            },
+            {
+              "title": "Galeria Arte e Memória",
+              "text": "Esculturas e utensílios de garimpeiros. Ter a dom, 10h às 18h."
+            },
+            {
+              "title": "Casa de Lindaura",
+              "text": "Histórias de família do garimpo, com bolinho de chuva e café."
+            }
+          ]
+        },
+        {
+          "time": "17h15 – 17h45 · CHEGADA",
+          "title": "🚗 Igatu → Mucugê",
+          "items": [
+            "Base das próximas duas noites.",
+            "⚠️ Sol se põe às 17h42 — este trecho precisa começar até as 17h15."
+          ],
+          "duration": {
+            "text": "22 km · ~30 min",
+            "status": "cotado",
+            "source": "rotas"
+          }
+        }
+      ]
+    },
+    {
+      "num": 4,
+      "date": "2026-10-20",
+      "emoji": "🏞️",
+      "city": "Mucugê",
+      "title": "O Buracão",
+      "route": "Mucugê → Ibicoara → Buracão → Mucugê",
+      "location": "mucuge",
+      "blocks": [
+        {
+          "time": "07h – 09h30 · MANHÃ",
+          "title": "🚗 Mucugê → entrada do Buracão",
+          "items": [
+            "⚠️ <strong>Correção importante:</strong> não é 1h20 como estava no cardápio antigo. São 70 km de asfalto até Ibicoara mais 30 km de cascalho até a portaria.",
+            "⚠️ Guia obrigatório, contratado em Ibicoara ou na portaria. Combinar na véspera.",
+            "📍 <a href=\"https://www.google.com/maps/dir/Mucug%C3%AA,+BA/Cachoeira+do+Burac%C3%A3o,+Ibicoara,+BA\" target=\"_blank\">Google Maps</a>"
+          ],
+          "duration": {
+            "text": "118 km · ~2h30",
+            "status": "cotado",
+            "source": "rotas"
+          }
+        },
+        {
+          "time": "09h30 – 14h30 · DIA",
+          "title": "🏞️ Cachoeira do Buracão",
+          "items": [
+            "✅ Escolha da Michele — e o programa mais impressionante da viagem.",
+            "3 km de trilha descrita como fácil e quase toda plana, cerca de 1h de caminhada até a queda de 85 m dentro do cânion de paredão vermelho.",
+            "💡 No trecho final cada um escolhe: entrar nadando no cânion até o pé da queda, ou ficar no mirante. Não precisa ser unânime.",
+            "⚠️ Levar sapatilha aquática, água e lanche — não há estrutura na trilha."
+          ],
+          "price": {
+            "text": "guia + entrada, cobrados na portaria",
+            "status": "estimado",
+            "source": "guia-chapada"
+          }
+        },
+        {
+          "time": "14h30 – 17h · VOLTA",
+          "title": "🚗 Buracão → Mucugê",
+          "items": [
+            "⚠️ Os 30 km de cascalho precisam ser feitos com luz. Saindo da cachoeira até as 15h, chega-se em Mucugê antes do pôr do sol com folga.",
+            "💡 Quem não quiser encarar o Buracão fica em Mucugê: o Projeto Sempre-Viva tem 1,5 km de trilha fácil até a Cachoeira do Tiburtino, ali mesmo."
+          ],
+          "duration": {
+            "text": "118 km · ~2h30",
+            "status": "cotado",
+            "source": "rotas"
+          }
+        }
+      ]
+    },
+    {
+      "num": 5,
+      "date": "2026-10-21",
+      "emoji": "🏛️",
+      "city": "Lençóis",
+      "title": "Mucugê de manhã, volta ao norte",
+      "route": "Mucugê → Lençóis",
+      "location": "lencois-volta",
+      "blocks": [
+        {
+          "time": "08h – 10h · MANHÃ",
+          "title": "🏛️ Uma volta por Mucugê antes de sair",
+          "items": [
+            "Dá para fazer uma coisa antes de pegar a estrada, não as duas.",
+            "💡 O centro tombado são três ruas de casario do século XIX — resolve-se a pé antes do café."
+          ],
+          "options": [
+            {
+              "title": "Centro histórico de Mucugê",
+              "text": "Conjunto tombado pelo IPHAN em 1980: 300 casas térreas e 10 sobrados em três ruas."
+            },
+            {
+              "title": "Cemitério Santa Isabel (\"Bizantino\")",
+              "text": "Mausoléus brancos que imitam igrejas em miniatura, encravados na encosta. Único das Américas nesse estilo."
+            },
+            {
+              "title": "Projeto Sempre-Viva",
+              "text": "Trilha fácil de 1,5 km até a Cachoeira do Tiburtino, se ninguém tiver feito no dia do Buracão."
+            }
+          ]
+        },
+        {
+          "time": "10h – 12h20 · TRAVESSIA",
+          "title": "🚗 Mucugê → Lençóis",
+          "items": [
+            "Passa por Andaraí e Igatu — se algo de Igatu ficou faltando na segunda, é aqui que ele cabe.",
+            "📍 <a href=\"https://www.google.com/maps/dir/Mucug%C3%AA,+BA/Len%C3%A7%C3%B3is,+BA\" target=\"_blank\">Google Maps</a>"
+          ],
+          "duration": {
+            "text": "114 km · ~2h20",
+            "status": "cotado",
+            "source": "rotas"
+          }
+        },
+        {
+          "time": "14h – 17h30 · TARDE",
+          "title": "🏊 Rio Serrano e Salão de Areias Coloridas",
+          "items": [
+            "✅ Escolha da Michele — e o encaixe mais confortável do roteiro: os dois ficam dentro do perímetro urbano de Lençóis, a pé da pousada.",
+            "Piscinas naturais escavadas na pedra pelo rio, com escorregadores rasos. O Salão de Areias Coloridas fica na mesma caminhada.",
+            "💡 Última noite da viagem — o centro de Lençóis é o melhor polo de comida do roteiro."
+          ]
+        }
+      ]
+    },
+    {
+      "num": 6,
+      "date": "2026-10-22",
+      "emoji": "🏠",
+      "city": "Juazeiro",
+      "title": "Volta para casa",
+      "route": "Lençóis → Morro do Chapéu → Jacobina → Juazeiro",
+      "blocks": [
+        {
+          "time": "08h · SAÍDA",
+          "title": "🚗 Lençóis → Juazeiro",
+          "items": [
+            "✅ Escolha da Michele: sair às 8h direto para casa.",
+            "Saindo às 8h, chega-se em Juazeiro por volta das 16h já contando a parada de almoço — com sol de sobra e a quinta à noite livre.",
+            "📍 <a href=\"https://www.google.com/maps/dir/Len%C3%A7%C3%B3is,+BA/Juazeiro,+BA\" target=\"_blank\">Google Maps</a>"
+          ],
+          "duration": {
+            "text": "489 km · ~7h10",
+            "status": "cotado",
+            "source": "rotas"
+          }
+        },
+        {
+          "time": "10h45 – 11h30 · PARADA OPCIONAL",
+          "title": "💦 Cachoeira do Ferro Doido, em Morro do Chapéu",
+          "items": [
+            "💡 <strong>Ela voltou ao roteiro.</strong> Com a volta pela BR-407, Morro do Chapéu está no caminho de casa — a cachoeira fica a 18 km do centro e custa cerca de 40 minutos ida e volta.",
+            "Mirante sobre uma queda de 90 m dentro de um cânion. Abre de segunda a sexta, 8h às 18h — quinta é dia útil.",
+            "⚠️ Horário vindo de agregador, não de fonte oficial. Confirmar por telefone com a prefeitura antes de contar com ele.",
+            "⚠️ Só entra se o grupo estiver disposto a chegar em casa por volta das 17h em vez de 16h."
+          ],
+          "duration": {
+            "text": "177 km de Lençóis · ~2h40",
+            "status": "cotado",
+            "source": "rotas"
+          }
+        },
+        {
+          "time": "13h – 14h · ALMOÇO",
+          "title": "🍽️ Almoço em Jacobina",
+          "items": [
+            "É o encaixe natural de horário e a melhor estrutura da rota: cerca de 4h30 depois da saída, com a metade do caminho já feita.",
+            "⚠️ Restaurante ainda não escolhido — a pergunta \"onde almoçar?\" da Michele continua em aberto.",
+            "💡 Alternativa mais tarde: Senhor do Bonfim, a cerca de 1h de Jacobina."
+          ],
+          "duration": {
+            "text": "108 km de Morro do Chapéu · ~1h55",
+            "status": "cotado",
+            "source": "rotas"
+          }
+        },
+        {
+          "time": "16h · CHEGADA",
+          "title": "🏠 Juazeiro",
+          "items": [
+            "✅ Escolha da Michele: sushi à noite.",
+            "O fim de semana em casa começa aqui — sexta livre, mais sábado e domingo. Cardápio de rio, ilhas, jetski e churrasco em <code>pesquisa/03-final-de-semana-juazeiro.md</code>."
+          ],
+          "duration": {
+            "text": "~204 km de Jacobina · ~2h30",
+            "status": "cotado",
+            "source": "rotas"
+          }
+        }
+      ]
+    }
+  ],
+  "stops": [
+    {
+      "n": 1,
+      "name": "Juazeiro",
+      "emoji": "🏠",
+      "days": "Saída sáb 17 · volta qui 22",
+      "dayRange": "Origem",
+      "lat": -9.4111,
+      "lng": -40.4986,
+      "category": "city",
+      "distNext": "489 km · ~7h10",
+      "highlights": [
+        "Saída às 6h30",
+        "BR-407 + BR-242",
+        "Volta na quinta, com sol"
+      ]
+    },
+    {
+      "n": 2,
+      "name": "Lençóis",
+      "emoji": "🏛️",
+      "days": "Dias 1, 2 e 5 · 3 noites",
+      "dayRange": "Base do centro",
+      "lat": -12.5614,
+      "lng": -41.3903,
+      "category": "city",
+      "distNext": "~95 km até o Poço Azul · ~1h40",
+      "highlights": [
+        "Grutas de Iraquara — Lapa Doce, Pratinha, Gruta Azul",
+        "Morro do Pai Inácio, 26 km pela BR-242",
+        "Rio Serrano e Salão de Areias Coloridas, a pé",
+        "Centro tombado e o melhor polo de comida da viagem"
+      ]
+    },
+    {
+      "n": 3,
+      "name": "Mucugê",
+      "emoji": "🏞️",
+      "days": "Dias 3 e 4 · 2 noites",
+      "dayRange": "Base do sul",
+      "lat": -13.0053,
+      "lng": -41.3706,
+      "category": "mountain",
+      "distNext": "114 km de volta a Lençóis · ~2h20",
+      "highlights": [
+        "Cachoeira do Buracão, em Ibicoara (2h30 por trecho)",
+        "Igatu e a Gruna do Brejo, a 22 km",
+        "Centro tombado e Cemitério Bizantino",
+        "Projeto Sempre-Viva, alternativa leve ao Buracão"
+      ]
+    }
+  ],
+  "lodging": {
+    "locations": [
+      {
+        "id": "lencois",
+        "name": "Lençóis — primeira estadia",
+        "emoji": "🏛️",
+        "nights": "2 noites · 17 e 18/10",
+        "dates": [
+          {
+            "checkin": "2026-10-17",
+            "checkout": "2026-10-19",
+            "label": "Dias 1 e 2"
+          }
+        ],
+        "options": []
+      },
+      {
+        "id": "mucuge",
+        "name": "Mucugê",
+        "emoji": "🏞️",
+        "nights": "2 noites · 19 e 20/10",
+        "dates": [
+          {
+            "checkin": "2026-10-19",
+            "checkout": "2026-10-21",
+            "label": "Dias 3 e 4"
+          }
+        ],
+        "options": []
+      },
+      {
+        "id": "lencois-volta",
+        "name": "Lençóis — última noite",
+        "emoji": "🌙",
+        "nights": "1 noite · 21/10",
+        "dates": [
+          {
+            "checkin": "2026-10-21",
+            "checkout": "2026-10-22",
+            "label": "Dia 5"
+          }
+        ],
+        "options": []
+      }
+    ],
+    "pendente": "Padrão de hospedagem não definido: categoria, faixa de diária e se serão dois quartos ou uma casa para os quatro. Lençóis aparece em duas estadias separadas (17–19 e 21–22) — vale perguntar à mesma pousada se ela segura as três noites, mesmo com o intervalo em Mucugê.",
+    "pendencias": [
+      "Padrão de hospedagem: categoria, faixa de diária, dois quartos ou casa inteira",
+      "Segunda 19/10 é o dia mais carregado do roteiro — decidir se o Poço Azul entra e o que sai de Igatu em troca",
+      "Ponto de almoço da volta: Jacobina é o encaixe natural de horário, restaurante ainda não escolhido"
+    ]
+  },
+  "transport": {},
+  "costs": {
+    "categories": []
+  },
+  "todos": [
+    {
+      "city": "Lençóis",
+      "emoji": "🏛️",
+      "subtitle": "Dias 1, 2 e 5 — 3 noites em duas estadias",
+      "items": [
+        {
+          "id": "lencois-hotel-1",
+          "text": "Reservar as noites de 17 e 18/10",
+          "autoKey": "lencois",
+          "autoType": "booking"
+        },
+        {
+          "id": "lencois-hotel-2",
+          "text": "Reservar a noite de 21/10 — de preferência na mesma pousada",
+          "autoKey": "lencois-volta",
+          "autoType": "booking"
+        },
+        {
+          "id": "lencois-guia-grutas",
+          "text": "Confirmar guia da Lapa Doce e horário do circuito das grutas"
+        },
+        {
+          "id": "lencois-jantar-sab",
+          "text": "Reservar mesa no Quilombola para sábado 17"
+        }
+      ]
+    },
+    {
+      "city": "Mucugê",
+      "emoji": "🏞️",
+      "subtitle": "Dias 3 e 4 — 2 noites",
+      "items": [
+        {
+          "id": "mucuge-hotel",
+          "text": "Reservar as noites de 19 e 20/10",
+          "autoKey": "mucuge",
+          "autoType": "booking"
+        },
+        {
+          "id": "mucuge-guia-buracao",
+          "text": "Contratar guia do Buracão com antecedência (obrigatório)"
+        },
+        {
+          "id": "mucuge-poco-azul",
+          "text": "Confirmar por telefone a janela dos raios do Poço Azul para 19/10"
+        },
+        {
+          "id": "mucuge-gruna",
+          "text": "Confirmar visita guiada à Gruna do Brejo, em Igatu"
+        }
+      ]
+    },
+    {
+      "city": "Geral",
+      "emoji": "🎒",
+      "subtitle": "Vale para a viagem inteira",
+      "items": [
+        {
+          "id": "geral-carro",
+          "text": "Revisar o carro antes de sair — pneus, estepe, óleo, freios"
+        },
+        {
+          "id": "geral-dinheiro",
+          "text": "Dinheiro vivo para taxas de atrativo, guias e artesanato"
+        },
+        {
+          "id": "geral-sapatilha",
+          "text": "Sapatilha aquática e calçado com aderência para pedra molhada"
+        },
+        {
+          "id": "geral-mochila",
+          "text": "Mochila de ataque: 1,5 L de água por pessoa, protetor, repelente, troca seca"
+        },
+        {
+          "id": "geral-lanterna",
+          "text": "Lanterna de cabeça — grutas e a Gruna do Brejo"
+        },
+        {
+          "id": "geral-ferro-doido",
+          "text": "Confirmar horário do Ferro Doido com a prefeitura de Morro do Chapéu"
+        },
+        {
+          "id": "geral-almoco-volta",
+          "text": "Escolher onde almoçar em Jacobina na volta"
+        }
+      ]
+    }
+  ],
+  "alerts": [
+    {
+      "emoji": "☀️",
+      "title": "Poço Azul — a janela fecha em 20/10 e só sobrou o dia 19",
+      "level": "high",
+      "items": [
+        "Os raios de sol atravessam a água entre 12h30 e 14h, e o fenômeno só acontece até 20/10.",
+        "Com o roteiro novo, o dia 20 virou o Buracão (dia inteiro, 5h de estrada). Ou o Poço Azul acontece na segunda 19, ou ele sai da viagem.",
+        "Se entrar no dia 19, ele manda no dia: saída de Lençóis às 9h para estar na água às 12h30."
+      ]
+    },
+    {
+      "emoji": "⚖️",
+      "title": "Segunda 19 é o dia mais carregado do roteiro",
+      "level": "high",
+      "items": [
+        "São 3h30 de carro somadas (Lençóis → Poço Azul → Igatu → Mucugê) mais duas atrações, num dia de mudança de base.",
+        "O perfil do grupo é ritmo tranquilo: 1 atividade por dia e até 2h de deslocamento. Este dia estoura os dois limites.",
+        "Saídas possíveis: (a) manter os dois e aceitar que a segunda é o dia corrido da viagem, com Igatu reduzido à Gruna do Brejo; (b) tirar o Poço Azul e dar a tarde inteira a Igatu; (c) manter o Poço Azul e empurrar Igatu para a manhã de quarta 21, que passa por lá de novo."
+      ]
+    },
+    {
+      "emoji": "🚗",
+      "title": "O Buracão está a 2h30 de Mucugê, não a 1h20",
+      "level": "high",
+      "items": [
+        "Consulta de 23/08/2026: são 118 km de Mucugê até a portaria — 70 km de asfalto até Ibicoara e mais 30 km de cascalho. O cardápio antigo dizia 1h20, e estava errado.",
+        "Na prática o dia 20 é 5h de carro mais 3 km de trilha. Sair de Mucugê às 7h e deixar a cachoeira até as 15h para não pegar o cascalho no escuro."
+      ]
+    },
+    {
+      "emoji": "🌅",
+      "title": "Todo deslocamento de carro à luz do dia",
+      "level": "high",
+      "items": [
+        "Regra do grupo (09/08/2026): estrada só entre o nascer e o pôr do sol.",
+        "Em outubro o sol nasce por volta das 5h17 e se põe às 17h42, com o crepúsculo civil terminando às 18h04.",
+        "Dois pontos de atrito no roteiro novo: o Pai Inácio ao pôr do sol (volta a Lençóis por volta das 18h45) e a chegada em Mucugê na segunda, que precisa começar até as 17h15."
+      ]
+    },
+    {
+      "emoji": "🏨",
+      "title": "Lençóis vira duas estadias separadas",
+      "level": "medium",
+      "items": [
+        "Com a volta pelo norte, dorme-se em Lençóis nos dias 17, 18 e 21 — mas com Mucugê no meio.",
+        "Vale perguntar à pousada se ela segura as três noites com o intervalo, para desfazer a mala em um lugar só nas pontas.",
+        "Morro do Chapéu deixou de ser pernoite: a cidade agora é parada da estrada de volta."
+      ]
+    },
+    {
+      "emoji": "🌧️",
+      "title": "Outubro é a virada da seca para as chuvas",
+      "level": "medium",
+      "items": [
+        "Outubro fecha a estação seca. Cachoeiras com volume mais baixo e trilhas de leito de rio menos escorregadias.",
+        "Já começa a haver pancadas de chuva — os 30 km de cascalho do Buracão são o trecho mais sensível a isso."
+      ]
+    }
+  ],
+  "notes": {
+    "index": [
+      {
+        "emoji": "🍽️",
+        "title": "O roteiro é um encaixe, não uma agenda",
+        "text": "Os horários mostram o que cabe no dia, não o que está marcado. Nada aqui está reservado, e pular qualquer coisa não quebra nada. A aba <strong>Cardápio de opções</strong> tem tudo o que está sobre a mesa hoje, incluindo o que não coube neste encaixe."
+      },
+      {
+        "emoji": "✅",
+        "title": "O que está marcado com ✅",
+        "text": "São as escolhas que a Michele mandou em 23/08/2026. Onde elas conflitam com horário, distância ou com a regra da luz do dia, o conflito está escrito no próprio bloco — nenhuma escolha foi descartada em silêncio."
+      }
+    ],
+    "hospedagem": [
+      {
+        "emoji": "🎯",
+        "title": "Primeiro o padrão, depois a busca",
+        "text": "Antes de cotar pousada vale fechar: categoria, faixa de diária por noite e se serão dois quartos de casal ou uma casa inteira para os quatro. São 5 noites em 3 estadias."
+      },
+      {
+        "emoji": "🔁",
+        "title": "Lençóis aparece duas vezes",
+        "text": "Dias 17–19 e 21–22. Se a mesma pousada segurar as duas estadias, dá para negociar as três noites juntas e deixar mala guardada."
+      }
+    ]
+  }
+}
