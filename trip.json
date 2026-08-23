@@ -1,0 +1,123 @@
+{
+  "_state": {
+    "phase": "pesquisa",
+    "completed": ["descoberta"],
+    "updatedAt": "2026-08-09"
+  },
+  "meta": {
+    "slug": "chapada-diamantina-2026",
+    "title": "Chapada Diamantina 2026",
+    "subtitle": "Saulo, Lorena, Ricardo & Michele",
+    "destination": "Chapada Diamantina, Bahia",
+    "startDate": "2026-10-17",
+    "endDate": "2026-10-23",
+    "travelers": [
+      { "name": "Saulo" },
+      { "name": "Lorena" },
+      { "name": "Ricardo" },
+      { "name": "Michele" }
+    ],
+    "modes": ["roadtrip"],
+    "currency": { "display": "BRL", "local": "BRL", "home": "BRL" },
+    "storagePrefix": "chapada2026",
+    "palette": "desert",
+    "profile": {
+      "objective": "misto",
+      "secondary": ["gastronomia"],
+      "intensity": "media",
+      "pace": "tranquilo",
+      "trekLimit": "trilhas curtas e planas como padrão; trilhas mais longas só como opção para quem quiser, nunca obrigatórias para o grupo",
+      "sports": [],
+      "mustDo": [
+        "Chegar em Juazeiro na sexta 23/10 a tempo de aproveitar o fim de semana em casa (decisão de 09/08/2026)"
+      ],
+      "wontDo": [
+        "Trilhas longas de alto desnível como programa obrigatório",
+        "Poço Encantado (Itaetê) — descartado pelo grupo em 08/08/2026: fora da janela dos raios de sol em outubro",
+        "Cachoeira do Sossego (Lençóis) — 14 km de trilha, fora do perfil",
+        "Cachoeira da Fumaça (Vale do Capão) — descartada pelo grupo em 09/08/2026: 12 km ida e volta, primeiros 2 km de subida íngreme, 2h subindo e 1h30 descendo, guia obrigatório",
+        "Vale do Capão — cai junto com a Fumaça, que era o único motivo de entrar como pernoite",
+        "Dirigir à noite — deslocamentos de carro devem acontecer à luz do dia, salvo caso extremo (decisão de 09/08/2026)"
+      ],
+      "pending": [],
+      "decisionMaker": "Saulo"
+    },
+    "budget": null
+  },
+  "features": { "currency": false, "map": true },
+  "days": [],
+  "stops": [],
+  "lodging": {
+    "locations": [
+      {
+        "city": "Lençóis",
+        "nights": 2,
+        "checkIn": "2026-10-17",
+        "checkOut": "2026-10-19",
+        "role": "Base do centro. Dorme-se dentro do conjunto tombado pelo IPHAN; saída para Ribeirão do Meio, Rio Serrano, Pai Inácio e grutas de Iraquara.",
+        "status": "sem reserva"
+      },
+      {
+        "city": "Mucugê",
+        "nights": 3,
+        "checkIn": "2026-10-19",
+        "checkOut": "2026-10-22",
+        "role": "Base do sul. Saída para Igatu, Buracão (Ibicoara) e o centro tombado de Mucugê. Andaraí é alternativa se a hospedagem pesar.",
+        "status": "sem reserva"
+      },
+      {
+        "city": "Morro do Chapéu",
+        "nights": 1,
+        "checkIn": "2026-10-22",
+        "checkOut": "2026-10-23",
+        "role": "Base da saída. Parte a volta em dois pedaços e evita uma tirada de mais de 8h direta de Mucugê a Juazeiro.",
+        "status": "sem reserva"
+      }
+    ],
+    "pendente": "Padrão de hospedagem não definido: categoria, faixa de diária e se serão dois quartos ou uma casa para os quatro."
+  },
+  "transport": {},
+  "costs": { "categories": [] },
+  "todos": [],
+  "alerts": [
+    {
+      "emoji": "☀️",
+      "title": "Poço Azul — janela dos raios de sol termina em 20/10",
+      "level": "high",
+      "items": [
+        "O fenômeno dos raios de sol no Poço Azul (Nova Redenção) ocorre de 08/02 a 20/10, entre 12h30 e 14h. A viagem (17–24/10) pega apenas os primeiros 4 dias dessa janela.",
+        "Se o Poço Azul entrar no roteiro, ele precisa ficar entre 17 e 20/10 e no horário do meio-dia. Consultado em 2026-08-08 — confirmar com o atrativo antes de fechar."
+      ]
+    },
+    {
+      "emoji": "🌅",
+      "title": "Todo deslocamento de carro à luz do dia",
+      "level": "high",
+      "items": [
+        "Regra do grupo (09/08/2026): estrada só entre o nascer e o pôr do sol. Dirigir à noite apenas em caso extremo.",
+        "Em outubro há cerca de 12h20 de luz na região: sol nasce por volta das 5h17 e se põe às 17h42, com o crepúsculo civil terminando às 18h04. Valores calculados para as coordenadas de Lençóis, Mucugê, Morro do Chapéu e Juazeiro — margem de ~2 min.",
+        "Todos os trechos entre bases cabem na janela com folga, desde que a saída seja pela manhã. O único conflito é o Morro do Pai Inácio ao pôr do sol: a volta a Lençóis (25 km) cairia por volta das 18h45, já no escuro."
+      ]
+    },
+    {
+      "emoji": "🚗",
+      "title": "Quinta 22/10 é o dia mais longo de estrada dentro da Chapada",
+      "level": "medium",
+      "items": [
+        "Mucugê → Morro do Chapéu é o trecho mais longo entre bases: estimado em ~5h30 e ainda não validado no mapa. Sair de Mucugê por volta das 7h30 para chegar às 13h.",
+        "A Cachoeira do Ferro Doido abre de segunda a sexta, 8h às 18h. Ela cabe na tarde de quinta 22 (chegando até 16h) ou na manhã de sexta 23, antes de pegar a BR — são 18 km do centro de Morro do Chapéu. Os dois encaixes caem em dia útil.",
+        "Horário do Ferro Doido vindo de agregador, não de fonte oficial. Confirmar por telefone com a prefeitura de Morro do Chapéu."
+      ]
+    },
+    {
+      "emoji": "🌧️",
+      "title": "Outubro é a virada da seca para as chuvas",
+      "level": "medium",
+      "items": [
+        "Outubro fecha a estação seca (abr–out). Cachoeiras podem estar com volume baixo e trilhas de leito de rio mais fáceis e menos escorregadias.",
+        "Já começa a haver pancadas de chuva — verificar previsão na semana da viagem antes de fechar atrativos dependentes de estrada de terra."
+      ]
+    }
+  ],
+  "notes": {}
+}
