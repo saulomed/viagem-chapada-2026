@@ -166,7 +166,11 @@
     var current = 0, first = true;
 
     D.days.forEach(function (d, i) {
-      var c = el('div', 'cal-day');
+      // <button>, não <div>: o dia precisa ser alcançável por Tab e anunciado
+      // como controle pelos leitores de tela
+      var c = el('button', 'cal-day');
+      c.type = 'button';
+      c.setAttribute('aria-pressed', 'false');
       c.innerHTML =
         '<div class="cal-wd">' + weekday(d.date) + '</div>' +
         '<div class="cal-num">' + fmtBR(d.date) + '</div>' +
@@ -178,7 +182,10 @@
 
     function select(i) {
       current = i;
-      $$('.cal-day', grid).forEach(function (c, j) { c.classList.toggle('active', i === j); });
+      $$('.cal-day', grid).forEach(function (c, j) {
+        c.classList.toggle('active', i === j);
+        c.setAttribute('aria-pressed', i === j ? 'true' : 'false');
+      });
       render(D.days[i]);
       if (!first) {
         setTimeout(function () { window.navigateTo('#dayDetail'); }, 60);
@@ -213,6 +220,11 @@
       var links = [];
       if (b.maps) links.push('<a href="' + b.maps + '" target="_blank" rel="noopener">📍 Google Maps</a>');
       if (b.waze) links.push('<a href="' + b.waze + '" target="_blank" rel="noopener">🧭 Waze</a>');
+      // b.attraction é o slug do card na página de atrações: leva de "o que
+      // fazemos às 16h15" para "o que é esse lugar"
+      if (b.attraction && D.attractionsPage) {
+        links.push('<a href="' + D.attractionsPage + '#' + b.attraction + '">ℹ️ Sobre o lugar</a>');
+      }
 
       var opcoes = (b.options || []).length
         ? '<ol class="day-options">' + b.options.map(renderOption).join('') + '</ol>'
@@ -262,9 +274,34 @@
           '<h3>' + (d.emoji || '') + ' ' + d.title + '</h3>' +
           (d.route ? '<div class="route">' + d.route + '</div>' : '') +
         '</div>' +
-        '<div class="day-body">' + (d.blocks || []).map(renderBlock).join('') + stayHTML + '</div>';
+        '<div class="day-body">' + (d.blocks || []).map(renderBlock).join('') + stayHTML +
+          dayNavHTML(d) +
+        '</div>';
 
+      $$('.day-nav-btn', detail).forEach(function (b) {
+        b.addEventListener('click', function () { select(+b.dataset.go); });
+      });
       reconvert(detail);
+    }
+
+    // O detalhe do dia é longo: quem chega ao fim teria de rolar tudo de volta
+    // até o calendário só para ver o dia seguinte.
+    function dayNavHTML(d) {
+      var i = D.days.indexOf(d);
+      if (D.days.length < 2) return '';
+      function botao(j, dir, rotulo) {
+        var o = D.days[j];
+        if (!o) return '<span></span>';
+        return '<button type="button" class="day-nav-btn ' + dir + '" data-go="' + j + '">' +
+          '<span class="day-nav-dir">' + rotulo + '</span>' +
+          '<span class="day-nav-day">' + (o.emoji || '') + ' ' + weekday(o.date) + ' ' + fmtBR(o.date) + '</span>' +
+          '<span class="day-nav-title">' + o.title + '</span>' +
+        '</button>';
+      }
+      return '<nav class="day-nav" aria-label="Navegação entre os dias">' +
+        botao(i - 1, 'prev', '← Dia anterior') +
+        botao(i + 1, 'next', 'Próximo dia →') +
+      '</nav>';
     }
 
     select(0);
@@ -505,20 +542,112 @@
   }
 
   // ═══════════ mapa ═══════════
+  function gmapsUrl(lat, lng) {
+    return 'https://www.google.com/maps/dir/?api=1&destination=' + lat + ',' + lng + '&travelmode=driving';
+  }
+  function wazeUrl(lat, lng) {
+    return 'https://waze.com/ul?ll=' + lat + ',' + lng + '&navigate=yes';
+  }
+
   function initMap() {
     if (!$('#map') || typeof L === 'undefined' || !D.stops || !D.stops.length) return;
 
     var COLORS = { city: '#4fc3f7', nature: '#66bb6a', beach: '#ffb74d', mountain: '#9575cd', default: '#e85d3a' };
     var stops = D.stops;
+    var route = D.route || {};
+    var alts = route.alternatives || [];
+    var waypoints = route.waypoints || [];
+    var pois = route.pois || [];
+
     var map = L.map('map', { scrollWheelZoom: true, zoomControl: true });
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap', maxZoom: 18
     }).addTo(map);
 
-    var coords = stops.map(function (s) { return [s.lat, s.lng]; });
-    L.polyline(coords, { color: '#fff', weight: 7, opacity: 0.6 }).addTo(map);
-    L.polyline(coords, { color: '#e85d3a', weight: 3, opacity: 0.95, dashArray: '1 8', lineCap: 'round' }).addTo(map);
+    var stopCoords = stops.map(function (s) { return [s.lat, s.lng]; });
 
+    // ── cidades de passagem: conferência de que o trajeto está certo ──
+    var wpMarkers = [];
+    waypoints.forEach(function (w) {
+      var icon = L.divIcon({ className: '', html: '<div class="wp-pin"></div>', iconSize: [20, 20], iconAnchor: [10, 16] });
+      var wsrc = (D.sources || {})[w.source];
+      var m = L.marker([w.lat, w.lng], { icon: icon })
+        .bindPopup('<div class="map-popup"><strong>📍 ' + esc(w.name) + '</strong>' + esc(w.note || '') +
+                   (wsrc ? '<div class="map-popup-src">Fonte: <a href="' + esc(wsrc.url) + '" target="_blank" rel="noopener">' + esc(wsrc.label) + '</a></div>' : '') +
+                   '</div>');
+      wpMarkers.push({ marker: m, routes: w.routes || [] });
+    });
+
+    // ── restaurantes e postos ao longo da rota ──
+    var poiIcons = { posto: '⛽', restaurante: '🍽️' };
+    pois.forEach(function (p) {
+      var icon = L.divIcon({
+        className: '', html: '<div class="poi-pin">' + (poiIcons[p.type] || '📌') + '</div>',
+        iconSize: [28, 28], iconAnchor: [14, 14]
+      });
+      var src = (D.sources || {})[p.source];
+      var m = L.marker([p.lat, p.lng], { icon: icon })
+        .bindPopup('<div class="map-popup"><strong>' + (poiIcons[p.type] || '') + ' ' + esc(p.name) + '</strong>' +
+                   '<div class="map-popup-city">' + esc(p.city || '') + '</div>' + esc(p.note || '') +
+                   (src ? '<div class="map-popup-src">Fonte: <a href="' + esc(src.url) + '" target="_blank" rel="noopener">' + esc(src.label) + '</a></div>' : '') +
+                   '</div>');
+      wpMarkers.push({ marker: m, routes: p.routes || [] });
+    });
+
+    function updateWaypointVisibility(activeRouteId) {
+      wpMarkers.forEach(function (wm) {
+        var show = !wm.routes.length || !activeRouteId || wm.routes.indexOf(activeRouteId) !== -1;
+        var has = map.hasLayer(wm.marker);
+        if (show && !has) wm.marker.addTo(map);
+        if (!show && has) map.removeLayer(wm.marker);
+      });
+    }
+
+    // ── rota: real (OSRM) com alternativas, ou linha reta entre paradas se não houver dado de rota ──
+    var routeLayers = [];
+
+    function drawRoute(id) {
+      routeLayers.forEach(function (l) { map.removeLayer(l.outline); map.removeLayer(l.line); });
+      routeLayers = [];
+      var alt = alts.filter(function (a) { return a.id === id; })[0];
+      if (!alt) return;
+      var coords = alt.geometry;
+      var outline = L.polyline(coords, { color: '#fff', weight: 7, opacity: 0.65 }).addTo(map);
+      var line = L.polyline(coords, { color: alt.color || '#e85d3a', weight: 4, opacity: 0.95, lineCap: 'round' }).addTo(map);
+      routeLayers.push({ outline: outline, line: line });
+      updateWaypointVisibility(id);
+      map.fitBounds(L.latLngBounds(coords), { padding: [60, 60] });
+    }
+
+    var defaultAlt = alts.filter(function (a) { return a.default; })[0] || alts[0];
+
+    if (alts.length) {
+      var toolbar = $('#routeToolbar');
+      if (toolbar) {
+        toolbar.hidden = false;
+        var btnsHtml = '<span class="route-toolbar-label">Rota</span>';
+        alts.forEach(function (a) {
+          btnsHtml += '<button type="button" class="route-btn' + (a.id === defaultAlt.id ? ' active' : '') +
+            '" data-route="' + esc(a.id) + '">' +
+            esc(a.label) + '<span class="route-btn-tag">' + esc(a.tag || '') + ' · ' +
+            a.distanceKm + ' km · ~' + Math.round(a.durationMin / 60 * 10) / 10 + 'h</span></button>';
+        });
+        btnsHtml += (route.note ? '<span class="route-note">ℹ️ ' + esc(route.note) + '</span>' : '');
+        toolbar.innerHTML = btnsHtml;
+        $$('.route-btn', toolbar).forEach(function (b) {
+          b.addEventListener('click', function () {
+            $$('.route-btn', toolbar).forEach(function (o) { o.classList.remove('active'); });
+            b.classList.add('active');
+            drawRoute(b.getAttribute('data-route'));
+          });
+        });
+      }
+    } else {
+      L.polyline(stopCoords, { color: '#fff', weight: 7, opacity: 0.6 }).addTo(map);
+      L.polyline(stopCoords, { color: '#e85d3a', weight: 3, opacity: 0.95, dashArray: '1 8', lineCap: 'round' }).addTo(map);
+    }
+
+    // ── marcadores das paradas principais (bases do roteiro) ──
     var markers = [], cards = [], active = -1;
     var list = $('#stopList');
 
@@ -531,8 +660,10 @@
         iconSize: [40, 40], iconAnchor: [20, 20]
       });
       var m = L.marker([s.lat, s.lng], { icon: icon }).addTo(map)
-        .bindPopup('<strong>' + s.n + '. ' + s.name + '</strong><br>' + (s.days || '') +
-                   '<br>' + (s.highlights || []).slice(0, 3).map(function (h) { return '· ' + h; }).join('<br>'));
+        .bindPopup('<div class="map-popup"><strong>' + s.n + '. ' + esc(s.name) + '</strong>' + (s.days || '') +
+                   '<br>' + (s.highlights || []).slice(0, 3).map(function (h) { return '· ' + h; }).join('<br>') +
+                   '<div class="deep-links"><a class="deep-link" target="_blank" rel="noopener" href="' + gmapsUrl(s.lat, s.lng) + '">🗺️ Google Maps</a>' +
+                   '<a class="deep-link" target="_blank" rel="noopener" href="' + wazeUrl(s.lat, s.lng) + '">🧭 Waze</a></div></div>');
       m.on('click', function () { select(i); });
       markers.push(m);
 
@@ -540,15 +671,29 @@
         var card = el('div', 'stop-card');
         card.innerHTML =
           '<div class="n">Parada ' + s.n + '</div>' +
-          '<h4>' + (s.emoji || '') + ' ' + s.name + '</h4>' +
+          // o título é um <button> cujo ::after cobre o card inteiro: um clique
+          // em qualquer ponto seleciona a parada, e o Tab chega até ele
+          '<h4><button type="button" class="stop-title">' + (s.emoji || '') + ' ' + esc(s.name) + '</button></h4>' +
           '<div class="days">' + (s.days || '') + '</div>' +
           '<ul>' + (s.highlights || []).slice(0, 4).map(function (h) { return '<li>' + h + '</li>'; }).join('') + '</ul>' +
-          (s.distNext ? '<div class="stop-dist">↓ ' + s.distNext + '</div>' : '');
-        card.addEventListener('click', function () { select(i); });
+          (s.distNext ? '<div class="stop-dist">↓ ' + s.distNext + '</div>' : '') +
+          '<div class="deep-links"><a class="deep-link" target="_blank" rel="noopener" href="' + gmapsUrl(s.lat, s.lng) + '">🗺️ Google Maps</a>' +
+          '<a class="deep-link" target="_blank" rel="noopener" href="' + wazeUrl(s.lat, s.lng) + '">🧭 Waze</a></div>';
+        card.querySelector('.stop-title').addEventListener('click', function () { select(i); });
         list.appendChild(card);
         cards.push(card);
       }
     });
+
+    // ── legenda ──
+    var legend = $('#mapLegend');
+    if (legend && (waypoints.length || pois.length)) {
+      legend.hidden = false;
+      legend.innerHTML =
+        '<span><i></i> Parada do roteiro</span>' +
+        (waypoints.length ? '<span><i class="diamond"></i> Cidade de passagem</span>' : '') +
+        (pois.length ? '<span><i class="ring"></i> Restaurante / posto</span>' : '');
+    }
 
     function select(i) {
       active = i;
@@ -558,7 +703,20 @@
       if (cards[i]) cards[i].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
 
-    map.fitBounds(L.latLngBounds(coords), { padding: [60, 60] });
+    // adiado: no primeiro paint o contêiner do mapa ainda não tem o tamanho final
+    // (grid ainda assentando, viewport mobile ainda ajustando) — invalidateSize()
+    // força o Leaflet a reler o tamanho real antes de calcular o enquadramento.
+    // Dois requestAnimationFrame + um setTimeout garantem que pelo menos um ciclo
+    // completo de layout/paint já rodou antes de medir.
+    function settleMap() {
+      map.invalidateSize();
+      if (alts.length) drawRoute(defaultAlt.id);
+      else map.fitBounds(L.latLngBounds(stopCoords), { padding: [60, 60] });
+    }
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () { setTimeout(settleMap, 50); });
+    });
+    window.addEventListener('resize', function () { map.invalidateSize(); });
     window.__mapSelect = select;
   }
 
@@ -610,8 +768,41 @@
     }
   }
 
+  // ═══════════ medidas de layout ═══════════
+  // O CSS não consegue medir o .page-header (padding em clamp de vw, foto ou
+  // não). Sem --header-h, o mapa em calc(100svh - nav) nascia abaixo da dobra.
+  function initLayoutMetrics() {
+    var header = $('.page-header');
+    var nav = $('#navbar');
+    var inner = $('.nav-inner');
+
+    function medir() {
+      var mapa = $('.map-layout');
+      var navH = nav ? nav.offsetHeight : 0;
+      // quando há mapa, o que interessa é o topo real dele (inclui margens e a
+      // barra de rotas); fora dele basta a altura do cabeçalho
+      var h = mapa
+        ? Math.round(mapa.getBoundingClientRect().top + window.pageYOffset) - navH
+        : (header ? Math.round(header.getBoundingClientRect().height) : 0);
+      document.documentElement.style.setProperty('--header-h', Math.max(0, h) + 'px');
+      // --nav-h no CSS é um chute de 58px; a barra real cresce com a fonte
+      if (navH) document.documentElement.style.setProperty('--nav-h', navH + 'px');
+      // o degradê da direita só faz sentido quando há itens fora da tela
+      if (nav && inner) nav.classList.toggle('overflowing', inner.scrollWidth > inner.clientWidth + 4);
+    }
+
+    medir();
+    window.addEventListener('resize', medir, { passive: true });
+    if (inner) inner.addEventListener('scroll', function () {
+      nav.classList.toggle('overflowing', inner.scrollLeft + inner.clientWidth < inner.scrollWidth - 4);
+    }, { passive: true });
+    // a foto do cabeçalho pode chegar depois e mudar a altura
+    window.addEventListener('load', medir);
+  }
+
   // ═══════════ boot ═══════════
   function boot() {
+    initLayoutMetrics();
     initFadeIn();
     initNavSpy();
     initCalendar();

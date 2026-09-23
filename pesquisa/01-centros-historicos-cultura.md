@@ -24,7 +24,6 @@ O Conjunto Arquitetônico e Paisagístico de Lençóis abrange **570 imóveis**.
 - **Cozinha Aberta** — alta gastronomia regional em pátio aberto e arborizado. A proposta é "refeição com calma", o que combina com o ritmo tranquilo de vocês.
 - **Quilombola** — cozinha baiana autêntica. Godó de banana verde e cortado de palma, pratos que quase não se acham fora da região.
 - **Bodega Restaurant Pizza Bar** — petiscos, pizza, drinks, música ao vivo à noite.
-- **Paraguassu** (no Refúgio na Serra) — contemporâneo. **Menu degustação aos sábados** — encaixaria no dia 17 (chegada) ou 23.
 
 ### Mucugê — tombado em 1980
 
@@ -35,6 +34,8 @@ O conjunto reúne **300 casas térreas e 10 sobrados** da segunda metade do séc
 | **Igreja Matriz de Santa Isabel** | Meados do século XIX, erguida pelo frei Caetano de Troyria com ajuda da população. |
 | **Cemitério Santa Isabel** ("Bizantino") | Dentro da área tombada. Mausoléus cujas fachadas reproduzem miniaturas de igrejas e capelas, em branco, encravados na encosta. Único das Américas nesse estilo. |
 | **Casario do centro** | As três ruas principais, quase todas residenciais e preservadas. |
+
+**Gastronomia** — o **Paraguassu**, do chef André Chequer, fica na Rua Caetité, no hotel Refúgio na Serra, dentro da própria área tombada. Cozinha contemporânea, almoço das 12h às 15h e jantar das 19h às 23h; o **menu degustação é tradicional aos sábados**, e o grupo não passa nenhum sábado em Mucugê. É o jantar mais elaborado do eixo sul. *(Correção de 23/09/2026: até esta data o Paraguassu estava listado acima, entre os restaurantes de Lençóis — o endereço no site do restaurante e no do Refúgio na Serra confirma Mucugê.)*
 
 ### Rio de Contas — tombado nos anos 1980
 

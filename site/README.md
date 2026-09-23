@@ -1,6 +1,6 @@
 # Chapada Diamantina 2026
 
-Roteiro interativo da viagem a Chapada Diamantina, Bahia (17/10 a 22/10).
+Roteiro interativo da viagem a Chapada Diamantina, Bahia (17/10 a 23/10).
 
 🔒 Site local — não publicado. Para publicar, defina `features.publish` como `"pages"` ou `"netlify"` no `trip.json` e rode o build de novo.
 
@@ -9,7 +9,7 @@ Roteiro interativo da viagem a Chapada Diamantina, Bahia (17/10 a 22/10).
 - `index.html` — 🗓️ Roteiro
 - `hospedagem.html` — 🏨 Hospedagem
 - `mapa.html` — 🌍 Mapa
-- `opcoes.html` — 🍽️ Cardápio de opções
+- `atracoes.html` — 📸 Atrações
 
 ## Como atualizar
 

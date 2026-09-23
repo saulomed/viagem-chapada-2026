@@ -1,0 +1,1753 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-palette="desert">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Chapada Diamantina 2026 — roteiro de viagem">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<title>[OFFLINE] Chapada Diamantina 2026</title>
+
+<style>/* ═══════════════════════════════════════════════════════════
+   Design System — Roteiro de Viagem
+   Gerado por agente-viagem/scripts/build.py — não editar aqui.
+   ═══════════════════════════════════════════════════════════ */
+
+/* ─── PALETAS ─── */
+/* --link e --accent-text são as versões de --secondary e --accent que podem
+   virar texto pequeno: as originais são cores de marca e reprovam no WCAG AA
+   (4,5:1) sobre --bg-alt. Todas as duplas abaixo foram medidas contra o
+   --bg-alt da própria paleta. */
+:root,
+:root[data-palette="jungle"] {
+  --primary: #1a3a2a;
+  --primary-light: #2d5a3f;
+  --secondary: #3d7a5a;
+  --secondary-light: #5ca87a;
+  --accent: #e85d3a;
+  --accent-dark: #c44a2d;
+  --highlight: #d4a843;
+  --bg: #faf3e6;
+  --bg-alt: #f5e6c8;
+  --surface: #fefdfb;
+  --border: #e8d4a8;
+  --shadow-rgb: 26, 58, 42;
+  --link: #376e51;
+  --accent-text: #b63515;
+}
+
+:root[data-palette="ocean"] {
+  --primary: #0d3b4f;
+  --primary-light: #175a75;
+  --secondary: #1e7f9e;
+  --secondary-light: #4fb3cc;
+  --accent: #ff6f5e;
+  --accent-dark: #d8503f;
+  --highlight: #f2b544;
+  --bg: #f3f8fa;
+  --bg-alt: #dceef3;
+  --surface: #ffffff;
+  --border: #c5dfe7;
+  --shadow-rgb: 13, 59, 79;
+  --link: #196d88;
+  --accent-text: #cb1500;
+}
+
+:root[data-palette="desert"] {
+  --primary: #5a2f1e;
+  --primary-light: #7d452c;
+  --secondary: #b4633a;
+  --secondary-light: #d99263;
+  --accent: #2f7d6a;
+  --accent-dark: #205a4c;
+  --highlight: #e0a63c;
+  --bg: #fbf3ea;
+  --bg-alt: #f2e2d0;
+  --surface: #fffdfa;
+  --border: #e3cdb4;
+  --shadow-rgb: 90, 47, 30;
+  --link: #93502f;
+  --accent-text: #286c5b;
+}
+
+:root[data-palette="alpine"] {
+  --primary: #1e2c3d;
+  --primary-light: #33465e;
+  --secondary: #4a6b8a;
+  --secondary-light: #7fa3c2;
+  --accent: #c0392b;
+  --accent-dark: #96291d;
+  --highlight: #d8b45c;
+  --bg: #f4f6f9;
+  --bg-alt: #e3e9f0;
+  --surface: #ffffff;
+  --border: #ccd6e2;
+  --shadow-rgb: 30, 44, 61;
+  --link: #476785;
+  --accent-text: #b73629;
+}
+
+:root[data-palette="urban"] {
+  --primary: #23262b;
+  --primary-light: #3c414a;
+  --secondary: #5b6270;
+  --secondary-light: #8d95a4;
+  --accent: #e0a020;
+  --accent-dark: #b87f12;
+  --highlight: #d94f4f;
+  --bg: #f6f6f7;
+  --bg-alt: #e8e9ec;
+  --surface: #ffffff;
+  --border: #d6d8dd;
+  --shadow-rgb: 35, 38, 43;
+  --link: #5b6270;
+  --accent-text: #845e12;
+}
+
+:root[data-palette="pampa"] {
+  --primary: #33401f;
+  --primary-light: #4d5f30;
+  --secondary: #7a8c4a;
+  --secondary-light: #a8b878;
+  --accent: #7b2233;
+  --accent-dark: #5c1826;
+  --highlight: #cfa04a;
+  --bg: #f8f6ee;
+  --bg-alt: #ece7d6;
+  --surface: #fffefa;
+  --border: #d9d2bc;
+  --shadow-rgb: 51, 64, 31;
+  --link: #5b6837;
+  --accent-text: #7b2132;
+}
+
+:root {
+  --text: #2a2520;
+  --text-muted: #6b6560;
+  /* medidos contra o --bg-alt mais escuro das paletas: pior caso 4,8:1 */
+  --text-light: #66615d;
+  --white: #fff;
+  --ok: #246e45;
+  --warn: #8c5417;
+  --danger: #b13427;
+  --shadow-sm: 0 1px 3px rgba(var(--shadow-rgb), 0.08);
+  --shadow-md: 0 4px 16px rgba(var(--shadow-rgb), 0.10);
+  --shadow-lg: 0 12px 40px rgba(var(--shadow-rgb), 0.15);
+  --shadow-xl: 0 20px 60px rgba(var(--shadow-rgb), 0.20);
+  --radius: 16px;
+  --radius-sm: 10px;
+  --radius-xs: 6px;
+  --nav-h: 58px;
+  /* altura real do .page-header, medida pelo app.js nas páginas internas */
+  --header-h: 0px;
+}
+
+/* ─── BASE ─── */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .serif { font-family: 'Playfair Display', Georgia, serif; }
+.mono, .block-time, .cal-num, .amount { font-family: 'JetBrains Mono', 'Courier New', monospace; }
+
+a { color: var(--link); }
+img { max-width: 100%; }
+
+/* ─── FOCO ─── */
+/* O navegador descarta o anel padrão em qualquer elemento com fundo ou borda
+   customizados — sem isto, navegar por teclado é navegar às cegas. */
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: var(--radius-xs);
+}
+:focus:not(:focus-visible) { outline: none; }
+
+/* ─── HERO ─── */
+.hero {
+  /* 100vh ocupava a primeira tela inteira sem nenhum elemento acionável e
+     empurrava o roteiro para bem longe do topo */
+  min-height: clamp(520px, 78svh, 820px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 60px clamp(24px, 6vw, 80px);
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(175deg, rgba(var(--shadow-rgb), 0.75) 0%, rgba(var(--shadow-rgb), 0.35) 40%, rgba(var(--shadow-rgb), 0.6) 100%),
+    var(--hero-image, linear-gradient(160deg, var(--primary), var(--primary-light) 50%, var(--accent-dark))) center/cover no-repeat;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 200px;
+  background: linear-gradient(to top, var(--bg), transparent);
+  z-index: 1;
+}
+
+.hero-content { position: relative; z-index: 2; max-width: 900px; }
+.hero-eyebrow {
+  font-size: 0.82rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--white); opacity: 0.85; margin-bottom: 16px; font-weight: 500;
+}
+.hero-title {
+  font-size: clamp(2.8rem, 9vw, 6rem); font-weight: 900; line-height: 1.02;
+  color: var(--white); margin-bottom: 18px; text-shadow: 0 4px 30px rgba(0,0,0,0.35);
+}
+.hero-sub { font-size: clamp(1rem, 2.4vw, 1.35rem); color: var(--white); opacity: 0.94; max-width: 620px; }
+.hero-meta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.hero-cta {
+  display: inline-flex; align-items: center; gap: 8px; align-self: flex-start;
+  margin-top: 26px; padding: 14px 26px; min-height: 48px;
+  background: var(--white); color: var(--primary); text-decoration: none;
+  font-family: inherit; font-size: 0.95rem; font-weight: 700;
+  border: none; border-radius: 100px; cursor: pointer;
+  box-shadow: var(--shadow-lg); transition: transform .16s ease;
+}
+.hero-cta:hover { transform: translateY(-2px); }
+.hero-chip {
+  background: rgba(255,255,255,0.16); backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.28); color: var(--white);
+  padding: 8px 16px; border-radius: 100px; font-size: 0.86rem; font-weight: 500;
+}
+
+/* ─── PAGE HEADER (páginas internas) ─── */
+.page-header {
+  background: linear-gradient(140deg, var(--primary), var(--primary-light));
+  color: var(--white);
+  padding: clamp(40px, 8vw, 72px) clamp(24px, 6vw, 80px) clamp(32px, 6vw, 56px);
+  position: relative;
+}
+/* Com foto de fundo (meta.pageImages): o degradê da paleta vira véu por cima
+   da imagem. Sem ele o título branco some em qualquer foto clara. */
+.page-header.has-image {
+  background:
+    linear-gradient(140deg, rgba(var(--shadow-rgb), 0.90), rgba(var(--shadow-rgb), 0.58) 55%, rgba(var(--shadow-rgb), 0.80)),
+    var(--page-image) center/cover no-repeat;
+  padding-top: clamp(56px, 10vw, 104px);
+  padding-bottom: clamp(44px, 8vw, 80px);
+}
+.page-header.has-image h1 { text-shadow: 0 3px 20px rgba(0, 0, 0, 0.4); }
+.page-header.has-image p { text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45); }
+.page-header .eyebrow {
+  font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.8; margin-bottom: 12px;
+}
+.page-header h1 { font-size: clamp(2rem, 6vw, 3.4rem); font-weight: 800; line-height: 1.1; }
+.page-header p { opacity: 0.9; margin-top: 12px; max-width: 640px; }
+.page-header a.back { color: var(--white); opacity: 0.85; text-decoration: none; font-size: 0.88rem; }
+
+/* ─── NAV ─── */
+.nav-bar {
+  position: sticky; top: 0; z-index: 100; isolation: isolate;
+  background: rgba(255,255,255,0.92); backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border); box-shadow: var(--shadow-sm);
+}
+/* No celular boa parte dos itens fica fora da tela e a barra de rolagem está
+   escondida: o degradê é a única pista de que há mais coisa à direita.
+   Só aparece quando de fato há transbordo (.nav-bar.overflowing, do app.js). */
+.nav-bar.overflowing::after {
+  content: ''; position: absolute; top: 0; right: 0; bottom: 0; width: 56px;
+  pointer-events: none; z-index: 2;
+  background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.97) 70%);
+}
+.nav-inner {
+  display: flex; gap: 4px; padding: 10px clamp(16px, 4vw, 40px);
+  overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch;
+  scroll-padding-inline: 16px;
+}
+.nav-inner::-webkit-scrollbar { display: none; }
+.nav-btn {
+  flex: 0 0 auto; border: none; background: transparent; cursor: pointer;
+  font-family: inherit; font-size: 0.88rem; font-weight: 500; color: var(--text-muted);
+  padding: 9px 15px; border-radius: 100px; white-space: nowrap;
+  text-decoration: none; transition: background .18s, color .18s;
+  min-height: 44px; display: inline-flex; align-items: center;
+}
+.nav-btn:hover { background: var(--bg-alt); color: var(--text); }
+.nav-btn.active { background: var(--primary); color: var(--white); }
+
+.rate-bar {
+  display: none; text-align: center; font-size: 0.78rem; color: var(--text-muted);
+  background: var(--bg-alt); padding: 6px 16px; font-family: 'JetBrains Mono', monospace;
+}
+.rate-bar.visible { display: block; }
+
+/* ─── SECTION ─── */
+.section { padding: clamp(48px, 8vw, 92px) clamp(24px, 6vw, 80px); max-width: 1240px; margin: 0 auto; }
+.section-header { margin-bottom: 36px; }
+.section-tag {
+  display: inline-block; font-size: 0.74rem; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--accent-text); font-weight: 600; margin-bottom: 10px;
+}
+.section-title { font-size: clamp(1.7rem, 4.5vw, 2.7rem); font-weight: 700; line-height: 1.15; }
+.section-desc { color: var(--text-muted); margin-top: 10px; max-width: 680px; }
+
+/* ─── ALERTS ─── */
+.alerts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(268px, 1fr)); gap: 18px; }
+.alert-card {
+  background: var(--surface); border-radius: var(--radius); padding: 22px;
+  border-left: 4px solid var(--warn); box-shadow: var(--shadow-md);
+}
+.alert-card.high { border-left-color: var(--danger); }
+.alert-card.medium { border-left-color: var(--warn); }
+.alert-card.info { border-left-color: var(--secondary); }
+.alert-card h3 { font-size: 1.06rem; margin-bottom: 10px; display: flex; gap: 8px; align-items: center; }
+.alert-card ul { list-style: none; }
+.alert-card li { font-size: 0.9rem; color: var(--text-muted); padding: 4px 0 4px 14px; position: relative; }
+.alert-card li::before { content: '·'; position: absolute; left: 2px; color: var(--accent); font-weight: 700; }
+
+/* ─── TODO ─── */
+.todo-summary {
+  display: flex; align-items: center; gap: 14px; margin-bottom: 22px;
+  background: var(--surface); border-radius: var(--radius); padding: 16px 20px; box-shadow: var(--shadow-sm);
+}
+.todo-bar { flex: 1; height: 8px; background: var(--bg-alt); border-radius: 100px; overflow: hidden; }
+.todo-bar span { display: block; height: 100%; background: linear-gradient(90deg, var(--secondary), var(--secondary-light)); transition: width .4s; }
+.todo-pct { font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 0.9rem; }
+
+.todo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 18px; }
+.todo-card { background: var(--surface); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow-md); border: 1px solid var(--border); }
+.todo-card.done { border-color: var(--ok); }
+.todo-card h3 { font-size: 1.02rem; margin-bottom: 4px; }
+.todo-card .sub { font-size: 0.78rem; color: var(--text-light); margin-bottom: 12px; }
+.todo-item {
+  display: flex; gap: 10px; align-items: flex-start; padding: 11px 0; cursor: pointer;
+  font-size: 0.9rem; border-top: 1px solid var(--border); min-height: 44px;
+}
+.todo-item:first-of-type { border-top: none; }
+.todo-item .box {
+  flex: 0 0 22px; width: 22px; height: 22px; margin-top: 1px; border-radius: 6px;
+  border: 2px solid var(--border); display: grid; place-items: center; font-size: 11px; color: var(--white);
+}
+.todo-item.done .box { background: var(--ok); border-color: var(--ok); }
+.todo-item.done .txt { text-decoration: line-through; color: var(--text-light); }
+.todo-item.auto { cursor: default; }
+.todo-auto-label { font-size: 0.72rem; color: var(--ok); padding-left: 28px; }
+
+/* ─── CALENDÁRIO ─── */
+.calendar-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(104px, 1fr)); gap: 12px; margin-bottom: 32px; }
+.cal-day {
+  background: var(--surface); border: 2px solid var(--border); border-radius: var(--radius-sm);
+  padding: 14px 10px; text-align: center; cursor: pointer; transition: transform .18s, border-color .18s, box-shadow .18s;
+  /* é um <button>: sem isto herdaria a fonte e a largura do agente do usuário */
+  font: inherit; color: inherit; width: 100%; display: block;
+}
+.cal-day:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.cal-day.active { background: var(--primary); border-color: var(--primary); color: var(--white); }
+.cal-wd { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.7; }
+.cal-num { font-size: 1.3rem; font-weight: 600; margin: 4px 0; }
+.cal-emoji { font-size: 1.2rem; }
+.cal-city { font-size: 0.72rem; opacity: 0.85; margin-top: 4px; }
+
+/* ─── DETALHE DO DIA ─── */
+.day-detail { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow-lg); overflow: hidden; }
+.day-head { background: linear-gradient(135deg, var(--primary), var(--primary-light)); color: var(--white); padding: 26px clamp(20px, 4vw, 34px); }
+.day-head .num { font-size: 0.76rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.8; }
+.day-head h3 { font-size: clamp(1.35rem, 3.5vw, 2rem); margin: 6px 0; }
+.day-head .route { font-size: 0.88rem; opacity: 0.88; }
+.day-body { padding: clamp(20px, 4vw, 34px); }
+
+.block { display: grid; grid-template-columns: 110px 1fr; gap: 18px; padding: 18px 0; border-top: 1px solid var(--border); }
+.block:first-child { border-top: none; padding-top: 0; }
+.block-time { font-size: 0.8rem; color: var(--accent-text); font-weight: 500; padding-top: 2px; }
+.block-title { font-weight: 600; margin-bottom: 8px; display: flex; flex-wrap: wrap; gap: 8px; align-items: baseline; }
+.block-tip { font-size: 0.72rem; background: var(--bg-alt); color: var(--text-muted); padding: 2px 9px; border-radius: 100px; }
+.block-items { list-style: none; }
+.block-items li { font-size: 0.9rem; color: var(--text-muted); padding: 3px 0 3px 15px; position: relative; }
+.block-items li::before { content: '›'; position: absolute; left: 0; color: var(--secondary-light); }
+.block-duration { font-size: 0.78rem; color: var(--text-light); font-family: 'JetBrains Mono', monospace; margin-top: 6px; }
+.block-links { margin-top: 8px; display: flex; gap: 14px; flex-wrap: wrap; font-size: 0.82rem; }
+.block-links a { text-decoration: none; font-weight: 500; }
+
+/* ─── NAVEGAÇÃO ENTRE OS DIAS ─── */
+/* Fecha o dia com a saída óbvia: o dia seguinte, sem voltar ao calendário. */
+.day-nav {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+  margin-top: 28px; padding-top: 22px; border-top: 1px solid var(--border);
+}
+.day-nav-btn {
+  display: flex; flex-direction: column; gap: 2px; min-height: 44px;
+  font: inherit; text-align: left; cursor: pointer;
+  background: var(--bg); color: var(--text);
+  border: 1.5px solid var(--border); border-radius: var(--radius-sm);
+  padding: 12px 16px; transition: border-color .16s ease, transform .16s ease;
+}
+.day-nav-btn:hover { border-color: var(--accent); transform: translateY(-2px); }
+.day-nav-btn.next { text-align: right; align-items: flex-end; }
+.day-nav-dir {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--accent-text);
+}
+.day-nav-day { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--text-muted); }
+.day-nav-title { font-weight: 600; font-size: 0.92rem; line-height: 1.3; }
+
+/* ─── PROCEDÊNCIA DOS NÚMEROS ─── */
+/* Selo ao lado de um preço: de onde ele veio e quanto confiar nele. */
+.fato-selo {
+  display: inline-block; font-size: 0.78em; text-decoration: none;
+  vertical-align: baseline; margin-left: 2px; cursor: help;
+  /* o selo aparece dentro de .opt-price e .price-tag, que usam monoespaçada —
+     sem uma fonte de emoji explícita, 📋 vira quadradinho vazio */
+  font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
+}
+a.fato-selo { cursor: pointer; }
+a.fato-selo:hover { opacity: 0.75; }
+.fato-legendas { display: flex; flex-wrap: wrap; gap: 18px; margin-bottom: 22px; }
+.fato-legenda { font-size: 0.84rem; color: var(--text-muted); }
+.fontes { list-style: none; display: grid; gap: 10px; }
+.fonte-item {
+  display: flex; gap: 12px; align-items: flex-start;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 12px; padding: 12px 16px;
+}
+.fonte-kind { flex: 0 0 auto; font-size: 1rem; line-height: 1.4; cursor: help; }
+.fonte-txt { font-size: 0.9rem; }
+.fonte-meta {
+  display: block; margin-top: 3px; font-size: 0.76rem; color: var(--text-muted);
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+}
+
+/* ─── OPÇÕES DO DIA (blocks[].options[]) ─── */
+/* Dia-cardápio: nada marcado, escolhe-se uma opção na hora. */
+.day-options { list-style: none; margin: 10px 0 4px; display: grid; gap: 8px; }
+.day-option {
+  display: flex; gap: 10px; align-items: baseline;
+  background: var(--bg-alt); border-radius: 10px; padding: 10px 13px;
+  font-size: 0.9rem; line-height: 1.5;
+}
+.opt-num {
+  flex: 0 0 auto; font-weight: 700; color: var(--link);
+  font-size: 1rem; line-height: 1.35;
+}
+.opt-body { color: var(--text-muted); }
+.opt-body strong { color: var(--text); }
+.opt-pet {
+  display: inline-block; vertical-align: middle; margin-right: 7px;
+  font-size: 0.7rem; font-weight: 600; color: #fff;
+  padding: 2px 8px; border-radius: 100px; white-space: nowrap;
+}
+.opt-pet.pet-sim { background: #2f7d4a; }
+.opt-pet.pet-nao { background: #a8342a; }
+.opt-pet.pet-talvez { background: #b8892b; }
+.opt-price {
+  display: block; margin-top: 4px; font-size: 0.78rem;
+  font-family: 'JetBrains Mono', 'Courier New', monospace; color: var(--link);
+}
+
+.price-tag {
+  display: inline-block; background: var(--bg-alt); color: var(--text);
+  font-size: 0.8rem; font-weight: 600; padding: 3px 11px; border-radius: 100px; margin-top: 8px;
+}
+
+/* ─── HOTÉIS ─── */
+.hotel-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(268px, 1fr)); gap: 18px; }
+.hotel-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 20px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 8px;
+}
+.hotel-card.reserved { border-color: var(--ok); border-width: 2px; }
+.hotel-card h4 { font-size: 1rem; font-weight: 600; }
+.hotel-card .desc { font-size: 0.86rem; color: var(--text-muted); flex: 1; }
+.hotel-price { font-family: 'JetBrains Mono', monospace; font-weight: 600; color: var(--accent-text); }
+.hotel-badge { font-size: 0.72rem; background: var(--ok); color: var(--white); padding: 2px 9px; border-radius: 100px; align-self: flex-start; }
+.hotel-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 6px; }
+.btn {
+  border: none; cursor: pointer; font-family: inherit; font-size: 0.84rem; font-weight: 600;
+  padding: 8px 16px; border-radius: 100px; text-decoration: none; display: inline-block;
+  background: var(--primary); color: var(--white); transition: opacity .18s;
+}
+.btn:hover { opacity: 0.88; }
+.btn.ghost { background: transparent; color: var(--primary); border: 1.5px solid var(--border); }
+.btn.danger { background: var(--danger); }
+
+/* ─── CUSTOS ─── */
+.summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; }
+.cost-card { background: var(--surface); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border); }
+.cost-card .label { font-size: 0.82rem; color: var(--text-muted); }
+.cost-card .amount { font-size: 1.35rem; font-weight: 700; color: var(--primary); margin-top: 6px; display: block; }
+.cost-card.total { background: linear-gradient(135deg, var(--primary), var(--primary-light)); color: var(--white); }
+.cost-card.total .label, .cost-card.total .amount { color: var(--white); }
+
+.table-wrap { overflow-x: auto; }
+.cost-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 520px; }
+.cost-table th {
+  text-align: left; font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--text-light); padding: 10px 12px; border-bottom: 2px solid var(--border);
+}
+.cost-table td { padding: 12px; border-bottom: 1px solid var(--border); }
+.cost-table .cost-amount { font-family: 'JetBrains Mono', monospace; font-weight: 600; white-space: nowrap; }
+.category-header { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.category-emoji { font-size: 1.4rem; }
+.category-title { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; flex: 1; }
+.category-total { font-family: 'JetBrains Mono', monospace; font-weight: 600; color: var(--accent-text); }
+.status { font-size: 0.72rem; padding: 3px 10px; border-radius: 100px; white-space: nowrap; }
+.status.confirmado { background: rgba(36,110,69,0.12); color: var(--ok); }
+.status.cotado { background: rgba(140,84,23,0.12); color: var(--warn); }
+.status.estimado { background: var(--bg-alt); color: var(--text-muted); }
+
+/* ─── INFO / TIPS ─── */
+.info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(268px, 1fr)); gap: 18px; }
+.info-card, .tip-card {
+  background: var(--surface); border-radius: var(--radius); padding: 22px;
+  box-shadow: var(--shadow-sm); border: 1px solid var(--border);
+}
+.info-card h3, .tip-card h3 { font-size: 1rem; margin-bottom: 8px; display: flex; gap: 8px; }
+.info-card p, .tip-card p { font-size: 0.9rem; color: var(--text-muted); }
+.info-card ul { list-style: none; margin-top: 8px; }
+.info-card li { font-size: 0.88rem; color: var(--text-muted); padding: 3px 0 3px 15px; position: relative; }
+.info-card li::before { content: '›'; position: absolute; left: 0; color: var(--secondary-light); }
+.info-card .kv { display: flex; justify-content: space-between; gap: 12px; padding: 7px 0; border-top: 1px solid var(--border); font-size: 0.88rem; }
+.info-card .kv:first-of-type { border-top: none; }
+.info-card .kv .k { color: var(--text-muted); }
+.info-card .kv .v { font-weight: 600; text-align: right; }
+.required-tag { font-size: 0.7rem; background: var(--danger); color: var(--white); padding: 2px 8px; border-radius: 100px; }
+
+/* ─── CONVERSOR ─── */
+.converter { background: var(--surface); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow-md); max-width: 620px; }
+.conv-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; }
+.conv-field label { font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-light); }
+.conv-field input {
+  width: 100%; font-family: 'JetBrains Mono', monospace; font-size: 1.1rem; padding: 10px 12px;
+  border: 1.5px solid var(--border); border-radius: var(--radius-sm); background: var(--bg); color: var(--text);
+}
+.conv-rates { font-size: 0.78rem; color: var(--text-light); margin-top: 12px; font-family: 'JetBrains Mono', monospace; }
+
+/* ─── MAPA ─── */
+/* calc(100vh - nav) ignorava o .page-header, que passa de 300px: o mapa nascia
+   meia tela abaixo da dobra. --header-h é medido pelo app.js. */
+.map-layout {
+  display: grid; grid-template-columns: 380px 1fr; grid-template-rows: minmax(0, 1fr);
+  height: calc(100svh - var(--nav-h) - var(--header-h)); min-height: 340px;
+}
+#map { height: 100%; width: 100%; }
+.stop-list { overflow-y: auto; background: var(--bg); border-right: 1px solid var(--border); padding: 16px; }
+.stop-card {
+  position: relative;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm);
+  padding: 14px; margin-bottom: 12px; transition: border-color .18s, transform .18s;
+}
+.stop-card:hover { transform: translateX(3px); }
+.stop-card.active { border-color: var(--accent); border-width: 2px; }
+.stop-card:has(.stop-title:focus-visible) { outline: 3px solid var(--accent); outline-offset: 3px; }
+.stop-card .n { font-family: 'JetBrains Mono', monospace; font-size: 0.74rem; color: var(--text-light); }
+.stop-card h4 { font-size: 0.98rem; margin: 2px 0 4px; }
+/* o cursor prometia que o card inteiro era clicável, mas só o título respondia.
+   O ::after do botão do título cobre o card; a lista e os links ficam por cima
+   para continuarem selecionáveis. */
+.stop-title {
+  font: inherit; color: inherit; text-align: left; background: none;
+  border: none; padding: 0; cursor: pointer; outline: none;
+}
+.stop-title::after { content: ''; position: absolute; inset: 0; z-index: 1; }
+.stop-card ul, .stop-card .deep-links, .stop-dist { position: relative; z-index: 2; }
+.stop-card .days { font-size: 0.76rem; color: var(--text-muted); }
+.stop-card ul { list-style: none; margin-top: 8px; }
+.stop-card li { font-size: 0.8rem; color: var(--text-muted); padding-left: 12px; position: relative; }
+.stop-card li::before { content: '·'; position: absolute; left: 2px; color: var(--accent); }
+.stop-dist { font-size: 0.74rem; color: var(--text-light); font-family: 'JetBrains Mono', monospace; margin-top: 8px; }
+.marker-pin { border-radius: 50%; display: grid; place-items: center; font-size: 17px; }
+.deep-links { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+.deep-link {
+  font-size: 0.74rem; font-weight: 600; text-decoration: none; padding: 10px 14px; border-radius: 100px;
+  background: var(--bg); color: var(--text); border: 1px solid var(--border); transition: background .16s ease;
+  min-height: 40px; display: inline-flex; align-items: center;
+}
+.deep-link:hover { background: var(--secondary-light); color: var(--white); border-color: var(--secondary-light); }
+
+/* ─── seletor de rota ─── */
+/* sem rotas alternativas o contêiner é renderizado vazio: sem isto sobrava uma
+   faixa branca com borda entre o menu e o mapa */
+.route-toolbar:empty { display: none; }
+.route-toolbar {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
+  margin: -8px 0 16px; padding: 14px 16px; background: var(--surface);
+  border: 1px solid var(--border); border-radius: var(--radius-sm);
+}
+.route-toolbar-label { font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-light); margin-right: 2px; }
+.route-btn {
+  font: inherit; font-size: 0.84rem; font-weight: 600; cursor: pointer; padding: 8px 14px;
+  border-radius: var(--radius-sm); border: 1.5px solid var(--border); background: var(--bg); color: var(--text-muted);
+  transition: all .16s ease; display: flex; flex-direction: column; align-items: flex-start; gap: 2px; line-height: 1.3;
+}
+.route-btn .route-btn-tag { font-size: 0.7rem; font-weight: 500; color: var(--text-light); text-transform: none; letter-spacing: 0; }
+.route-btn:hover { border-color: var(--accent); color: var(--text); }
+.route-btn.active { background: var(--accent); border-color: var(--accent); color: var(--white); }
+.route-btn.active .route-btn-tag { color: rgba(255,255,255,0.85); }
+.route-note { flex: 1 1 220px; font-size: 0.78rem; color: var(--text-light); margin-left: auto; }
+
+/* ─── pinos de apoio no mapa (cidades de passagem e pontos de interesse) ─── */
+.wp-pin {
+  width: 20px; height: 20px; border-radius: 50% 50% 50% 3px; transform: rotate(-45deg);
+  background: var(--secondary); border: 2px solid var(--white); box-shadow: 0 2px 6px rgba(0,0,0,.35);
+}
+.poi-pin {
+  width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; font-size: 14px;
+  background: var(--surface); border: 2px solid var(--accent); box-shadow: 0 2px 6px rgba(0,0,0,.35);
+}
+.map-popup { font-size: 0.85rem; line-height: 1.5; max-width: 240px; }
+.map-popup strong { display: block; margin-bottom: 4px; }
+.map-popup .map-popup-city { font-size: 0.76rem; color: var(--text-light); margin-bottom: 6px; }
+.map-popup .map-popup-src { font-size: 0.72rem; color: var(--text-light); margin-top: 6px; }
+
+.map-legend {
+  display: flex; flex-wrap: wrap; gap: 16px; margin-top: 14px; font-size: 0.78rem; color: var(--text-muted);
+}
+.map-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.map-legend i { width: 12px; height: 12px; display: inline-block; border-radius: 50%; }
+.map-legend i.diamond { background: var(--secondary); border-radius: 2px; transform: rotate(45deg); }
+.map-legend i.ring { background: var(--surface); border: 2px solid var(--accent); }
+
+/* ─── MODAL ─── */
+.modal-overlay {
+  display: none; position: fixed; inset: 0; z-index: 500;
+  background: rgba(0,0,0,0.5); backdrop-filter: blur(3px); place-items: center; padding: 20px;
+}
+.modal-overlay.open { display: grid; }
+.modal { background: var(--surface); border-radius: var(--radius); padding: 26px; width: 100%; max-width: 440px; box-shadow: var(--shadow-xl); }
+.modal h3 { font-size: 1.2rem; margin-bottom: 6px; }
+.modal .modal-sub { font-size: 0.86rem; color: var(--text-muted); margin-bottom: 18px; }
+.modal label { display: block; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-light); margin: 12px 0 4px; }
+.modal input {
+  width: 100%; padding: 10px 12px; border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm); font-family: inherit; font-size: 0.94rem; background: var(--bg); color: var(--text);
+}
+.modal-actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 20px; }
+.modal-error { color: var(--danger); font-size: 0.82rem; margin-top: 10px; min-height: 18px; }
+.date-chips { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+.date-chip {
+  font-size: 0.78rem; padding: 5px 12px; border-radius: 100px; cursor: pointer;
+  border: 1.5px solid var(--border); background: transparent; font-family: inherit; color: var(--text);
+}
+.date-chip.active { background: var(--primary); color: var(--white); border-color: var(--primary); }
+
+/* ─── FOOTER ─── */
+.footer {
+  background: var(--primary); color: var(--white); text-align: center;
+  padding: 44px clamp(24px, 6vw, 80px); font-size: 0.86rem;
+}
+.footer a { color: var(--white); opacity: 0.85; }
+.footer .sync-row { margin-top: 14px; display: flex; gap: 10px; justify-content: center; align-items: center; flex-wrap: wrap; }
+.sync-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--text-light); display: inline-block; }
+.sync-dot.synced { background: var(--ok); }
+.sync-dot.syncing { background: var(--highlight); }
+.sync-dot.error { background: var(--danger); }
+
+/* ─── CONVERSÃO DE MOEDA ─── */
+.brl { display: block; font-size: 0.8em; color: var(--text-light); font-weight: 500; }
+.price-tag .brl, .price-value .brl { display: inline; }
+
+/* ─── ANIMAÇÃO ─── */
+.fade-in { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+.fade-in.visible { opacity: 1; transform: none; }
+
+/* o .fade-in só volta a aparecer pelo IntersectionObserver: sem script,
+   a página inteira ficaria em branco */
+@media (scripting: none) {
+  .fade-in { opacity: 1 !important; transform: none !important; }
+}
+
+/* quem pediu menos movimento no sistema não deve ganhar fade nem rolagem suave */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .fade-in { opacity: 1 !important; transform: none !important; }
+}
+
+/* ─── RESPONSIVO ─── */
+@media (max-width: 900px) {
+  .map-layout { grid-template-columns: 1fr; height: auto; }
+  /* empilhado, a lista de paradas vinha antes do mapa — na página do mapa,
+     o mapa só começava depois de rolar a lista inteira */
+  #map { order: -1; height: min(58svh, calc(100svh - var(--header-h) - var(--nav-h) - 92px)); min-height: 300px; }
+  .stop-list { max-height: none; border-right: none; border-top: 1px solid var(--border); }
+}
+
+@media (max-width: 600px) {
+  .block { grid-template-columns: 1fr; gap: 6px; }
+  .block-time { font-size: 0.76rem; }
+  .calendar-grid { grid-template-columns: repeat(auto-fit, minmax(88px, 1fr)); gap: 8px; }
+  .hero { min-height: clamp(460px, 68svh, 640px); padding-bottom: 44px; }
+  .todo-summary { flex-wrap: wrap; }
+  .day-nav { grid-template-columns: 1fr; }
+  .day-nav-btn.next { text-align: left; align-items: flex-start; }
+}
+
+@media print {
+  .nav-bar, .footer .sync-row, .modal-overlay { display: none !important; }
+  .fade-in { opacity: 1 !important; transform: none !important; }
+  .day-detail { box-shadow: none; }
+}
+
+
+/* ─── customCss do trip.json ─── */
+
+/* ─── atracoes.html — fichas dos lugares ─── */
+.filtros { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 2rem; }
+.filtro-btn {
+  font: inherit; font-size: .85rem; font-weight: 600; cursor: pointer;
+  padding: .45rem .9rem; border-radius: 999px;
+  border: 1px solid var(--border); background: var(--surface); color: var(--text-muted);
+  transition: background .15s, color .15s, border-color .15s;
+}
+.filtro-btn:hover { border-color: var(--primary); color: var(--text); }
+.filtro-btn.ativo { background: var(--primary); border-color: var(--primary); color: var(--white); }
+
+.dia-bloco { margin: 0 0 2.75rem; }
+.dia-cab { margin: 0 0 1rem; }
+.dia-tit {
+  display: flex; align-items: center; gap: .6rem; flex-wrap: wrap;
+  margin: 0 0 .35rem; font-size: 1.25rem;
+}
+.dia-chip {
+  font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  padding: .25rem .6rem; border-radius: 999px;
+  background: var(--bg-alt); color: var(--primary); border: 1px solid var(--border);
+}
+.dia-ancora { margin: 0; font-size: .9rem; color: var(--text-muted); }
+
+.opt-grid {
+  display: grid; gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+.opt-card {
+  border: 1px solid var(--border); border-left: 3px solid var(--border);
+  border-radius: var(--radius); background: var(--surface); padding: 1rem 1.1rem;
+}
+.opt-card.sel-ok { border-left-color: var(--ok); }
+.opt-card.sel-duv { border-left-color: var(--warn); }
+.opt-card.sel-conf { border-left-color: var(--danger); }
+.opt-top {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: .5rem; margin: 0 0 .5rem;
+}
+.opt-selo { font-size: .75rem; font-weight: 700; color: var(--text-muted); }
+.sel-ok .opt-selo { color: var(--ok); }
+.sel-duv .opt-selo { color: var(--warn); }
+.sel-conf .opt-selo { color: var(--danger); }
+.opt-tipo {
+  font-size: .68rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
+  color: var(--text-light);
+}
+.opt-nome { margin: 0 0 .3rem; font-size: 1rem; line-height: 1.35; }
+.opt-onde { margin: 0 0 .5rem; font-size: .8rem; font-weight: 600; color: var(--primary); }
+.opt-nota { margin: 0; font-size: .88rem; line-height: 1.55; color: var(--text-muted); }
+
+.rest-lista { margin: .5rem 0 0; padding-left: 1.1rem; }
+.rest-lista li { font-size: .88rem; line-height: 1.6; color: var(--text-muted); }
+
+@media (max-width: 640px) {
+  .opt-grid { grid-template-columns: 1fr; }
+  .filtros { gap: .4rem; }
+  .filtro-btn { font-size: .8rem; padding: .4rem .75rem; }
+}
+
+/* níveis de recomendação */
+.opt-rec { font-size: .72rem; font-weight: 800; letter-spacing: .02em; }
+.opt-rec.rec1 { color: var(--ok); }
+.opt-rec.rec2 { color: var(--primary); }
+.opt-rec.rec3 { color: var(--text-muted); }
+.opt-rec.rec4 { color: var(--warn); }
+.opt-card { border-left-color: var(--border); }
+.opt-selo { font-weight: 700; }
+.sel-ok .opt-selo { color: var(--ok); }
+.sel-duv .opt-selo { color: var(--warn); }
+.sel-conf .opt-selo { color: var(--danger); }
+.legenda { display: flex; flex-wrap: wrap; gap: .35rem 1.1rem; margin: .9rem 0 0; }
+.leg-item { font-size: .8rem; color: var(--text-muted); }
+.leg-item b { margin-right: .2rem; }
+.opt-onde { display: block; }
+
+
+/* ─── barra de filtros combinados ─── */
+.filtro-barra {
+  border: 1px solid var(--border); border-radius: var(--radius);
+  background: var(--bg-alt); padding: 1rem 1.1rem .35rem; margin: 0 0 2rem;
+}
+.filtro-grupo { display: flex; align-items: baseline; gap: .85rem; margin: 0 0 .35rem; }
+.filtro-rot {
+  flex: 0 0 6.5rem; font-size: .7rem; font-weight: 700;
+  letter-spacing: .07em; text-transform: uppercase; color: var(--text-light);
+}
+.filtro-barra .filtros { margin: 0 0 .55rem; }
+.filtro-n {
+  display: inline-block; margin-left: .3rem; padding: 0 .35rem;
+  border-radius: 999px; background: var(--bg-alt);
+  font-size: .7rem; font-weight: 700; color: var(--text-light);
+}
+.filtro-btn.ativo .filtro-n { background: rgba(255, 255, 255, .22); color: var(--white); }
+.rec-btn.rec1:not(.ativo) { color: var(--ok); }
+.rec-btn.rec2:not(.ativo) { color: var(--primary); }
+.rec-btn.rec4:not(.ativo) { color: var(--warn); }
+.filtro-saida {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  margin: .25rem 0 .65rem; font-size: .8rem; color: var(--text-muted);
+}
+.filtro-limpa {
+  font: inherit; font-size: .78rem; cursor: pointer; padding: 0;
+  border: 0; background: none; color: var(--primary); text-decoration: underline;
+}
+.dia-vazio { display: none; margin: 0; font-size: .85rem; color: var(--text-light); font-style: italic; }
+.dia-bloco.sem-resultado .dia-vazio { display: block; }
+.dia-bloco.sem-resultado .opt-grid { display: none; }
+
+/* ─── links de blog e vídeo dentro do card ─── */
+.opt-links {
+  display: flex; flex-wrap: wrap; gap: .35rem;
+  margin: .85rem 0 0; padding-top: .75rem; border-top: 1px solid var(--border);
+}
+.opt-link {
+  display: inline-block; max-width: 100%; overflow: hidden;
+  text-overflow: ellipsis; white-space: nowrap;
+  font-size: .74rem; font-weight: 600; text-decoration: none;
+  padding: .28rem .6rem; border-radius: 999px;
+  border: 1px solid var(--border); background: var(--bg-alt); color: var(--text-muted);
+  transition: border-color .15s, color .15s;
+}
+.opt-link:hover { border-color: var(--primary); color: var(--primary); }
+.opt-link.video { color: var(--danger); }
+.opt-link.video:hover { border-color: var(--danger); }
+.opt-link.insta { color: var(--link); }
+.opt-link.insta:hover { border-color: var(--link); }
+/* a marca do Instagram vai como SVG embutido: acompanha a cor do chip e
+   sobrevive nas páginas offline, onde nenhuma fonte de ícone chegaria */
+.opt-link.insta { gap: .38rem; }
+.ico-insta { flex: 0 0 auto; vertical-align: -2px; }
+
+@media (max-width: 640px) {
+  .filtro-grupo { display: block; }
+  .filtro-rot { display: block; margin: 0 0 .35rem; }
+  .filtro-barra { padding: .9rem .8rem .3rem; }
+  .opt-link { font-size: .72rem; }
+}
+
+/* ─── alvos de toque de 44px nos filtros ─── */
+/* o restante dos ajustes de acessibilidade vive no theme.css da skill */
+.filtro-btn { min-height: 44px; display: inline-flex; align-items: center; }
+.filtro-limpa { min-height: 44px; }
+.opt-link { min-height: 40px; display: inline-flex; align-items: center; padding: .4rem .7rem; }
+
+/* ─── cards de atração com foto ─── */
+.opt-card { display: flex; flex-direction: column; padding: 0; overflow: hidden; }
+.opt-corpo { padding: 1rem 1.1rem 1.15rem; display: flex; flex-direction: column; flex: 1; }
+.opt-foto {
+  position: relative; aspect-ratio: 3 / 2; background: var(--bg-alt);
+  border-bottom: 1px solid var(--border);
+}
+.opt-foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* sem foto o card não pode virar um buraco na grade: um degradê da paleta
+   segura o ritmo da coluna */
+.opt-foto.sem-foto {
+  aspect-ratio: 5 / 1;
+  background: linear-gradient(120deg, var(--primary), var(--primary-light) 60%, var(--secondary));
+}
+/* crédito obrigatório das licenças CC, sem roubar a foto */
+.opt-foto-cred {
+  position: absolute; right: 8px; bottom: 8px;
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 30px; height: 30px; border-radius: 50%; text-decoration: none;
+  font-size: .8rem; line-height: 1;
+  background: rgba(255, 255, 255, .85); border: 1px solid var(--border);
+}
+.opt-foto-cred:hover { background: var(--white); }
+.opt-nota { flex: 1; }
+/* a âncora vinda do roteiro não pode parar embaixo do menu fixo */
+.opt-card { scroll-margin-top: calc(var(--nav-h) + 16px); }
+.opt-card:target { border-color: var(--accent); border-left-color: var(--accent); box-shadow: var(--shadow-lg); }
+</style>
+
+<style>
+body, .nav-btn, .modal input { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important; }
+h1, h2, h3, .serif, .category-title { font-family: Georgia, 'Times New Roman', serif !important; }
+.mono, .block-time, .cal-num, .amount, .cost-amount { font-family: 'Courier New', monospace !important; }
+#converter-section, .sync-row, .rate-bar { display: none !important; }
+</style><script>
+window.TRIP_RATE = null; window.LOCAL_RATE = null;
+window.toHomeText = function(){ return ''; };
+window.withHome = function(h){ return h; };
+window.applyConversion = function(){};
+window.GistSync = { isConfigured: function(){ return false; }, debouncedSave: function(){},
+  onStatusChange: function(){}, syncOnLoad: function(){ return Promise.resolve(false); } };
+</script></head>
+<body class=""><div style="background:linear-gradient(135deg,#e85d3a,#c44a2d);color:#fff;text-align:center;padding:10px 20px;font-size:.85rem;font-weight:500;position:relative;z-index:200">📴 Versão offline — gerada em <span id="offdate"></span> · sem conversão de moeda</div><script>document.getElementById("offdate").textContent=new Date().toLocaleDateString("pt-BR");</script>
+<section class="hero" style="--hero-image:url('imagens/cabecalhos/hero-pai-inacio.jpg')">
+  <div class="hero-content">
+    <div class="hero-eyebrow">Roteiro de viagem</div>
+    <h1 class="hero-title">Chapada Diamantina 2026</h1>
+    <p class="hero-sub">Saulo, Lorena, Ricardo &amp; Michele · 17 a 23 de outubro</p>
+    <div class="hero-meta"><span class="hero-chip">📅 17/10 – 23/10</span><span class="hero-chip">🗓️ 7 dias</span><span class="hero-chip">📍 Chapada Diamantina, Bahia</span><span class="hero-chip">👥 4 viajantes</span></div>
+    <a class="hero-cta" href="#calendar-section" onclick="navigateTo('#calendar-section');return false">Ver o roteiro ↓</a>
+  </div>
+</section>
+<nav class="nav-bar" id="navbar"><div class="nav-inner"><button class="nav-btn" data-section="calendar-section" onclick="navigateTo('#calendar-section')">🗓️ Roteiro</button><button class="nav-btn" data-section="alerts-section" onclick="navigateTo('#alerts-section')">⚠️ Atenção</button><button class="nav-btn" data-section="todo-section" onclick="navigateTo('#todo-section')">📝 Checklist</button><button class="nav-btn" data-section="sources-section" onclick="navigateTo('#sources-section')">🔎 Fontes</button><a class="nav-btn" href="offline-hospedagem.html">🏨 Hospedagem</a><a class="nav-btn" href="mapa.html">🌍 Mapa</a><a class="nav-btn" href="offline-atracoes.html">📸 Atrações</a></div></nav>
+<div class="rate-bar" id="rate-bar"></div>
+<section class="section" id="calendar-section">
+  <div class="section-header fade-in"><span class="section-tag">Dia a dia</span>
+  <h2 class="section-title">Roteiro</h2>
+  <p class="section-desc">Toque num dia para ver os horários, trajetos e o que está reservado.</p></div>
+  <div class="calendar-grid" id="calendarGrid"></div>
+  <div class="day-detail" id="dayDetail"></div></section>
+<section class="section" id="alerts-section">
+  <div class="section-header fade-in"><span class="section-tag">Antes de viajar</span>
+  <h2 class="section-title">Não pode esquecer</h2></div>
+  <div class="alerts-grid"><div class="alert-card high fade-in"><h3>🥾 Domingo 18: a Fumaça pede despertador às 5h30</h3><ul><li><strong>O esforço:</strong> 6 km por sentido (12 ida e volta), sendo 2 km de subida em degraus de pedra. Classificada de moderada a avançada — mínimo 2h30 subindo e ~1h30 descendo.</li><li><strong>O relógio:</strong> a trilha recebe visitantes das 8h às 13h, e o Capão fica a 1h30 de Lençóis. Sair às 6h15.</li><li><strong>O dinheiro:</strong> guia obrigatório, R$ 250 a diária para até 4 pessoas — ~R$ 62,50 por pessoa.</li><li><strong>A volta:</strong> são 74 km até Lençóis, fora da exceção dos trechos curtos. Sair do Capão até as 16h.</li><li>💡 Quem não quiser subir fica com a Cachoeira do Riachinho (5 a 10 min de trilha) e a vila. O grupo se reencontra no almoço.</li></ul></div><div class="alert-card high fade-in"><h3>🚗 Quinta 22 é o dia mais pesado de estrada no meio da viagem</h3><ul><li>De Ibicoara até a Pratinha são ~215 a 230 km pelo asfalto, cerca de 4h15, e depois mais 1h até Lençóis.</li><li>✅ <strong>A Pratinha é o plano principal.</strong> A Lapa Doce é decidida no dia, e a aposta do grupo é não fazê-la.</li><li><strong>A regra para a Lapa Doce entrar:</strong> estar em Iraquara até as 11h15, com o grupo disposto. Depois disso ela não cabe, porque a Pratinha fecha a entrada às 16h e a saída para Lençóis precisa ser até 16h30.</li><li>Sair de Ibicoara às 7h mesmo indo só à Pratinha: mantém a Lapa Doce possível e dá folga para o almoço.</li><li>O atalho por Guiné e Palmeiras economiza perto de uma hora, mas tem ~60 km de terra na serra. Fica de fora pelo mesmo critério de Piatã.</li></ul></div><div class="alert-card high fade-in"><h3>🏞️ Buracão: última entrada às 11h</h3><ul><li>O parque só deixa entrar até as 11h. Saindo de Mucugê às 7h, chega-se a Ibicoara às 8h15 e à portaria por volta das 9h15.</li><li>Condutor obrigatório, da Associação dos Condutores de Visitantes de Ibicoara (ACVIB). Combinar na véspera, com ponto de encontro em Ibicoara.</li><li>As fontes divergem no horário de fechamento (15h ou 17h) e no valor do guia (R$ 150–200 por grupo contra R$ 35–40 por pessoa em outra fonte). Confirmar com a ACVIB.</li></ul></div><div class="alert-card high fade-in"><h3>☀️ Poço Azul — segunda 19, com a terça de reserva</h3><ul><li>Os raios de sol atravessam a água entre 12h30 e 14h, e o fenômeno só acontece até 20/10.</li><li>A permanência é curta — 20 a 30 minutos por grupo. É um momento, não um programa de meio período.</li><li>Se a segunda amanhecer nublada, a terça 20 ainda está na janela: de Mucugê são ~1h30 até o poço, e o dia do parque municipal troca de lugar.</li></ul></div><div class="alert-card high fade-in"><h3>🌅 Estrada à luz do dia — com uma exceção</h3><ul><li>Regra do grupo: as travessias acontecem entre o nascer e o pôr do sol. Em outubro o sol nasce por volta das 5h17 e se põe às 17h42.</li><li>✅ <strong>A exceção:</strong> trechos curtos de asfalto, de até ~30 min e com o grupo junto. Só um trecho do roteiro usa: a volta do Pai Inácio no sábado, chegando a Lençóis por volta das 18h45.</li><li>⚠️ <strong>O Pai Inácio fecha a subida às 17h.</strong> Sair de Lençóis às 16h15.</li><li>⚠️ Duas voltas encostam no pôr do sol e não entram na exceção: Capão → Lençóis no domingo (sair até 16h) e Pratinha → Lençóis na quinta (sair até 16h30).</li></ul></div><div class="alert-card medium fade-in"><h3>💰 Pratinha: preço alto e luz da Gruta Azul incerta</h3><ul><li>Tabela oficial da fazenda: R$ 90 de entrada por pessoa em dias comuns, e a flutuação é cobrada à parte, R$ 100 por pessoa. Para os quatro com flutuação, são R$ 760 — o atrativo mais caro da viagem.</li><li>Tirolesa (R$ 30 por salto), caiaque e stand-up (R$ 50 por 30 min) também são extras.</li><li><strong>A luz da Gruta Azul pode não acontecer em 22/10.</strong> As fontes divergem na época (abril a setembro, ou até outubro) e no horário (entre 12h30 e 15h30). Perguntar pelo WhatsApp da fazenda, (75) 9 9946-9933.</li><li>Se a luz não vier, a luz azul da viagem fica com o Poço Azul, na segunda 19, que tem janela garantida até 20/10.</li></ul></div><div class="alert-card medium fade-in"><h3>🏨 Quatro pousadas, com Lençóis nas duas pontas</h3><ul><li>Lençóis (17–19), Mucugê (19–21), Ibicoara (21–22) e Lençóis de novo (22–23).</li><li>Vale perguntar à pousada de Lençóis se ela segura as três noites com o intervalo, para deixar mala guardada.</li><li>Ibicoara tem poucas pousadas e é uma noite só — é a reserva que mais vale fazer cedo.</li></ul></div><div class="alert-card medium fade-in"><h3>💧 O Ferro Doido pode estar seco em outubro</h3><ul><li>As avaliações são consistentes em dizer que a cachoeira só vale na estação chuvosa, porque fora dela é raro ter água.</li><li>Outubro fecha a estação seca. A parada continua barata (40 min, no caminho de casa), mas é aposta — não conte com a queda.</li></ul></div><div class="alert-card medium fade-in"><h3>🌧️ Outubro é a virada da seca para as chuvas</h3><ul><li>Cachoeiras com volume mais baixo e trilhas de leito de rio menos escorregadias.</li><li>Já começa a haver pancadas de chuva — os 28 km de terra do Buracão são o trecho mais sensível a isso.</li></ul></div></div></section>
+<section class="section" id="todo-section">
+  <div class="section-header fade-in"><span class="section-tag">Preparação</span>
+  <h2 class="section-title">Checklist</h2>
+  <p class="section-desc">Itens ligados a uma reserva são marcados sozinhos. O progresso fica salvo neste navegador.</p></div>
+  <div class="todo-summary fade-in"><div class="todo-bar"><span id="todoBar" style="width:0%"></span></div>
+  <span class="todo-pct" id="todoPct">0%</span></div>
+  <div class="todo-grid" id="todoGrid"></div></section>
+<section class="section"><div class="section-header fade-in"><span class="section-tag">Prático</span><h2 class="section-title">Dicas gerais</h2></div><div class="info-grid"><div class="tip-card fade-in"><h3>🗓️ O roteiro está definido</h3><p>São sete dias, com volta na sexta 23. Os horários mostram o encaixe que funciona no relógio — nada está reservado ainda, e o que tem hora de verdade (Pai Inácio, Fumaça, Poço Azul, Buracão, Pratinha) está marcado com ⚠️ no próprio bloco.</p></div><div class="tip-card fade-in"><h3>🍽️ O cardápio de opções continua valendo</h3><p>A aba <strong>Atrações</strong> traz, dia a dia, a ficha de cada lugar: foto, resumo e as leituras que sustentam a nota. O que está no roteiro aparece com ✅; o resto é plano B ou o que cabe se sobrar tempo. Dentro do roteiro, o link <strong>ℹ️ Sobre o lugar</strong> leva direto ao card.</p></div></div></section>
+<section class="section" id="sources-section">
+  <div class="section-header fade-in"><span class="section-tag">Procedência</span>
+  <h2 class="section-title">De onde vêm os números</h2>
+  <p class="section-desc">Cada preço e horário do roteiro traz um selo com a sua origem.
+  Preço muda: o que está marcado como estimado precisa ser confirmado antes de virar plano.</p></div>
+  <div class="fato-legendas fade-in"><span class="fato-legenda"><span class="fato-selo st-confirmado">✅</span> Confirmado</span><span class="fato-legenda"><span class="fato-selo st-cotado">🔎</span> Cotado</span><span class="fato-legenda"><span class="fato-selo st-estimado">⚠️</span> Estimado</span></div>
+  <ul class="fontes fade-in"><li class="fonte-item"><span class="fonte-kind" title="Fonte oficial">🏛️</span><span class="fonte-txt">Fazenda Pratinha — tabela oficial de taxas e horário (material de divulgação, em pesquisa/valores-fazenda-pratinha.jpeg)<span class="fonte-meta">consultado em 21/09/2026 · 1 valor no roteiro</span></span></li><li class="fonte-item"><span class="fonte-kind" title="Operador / estabelecimento">🏢</span><span class="fonte-txt">Poço Azul — janela dos raios de sol e taxa de entrada<span class="fonte-meta">consultado em 08/08/2026 · 1 valor no roteiro</span></span></li><li class="fonte-item"><span class="fonte-kind" title="Imprensa">📰</span><span class="fonte-txt"><a href="https://atarde.com.br/bahia/acesso-a-cartao-postal-da-chapada-diamantina-fica-mais-caro-a-partir-de-abril-1382172" target="_blank" rel="noopener">A Tarde — taxa do Morro do Pai Inácio passa a R$ 20 em 06/04/2026 ↗</a><span class="fonte-meta">consultado em 23/09/2026 · 1 valor no roteiro</span></span></li><li class="fonte-item"><span class="fonte-kind" title="Agregador de avaliações">⭐</span><span class="fonte-txt"><a href="https://vivaiapp.com.br/experiencia/canjeranacafe-passeio-na-plantacao-cafeteria-em-ibicoara-chapada-diama" target="_blank" rel="noopener">Vivai — Canjerana Café: colheita de morango, cafezal e cafeteria em Ibicoara ↗</a><span class="fonte-meta">consultado em 22/09/2026 · 1 valor no roteiro</span></span></li><li class="fonte-item"><span class="fonte-kind" title="Agregador de avaliações">⭐</span><span class="fonte-txt"><a href="https://grutalapadoce.com.br/" target="_blank" rel="noopener">Gruta Lapa Doce — site oficial, sem tabela publicada; valores tirados das avaliações recentes da própria página ↗</a><span class="fonte-meta">consultado em 22/09/2026 · 1 valor no roteiro</span></span></li><li class="fonte-item"><span class="fonte-kind" title="Agregador de avaliações">⭐</span><span class="fonte-txt">Consultas de rota — distâncias e tempos entre cidades<span class="fonte-meta">consultado em 23/08/2026 · 7 valores no roteiro</span></span></li><li class="fonte-item"><span class="fonte-kind" title="Agregador de avaliações">⭐</span><span class="fonte-txt"><a href="https://map.project-osrm.org/" target="_blank" rel="noopener">Roteador OpenStreetMap (OSRM) — distâncias e tempos dos trechos do sul e das grutas, calibrados contra as medições do Google Maps ↗</a><span class="fonte-meta">consultado em 22/09/2026 · 6 valores no roteiro</span></span></li><li class="fonte-item"><span class="fonte-kind" title="Blog de viagem">✍️</span><span class="fonte-txt"><a href="https://guiadostrilheiros.com.br/cachoeira-do-buracao/" target="_blank" rel="noopener">Guia dos Trilheiros — Cachoeira do Buracão: horário, última entrada, ingresso e guia (atualizado em 12/01/2026) ↗</a><span class="fonte-meta">consultado em 22/09/2026 · 3 valores no roteiro</span></span></li><li class="fonte-item"><span class="fonte-kind" title="Blog de viagem">✍️</span><span class="fonte-txt"><a href="https://vemprabahia.com.br/cemiterio-bizantino-de-mucuge-saiba-a-historia-e-como-visitar/" target="_blank" rel="noopener">Vem Pra Bahia — Cemitério Bizantino: entrada gratuita e iluminação noturna ↗</a><span class="fonte-meta">consultado em 22/09/2026 · 1 valor no roteiro</span></span></li><li class="fonte-item"><span class="fonte-kind" title="Blog de viagem">✍️</span><span class="fonte-txt"><a href="https://www.guiachapadadiamantina.com.br/cachoeira-da-fumaca/" target="_blank" rel="noopener">Guia Chapada Diamantina — Cachoeira da Fumaça por cima: trilha, janela de visitação e guia ↗</a><span class="fonte-meta">consultado em 22/09/2026 · 1 valor no roteiro</span></span></li><li class="fonte-item"><span class="fonte-kind" title="Blog de viagem">✍️</span><span class="fonte-txt"><a href="https://www.guiachapadadiamantina.com.br/parque-municipal-de-mucuge/" target="_blank" rel="noopener">Parque Municipal de Mucugê — ingresso, horário e atrativos inclusos (museu, Piabinha e Tiburtino) ↗</a><span class="fonte-meta">consultado em 21/09/2026 · 1 valor no roteiro</span></span></li><li class="fonte-item"><span class="fonte-kind" title="Fonte">🔗</span><span class="fonte-txt"><a href="https://www.booking.com/searchresults.pt-br.html?ss=Ibicoara%2C+Bahia%2C+Brasil&amp;checkin=2026-10-21&amp;checkout=2026-10-22&amp;group_adults=2&amp;no_rooms=1&amp;order=bayesian_review_score" target="_blank" rel="noopener">Booking — Ibicoara, 21–22/10, 1 quarto de casal ↗</a><span class="fonte-meta">consultado em 23/09/2026 · 10 valores no roteiro</span></span></li><li class="fonte-item"><span class="fonte-kind" title="Fonte">🔗</span><span class="fonte-txt"><a href="https://www.booking.com/searchresults.pt-br.html?ss=Len%C3%A7%C3%B3is%2C+Bahia%2C+Brasil&amp;checkin=2026-10-17&amp;checkout=2026-10-19&amp;group_adults=2&amp;no_rooms=1&amp;order=bayesian_review_score&amp;nflt=mealplan%3D1" target="_blank" rel="noopener">Booking — Lençóis, 17–19/10, 1 quarto de casal, café incluído ↗</a><span class="fonte-meta">consultado em 23/09/2026 · 12 valores no roteiro</span></span></li><li class="fonte-item"><span class="fonte-kind" title="Fonte">🔗</span><span class="fonte-txt"><a href="https://www.booking.com/searchresults.pt-br.html?ss=Len%C3%A7%C3%B3is%2C+Bahia%2C+Brasil&amp;checkin=2026-10-22&amp;checkout=2026-10-23&amp;group_adults=2&amp;no_rooms=1&amp;order=bayesian_review_score&amp;nflt=mealplan%3D1" target="_blank" rel="noopener">Booking — Lençóis, 22–23/10, 1 quarto de casal, café incluído ↗</a><span class="fonte-meta">consultado em 23/09/2026 · 12 valores no roteiro</span></span></li><li class="fonte-item"><span class="fonte-kind" title="Fonte">🔗</span><span class="fonte-txt"><a href="https://www.booking.com/searchresults.pt-br.html?ss=Mucug%C3%AA%2C+Bahia%2C+Brasil&amp;checkin=2026-10-19&amp;checkout=2026-10-21&amp;group_adults=2&amp;no_rooms=1&amp;order=bayesian_review_score&amp;nflt=mealplan%3D1" target="_blank" rel="noopener">Booking — Mucugê, 19–21/10, 1 quarto de casal, café incluído ↗</a><span class="fonte-meta">consultado em 23/09/2026 · 11 valores no roteiro</span></span></li></ul></section>
+<footer class="footer"><div>Chapada Diamantina 2026 · Saulo, Lorena, Ricardo e Michele</div><div style="opacity:.7;margin-top:6px;font-size:.8rem">17/10 a 23/10 · roteiro gerado automaticamente</div></footer>
+<script>window.TRIP_DATA = {"meta": {"storagePrefix": "chapada2026", "currency": {"display": "BRL", "local": "BRL", "home": "BRL"}, "title": "Chapada Diamantina 2026", "profile": {"pets": []}}, "sources": {"rotas": {"label": "Consultas de rota — distâncias e tempos entre cidades", "consultadoEm": "2026-08-23", "kind": "agregador"}, "poco-azul": {"label": "Poço Azul — janela dos raios de sol e taxa de entrada", "consultadoEm": "2026-08-08", "kind": "operador"}, "parque-mucuge": {"label": "Parque Municipal de Mucugê — ingresso, horário e atrativos inclusos (museu, Piabinha e Tiburtino)", "url": "https://www.guiachapadadiamantina.com.br/parque-municipal-de-mucuge/", "consultadoEm": "2026-09-21", "kind": "blog"}, "rotas-osrm": {"label": "Roteador OpenStreetMap (OSRM) — distâncias e tempos dos trechos do sul e das grutas, calibrados contra as medições do Google Maps", "url": "https://map.project-osrm.org/", "consultadoEm": "2026-09-22", "kind": "agregador"}, "fumaca": {"label": "Guia Chapada Diamantina — Cachoeira da Fumaça por cima: trilha, janela de visitação e guia", "url": "https://www.guiachapadadiamantina.com.br/cachoeira-da-fumaca/", "consultadoEm": "2026-09-22", "kind": "blog"}, "cemiterio-bizantino": {"label": "Vem Pra Bahia — Cemitério Bizantino: entrada gratuita e iluminação noturna", "url": "https://vemprabahia.com.br/cemiterio-bizantino-de-mucuge-saiba-a-historia-e-como-visitar/", "consultadoEm": "2026-09-22", "kind": "blog"}, "buracao": {"label": "Guia dos Trilheiros — Cachoeira do Buracão: horário, última entrada, ingresso e guia (atualizado em 12/01/2026)", "url": "https://guiadostrilheiros.com.br/cachoeira-do-buracao/", "consultadoEm": "2026-09-22", "kind": "blog"}, "canjerana": {"label": "Vivai — Canjerana Café: colheita de morango, cafezal e cafeteria em Ibicoara", "url": "https://vivaiapp.com.br/experiencia/canjeranacafe-passeio-na-plantacao-cafeteria-em-ibicoara-chapada-diama", "consultadoEm": "2026-09-22", "kind": "agregador"}, "lapa-doce": {"label": "Gruta Lapa Doce — site oficial, sem tabela publicada; valores tirados das avaliações recentes da própria página", "url": "https://grutalapadoce.com.br/", "consultadoEm": "2026-09-22", "kind": "agregador"}, "fazenda-pratinha": {"label": "Fazenda Pratinha — tabela oficial de taxas e horário (material de divulgação, em pesquisa/valores-fazenda-pratinha.jpeg)", "consultadoEm": "2026-09-21", "kind": "oficial"}, "pai-inacio-taxa": {"label": "A Tarde — taxa do Morro do Pai Inácio passa a R$ 20 em 06/04/2026", "url": "https://atarde.com.br/bahia/acesso-a-cartao-postal-da-chapada-diamantina-fica-mais-caro-a-partir-de-abril-1382172", "consultadoEm": "2026-09-23", "kind": "imprensa"}, "booking-lencois-1": {"label": "Booking — Lençóis, 17–19/10, 1 quarto de casal, café incluído", "url": "https://www.booking.com/searchresults.pt-br.html?ss=Len%C3%A7%C3%B3is%2C+Bahia%2C+Brasil&checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1&order=bayesian_review_score&nflt=mealplan%3D1", "consultadoEm": "2026-09-23"}, "booking-mucuge": {"label": "Booking — Mucugê, 19–21/10, 1 quarto de casal, café incluído", "url": "https://www.booking.com/searchresults.pt-br.html?ss=Mucug%C3%AA%2C+Bahia%2C+Brasil&checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1&order=bayesian_review_score&nflt=mealplan%3D1", "consultadoEm": "2026-09-23"}, "booking-ibicoara": {"label": "Booking — Ibicoara, 21–22/10, 1 quarto de casal", "url": "https://www.booking.com/searchresults.pt-br.html?ss=Ibicoara%2C+Bahia%2C+Brasil&checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1&order=bayesian_review_score", "consultadoEm": "2026-09-23"}, "booking-lencois-2": {"label": "Booking — Lençóis, 22–23/10, 1 quarto de casal, café incluído", "url": "https://www.booking.com/searchresults.pt-br.html?ss=Len%C3%A7%C3%B3is%2C+Bahia%2C+Brasil&checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1&order=bayesian_review_score&nflt=mealplan%3D1", "consultadoEm": "2026-09-23"}}, "days": [{"num": 1, "date": "2026-10-17", "emoji": "🌅", "city": "Lençóis", "title": "A estrada e o pôr do sol no Pai Inácio", "route": "Juazeiro → Lençóis → Morro do Pai Inácio → Lençóis", "location": "lencois", "blocks": [{"time": "06h30 – 14h · MANHÃ", "title": "🚗 Juazeiro → Lençóis", "items": ["BR-407 até o sul, depois BR-242 para o oeste. É, junto com a volta, o trecho mais longo da viagem.", "⚠️ Saída às 6h30 para chegar por volta das 14h. O Pai Inácio fecha a subida às 17h, então não há folga para sair tarde.", "💡 Abastecer e almoçar no caminho — Senhor do Bonfim e Jacobina têm a melhor estrutura da rota.", "📍 <a href=\"https://www.google.com/maps/dir/Juazeiro%2C%20BA/Len%C3%A7%C3%B3is%2C%20BA\" target=\"_blank\">Google Maps<\/a> · <a href=\"https://www.waze.com/live-map/directions?to=ll.-12.5614%2C-41.3903\" target=\"_blank\">Waze<\/a>"], "duration": {"text": "489 km · ~7h10", "status": "cotado", "source": "rotas"}}, {"time": "14h – 16h15 · TARDE", "title": "🏨 Chegada e check-in em Lençóis", "items": ["Base das duas primeiras noites, dentro do conjunto tombado pelo IPHAN.", "Descanso depois da estrada. O carro sai de novo às 16h15.", "💡 Para quem sobrar perna: o Rio Serrano fica a pé da pousada, dentro da cidade, e cabe em uma hora."]}, {"time": "16h15 – 18h45 · FIM DE TARDE", "title": "⛰️ Pôr do sol no Morro do Pai Inácio", "items": ["26 km de Lençóis pela BR-242, sentido oeste.", "⚠️ <strong>A subida só é liberada até as 17h.<\/strong> Sair de Lençóis às 16h15 para estar na portaria por volta das 16h45.", "Subida de 20 a 30 minutos por escadaria e trilha curta até o platô, com vista de 360° para o Morro do Camelo e o Dois Irmãos.", "Pôr do sol às 17h42. A volta são 26 km de BR-242 asfaltada já no escuro, com o grupo junto. Chegada em Lençóis por volta das 18h45.", "💡 A taxa subiu para R$ 20 em 06/04/2026 (meia a R$ 10). São R$ 80 pelos quatro, pagos na guarita.", "💡 Levar lanterna: a descida do platô acontece depois que o sol some.", "📍 <a href=\"https://www.google.com/maps/dir/Len%C3%A7%C3%B3is%2C%20BA/Morro%20do%20Pai%20In%C3%A1cio%2C%20Palmeiras%2C%20BA\" target=\"_blank\">Google Maps<\/a>"], "price": {"text": "R$ 20 por pessoa", "status": "cotado", "source": "pai-inacio-taxa"}, "duration": {"text": "26 km · ~30–40 min até Lençóis", "status": "cotado", "source": "rotas"}, "tip": "Subida até 17h", "attraction": "morro-do-pai-inacio"}, {"time": "19h30 em diante · NOITE", "title": "🍽️ Jantar em Lençóis", "items": ["⚠️ Domingo o carro sai às 6h15 para a Fumaça. Jantar sem esticar."], "options": [{"title": "Quilombola", "text": "Godó de banana verde, cortado de palma. Cozinha baiana que quase não se acha fora daqui."}, {"title": "Volta pelo centro histórico iluminado", "text": "Mesa na calçada, costuma ter música ao vivo. Tudo a pé, sem pegar o carro."}, {"title": "Direto para a pousada", "text": "Escolha legítima: foram 7h de estrada e o despertador de domingo toca às 5h30."}], "attraction": "quilombola"}]}, {"num": 2, "date": "2026-10-18", "emoji": "🥾", "city": "Lençóis", "title": "Trekking no Cânion da Fumaça", "route": "Lençóis → Vale do Capão → Lençóis", "location": "lencois", "blocks": [{"time": "06h15 – 07h45 · MADRUGADA", "title": "🚗 Lençóis → Vale do Capão", "items": ["BR-242 até Palmeiras e depois a estrada do Capão. A portaria da trilha fica a 3 km da vila de Caeté-Açu.", "⚠️ Saída às 6h15: a trilha só recebe visitantes das 8h às 13h, e a subida leva no mínimo 2h30.", "💡 Café da manhã para levar — poucas pousadas servem antes das 6h. Vale pedir na véspera.", "📍 <a href=\"https://www.google.com/maps/dir/Len%C3%A7%C3%B3is%2C%20BA/Vale%20do%20Cap%C3%A3o%2C%20Palmeiras%2C%20BA\" target=\"_blank\">Google Maps<\/a>"], "duration": {"text": "~74 km · ~1h30", "status": "estimado", "source": "rotas-osrm"}}, {"time": "08h – 13h · MANHÃ", "title": "🥾 Cachoeira da Fumaça por cima", "items": ["É a trilha do alto do cânion: 6 km por sentido, 12 km ida e volta, com os 2 primeiros quilômetros em subida por degraus de pedra. Depois o terreno fica mais plano até a borda.", "Classificada de moderada a avançada. Mínimo de 2h30 subindo e cerca de 1h30 descendo.", "⚠️ <strong>Guia obrigatório<\/strong>, contratado na portaria ou direto com os condutores do Capão. A diária sai a R$ 250 para grupo de até 4 — contratando direto, custa um terço do preço de agência.", "⚠️ Calçado de trilha já amaciado, água, lanche e protetor. Não há estrutura no caminho.", "💡 No alto, a vista é do cânion por cima, deitado na pedra da borda. O guia indica onde é seguro chegar."], "price": {"text": "R$ 250 o guia, para até 4 pessoas", "status": "estimado", "source": "fumaca"}, "options": [{"title": "Fumaça por cima", "text": "O programa do dia, para quem topar a subida."}, {"title": "Cachoeira do Riachinho + vila do Capão", "text": "Para quem preferir não subir: trilha de 5 a 10 minutos até o poço e manhã livre na vila. O grupo se reencontra no almoço."}], "attraction": "cachoeira-da-fumaca"}, {"time": "13h30 – 15h · ALMOÇO", "title": "🍽️ Almoço na vila de Caeté-Açu", "items": ["A vila fica a 3 km da portaria. Almoço tardio, sem pressa — mas com o relógio da volta em mente."], "attraction": "caete-acu"}, {"time": "15h – 16h30 · VOLTA", "title": "🚗 Vale do Capão → Lençóis", "items": ["⚠️ São 74 km, e esta travessia <strong>não<\/strong> está coberta pela exceção dos trechos curtos. Sair do Capão até as 16h para chegar a Lençóis antes do pôr do sol (17h42).", "Noite livre em Lençóis. Segunda não tem hora para sair de manhã."], "duration": {"text": "~74 km · ~1h30", "status": "estimado", "source": "rotas-osrm"}}]}, {"num": 3, "date": "2026-10-19", "emoji": "💧", "city": "Mucugê", "title": "Poço Azul e o centro histórico de Mucugê", "route": "Lençóis → Poço Azul (Nova Redenção) → Mucugê", "location": "mucuge", "blocks": [{"time": "09h30 – 11h10 · MANHÃ", "title": "🚗 Lençóis → Poço Azul (Nova Redenção)", "items": ["Mudança de base: as malas vão no carro, a próxima cama é em Mucugê.", "💡 Manhã sem pressa depois da Fumaça. A única hora que manda no dia é 12h30.", "📍 <a href=\"https://www.google.com/maps/dir/Len%C3%A7%C3%B3is%2C%20BA/Po%C3%A7o%20Azul%2C%20Nova%20Reden%C3%A7%C3%A3o%2C%20BA\" target=\"_blank\">Google Maps<\/a>"], "duration": {"text": "~95 km · ~1h40", "status": "cotado", "source": "rotas"}}, {"time": "11h30 – 14h · MEIO-DIA", "title": "💧 Poço Azul — flutuação na caverna alagada", "items": ["⚠️ <strong>Hora marcada de verdade:<\/strong> os raios de sol entram na água entre 12h30 e 14h, e a janela do ano fecha em 20/10.", "⚠️ A permanência na água é curta — 20 a 30 minutos por grupo. Chegar antes das 12h30 para pegar a vez dentro da janela.", "⚠️ Banho obrigatório antes de entrar, para tirar o protetor solar. Colete e máscara inclusos na taxa.", "💡 O APA Restaurante fica anexo e resolve o almoço, antes ou depois da flutuação.", "💡 <strong>Plano B:<\/strong> se a segunda amanhecer nublada, a terça 20 ainda está dentro da janela. De Mucugê são ~1h30 até o poço."], "price": {"text": "R$ 30 por pessoa", "status": "estimado", "source": "poco-azul"}, "tip": "Janela fecha 20/10", "attraction": "poco-azul"}, {"time": "14h15 – 15h45 · TARDE", "title": "🚗 Poço Azul → Mucugê", "items": ["Pela BA-245 até a BA-142, sentido sul. Chegada com mais de duas horas de sol pela frente.", "⚠️ Trecho medido só no roteador — conferir no Google Maps na véspera. Parte do acesso ao Poço Azul é de terra.", "📍 <a href=\"https://www.google.com/maps/dir/Po%C3%A7o%20Azul%2C%20Nova%20Reden%C3%A7%C3%A3o%2C%20BA/Mucug%C3%AA%2C%20BA\" target=\"_blank\">Google Maps<\/a>"], "duration": {"text": "~66 km · ~1h30", "status": "estimado", "source": "rotas-osrm"}}, {"time": "16h – 18h · FIM DE TARDE", "title": "🏛️ Check-in e centro histórico de Mucugê", "items": ["Base das próximas duas noites.", "Conjunto tombado pelo IPHAN em 1980: cerca de 300 casas térreas e 10 sobrados do século XIX em três ruas planas. Tudo a pé, em 10 a 15 minutos de caminhada.", "A Igreja Matriz de Santa Isabel, de meados do século XIX, fica ao lado do centro.", "💡 O Cemitério Bizantino recebe iluminação à noite e fica na entrada da cidade — dá para vê-lo aceso hoje e visitá-lo com calma amanhã.", "🍽️ Jantar no centro. O <strong>Paraguassu<\/strong>, do chef André Chequer, fica na Rua Caetité, na mesma área tombada — cozinha contemporânea, das 19h às 23h. Vale para as duas noites em Mucugê."], "attraction": "centro-historico-mucuge"}]}, {"num": 4, "date": "2026-10-20", "emoji": "⛏️", "city": "Mucugê", "title": "Garimpo, cemitério e cachoeiras", "route": "Mucugê — tudo a até 2 km do centro", "location": "mucuge", "blocks": [{"time": "08h30 – 12h30 · MANHÃ", "title": "⛏️ Parque Municipal: Museu Vivo do Garimpo, Piabinha e Tiburtino", "items": ["O parque fica na saída para Andaraí, a menos de 2 km do centro. <strong>Um ingresso cobre tudo<\/strong>: o museu, a trilha do Projeto Sempre-Viva e as duas cachoeiras.", "O Museu Vivo do Garimpo é montado numa toca de garimpeiro restaurada, com diamantes, carbonados e máquinas de lapidação inglesas do século XIX.", "A Cachoeira da Piabinha fica a poucos minutos a pé da sede. O Tiburtino vem depois, a uns 20 minutos pela mesma trilha, larga e praticamente plana — tem poço raso de um lado e fundo do outro.", "Aberto das 8h30 às 17h30.", "💡 Roupa de banho na mochila.", "📍 <a href=\"https://www.google.com/maps/dir/Mucug%C3%AA%2C%20BA/Parque%20Municipal%20de%20Mucug%C3%AA%2C%20BA\" target=\"_blank\">Google Maps<\/a>"], "price": {"text": "R$ 20 por pessoa", "status": "estimado", "source": "parque-mucuge"}, "attraction": "parque-municipal-mucuge"}, {"time": "12h30 – 15h · ALMOÇO", "title": "🍽️ Almoço no centro e tarde sem programa", "items": ["Dia leve de propósito: vem depois da Fumaça e antes do Buracão, e é o único da viagem sem estrada."]}, {"time": "15h30 – 17h · FIM DE TARDE", "title": "⛪ Cemitério Bizantino (Santa Isabel)", "items": ["Mausoléus brancos em estilo bizantino, com torres e cruzes em miniatura, encravados ao pé do paredão de pedra. Construído entre 1850 e 1886, é apontado como único nas Américas nesse estilo.", "Fica na beira da BA-142, em frente a uma das entradas da cidade. Entrada gratuita, sem guia, visita rápida.", "💡 À noite ele é iluminado — vale passar de novo depois do jantar."], "price": {"text": "gratuito", "status": "estimado", "source": "cemiterio-bizantino"}, "attraction": "cemiterio-bizantino"}, {"time": "19h em diante · NOITE", "title": "🌙 Última noite em Mucugê", "items": ["⚠️ <strong>Quarta o carro sai às 7h.<\/strong> O Buracão só aceita entrada até as 11h, e antes dele há 1h15 de asfalto e 28 km de terra.", "Malas prontas na véspera e condutor do Buracão confirmado para 8h15 em Ibicoara."]}]}, {"num": 5, "date": "2026-10-21", "emoji": "🏞️", "city": "Ibicoara", "title": "Buracão, café e morango", "route": "Mucugê → Ibicoara → Buracão → Ibicoara", "location": "ibicoara", "blocks": [{"time": "07h – 08h15 · MANHÃ", "title": "🚗 Mucugê → Ibicoara", "items": ["Mudança de base. BA-142 sentido sul, todo em asfalto.", "⚠️ Encontro com o condutor em Ibicoara, combinado na véspera com a Associação dos Condutores de Visitantes de Ibicoara (ACVIB).", "📍 <a href=\"https://www.google.com/maps/dir/Mucug%C3%AA%2C%20BA/Ibicoara%2C%20BA\" target=\"_blank\">Google Maps<\/a>"], "duration": {"text": "~75 km · ~1h15", "status": "estimado", "source": "rotas-osrm"}}, {"time": "08h15 – 09h15", "title": "🚗 Ibicoara → portaria do Buracão", "items": ["São 28 km de estrada de terra até a portaria do parque.", "⚠️ <strong>Última entrada às 11h.<\/strong> As fontes divergem no horário de fechamento (15h ou 17h) — confirmar com o condutor.", "📍 <a href=\"https://www.google.com/maps/dir/Ibicoara%2C%20BA/Cachoeira%20do%20Burac%C3%A3o%2C%20Ibicoara%2C%20BA\" target=\"_blank\">Google Maps<\/a>"], "duration": {"text": "~28 km de terra · ~1h", "status": "estimado", "source": "buracao"}}, {"time": "09h15 – 13h30 · DIA", "title": "🏞️ Cachoeira do Buracão", "items": ["O programa mais impressionante da viagem, e o ponto em que as fontes mais concordam.", "3 km de trilha por sentido, descrita como de leve a moderada e quase toda plana — cerca de 1h de caminhada até a queda de 85 m dentro do cânion.", "💡 No trecho final cada um escolhe: entrar nadando pelo cânion até o pé da queda, ou ficar no mirante. Não precisa ser unânime.", "⚠️ Sapatilha aquática, água e lanche. Não há estrutura na trilha."], "price": {"text": "guia R$ 150–200 por grupo · ingresso ~R$ 30 por pessoa", "status": "estimado", "source": "buracao"}, "tip": "Entrada até 11h", "attraction": "cachoeira-do-buracao"}, {"time": "13h30 – 14h30 · VOLTA", "title": "🚗 Buracão → Ibicoara", "items": ["Os 28 km de terra com sol alto e folga larga.", "Check-in na pousada e almoço tardio."], "duration": {"text": "~28 km de terra · ~1h", "status": "estimado", "source": "buracao"}}, {"time": "15h30 – 17h30 · TARDE", "title": "🍓 Café e morango no Sítio Canjerana", "items": ["Colheita de morango direto do pé, trilha pelo cafezal sombreado e degustação de café especial na cafeteria do sítio. Cerca de 2h.", "Fica na beira da rodovia, a poucos minutos do centro de Ibicoara.", "⚠️ <strong>Exige agendamento.<\/strong> A agenda publicada mostra um horário das 13h às 14h30 — que bate com a volta do Buracão. Pedir um horário depois das 15h pelo Instagram <a href=\"https://www.instagram.com/cafe_canjerana/\" target=\"_blank\">@cafe_canjerana<\/a> antes de contar com ele."], "price": {"text": "R$ 80 a primeira pessoa + R$ 50 cada adicional", "status": "estimado", "source": "canjerana"}, "attraction": "sitio-canjerana"}, {"time": "18h em diante · NOITE", "title": "🏘️ A vila de Ibicoara", "items": ["Cidade pequena, de pousadas simples. Volta pela praça e jantar no centro.", "⚠️ Quinta é o dia mais longo de estrada no meio da viagem: o carro sai às 6h45."], "attraction": "ibicoara"}]}, {"num": 6, "date": "2026-10-22", "emoji": "🕳️", "city": "Lençóis", "title": "Pratinha, e a Lapa Doce se der", "route": "Ibicoara → Mucugê → Andaraí → Iraquara → Lençóis", "location": "lencois-volta", "blocks": [{"time": "07h – 11h15 · MANHÃ", "title": "🚗 Ibicoara → Iraquara", "items": ["Pelo asfalto: BA-142 de volta por Mucugê e Andaraí, depois BR-242 para o oeste, passando pela entrada de Lençóis e pelo Pai Inácio.", "⚠️ É o trecho mais longo da viagem depois das duas travessias de Juazeiro.", "💡 Sair às 7h mesmo indo só à Pratinha: é o que mantém a Lapa Doce possível e dá folga para o almoço.", "💡 Existe um atalho por Guiné e Palmeiras que economiza perto de uma hora, mas são ~60 km de estrada de terra na serra. Pelo mesmo critério que tirou Piatã do roteiro, fica de fora.", "📍 <a href=\"https://www.google.com/maps/dir/Ibicoara%2C%20BA/Fazenda%20Pratinha%2C%20Iraquara%2C%20BA\" target=\"_blank\">Google Maps<\/a>"], "duration": {"text": "~215–230 km · ~4h15 até a Pratinha", "status": "estimado", "source": "rotas-osrm"}}, {"time": "11h15 · DECIDIR NA HORA", "title": "🔀 Lapa Doce ou direto para a Pratinha", "items": ["A decisão fica para o dia, na chegada a Iraquara. A aposta do grupo é ir só à Pratinha.", "⚠️ <strong>A regra para a Lapa Doce entrar:<\/strong> estar em Iraquara até as 11h15 e com o grupo disposto. Depois disso ela não cabe — a Pratinha fecha a entrada às 16h, e a saída para Lençóis precisa ser até 16h30."], "options": [{"title": "Direto para a Pratinha", "text": "O plano principal. Chegada por volta das 11h30, almoço sem pressa e a tarde inteira na fazenda, cobrindo todas as janelas de luz citadas para a Gruta Azul."}, {"title": "Lapa Doce primeiro, Pratinha depois", "text": "Visita guiada de 1h30 a 2h pelos salões de formações, com lanterna e calçado fechado. A Pratinha fica a 10,8 km (~20 min) e começa por volta das 13h15, com almoço e flutuação espremidos até as 16h30. O site oficial não publica horário nem tabela — confirmar pelo contato da página.", "price": {"text": "~R$ 60–80 por pessoa, com guia", "status": "estimado", "source": "lapa-doce"}}], "attraction": "gruta-da-lapa-doce"}, {"time": "11h30 – 16h30 · DIA", "title": "💦 Fazenda Pratinha e Gruta Azul", "items": ["No complexo ficam o rio de água transparente, a Gruta da Pratinha e a Gruta Azul, com restaurante e cafeteria. A flutuação acontece na Gruta da Pratinha.", "⚠️ <strong>A luz da Gruta Azul em 22/10 é incerta.<\/strong> As fontes divergem no horário (12h30–14h, 14h–15h ou 14h30–15h30) e na época: umas dizem que o fenômeno vai de abril a setembro, outras estendem até outubro. Perguntar à fazenda pelo WhatsApp (75) 9 9946-9933 antes da viagem.", "💡 Indo só à Pratinha, estar lá das 12h às 15h30 cobre todas as janelas citadas. Se a luz não vier, a luz azul da viagem já terá sido a do Poço Azul, na segunda.", "⚠️ Entrada até as 16h, permanência até as 17h.", "⚠️ <strong>A flutuação é cobrada à parte:<\/strong> R$ 100 por pessoa, além da entrada. Para os quatro com flutuação, são R$ 760."], "price": {"text": "R$ 90 por pessoa · flutuação + R$ 100", "status": "cotado", "source": "fazenda-pratinha"}, "tip": "Luz da Gruta Azul incerta", "attraction": "fazenda-pratinha"}, {"time": "16h – 17h30 · VOLTA", "title": "🚗 Pratinha → Lençóis", "items": ["⚠️ Não é trecho curto de ~30 min: sair da Pratinha entre 16h e 16h30 para chegar antes do pôr do sol (17h42).", "📍 <a href=\"https://www.google.com/maps/dir/Fazenda%20Pratinha%2C%20Iraquara%2C%20BA/Len%C3%A7%C3%B3is%2C%20BA\" target=\"_blank\">Google Maps<\/a> · <a href=\"https://www.waze.com/live-map/directions?to=ll.-12.5614%2C-41.3903\" target=\"_blank\">Waze<\/a>"], "duration": {"text": "~46 km · ~1h", "status": "estimado", "source": "rotas-osrm"}}, {"time": "19h em diante · NOITE", "title": "🍽️ Última noite na Chapada", "items": ["Lençóis é o melhor polo de comida do roteiro — a despedida é aqui.", "💡 Sexta o carro sai às 8h."], "options": [{"title": "Lampião Cozinha Nordestina", "text": "Moquecas e carne de sol."}, {"title": "Garimpo Gourmet", "text": "Comida regional farta."}, {"title": "Cozinha Aberta", "text": "Outra opção no centro de Lençóis."}, {"title": "Bistrô do Mato", "text": "Massas e pratos leves, para quem chegar cansado."}], "attraction": "jantar-despedida"}]}, {"num": 7, "date": "2026-10-23", "emoji": "🏠", "city": "Juazeiro", "title": "Volta para casa", "route": "Lençóis → Morro do Chapéu → Jacobina → Juazeiro", "blocks": [{"time": "08h · SAÍDA", "title": "🚗 Lençóis → Juazeiro", "items": ["Sair às 8h direto para casa.", "Saindo às 8h, chega-se em Juazeiro por volta das 16h já contando a parada de almoço — com sol de sobra e a sexta à noite livre.", "📍 <a href=\"https://www.google.com/maps/dir/Len%C3%A7%C3%B3is%2C%20BA/Juazeiro%2C%20BA\" target=\"_blank\">Google Maps<\/a>"], "duration": {"text": "489 km · ~7h10", "status": "cotado", "source": "rotas"}}, {"time": "10h45 – 11h30 · PARADA OPCIONAL", "title": "💦 Cachoeira do Ferro Doido, em Morro do Chapéu", "items": ["💡 Morro do Chapéu está no caminho de casa. A cachoeira fica a 18 km do centro e custa cerca de 40 minutos ida e volta. Do estacionamento são 650 m de caminhada, ~10 min, esforço leve.", "⚠️ <strong>Mas a recomendação não se sustenta em outubro:<\/strong> os relatos são consistentes em dizer que só vale na estação chuvosa — fora dela é raro ter água. Outubro fecha a estação seca.", "⚠️ O local não tem sinalização nem estrutura de segurança. Ficar no mirante.", "⚠️ Abre de segunda a sexta, 8h às 18h — sexta serve. Horário de agregador: confirmar por telefone com a prefeitura.", "💡 Tratar como aposta de 40 minutos, não como programa contado. Se entrar, a chegada em casa passa das 16h para as 17h."], "duration": {"text": "177 km de Lençóis · ~2h40", "status": "cotado", "source": "rotas"}, "tip": "Pode estar seca", "attraction": "cachoeira-ferro-doido"}, {"time": "13h – 14h · ALMOÇO", "title": "🍽️ Almoço em Jacobina", "items": ["É o encaixe natural de horário e a melhor estrutura da rota: cerca de 4h30 depois da saída, com a metade do caminho já feita.", "⚠️ Restaurante ainda não escolhido.", "💡 Alternativa mais tarde: Senhor do Bonfim, a cerca de 1h de Jacobina."], "duration": {"text": "108 km de Morro do Chapéu · ~1h55", "status": "cotado", "source": "rotas"}, "attraction": "jacobina"}, {"time": "16h · CHEGADA", "title": "🏠 Juazeiro", "items": ["Sushi à noite.", "O fim de semana em casa começa aqui — sábado e domingo livres. Cardápio de rio, ilhas, jetski e churrasco em <code>pesquisa/03-final-de-semana-juazeiro.md<\/code>."], "duration": {"text": "~204 km de Jacobina · ~2h30", "status": "cotado", "source": "rotas"}}]}], "todos": [{"city": "Lençóis", "emoji": "🏛️", "subtitle": "Dias 1, 2 e 6 — 3 noites em duas estadias", "items": [{"id": "lencois-hotel-1", "text": "Reservar as noites de 17 e 18/10", "autoKey": "lencois", "autoType": "booking"}, {"id": "lencois-hotel-2", "text": "Reservar a noite de 22/10 — de preferência na mesma pousada", "autoKey": "lencois-volta", "autoType": "booking"}, {"id": "lencois-guia-fumaca", "text": "Contratar o guia da Fumaça para domingo 18, às 8h na portaria (obrigatório · R$ 250 para até 4)"}, {"id": "lencois-cafe-cedo", "text": "Pedir à pousada café da manhã para levar no domingo 18 (saída às 6h15)"}, {"id": "lencois-pratinha-luz", "text": "Perguntar à Fazenda Pratinha pelo WhatsApp (75) 9 9946-9933 se ainda há luz na Gruta Azul em 22/10, e em que horário"}, {"id": "lencois-guia-grutas", "text": "Se a Lapa Doce entrar na quinta 22: confirmar horário e preço pelo contato do site oficial"}, {"id": "lencois-jantar-sab", "text": "Reservar mesa para sábado 17, a partir das 19h30 — depois do Pai Inácio"}]}, {"city": "Mucugê", "emoji": "⛏️", "subtitle": "Dias 3 e 4 — 2 noites", "items": [{"id": "mucuge-hotel", "text": "Reservar as noites de 19 e 20/10", "autoKey": "mucuge", "autoType": "booking"}, {"id": "mucuge-poco-azul", "text": "Confirmar por telefone a janela dos raios do Poço Azul para 19/10"}, {"id": "mucuge-rota-poco", "text": "Conferir no Google Maps o trecho Poço Azul → Mucugê (BA-245) antes de sair"}]}, {"city": "Ibicoara", "emoji": "🍓", "subtitle": "Dia 5 — 1 noite", "items": [{"id": "ibicoara-hotel", "text": "Reservar a noite de 21/10", "autoKey": "ibicoara", "autoType": "booking"}, {"id": "mucuge-guia-buracao", "text": "Contratar o condutor do Buracão com a ACVIB para quarta 21 — encontro às 8h15 em Ibicoara"}, {"id": "ibicoara-canjerana", "text": "Agendar a visita ao Sítio Canjerana (café + morango) para depois das 15h"}]}, {"city": "Geral", "emoji": "🎒", "subtitle": "Vale para a viagem inteira", "items": [{"id": "geral-carro", "text": "Revisar o carro antes de sair — pneus, estepe, óleo, freios"}, {"id": "geral-dinheiro", "text": "Dinheiro vivo para taxas de atrativo, guias e artesanato"}, {"id": "geral-sapatilha", "text": "Sapatilha aquática e calçado com aderência para pedra molhada"}, {"id": "geral-bota", "text": "Calçado de trilha já amaciado para a Fumaça"}, {"id": "geral-mochila", "text": "Mochila de ataque: 1,5 L de água por pessoa, protetor, repelente, troca seca"}, {"id": "geral-lanterna", "text": "Lanterna de cabeça — descida do Pai Inácio e Lapa Doce"}, {"id": "geral-ferro-doido", "text": "Confirmar horário do Ferro Doido com a prefeitura de Morro do Chapéu"}, {"id": "geral-almoco-volta", "text": "Escolher onde almoçar em Jacobina na volta"}]}], "costs": {"categories": []}, "lodging": {"locations": [{"id": "lencois", "name": "Lençóis — primeira estadia", "emoji": "🏛️", "nights": "2 noites · 17 e 18/10", "dates": [{"checkin": "2026-10-17", "checkout": "2026-10-19", "label": "Dias 1 e 2"}], "options": [{"name": "Vila Caribé", "desc": "Quarto duplo amplo com cama de casal, a 700 m do centro, café incluído e cancelamento grátis. O mais barato da cidade entre as pousadas de nota alta — a ressalva é que só tem 20 avaliações.", "price": {"text": "R$ 500 o quarto · 2 noites (R$ 1.000 os dois casais)", "status": "cotado", "source": "booking-lencois-1"}, "rating": "9,6 Booking (20 avaliações)", "url": "https://www.booking.com/searchresults.pt-br.html?ss=Vila+Carib%C3%A9+Len%C3%A7%C3%B3is%2C+Bahia&checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1&group_children=0"}, {"name": "Vila das Estrelas — Guesthouse", "desc": "A 300 m do centro, com estacionamento grátis e café nota 10. Nas datas da viagem o que sobra é o quarto triplo com vista da montanha.", "price": {"text": "R$ 508 o quarto · 2 noites (R$ 1.016 os dois casais)", "status": "cotado", "source": "booking-lencois-1"}, "rating": "9,7 Booking (205 avaliações)", "url": "https://www.booking.com/searchresults.pt-br.html?ss=Vila+das+Estrelas+%E2%80%94+Guesthouse+Len%C3%A7%C3%B3is%2C+Bahia&checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1&group_children=0"}, {"name": "Mansão Mascarenhas", "desc": "Quarto duplo deluxe com varanda, a 500 m do centro. Café nota 10 e cancelamento grátis. <strong>Tem vaga também na noite de 22/10<\/strong> — é a candidata mais forte para segurar as duas estadias de Lençóis.", "price": {"text": "R$ 690 o quarto · 2 noites (R$ 1.380 os dois casais)", "status": "cotado", "source": "booking-lencois-1"}, "rating": "9,7 Booking (140 avaliações)", "url": "https://www.booking.com/searchresults.pt-br.html?ss=Mans%C3%A3o+Mascarenhas+Len%C3%A7%C3%B3is%2C+Bahia&checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1&group_children=0"}, {"name": "Hospedagem do Sítio", "desc": "Quarto com vista do jardim a 600 m do centro, com estacionamento grátis. Nota de localização 9,6 e café 9,2.", "price": {"text": "R$ 700 o quarto · 2 noites (R$ 1.400 os dois casais)", "status": "cotado", "source": "booking-lencois-1"}, "rating": "9,6 Booking (128 avaliações)", "url": "https://www.booking.com/searchresults.pt-br.html?ss=Hospedagem+do+S%C3%ADtio+Len%C3%A7%C3%B3is%2C+Bahia&checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1&group_children=0"}, {"name": "Suítes VarandaLu", "desc": "Suíte com varanda a 350 m do centro. Nota de localização 9,5.", "price": {"text": "R$ 738 o quarto · 2 noites (R$ 1.476 os dois casais)", "status": "cotado", "source": "booking-lencois-1"}, "rating": "9,6 Booking (67 avaliações)", "url": "https://www.booking.com/searchresults.pt-br.html?ss=Su%C3%ADtes+VarandaLu+Len%C3%A7%C3%B3is%2C+Bahia&checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1&group_children=0"}, {"name": "Villa Allma", "desc": "Quarto queen com vista do jardim, a 700 m do centro. Quase 500 avaliações sustentando o 9,7.", "price": {"text": "R$ 780 o quarto · 2 noites (R$ 1.560 os dois casais)", "status": "cotado", "source": "booking-lencois-1"}, "rating": "9,7 Booking (495 avaliações)", "url": "https://www.booking.com/searchresults.pt-br.html?ss=Villa+Allma+Len%C3%A7%C3%B3is%2C+Bahia&checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1&group_children=0"}, {"name": "Pousada Casa Viva a Vida", "desc": "Quarto com vista do jardim a 700 m do centro, café orgânico e estacionamento grátis.", "price": {"text": "R$ 861 o quarto · 2 noites (R$ 1.722 os dois casais)", "status": "cotado", "source": "booking-lencois-1"}, "rating": "9,7 Booking (266 avaliações)", "url": "https://www.booking.com/searchresults.pt-br.html?ss=Pousada+Casa+Viva+a+Vida+Len%C3%A7%C3%B3is%2C+Bahia&checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1&group_children=0"}, {"name": "Pouso da Trilha", "desc": "Suíte superior a 50 m do centro histórico, a pé de tudo. <strong>Atenção<\/strong>: nestas datas só há um quarto disponível — serve para um casal, não para os dois.", "price": {"text": "R$ 968 o quarto · 2 noites (R$ 1.936 os dois casais)", "status": "cotado", "source": "booking-lencois-1"}, "rating": "9,4 Booking (694 avaliações)", "url": "https://www.booking.com/hotel/br/pouso-da-trilha-hospedagem.pt-br.html?checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1", "confirmationUrls": [{"label": "Site da pousada", "url": "https://www.pousodatrilha.com.br/"}]}, {"name": "Pousada Vila Serrano", "desc": "Suíte com vista da piscina, a 500 m do centro, com jardim e aluguel de bicicletas. Café nota 10 e cancelamento grátis.", "price": {"text": "R$ 1.258 o quarto · 2 noites (R$ 2.516 os dois casais)", "status": "cotado", "source": "booking-lencois-1"}, "rating": "9,4 Booking (658 avaliações)", "url": "https://www.booking.com/hotel/br/pousada-vila-serrano.pt-br.html?checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1", "confirmationUrls": [{"label": "Site da pousada", "url": "https://www.vilaserrano.com/"}]}, {"name": "Portal Lençóis", "desc": "Quarto deluxe com varanda, piscina e academia, a 200 m do centro. <strong>A cotação derrubou o mito<\/strong>: a nota real é 7,9, com custo-benefício 7,0 — e o quarto sai por R$ 757 a diária, o dobro do que a pesquisa de agosto estimava. Sem cancelamento grátis fica R$ 1.363.", "price": {"text": "R$ 1.514 o quarto · 2 noites (R$ 3.028 os dois casais)", "status": "cotado", "source": "booking-lencois-1"}, "rating": "7,9 Booking (504 avaliações)", "url": "https://www.booking.com/hotel/br/portal-lencois.pt-br.html?checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1", "confirmationUrls": [{"label": "Site do hotel", "url": "https://portal.bahiatophotels.com/"}]}, {"name": "Hotel Canto das Águas", "desc": "Apartamento deluxe com vista do jardim, à beira do rio, a 300 m do centro. Piscina, sauna e spa — o mais estruturado da cidade.", "price": {"text": "R$ 2.742 o quarto · 2 noites (R$ 5.484 os dois casais)", "status": "cotado", "source": "booking-lencois-1"}, "rating": "9,4 Booking (305 avaliações)", "url": "https://www.booking.com/hotel/br/canto-das-aguas.pt-br.html?checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1", "confirmationUrls": [{"label": "Site do hotel", "url": "https://lencois.com.br/"}]}, {"name": "Vila Pugliesi Hotel Boutique", "desc": "Quarto deluxe a 200 m do centro histórico, com piscina e bar. A melhor nota da cidade — e a diária mais cara da lista.", "price": {"text": "R$ 3.118 o quarto · 2 noites (R$ 6.236 os dois casais)", "status": "cotado", "source": "booking-lencois-1"}, "rating": "9,8 Booking (254 avaliações)", "url": "https://www.booking.com/hotel/br/vila-pugliesi-boutique.pt-br.html?checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1"}]}, {"id": "mucuge", "name": "Mucugê", "emoji": "🏞️", "nights": "2 noites · 19 e 20/10", "dates": [{"checkin": "2026-10-19", "checkout": "2026-10-21", "label": "Dias 3 e 4"}], "options": [{"name": "Pousada Encanto da Roça", "desc": "Quarto duplo de casal a 100 m do centro, café nota 10 e cancelamento grátis. O melhor custo-benefício de Mucugê nas datas da viagem.", "price": {"text": "R$ 540 o quarto · 2 noites (R$ 1.080 os dois casais)", "status": "cotado", "source": "booking-mucuge"}, "rating": "9,0 Booking (72 avaliações)", "url": "https://www.booking.com/searchresults.pt-br.html?ss=Pousada+Encanto+da+Ro%C3%A7a+Mucug%C3%AA%2C+Bahia&checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1&group_children=0"}, {"name": "Casa di Vó", "desc": "Quarto família a 500 m do centro, com cancelamento grátis e café 9,5.", "price": {"text": "R$ 700 o quarto · 2 noites (R$ 1.400 os dois casais)", "status": "cotado", "source": "booking-mucuge"}, "rating": "9,4 Booking (284 avaliações)", "url": "https://www.booking.com/searchresults.pt-br.html?ss=Casa+di+V%C3%B3+Mucug%C3%AA%2C+Bahia&checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1&group_children=0"}, {"name": "Escalada Hospedagens", "desc": "Apartamento inteiro com cama de casal, a 450 m do centro. Cancelamento grátis, sem pré-pagamento, e sete unidades livres pelo mesmo preço.", "price": {"text": "R$ 740 o quarto · 2 noites (R$ 1.480 os dois casais)", "status": "cotado", "source": "booking-mucuge"}, "rating": "9,5 Booking (456 avaliações)", "url": "https://www.booking.com/searchresults.pt-br.html?ss=Escalada+Hospedagens+Mucug%C3%AA%2C+Bahia&checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1&group_children=0"}, {"name": "Pousada Monte Azul", "desc": "Toda em madeira, com bar e lareira, a 500 m do centro. A mais avaliada de Mucugê, com café nota 10, cancelamento grátis e sem pré-pagamento.", "price": {"text": "R$ 767 o quarto · 2 noites (R$ 1.534 os dois casais)", "status": "cotado", "source": "booking-mucuge"}, "rating": "9,0 Booking (588 avaliações)", "url": "https://www.booking.com/hotel/br/pousada-monte-azul.pt-br.html?checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1", "confirmationUrls": [{"label": "Site da pousada", "url": "https://www.pousadamonteazul.com.br/"}]}, {"name": "Cafe Preto Pousada e Bistrô", "desc": "Quarto triplo standard a 150 m do centro, com bistrô no local e café nota 10. A nota geral é a mais baixa da lista.", "price": {"text": "R$ 890 o quarto · 2 noites (R$ 1.780 os dois casais)", "status": "cotado", "source": "booking-mucuge"}, "rating": "8,3 Booking (414 avaliações)", "url": "https://www.booking.com/searchresults.pt-br.html?ss=Cafe+Preto+Pousada+e+Bistr%C3%B4+Mucug%C3%AA%2C+Bahia&checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1&group_children=0"}, {"name": "Villa Hortensia", "desc": "Apartamento inteiro com cama king a 150 m do centro. Café nota 10, cancelamento grátis e sem pré-pagamento.", "price": {"text": "R$ 1.056 o quarto · 2 noites (R$ 2.112 os dois casais)", "status": "cotado", "source": "booking-mucuge"}, "rating": "9,7 Booking (307 avaliações)", "url": "https://www.booking.com/searchresults.pt-br.html?ss=Villa+Hortensia+Mucug%C3%AA%2C+Bahia&checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1&group_children=0"}, {"name": "Pousada Céu da Chapadha", "desc": "Quarto standard de casal a 150 m do centro. Nota de localização 9,9 e cancelamento grátis.", "price": {"text": "R$ 1.112 o quarto · 2 noites (R$ 2.224 os dois casais)", "status": "cotado", "source": "booking-mucuge"}, "rating": "9,7 Booking (117 avaliações)", "url": "https://www.booking.com/searchresults.pt-br.html?ss=Pousada+C%C3%A9u+da+Chapadha+Mucug%C3%AA%2C+Bahia&checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1&group_children=0"}, {"name": "Oforasteiro", "desc": "Villa de pedra inteira, com sala e quintal, a 150 m do centro. Café nota 10.", "price": {"text": "R$ 1.142 o quarto · 2 noites (R$ 2.284 os dois casais)", "status": "cotado", "source": "booking-mucuge"}, "rating": "9,4 Booking (355 avaliações)", "url": "https://www.booking.com/hotel/br/estalagem-oforasteiro.pt-br.html?checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1"}, {"name": "Moã Charme Hotel", "desc": "Suíte no casarão tombado do centro histórico. <strong>É a antiga Villa Santo Antônio<\/strong>: foi reformada e renomeada, a nota caiu de 9,3 para 8,9 e a diária passou de \"a partir de R$ 297\" para R$ 870.", "price": {"text": "R$ 1.740 o quarto · 2 noites (R$ 3.480 os dois casais)", "status": "cotado", "source": "booking-mucuge"}, "rating": "8,9 Booking (172 avaliações)", "url": "https://www.booking.com/hotel/br/villa-santo-antonio-mucuge-mucuge.pt-br.html?checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1"}, {"name": "Refúgio na Serra Boutique Hotel", "desc": "Suíte com sala e jacuzzi, a 400 m do centro. Bem acima da faixa intermediária definida pelo grupo.", "price": {"text": "R$ 3.519 o quarto · 2 noites (R$ 7.038 os dois casais)", "status": "cotado", "source": "booking-mucuge"}, "rating": "9,7 Booking (72 avaliações)", "url": "https://www.booking.com/searchresults.pt-br.html?ss=Ref%C3%BAgio+na+Serra+Boutique+Hotel+Mucug%C3%AA%2C+Bahia&checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1&group_children=0"}, {"name": "Pousada Flor de Açucena", "desc": "Fora de Mucugê: fica em Igatu, a 13,6 km, na estrada de Andaraí. Quarto deluxe de casal com piscina e cancelamento grátis. Entra na lista só se o grupo quiser dormir na cidade-fantasma do garimpo.", "price": {"text": "R$ 800 o quarto · 2 noites (R$ 1.600 os dois casais)", "status": "cotado", "source": "booking-mucuge"}, "rating": "9,5 Booking (285 avaliações)", "url": "https://www.booking.com/searchresults.pt-br.html?ss=Pousada+Flor+de+A%C3%A7ucena+Mucug%C3%AA%2C+Bahia&checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1&group_children=0"}]}, {"id": "ibicoara", "name": "Ibicoara", "emoji": "🍓", "nights": "1 noite · 21/10", "dates": [{"checkin": "2026-10-21", "checkout": "2026-10-22", "label": "Dia 5"}], "options": [{"name": "Pousada Encanto dos Mognos", "desc": "Quarto duplo de casal a 1,9 km do centro, café incluído, cancelamento grátis e pagamento na chegada. A mais barata com quarto de casal de verdade.", "price": {"text": "R$ 250 o quarto · 1 noite (R$ 500 os dois casais)", "status": "cotado", "source": "booking-ibicoara"}, "rating": "8,7 Booking (42 avaliações)", "url": "https://www.booking.com/searchresults.pt-br.html?ss=Pousada+Encanto+dos+Mognos+Ibicoara%2C+Bahia&checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1&group_children=0"}, {"name": "Pousada Mirante das Serras", "desc": "Chalé inteiro com café incluído e cancelamento grátis. Fica a 9,2 km do centro — some com a ideia de jantar na cidade.", "price": {"text": "R$ 260 o quarto · 1 noite (R$ 520 os dois casais)", "status": "cotado", "source": "booking-ibicoara"}, "rating": "9,3 Booking (167 avaliações)", "url": "https://www.booking.com/searchresults.pt-br.html?ss=Pousada+Mirante+das+Serras+Ibicoara%2C+Bahia&checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1&group_children=0"}, {"name": "Pousada Serra Aquarela", "desc": "Chalé de um quarto com sala, na própria estrada do Buracão, a 6,2 km do centro. Café incluído. <strong>Reservando um quarto por casal ela volta à mesa<\/strong>: no pacote de dois quartos só sobrava o chalé inteiro de três dormitórios.", "price": {"text": "R$ 261 o quarto · 1 noite (R$ 522 os dois casais)", "status": "cotado", "source": "booking-ibicoara"}, "rating": "8,6 Booking (109 avaliações)", "url": "https://www.booking.com/searchresults.pt-br.html?ss=Pousada+Serra+Aquarela+Ibicoara%2C+Bahia&checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1&group_children=0", "confirmationUrls": [{"label": "Instagram", "url": "https://www.instagram.com/pousadaserraaquarela/"}]}, {"name": "Pousada Capão do Mel", "desc": "Quarto duplo com cama king, a 4,1 km do centro, café incluído.", "price": {"text": "R$ 290 o quarto · 1 noite (R$ 580 os dois casais)", "status": "cotado", "source": "booking-ibicoara"}, "rating": "8,6 Booking (66 avaliações)", "url": "https://www.booking.com/searchresults.pt-br.html?ss=Pousada+Cap%C3%A3o+do+Mel+Ibicoara%2C+Bahia&checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1&group_children=0"}, {"name": "Hotel Raio do Sol", "desc": "Quarto duplo de casal a 200 m do centro de Ibicoara, café incluído e cancelamento grátis. A opção central mais bem avaliada.", "price": {"text": "R$ 300 o quarto · 1 noite (R$ 600 os dois casais)", "status": "cotado", "source": "booking-ibicoara"}, "rating": "9,1 Booking (86 avaliações)", "url": "https://www.booking.com/searchresults.pt-br.html?ss=Hotel+Raio+do+Sol+Ibicoara%2C+Bahia&checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1&group_children=0"}, {"name": "Diamantina Falls Boutique Hotel & Spa", "desc": "A 250 m do centro, com jacuzzi e restaurante, café incluído e cancelamento grátis. A nota caiu de 9,1 em agosto para 8,8.", "price": {"text": "R$ 300 o quarto · 1 noite (R$ 600 os dois casais)", "status": "cotado", "source": "booking-ibicoara"}, "rating": "8,8 Booking (101 avaliações)", "url": "https://www.booking.com/hotel/br/diamantina-falls-boutique.pt-br.html?checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1"}, {"name": "Pousada Kabana de Pedra", "desc": "Chalé de casal em volta do jardim com piscina, na estrada do Buracão — encurta o dia da cachoeira. Café da manhã \"excepcional\", restaurante no local e cancelamento grátis até 14/10. <strong>Só aceita dinheiro<\/strong>: o pré-pagamento é por transferência bancária combinada direto com a pousada.", "price": {"text": "R$ 368 o quarto · 1 noite (R$ 736 os dois casais)", "status": "cotado", "source": "booking-ibicoara"}, "rating": "9,0 Booking (143 avaliações)", "url": "https://www.booking.com/hotel/br/pousada-kabana-de-pedra.pt-br.html?checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1"}, {"name": "Chalé Mascarenhas", "desc": "Quarto quádruplo com cancelamento grátis, a 11,9 km do centro. <strong>Sem café da manhã<\/strong> e longe de tudo — entra pelo preço e pela nota.", "price": {"text": "R$ 230 o quarto · 1 noite (R$ 460 os dois casais)", "status": "cotado", "source": "booking-ibicoara"}, "rating": "9,5 Booking (15 avaliações)", "url": "https://www.booking.com/searchresults.pt-br.html?ss=Chal%C3%A9+Mascarenhas+Ibicoara%2C+Bahia&checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1&group_children=0"}, {"name": "Recanto Cachoeiras de Ibicoara", "desc": "Quarto com cama queen e varanda, a 6,2 km do centro. A melhor nota de Ibicoara. <strong>Sem café da manhã<\/strong>; o valor já inclui as taxas.", "price": {"text": "R$ 274 o quarto · 1 noite (R$ 548 os dois casais)", "status": "cotado", "source": "booking-ibicoara"}, "rating": "9,9 Booking (61 avaliações)", "url": "https://www.booking.com/searchresults.pt-br.html?ss=Recanto+Cachoeiras+de+Ibicoara+Ibicoara%2C+Bahia&checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1&group_children=0"}, {"name": "Pousada Terra de Gigantes", "desc": "Chalé inteiro a 5,2 km do centro, com café incluído. Nota altíssima, mas com apenas 13 avaliações.", "price": {"text": "R$ 691 o quarto · 1 noite (R$ 1.382 os dois casais)", "status": "cotado", "source": "booking-ibicoara"}, "rating": "9,7 Booking (13 avaliações)", "url": "https://www.booking.com/searchresults.pt-br.html?ss=Pousada+Terra+de+Gigantes+Ibicoara%2C+Bahia&checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1&group_children=0"}]}, {"id": "lencois-volta", "name": "Lençóis — última noite", "emoji": "🌙", "nights": "1 noite · 22/10", "dates": [{"checkin": "2026-10-22", "checkout": "2026-10-23", "label": "Dia 6"}], "options": [{"name": "Vila Caribé", "desc": "A 700 m do centro, café incluído. É a mesma casa da primeira estadia — dá para tentar negociar as três noites juntas.", "price": {"text": "R$ 240 o quarto · 1 noite (R$ 480 os dois casais)", "status": "cotado", "source": "booking-lencois-2"}, "rating": "9,6 Booking (20 avaliações)", "url": "https://www.booking.com/searchresults.pt-br.html?ss=Vila+Carib%C3%A9+Len%C3%A7%C3%B3is%2C+Bahia&checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1&group_children=0"}, {"name": "Pousada da Rita", "desc": "Quarto de casal a 50 m do centro, com estacionamento e cancelamento grátis. O endereço mais central da lista pelo menor preço.", "price": {"text": "R$ 260 o quarto · 1 noite (R$ 520 os dois casais)", "status": "cotado", "source": "booking-lencois-2"}, "rating": "9,0 Booking (127 avaliações)", "url": "https://www.booking.com/searchresults.pt-br.html?ss=Pousada+da+Rita+Len%C3%A7%C3%B3is%2C+Bahia&checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1&group_children=0"}, {"name": "Suítes VarandaLu", "desc": "Suíte júnior deluxe com cama de casal, a 350 m do centro.", "price": {"text": "R$ 324 o quarto · 1 noite (R$ 648 os dois casais)", "status": "cotado", "source": "booking-lencois-2"}, "rating": "9,6 Booking (67 avaliações)", "url": "https://www.booking.com/searchresults.pt-br.html?ss=Su%C3%ADtes+VarandaLu+Len%C3%A7%C3%B3is%2C+Bahia&checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1&group_children=0"}, {"name": "Canto Verde Pousada", "desc": "Quarto duplo de casal a 400 m do centro, com cancelamento grátis.", "price": {"text": "R$ 340 o quarto · 1 noite (R$ 680 os dois casais)", "status": "cotado", "source": "booking-lencois-2"}, "rating": "9,3 Booking (186 avaliações)", "url": "https://www.booking.com/searchresults.pt-br.html?ss=Canto+Verde+Pousada+Len%C3%A7%C3%B3is%2C+Bahia&checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1&group_children=0"}, {"name": "Mansão Mascarenhas", "desc": "O mesmo quarto duplo deluxe da primeira estadia, a 500 m do centro, pela metade da diária. Disponível nas duas janelas.", "price": {"text": "R$ 345 o quarto · 1 noite (R$ 690 os dois casais)", "status": "cotado", "source": "booking-lencois-2"}, "rating": "9,7 Booking (140 avaliações)", "url": "https://www.booking.com/searchresults.pt-br.html?ss=Mans%C3%A3o+Mascarenhas+Len%C3%A7%C3%B3is%2C+Bahia&checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1&group_children=0"}, {"name": "Pousada Alto do Cajueiro", "desc": "Quarto duplo standard a 800 m do centro, com cancelamento grátis. A pousada com mais avaliações de Lençóis — e fechada para a primeira estadia.", "price": {"text": "R$ 350 o quarto · 1 noite (R$ 700 os dois casais)", "status": "cotado", "source": "booking-lencois-2"}, "rating": "9,0 Booking (743 avaliações)", "url": "https://www.booking.com/searchresults.pt-br.html?ss=Pousada+Alto+do+Cajueiro+Len%C3%A7%C3%B3is%2C+Bahia&checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1&group_children=0"}, {"name": "Casa Papa-Vento Pousada", "desc": "Quarto duplo com vista do jardim, a 700 m do centro, com cancelamento grátis.", "price": {"text": "R$ 355 o quarto · 1 noite (R$ 710 os dois casais)", "status": "cotado", "source": "booking-lencois-2"}, "rating": "9,4 Booking (36 avaliações)", "url": "https://www.booking.com/searchresults.pt-br.html?ss=Casa+Papa-Vento+Pousada+Len%C3%A7%C3%B3is%2C+Bahia&checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1&group_children=0"}, {"name": "Villa Allma", "desc": "Quarto queen com vista da piscina, a 700 m do centro.", "price": {"text": "R$ 375 o quarto · 1 noite (R$ 750 os dois casais)", "status": "cotado", "source": "booking-lencois-2"}, "rating": "9,7 Booking (495 avaliações)", "url": "https://www.booking.com/searchresults.pt-br.html?ss=Villa+Allma+Len%C3%A7%C3%B3is%2C+Bahia&checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1&group_children=0"}, {"name": "Pouso da Trilha", "desc": "Suíte standard de casal a 50 m do centro histórico. <strong>Nesta noite há quatro quartos livres<\/strong>, ao contrário de 17–19, quando sobra um só.", "price": {"text": "R$ 385 o quarto · 1 noite (R$ 770 os dois casais)", "status": "cotado", "source": "booking-lencois-2"}, "rating": "9,4 Booking (694 avaliações)", "url": "https://www.booking.com/hotel/br/pouso-da-trilha-hospedagem.pt-br.html?checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1", "confirmationUrls": [{"label": "Site da pousada", "url": "https://www.pousodatrilha.com.br/"}]}, {"name": "Pousada Casa Viva a Vida", "desc": "Quarto duplo com vista do jardim, a 700 m do centro. Também tem vaga em 17–19.", "price": {"text": "R$ 410 o quarto · 1 noite (R$ 820 os dois casais)", "status": "cotado", "source": "booking-lencois-2"}, "rating": "9,7 Booking (266 avaliações)", "url": "https://www.booking.com/searchresults.pt-br.html?ss=Pousada+Casa+Viva+a+Vida+Len%C3%A7%C3%B3is%2C+Bahia&checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1&group_children=0"}, {"name": "Pousada Vila Serrano", "desc": "Villa com vista do jardim, a 500 m do centro. A mesma casa da primeira estadia, por menos da metade da diária.", "price": {"text": "R$ 545 o quarto · 1 noite (R$ 1.090 os dois casais)", "status": "cotado", "source": "booking-lencois-2"}, "rating": "9,4 Booking (658 avaliações)", "url": "https://www.booking.com/hotel/br/pousada-vila-serrano.pt-br.html?checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1", "confirmationUrls": [{"label": "Site da pousada", "url": "https://www.vilaserrano.com/"}]}, {"name": "Hotel Canto das Águas", "desc": "Apartamento deluxe com vista do jardim, a 300 m do centro, à beira do rio.", "price": {"text": "R$ 1.244 o quarto · 1 noite (R$ 2.488 os dois casais)", "status": "cotado", "source": "booking-lencois-2"}, "rating": "9,4 Booking (305 avaliações)", "url": "https://www.booking.com/hotel/br/canto-das-aguas.pt-br.html?checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1", "confirmationUrls": [{"label": "Site do hotel", "url": "https://lencois.com.br/"}]}]}], "pendencias": ["Os preços são <strong>por quarto de casal<\/strong>, para a estadia inteira daquela base — é o que cada casal vai pagar na sua própria reserva. O valor entre parênteses é a soma dos dois quartos, só para dimensionar o gasto do grupo.", "Cotações da Booking de 23/09/2026, nas datas exatas de cada base, 2 adultos em 1 quarto, com impostos e taxas incluídos.", "Padrão do grupo: quarto de casal, categoria intermediária. Onde a pousada não tinha duplo livre, o quarto cotado foi o menor disponível que acomoda o casal — está dito na descrição.", "Preço de Booking muda com a procura: use esta lista para escolher, e cote de novo na hora de fechar.", "Lençóis aparece em duas estadias (17–19 e 22–23). Mansão Mascarenhas, Vila Caribé e Casa Viva a Vida têm vaga nas duas janelas — são as candidatas a segurar as três noites.", "Ibicoara é a reserva mais urgente: uma noite só, cidade pequena, e as opções centrais têm poucos quartos.", "A Kabana de Pedra cancela grátis até 14/10 e cobra por transferência bancária antecipada, em dinheiro. Decidir com folga desse prazo.", "Como cada casal reserva por conta própria, vale combinar a pousada antes e reservar no mesmo dia: em várias delas sobram um ou dois quartos no preço cotado."]}, "stops": [{"n": 1, "name": "Juazeiro", "emoji": "🏠", "days": "Saída sáb 17 · volta sex 23", "dayRange": "Origem", "lat": -9.4111, "lng": -40.4986, "category": "city", "distNext": "489 km · ~7h10", "highlights": ["Saída às 6h30", "BR-407 + BR-242", "Volta na sexta, com sol"]}, {"n": 2, "name": "Lençóis", "emoji": "🏛️", "days": "Dias 1, 2 e 6 · 3 noites", "dayRange": "Base do norte", "lat": -12.5614, "lng": -41.3903, "category": "city", "distNext": "~95 km até o Poço Azul · ~1h40", "highlights": ["Pôr do sol no Morro do Pai Inácio, 26 km pela BR-242", "Cachoeira da Fumaça por cima, saindo do Vale do Capão", "Fazenda Pratinha na volta do sul, a ~1h — e a Lapa Doce, se der", "Centro tombado e o melhor polo de comida da viagem"]}, {"n": 3, "name": "Mucugê", "emoji": "⛏️", "days": "Dias 3 e 4 · 2 noites", "dayRange": "Base do garimpo", "lat": -13.0053, "lng": -41.3706, "category": "mountain", "distNext": "~75 km até Ibicoara · ~1h15", "highlights": ["Poço Azul no caminho de chegada", "Parque Municipal: Museu Vivo do Garimpo, Piabinha e Tiburtino", "Cemitério Bizantino, iluminado à noite", "Centro tombado pelo IPHAN"]}, {"n": 4, "name": "Ibicoara", "emoji": "🍓", "days": "Dia 5 · 1 noite", "dayRange": "Base do Buracão", "lat": -13.4131, "lng": -41.2851, "category": "nature", "distNext": "~215–230 km até a Pratinha · ~4h15", "highlights": ["Cachoeira do Buracão, a 28 km de terra", "Sítio Canjerana — café e morango", "Vila pequena, de pousadas simples"]}], "route": {}, "attractionsPage": "atracoes.html"};
+window.TRIP_FX = {"display": "BRL", "home": "BRL", "local": "BRL", "prefix": "chapada2026", "symbol": "R$", "homeSymbol": "R$"};
+window.TRIP_SYNC = {"prefix": "chapada2026"};</script>
+
+
+<script>// app.js — lógica compartilhada do roteiro. Cada módulo só roda se seus elementos existem.
+// Dados vêm de window.TRIP_DATA, injetado pelo build.
+(function () {
+  'use strict';
+
+  var D = window.TRIP_DATA || {};
+  var META = D.meta || {};
+  var P = META.storagePrefix || 'trip';
+  var K = { todos: P + '_todos', bookings: P + '_bookings', car: P + '_car_booking' };
+
+  var WEEKDAYS = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
+
+  // ═══════════ helpers ═══════════
+  function $(s, r) { return (r || document).querySelector(s); }
+  function $$(s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
+  function el(tag, cls, html) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (html != null) e.innerHTML = html;
+    return e;
+  }
+  function readJSON(key, fallback) {
+    try { return JSON.parse(localStorage.getItem(key)) || fallback; } catch (e) { return fallback; }
+  }
+  function writeJSON(key, val) {
+    localStorage.setItem(key, JSON.stringify(val));
+    if (window.GistSync && window.GistSync.isConfigured()) window.GistSync.debouncedSave();
+  }
+  function parseISO(iso) { var p = String(iso).split('-'); return new Date(+p[0], +p[1] - 1, +p[2]); }
+  function fmtBR(iso) { var p = String(iso).split('-'); return p[2] + '/' + p[1]; }
+  function weekday(iso) { return WEEKDAYS[parseISO(iso).getDay()]; }
+  function reconvert(root) { if (window.applyConversion) window.applyConversion(root); }
+  function esc(t) {
+    return String(t == null ? '' : t).replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  // ═══════════ procedência de um número ═══════════
+  // Espelha fato_html() do build.py: um preço pode ser string (como sempre) ou
+  // { text, status, source }. O selo separa preço oficial de estimativa.
+  var STATUS_SELO = {
+    confirmado: ['✅', 'Confirmado — já reservado ou pago'],
+    cotado: ['🔎', 'Cotado — preço verificado na fonte oficial'],
+    estimado: ['⚠️', 'Estimado — sem fonte oficial, confirme antes de contar com o valor']
+  };
+
+  function fatoHTML(v) {
+    if (v == null) return '';
+    if (typeof v !== 'object') return esc(v);
+    var txt = esc(v.text || '');
+    var selo = STATUS_SELO[v.status];
+    if (!selo) return txt;
+    var src = (D.sources || {})[v.source || ''];
+    var titulo = selo[1];
+    if (src) {
+      titulo += ' · ' + (src.label || '');
+      // data de consulta precisa do ano: fmtBR() corta para DD/MM
+      if (src.consultadoEm) {
+        var pd = String(src.consultadoEm).split('-');
+        titulo += ' (consultado em ' + pd[2] + '/' + pd[1] + '/' + pd[0] + ')';
+      }
+      if (src.url) {
+        return txt + ' <a class="fato-selo st-' + v.status + '" href="' + esc(src.url) +
+               '" target="_blank" rel="noopener" title="' + esc(titulo) + '">' + selo[0] + '</a>';
+      }
+    }
+    return txt + ' <span class="fato-selo st-' + v.status + '" title="' + esc(titulo) + '">' +
+           selo[0] + '</span>';
+  }
+
+  // ═══════════ fade-in ═══════════
+  // .fade-in nasce com opacity 0 e só aparece ao ganhar .visible. Observar
+  // apenas o que existe no load deixa invisível todo card criado depois — ou
+  // reexibido depois de um filtro. O MutationObserver fecha esse buraco, e
+  // window.revelar() serve para quem precisa exibir na hora, sem esperar rolagem.
+  var fadeIO = null;
+
+  function observarFade(raiz) {
+    if (!fadeIO) return;
+    var alvos = (raiz && raiz.classList && raiz.classList.contains('fade-in')) ? [raiz] : [];
+    alvos = alvos.concat($$('.fade-in', raiz || document));
+    alvos.forEach(function (e) { if (!e.classList.contains('visible')) fadeIO.observe(e); });
+  }
+
+  // Exibe imediatamente, sem depender de rolagem. Use depois de filtrar,
+  // reordenar ou inserir cards por JS.
+  window.revelar = function (raiz) {
+    var alvos = (raiz && raiz.classList && raiz.classList.contains('fade-in')) ? [raiz] : [];
+    alvos = alvos.concat($$('.fade-in', raiz || document));
+    alvos.forEach(function (e) { e.classList.add('visible'); });
+  };
+
+  function initFadeIn() {
+    if (!window.IntersectionObserver) { window.revelar(document); return; }
+    fadeIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('visible'); fadeIO.unobserve(e.target); }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    observarFade(document);
+
+    if (window.MutationObserver) {
+      new MutationObserver(function (muts) {
+        muts.forEach(function (m) {
+          Array.prototype.forEach.call(m.addedNodes, function (n) {
+            if (n.nodeType === 1) observarFade(n);
+          });
+        });
+      }).observe(document.body, { childList: true, subtree: true });
+    }
+  }
+
+  // ═══════════ navegação ═══════════
+  window.navigateTo = function (selector) {
+    var target = $(selector);
+    if (!target) return;
+    var nav = $('#navbar');
+    var offset = (nav ? nav.offsetHeight : 0) + 10;
+    window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - offset, behavior: 'smooth' });
+  };
+
+  function initNavSpy() {
+    var btns = $$('.nav-btn[data-section]');
+    if (!btns.length) return;
+    var nav = $('#navbar');
+    window.addEventListener('scroll', function () {
+      var offset = (nav ? nav.offsetHeight : 0) + 24;
+      var current = '';
+      btns.forEach(function (b) {
+        var sec = document.getElementById(b.dataset.section);
+        if (sec && sec.getBoundingClientRect().top <= offset) current = b.dataset.section;
+      });
+      btns.forEach(function (b) { b.classList.toggle('active', b.dataset.section === current); });
+    }, { passive: true });
+  }
+
+  // ═══════════ reservas de hospedagem ═══════════
+  function getBookings() {
+    var raw = readJSON(K.bookings, {});
+    var out = {};
+    Object.keys(raw).forEach(function (loc) {
+      out[loc] = Array.isArray(raw[loc]) ? raw[loc] : [raw[loc]];
+    });
+    return out;
+  }
+
+  function findBookingForDay(day, bookings) {
+    var arr = (bookings[day.location] || []);
+    var hit = arr.find(function (b) {
+      if (!b.checkin || !b.checkout) return true;
+      return day.date >= b.checkin && day.date < b.checkout;
+    });
+    if (hit) return hit;
+    var loc = (D.lodging && D.lodging.locations || []).find(function (l) { return l.id === day.location; });
+    if (!loc) return null;
+    var reserved = (loc.options || []).find(function (o) { return o.reserved; });
+    return reserved ? Object.assign({ _fromData: true }, reserved) : null;
+  }
+
+  // ═══════════ calendário + detalhe do dia ═══════════
+  function initCalendar() {
+    var grid = $('#calendarGrid');
+    var detail = $('#dayDetail');
+    if (!grid || !detail || !D.days) return;
+
+    var current = 0, first = true;
+
+    D.days.forEach(function (d, i) {
+      // <button>, não <div>: o dia precisa ser alcançável por Tab e anunciado
+      // como controle pelos leitores de tela
+      var c = el('button', 'cal-day');
+      c.type = 'button';
+      c.setAttribute('aria-pressed', 'false');
+      c.innerHTML =
+        '<div class="cal-wd">' + weekday(d.date) + '</div>' +
+        '<div class="cal-num">' + fmtBR(d.date) + '</div>' +
+        '<div class="cal-emoji">' + (d.emoji || '📍') + '</div>' +
+        '<div class="cal-city">' + d.city + '</div>';
+      c.addEventListener('click', function () { select(i); });
+      grid.appendChild(c);
+    });
+
+    function select(i) {
+      current = i;
+      $$('.cal-day', grid).forEach(function (c, j) {
+        c.classList.toggle('active', i === j);
+        c.setAttribute('aria-pressed', i === j ? 'true' : 'false');
+      });
+      render(D.days[i]);
+      if (!first) {
+        setTimeout(function () { window.navigateTo('#dayDetail'); }, 60);
+      }
+      first = false;
+    }
+
+    // ①②③… gerados pelo site. Numerar à mão dentro do texto foi o que já
+    // produziu dois "⑤" no mesmo bloco sem ninguém perceber.
+    var CIRCULOS = '①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮';
+    var PET_SELO = {
+      sim: ['pet-sim', '🐕 pode ir'],
+      nao: ['pet-nao', '🚫 sem pet'],
+      confirmar: ['pet-talvez', '🐕 a confirmar']
+    };
+    var TEM_PET = !!((META.profile || {}).pets || []).length;
+
+    function renderOption(o, i) {
+      var selo = TEM_PET && o.pet && PET_SELO[o.pet];
+      return '<li class="day-option">' +
+        '<span class="opt-num">' + (CIRCULOS.charAt(i) || (i + 1) + '.') + '</span>' +
+        '<span class="opt-body">' +
+          (selo ? '<span class="opt-pet ' + selo[0] + '">' + selo[1] + '</span>' : '') +
+          '<strong>' + o.title + '</strong>' +
+          (o.text ? ' — ' + o.text : '') +
+          (o.price ? '<span class="opt-price">' + fatoHTML(o.price) + '</span>' : '') +
+        '</span>' +
+      '</li>';
+    }
+
+    function renderBlock(b) {
+      var links = [];
+      if (b.maps) links.push('<a href="' + b.maps + '" target="_blank" rel="noopener">📍 Google Maps</a>');
+      if (b.waze) links.push('<a href="' + b.waze + '" target="_blank" rel="noopener">🧭 Waze</a>');
+      // b.attraction é o slug do card na página de atrações: leva de "o que
+      // fazemos às 16h15" para "o que é esse lugar"
+      if (b.attraction && D.attractionsPage) {
+        links.push('<a href="' + D.attractionsPage + '#' + b.attraction + '">ℹ️ Sobre o lugar</a>');
+      }
+
+      var opcoes = (b.options || []).length
+        ? '<ol class="day-options">' + b.options.map(renderOption).join('') + '</ol>'
+        : '';
+
+      return '<div class="block">' +
+        '<div class="block-time">' + b.time + '</div>' +
+        '<div>' +
+          '<div class="block-title">' + b.title +
+            (b.tip ? '<span class="block-tip">' + b.tip + '</span>' : '') +
+          '</div>' +
+          '<ul class="block-items">' + (b.items || []).map(function (it) { return '<li>' + it + '</li>'; }).join('') + '</ul>' +
+          opcoes +
+          (b.duration ? '<div class="block-duration">⏱ ' + fatoHTML(b.duration) + '</div>' : '') +
+          (links.length ? '<div class="block-links">' + links.join('') + '</div>' : '') +
+          (b.price ? '<div class="price-tag">' + fatoHTML(b.price) + '</div>' : '') +
+        '</div>' +
+      '</div>';
+    }
+
+    function render(d) {
+      var bookings = getBookings();
+      var stay = findBookingForDay(d, bookings);
+      var loc = (D.lodging && D.lodging.locations || []).find(function (l) { return l.id === d.location; });
+
+      var stayHTML = '';
+      if (stay) {
+        var confirmations = (stay.confirmationUrls || []).map(function (c) {
+          return '<a href="' + c.url + '" target="_blank" rel="noopener">📄 ' + c.label + '</a>';
+        }).join('');
+        stayHTML =
+          '<div class="hotel-card reserved" style="margin-top:24px">' +
+            '<span class="hotel-badge">✅ Reservado</span>' +
+            '<h4>🏨 ' + stay.name + '</h4>' +
+            (stay.desc ? '<div class="desc">' + stay.desc + '</div>' : '') +
+            (stay.price ? '<div class="hotel-price">' + stay.price + '</div>' : '') +
+            (stay.checkin ? '<div class="block-duration">' + fmtBR(stay.checkin) + ' → ' + fmtBR(stay.checkout) + '</div>' : '') +
+            (confirmations ? '<div class="block-links">' + confirmations + '</div>' : '') +
+          '</div>';
+      } else if (loc) {
+        stayHTML = '<div style="margin-top:24px"><a class="btn ghost" href="hospedagem.html#' + loc.id + '">Ver opções de hospedagem em ' + loc.name + ' →</a></div>';
+      }
+
+      detail.innerHTML =
+        '<div class="day-head">' +
+          '<div class="num">Dia ' + d.num + ' · ' + weekday(d.date) + ' ' + fmtBR(d.date) + '</div>' +
+          '<h3>' + (d.emoji || '') + ' ' + d.title + '</h3>' +
+          (d.route ? '<div class="route">' + d.route + '</div>' : '') +
+        '</div>' +
+        '<div class="day-body">' + (d.blocks || []).map(renderBlock).join('') + stayHTML +
+          dayNavHTML(d) +
+        '</div>';
+
+      $$('.day-nav-btn', detail).forEach(function (b) {
+        b.addEventListener('click', function () { select(+b.dataset.go); });
+      });
+      reconvert(detail);
+    }
+
+    // O detalhe do dia é longo: quem chega ao fim teria de rolar tudo de volta
+    // até o calendário só para ver o dia seguinte.
+    function dayNavHTML(d) {
+      var i = D.days.indexOf(d);
+      if (D.days.length < 2) return '';
+      function botao(j, dir, rotulo) {
+        var o = D.days[j];
+        if (!o) return '<span></span>';
+        return '<button type="button" class="day-nav-btn ' + dir + '" data-go="' + j + '">' +
+          '<span class="day-nav-dir">' + rotulo + '</span>' +
+          '<span class="day-nav-day">' + (o.emoji || '') + ' ' + weekday(o.date) + ' ' + fmtBR(o.date) + '</span>' +
+          '<span class="day-nav-title">' + o.title + '</span>' +
+        '</button>';
+      }
+      return '<nav class="day-nav" aria-label="Navegação entre os dias">' +
+        botao(i - 1, 'prev', '← Dia anterior') +
+        botao(i + 1, 'next', 'Próximo dia →') +
+      '</nav>';
+    }
+
+    select(0);
+    window.addEventListener('fx-ready', function () { render(D.days[current]); });
+    window.addEventListener('storage', function (e) {
+      if (e.key === K.bookings) render(D.days[current]);
+    });
+  }
+
+  // ═══════════ checklist ═══════════
+  function initTodos() {
+    var grid = $('#todoGrid');
+    if (!grid || !D.todos) return;
+
+    function autoState(item) {
+      if (item.autoType === 'car') {
+        var car = readJSON(K.car, null);
+        return car ? { label: 'Reserva salva' + (car.confirmation ? ' · ' + car.confirmation : '') } : null;
+      }
+      if (item.autoType === 'booking' && item.autoKey) {
+        var arr = getBookings()[item.autoKey] || [];
+        var hit = item.autoDate
+          ? arr.find(function (b) { return !b.checkin || (item.autoDate >= b.checkin && item.autoDate < b.checkout); })
+          : arr[0];
+        return hit ? { label: hit.name + (hit.checkin ? ' · ' + fmtBR(hit.checkin) : '') } : null;
+      }
+      return null;
+    }
+
+    function render() {
+      var todos = readJSON(K.todos, {});
+      var total = 0, done = 0;
+      grid.innerHTML = '';
+
+      D.todos.forEach(function (group) {
+        var groupDone = 0;
+        var items = (group.items || []).map(function (item) {
+          var auto = autoState(item);
+          var isDone = !!auto || todos[item.id] === true;
+          total++;
+          if (isDone) { done++; groupDone++; }
+          return '<div class="todo-item' + (isDone ? ' done' : '') + (auto ? ' auto' : '') + '" data-id="' + item.id + '"' +
+              (auto ? '' : ' role="button" tabindex="0"') + '>' +
+              '<span class="box">' + (isDone ? '✓' : '') + '</span>' +
+              '<span class="txt">' + item.text + '</span>' +
+            '</div>' +
+            (auto ? '<div class="todo-auto-label">🔗 ' + auto.label + '</div>' : '');
+        }).join('');
+
+        var card = el('div', 'todo-card fade-in' + (groupDone === (group.items || []).length ? ' done' : ''));
+        card.innerHTML =
+          '<h3>' + (group.emoji || '') + ' ' + group.city + '</h3>' +
+          (group.subtitle ? '<div class="sub">' + group.subtitle + '</div>' : '') +
+          items;
+        grid.appendChild(card);
+        card.classList.add('visible');
+      });
+
+      var pct = total ? Math.round(done / total * 100) : 0;
+      var bar = $('#todoBar'), lbl = $('#todoPct');
+      if (bar) bar.style.width = pct + '%';
+      if (lbl) lbl.textContent = done + '/' + total + ' · ' + pct + '%';
+    }
+
+    grid.addEventListener('click', function (e) {
+      var item = e.target.closest('.todo-item');
+      if (!item || item.classList.contains('auto')) return;
+      var todos = readJSON(K.todos, {});
+      todos[item.dataset.id] = !todos[item.dataset.id];
+      writeJSON(K.todos, todos);
+      render();
+    });
+
+    render();
+    window.addEventListener('storage', function (e) {
+      if (e.key === K.todos || e.key === K.bookings) render();
+    });
+    window.__renderTodos = render;
+  }
+
+  // ═══════════ resumo de custos ═══════════
+  function initCostSummary() {
+    var grid = $('#summaryGrid');
+    if (!grid || !D.costs) return;
+    (D.costs.categories || []).forEach(function (c) {
+      var card = el('div', 'cost-card fade-in');
+      card.innerHTML = '<div class="label">' + (c.emoji || '') + ' ' + c.title + '</div>' +
+                       '<span class="amount">' + c.totalLabel + '</span>';
+      grid.appendChild(card);
+    });
+    var total = el('div', 'cost-card total fade-in');
+    total.innerHTML = '<div class="label">Total estimado</div><span class="amount">' + D.costs.totalLabel + '</span>';
+    grid.appendChild(total);
+    reconvert(grid);
+  }
+
+  // ═══════════ conversor de moeda ═══════════
+  function initConverter() {
+    var dsp = $('#conv-display');
+    if (!dsp) return;
+    var home = $('#conv-home'), local = $('#conv-local'), rates = $('#conv-rates');
+    var busy = false;
+
+    function num(v) { return parseFloat(String(v).replace(/\./g, '').replace(',', '.')) || 0; }
+    function show(v) { return v ? v.toLocaleString('pt-BR', { maximumFractionDigits: 2 }) : ''; }
+
+    function sync(source) {
+      if (busy || !window.TRIP_RATE) return;
+      busy = true;
+      var base = source === 'display' ? num(dsp.value)
+        : source === 'home' ? num(home.value) / window.TRIP_RATE
+        : num(local.value) / (window.LOCAL_RATE || 1);
+      if (source !== 'display') dsp.value = show(base);
+      if (source !== 'home' && home) home.value = show(base * window.TRIP_RATE);
+      if (source !== 'local' && local && window.LOCAL_RATE) local.value = show(base * window.LOCAL_RATE);
+      busy = false;
+    }
+
+    dsp.addEventListener('input', function () { sync('display'); });
+    if (home) home.addEventListener('input', function () { sync('home'); });
+    if (local) local.addEventListener('input', function () { sync('local'); });
+
+    window.addEventListener('fx-ready', function () {
+      if (rates) {
+        rates.textContent = '1 ' + META.currency.display + ' = ' + window.TRIP_RATE.toFixed(3) + ' ' + META.currency.home +
+          (window.LOCAL_RATE ? '  ·  1 ' + META.currency.display + ' = ' + window.LOCAL_RATE.toFixed(2) + ' ' + META.currency.local : '');
+      }
+      dsp.value = '100';
+      sync('display');
+    });
+  }
+
+  // ═══════════ hospedagem: marcar reserva ═══════════
+  function initLodging() {
+    var root = $('#lodgingRoot');
+    if (!root) return;
+    var pending = null;
+
+    function refresh() {
+      var bookings = getBookings();
+      $$('.hotel-card[data-hotel]', root).forEach(function (card) {
+        var loc = card.dataset.location;
+        var name = card.dataset.name;
+        var hit = (bookings[loc] || []).find(function (b) { return b.name === name; });
+        var preset = card.dataset.reserved === 'true';
+        card.classList.toggle('reserved', !!hit || preset);
+        var btn = $('.js-book', card);
+        if (btn) {
+          btn.textContent = hit ? 'Cancelar reserva' : (preset ? 'Confirmar datas' : 'Marcar como reservado');
+          btn.classList.toggle('danger', !!hit);
+        }
+        var info = $('.js-booking-info', card);
+        if (info) {
+          info.innerHTML = hit && hit.checkin
+            ? '<div class="block-duration">' + fmtBR(hit.checkin) + ' → ' + fmtBR(hit.checkout) +
+              (hit.cancelDate ? ' · cancelamento grátis até ' + fmtBR(hit.cancelDate) : '') +
+              (hit.pin ? ' · cód. ' + hit.pin : '') + '</div>'
+            : '';
+        }
+      });
+      if (window.__renderTodos) window.__renderTodos();
+    }
+
+    root.addEventListener('click', function (e) {
+      var btn = e.target.closest('.js-book');
+      if (!btn) return;
+      var card = btn.closest('.hotel-card');
+      var loc = card.dataset.location, name = card.dataset.name;
+      var bookings = getBookings();
+      var arr = bookings[loc] || [];
+      var idx = arr.findIndex(function (b) { return b.name === name; });
+
+      if (idx >= 0) {
+        arr.splice(idx, 1);
+        bookings[loc] = arr;
+        writeJSON(K.bookings, bookings);
+        refresh();
+        return;
+      }
+      pending = { card: card, location: loc, name: name };
+      openModal(loc, name);
+    });
+
+    function openModal(loc, name) {
+      var overlay = $('#bookingModal');
+      $('#bookingHotelName').textContent = name;
+      $('#bookingError').textContent = '';
+      var location = (D.lodging.locations || []).find(function (l) { return l.id === loc; });
+      var chips = $('#bookingChips');
+      chips.innerHTML = '';
+      ((location && location.dates) || []).forEach(function (d, i) {
+        var chip = el('button', 'date-chip', (d.label || fmtBR(d.checkin) + ' → ' + fmtBR(d.checkout)));
+        chip.type = 'button';
+        chip.addEventListener('click', function () {
+          $$('.date-chip', chips).forEach(function (c) { c.classList.remove('active'); });
+          chip.classList.add('active');
+          $('#bookingCheckin').value = d.checkin;
+          $('#bookingCheckout').value = d.checkout;
+        });
+        chips.appendChild(chip);
+        if (i === 0) chip.click();
+      });
+      overlay.classList.add('open');
+    }
+
+    window.closeBookingModal = function (e) {
+      if (e && e.target !== e.currentTarget) return;
+      $('#bookingModal').classList.remove('open');
+      pending = null;
+    };
+
+    window.confirmBooking = function () {
+      if (!pending) return;
+      var checkin = $('#bookingCheckin').value, checkout = $('#bookingCheckout').value;
+      var err = $('#bookingError');
+      if (!checkin || !checkout) { err.textContent = 'Informe check-in e check-out.'; return; }
+      if (checkout <= checkin) { err.textContent = 'Check-out precisa ser depois do check-in.'; return; }
+
+      var bookings = getBookings();
+      var arr = bookings[pending.location] || [];
+      arr.push({
+        name: pending.name,
+        checkin: checkin,
+        checkout: checkout,
+        pin: $('#bookingPin').value.trim() || null,
+        cancelDate: $('#bookingCancel').value || null,
+        ts: Date.now()
+      });
+      bookings[pending.location] = arr;
+      writeJSON(K.bookings, bookings);
+      $('#bookingModal').classList.remove('open');
+      pending = null;
+      refresh();
+    };
+
+    refresh();
+    window.addEventListener('storage', function (e) { if (e.key === K.bookings) refresh(); });
+  }
+
+  // ═══════════ mapa ═══════════
+  function gmapsUrl(lat, lng) {
+    return 'https://www.google.com/maps/dir/?api=1&destination=' + lat + ',' + lng + '&travelmode=driving';
+  }
+  function wazeUrl(lat, lng) {
+    return 'https://waze.com/ul?ll=' + lat + ',' + lng + '&navigate=yes';
+  }
+
+  function initMap() {
+    if (!$('#map') || typeof L === 'undefined' || !D.stops || !D.stops.length) return;
+
+    var COLORS = { city: '#4fc3f7', nature: '#66bb6a', beach: '#ffb74d', mountain: '#9575cd', default: '#e85d3a' };
+    var stops = D.stops;
+    var route = D.route || {};
+    var alts = route.alternatives || [];
+    var waypoints = route.waypoints || [];
+    var pois = route.pois || [];
+
+    var map = L.map('map', { scrollWheelZoom: true, zoomControl: true });
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap', maxZoom: 18
+    }).addTo(map);
+
+    var stopCoords = stops.map(function (s) { return [s.lat, s.lng]; });
+
+    // ── cidades de passagem: conferência de que o trajeto está certo ──
+    var wpMarkers = [];
+    waypoints.forEach(function (w) {
+      var icon = L.divIcon({ className: '', html: '<div class="wp-pin"></div>', iconSize: [20, 20], iconAnchor: [10, 16] });
+      var wsrc = (D.sources || {})[w.source];
+      var m = L.marker([w.lat, w.lng], { icon: icon })
+        .bindPopup('<div class="map-popup"><strong>📍 ' + esc(w.name) + '</strong>' + esc(w.note || '') +
+                   (wsrc ? '<div class="map-popup-src">Fonte: <a href="' + esc(wsrc.url) + '" target="_blank" rel="noopener">' + esc(wsrc.label) + '</a></div>' : '') +
+                   '</div>');
+      wpMarkers.push({ marker: m, routes: w.routes || [] });
+    });
+
+    // ── restaurantes e postos ao longo da rota ──
+    var poiIcons = { posto: '⛽', restaurante: '🍽️' };
+    pois.forEach(function (p) {
+      var icon = L.divIcon({
+        className: '', html: '<div class="poi-pin">' + (poiIcons[p.type] || '📌') + '</div>',
+        iconSize: [28, 28], iconAnchor: [14, 14]
+      });
+      var src = (D.sources || {})[p.source];
+      var m = L.marker([p.lat, p.lng], { icon: icon })
+        .bindPopup('<div class="map-popup"><strong>' + (poiIcons[p.type] || '') + ' ' + esc(p.name) + '</strong>' +
+                   '<div class="map-popup-city">' + esc(p.city || '') + '</div>' + esc(p.note || '') +
+                   (src ? '<div class="map-popup-src">Fonte: <a href="' + esc(src.url) + '" target="_blank" rel="noopener">' + esc(src.label) + '</a></div>' : '') +
+                   '</div>');
+      wpMarkers.push({ marker: m, routes: p.routes || [] });
+    });
+
+    function updateWaypointVisibility(activeRouteId) {
+      wpMarkers.forEach(function (wm) {
+        var show = !wm.routes.length || !activeRouteId || wm.routes.indexOf(activeRouteId) !== -1;
+        var has = map.hasLayer(wm.marker);
+        if (show && !has) wm.marker.addTo(map);
+        if (!show && has) map.removeLayer(wm.marker);
+      });
+    }
+
+    // ── rota: real (OSRM) com alternativas, ou linha reta entre paradas se não houver dado de rota ──
+    var routeLayers = [];
+
+    function drawRoute(id) {
+      routeLayers.forEach(function (l) { map.removeLayer(l.outline); map.removeLayer(l.line); });
+      routeLayers = [];
+      var alt = alts.filter(function (a) { return a.id === id; })[0];
+      if (!alt) return;
+      var coords = alt.geometry;
+      var outline = L.polyline(coords, { color: '#fff', weight: 7, opacity: 0.65 }).addTo(map);
+      var line = L.polyline(coords, { color: alt.color || '#e85d3a', weight: 4, opacity: 0.95, lineCap: 'round' }).addTo(map);
+      routeLayers.push({ outline: outline, line: line });
+      updateWaypointVisibility(id);
+      map.fitBounds(L.latLngBounds(coords), { padding: [60, 60] });
+    }
+
+    var defaultAlt = alts.filter(function (a) { return a.default; })[0] || alts[0];
+
+    if (alts.length) {
+      var toolbar = $('#routeToolbar');
+      if (toolbar) {
+        toolbar.hidden = false;
+        var btnsHtml = '<span class="route-toolbar-label">Rota</span>';
+        alts.forEach(function (a) {
+          btnsHtml += '<button type="button" class="route-btn' + (a.id === defaultAlt.id ? ' active' : '') +
+            '" data-route="' + esc(a.id) + '">' +
+            esc(a.label) + '<span class="route-btn-tag">' + esc(a.tag || '') + ' · ' +
+            a.distanceKm + ' km · ~' + Math.round(a.durationMin / 60 * 10) / 10 + 'h</span></button>';
+        });
+        btnsHtml += (route.note ? '<span class="route-note">ℹ️ ' + esc(route.note) + '</span>' : '');
+        toolbar.innerHTML = btnsHtml;
+        $$('.route-btn', toolbar).forEach(function (b) {
+          b.addEventListener('click', function () {
+            $$('.route-btn', toolbar).forEach(function (o) { o.classList.remove('active'); });
+            b.classList.add('active');
+            drawRoute(b.getAttribute('data-route'));
+          });
+        });
+      }
+    } else {
+      L.polyline(stopCoords, { color: '#fff', weight: 7, opacity: 0.6 }).addTo(map);
+      L.polyline(stopCoords, { color: '#e85d3a', weight: 3, opacity: 0.95, dashArray: '1 8', lineCap: 'round' }).addTo(map);
+    }
+
+    // ── marcadores das paradas principais (bases do roteiro) ──
+    var markers = [], cards = [], active = -1;
+    var list = $('#stopList');
+
+    stops.forEach(function (s, i) {
+      var color = COLORS[s.category] || COLORS.default;
+      var icon = L.divIcon({
+        className: '',
+        html: '<div class="marker-pin" style="width:40px;height:40px;background:' + color +
+              ';border:3px solid #fff;box-shadow:0 3px 12px rgba(0,0,0,.4)">' + (s.emoji || s.n) + '</div>',
+        iconSize: [40, 40], iconAnchor: [20, 20]
+      });
+      var m = L.marker([s.lat, s.lng], { icon: icon }).addTo(map)
+        .bindPopup('<div class="map-popup"><strong>' + s.n + '. ' + esc(s.name) + '</strong>' + (s.days || '') +
+                   '<br>' + (s.highlights || []).slice(0, 3).map(function (h) { return '· ' + h; }).join('<br>') +
+                   '<div class="deep-links"><a class="deep-link" target="_blank" rel="noopener" href="' + gmapsUrl(s.lat, s.lng) + '">🗺️ Google Maps</a>' +
+                   '<a class="deep-link" target="_blank" rel="noopener" href="' + wazeUrl(s.lat, s.lng) + '">🧭 Waze</a></div></div>');
+      m.on('click', function () { select(i); });
+      markers.push(m);
+
+      if (list) {
+        var card = el('div', 'stop-card');
+        card.innerHTML =
+          '<div class="n">Parada ' + s.n + '</div>' +
+          // o título é um <button> cujo ::after cobre o card inteiro: um clique
+          // em qualquer ponto seleciona a parada, e o Tab chega até ele
+          '<h4><button type="button" class="stop-title">' + (s.emoji || '') + ' ' + esc(s.name) + '</button></h4>' +
+          '<div class="days">' + (s.days || '') + '</div>' +
+          '<ul>' + (s.highlights || []).slice(0, 4).map(function (h) { return '<li>' + h + '</li>'; }).join('') + '</ul>' +
+          (s.distNext ? '<div class="stop-dist">↓ ' + s.distNext + '</div>' : '') +
+          '<div class="deep-links"><a class="deep-link" target="_blank" rel="noopener" href="' + gmapsUrl(s.lat, s.lng) + '">🗺️ Google Maps</a>' +
+          '<a class="deep-link" target="_blank" rel="noopener" href="' + wazeUrl(s.lat, s.lng) + '">🧭 Waze</a></div>';
+        card.querySelector('.stop-title').addEventListener('click', function () { select(i); });
+        list.appendChild(card);
+        cards.push(card);
+      }
+    });
+
+    // ── legenda ──
+    var legend = $('#mapLegend');
+    if (legend && (waypoints.length || pois.length)) {
+      legend.hidden = false;
+      legend.innerHTML =
+        '<span><i></i> Parada do roteiro</span>' +
+        (waypoints.length ? '<span><i class="diamond"></i> Cidade de passagem</span>' : '') +
+        (pois.length ? '<span><i class="ring"></i> Restaurante / posto</span>' : '');
+    }
+
+    function select(i) {
+      active = i;
+      cards.forEach(function (c, j) { c.classList.toggle('active', i === j); });
+      map.setView([stops[i].lat, stops[i].lng], 10, { animate: true });
+      markers[i].openPopup();
+      if (cards[i]) cards[i].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    // adiado: no primeiro paint o contêiner do mapa ainda não tem o tamanho final
+    // (grid ainda assentando, viewport mobile ainda ajustando) — invalidateSize()
+    // força o Leaflet a reler o tamanho real antes de calcular o enquadramento.
+    // Dois requestAnimationFrame + um setTimeout garantem que pelo menos um ciclo
+    // completo de layout/paint já rodou antes de medir.
+    function settleMap() {
+      map.invalidateSize();
+      if (alts.length) drawRoute(defaultAlt.id);
+      else map.fitBounds(L.latLngBounds(stopCoords), { padding: [60, 60] });
+    }
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () { setTimeout(settleMap, 50); });
+    });
+    window.addEventListener('resize', function () { map.invalidateSize(); });
+    window.__mapSelect = select;
+  }
+
+  // ═══════════ modal de sincronização ═══════════
+  function initSync() {
+    var overlay = $('#syncModal');
+    if (!overlay || !window.GistSync) return;
+
+    window.GistSync.onStatusChange(function (status) {
+      var dot = $('#syncDot'), label = $('#syncLabel');
+      if (!dot) return;
+      dot.className = 'sync-dot ' + status;
+      var texts = { idle: 'Sync desativado', syncing: 'Sincronizando…', synced: 'Sincronizado', error: 'Erro no sync' };
+      if (label) label.textContent = texts[status] || '';
+    });
+
+    window.openSyncModal = function () {
+      $('#syncGistId').value = localStorage.getItem(P + '_gist_id') || '';
+      $('#syncPat').value = '';
+      $('#syncFeedback').textContent = '';
+      $('#syncDisconnect').style.display = window.GistSync.isConfigured() ? '' : 'none';
+      overlay.classList.add('open');
+    };
+    window.closeSyncModal = function (e) {
+      if (e && e.target !== e.currentTarget) return;
+      overlay.classList.remove('open');
+    };
+    window.saveSyncConfig = function () {
+      var id = $('#syncGistId').value.trim(), pat = $('#syncPat').value.trim();
+      var fb = $('#syncFeedback');
+      if (!id || !pat) { fb.textContent = 'Preencha Gist ID e token.'; return; }
+      window.GistSync.saveCredentials(id, pat);
+      fb.textContent = 'Testando…';
+      window.GistSync.testConnection().then(function (ok) {
+        if (!ok) { fb.textContent = 'Não consegui acessar o Gist. Confira o ID e o token.'; return; }
+        window.GistSync.syncOnLoad().then(function () {
+          overlay.classList.remove('open');
+          location.reload();
+        });
+      });
+    };
+    window.disconnectSync = function () {
+      window.GistSync.clearCredentials();
+      overlay.classList.remove('open');
+    };
+
+    if (window.GistSync.isConfigured()) {
+      window.GistSync.syncOnLoad().then(function (changed) { if (changed) location.reload(); });
+    }
+  }
+
+  // ═══════════ medidas de layout ═══════════
+  // O CSS não consegue medir o .page-header (padding em clamp de vw, foto ou
+  // não). Sem --header-h, o mapa em calc(100svh - nav) nascia abaixo da dobra.
+  function initLayoutMetrics() {
+    var header = $('.page-header');
+    var nav = $('#navbar');
+    var inner = $('.nav-inner');
+
+    function medir() {
+      var mapa = $('.map-layout');
+      var navH = nav ? nav.offsetHeight : 0;
+      // quando há mapa, o que interessa é o topo real dele (inclui margens e a
+      // barra de rotas); fora dele basta a altura do cabeçalho
+      var h = mapa
+        ? Math.round(mapa.getBoundingClientRect().top + window.pageYOffset) - navH
+        : (header ? Math.round(header.getBoundingClientRect().height) : 0);
+      document.documentElement.style.setProperty('--header-h', Math.max(0, h) + 'px');
+      // --nav-h no CSS é um chute de 58px; a barra real cresce com a fonte
+      if (navH) document.documentElement.style.setProperty('--nav-h', navH + 'px');
+      // o degradê da direita só faz sentido quando há itens fora da tela
+      if (nav && inner) nav.classList.toggle('overflowing', inner.scrollWidth > inner.clientWidth + 4);
+    }
+
+    medir();
+    window.addEventListener('resize', medir, { passive: true });
+    if (inner) inner.addEventListener('scroll', function () {
+      nav.classList.toggle('overflowing', inner.scrollLeft + inner.clientWidth < inner.scrollWidth - 4);
+    }, { passive: true });
+    // a foto do cabeçalho pode chegar depois e mudar a altura
+    window.addEventListener('load', medir);
+  }
+
+  // ═══════════ boot ═══════════
+  function boot() {
+    initLayoutMetrics();
+    initFadeIn();
+    initNavSpy();
+    initCalendar();
+    initTodos();
+    initCostSummary();
+    initConverter();
+    initLodging();
+    initMap();
+    initSync();
+    window.addEventListener('fx-ready', function () { reconvert(document); });
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
+  else boot();
+})();
+</script>
+
+
+</body>
+</html>

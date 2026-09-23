@@ -9,7 +9,9 @@ Viagem mista com esforço físico de médio a baixo e ritmo tranquilo: um atrati
 - **Ida:** sábado, 17/10/2026
 - **Volta:** sexta-feira, 23/10/2026 *(antecipada em 09/08/2026 — ver abaixo)*
 - **Duração:** 7 dias / 6 noites — descontando ida e volta, restam ~5 dias efetivos de passeio na Chapada
-- **Fim de semana em casa:** sábado 24 e domingo 25/10 em Juazeiro/Petrolina, com a tarde de sexta 23 já livre
+- **Fim de semana em casa:** sábado 24 e domingo 25/10 em Juazeiro/Petrolina, com a noite de sexta 23 já livre
+
+> **Roteiro definido em 22/09/2026.** Sáb 17 Pai Inácio ao pôr do sol · Dom 18 Fumaça por cima · Seg 19 Poço Azul e Mucugê · Ter 20 Parque Municipal e Cemitério Bizantino · Qua 21 Buracão e Sítio Canjerana, dormindo em Ibicoara · Qui 22 Fazenda Pratinha, com a Lapa Doce decidida no dia, dormindo em Lençóis · Sex 23 volta. Medições e checagens em `pesquisa/07-roteiro-definido.md`. Entre 23/08 e 22/09 a volta chegou a ser antecipada para a quinta 22; o roteiro definido a devolveu para a sexta.
 
 ### Por que a volta foi antecipada
 
@@ -50,8 +52,8 @@ Decidido pelo grupo em 08/08/2026:
 
 Decidido pelo grupo em 09/08/2026:
 
-- **Cachoeira da Fumaça (Vale do Capão) — descartada.** São 12 km ida e volta, com os 2 km iniciais em subida íngreme que exigem bom condicionamento, e depois terreno irregular de pedra: 2h subindo, 1h30 descendo, guia obrigatório, visitação das 8h às 13h. Fora do perfil por larga margem.
-- **Vale do Capão — cai junto.** Sem a Fumaça, sobrariam a Cachoeira do Riachinho e a vila, que não justificam 2h de carro e 20 km de estrada de terra.
+- **Cachoeira da Fumaça (Vale do Capão) — descartada.** São 12 km ida e volta, com os 2 km iniciais em subida íngreme que exigem bom condicionamento, e depois terreno irregular de pedra: 2h subindo, 1h30 descendo, guia obrigatório, visitação das 8h às 13h. Fora do perfil por larga margem. **Revertido:** reaberta em 21/09 e escolhida pelo grupo em 22/09/2026 para o domingo 18, com a Cachoeira do Riachinho como alternativa para quem não quiser subir.
+- **Vale do Capão — cai junto.** Sem a Fumaça, sobrariam a Cachoeira do Riachinho e a vila, que não justificam 2h de carro e 20 km de estrada de terra. **Revertido em 22/09/2026** junto com a Fumaça — e a estrada Palmeiras–Capão foi asfaltada em 2025.
 - **Dirigir à noite.** Todo deslocamento de carro acontece à luz do dia; noite só em caso extremo.
 
 ## Orçamento
@@ -66,7 +68,15 @@ Decidido pelo grupo em 09/08/2026:
 
 ## Hospedagem
 
-**Estratégia definida: três bases, seis noites.** Poucas mudanças de mala, cada base cobrindo um trecho da Chapada, com os passeios saindo de perto.
+**Estratégia atualizada em 22/09/2026: três cidades-base, seis noites, com Lençóis nas duas pontas.** A tabela abaixo substitui a de agosto (Lençóis 2, Mucugê 3, Morro do Chapéu 1).
+
+| Base | Noites | Datas | Papel |
+|---|---|---|---|
+| **Lençóis** | 2 + 1 | 17, 18 e 22/10 | Base do norte: Pai Inácio, Fumaça e, na volta do sul, as grutas de Iraquara. Melhor polo de comida da viagem |
+| **Mucugê** | 2 | 19 e 20/10 | Poço Azul na chegada, Parque Municipal e Cemitério Bizantino |
+| **Ibicoara** | 1 | 21/10 | Base do Buracão, a 28 km de terra — tira o dia das 5h de carro que custava saindo de Mucugê |
+
+Tabela original de agosto, mantida como registro:
 
 | Base | Noites | Datas | Papel |
 |---|---|---|---|
@@ -81,6 +91,19 @@ Decidido pelo grupo em 09/08/2026:
 ## O que já está fechado
 
 Nada. Nenhuma pousada, ingresso ou guia reservado até o momento.
+
+## O site do roteiro
+
+Gerado a partir de `site/trip.json` — **o HTML não se edita à mão**. Quatro abas:
+
+- **Roteiro** (`index.html`) — o dia a dia, com os horários, trajetos e o que está reservado. Cada dia termina com o atalho para o dia seguinte, e os blocos com um lugar catalogado trazem o link **ℹ️ Sobre o lugar**.
+- **Atrações** (`atracoes.html`) — a ficha de cada lugar da viagem: foto, resumo, nível de recomendação e os blogs e vídeos que sustentam a nota. Substituiu o antigo cardápio de opções em 23/09/2026, mantendo a curadoria e os filtros por dia. As fotos vêm do Wikimedia Commons, baixadas no projeto e creditadas na própria página.
+- **Hospedagem** (`hospedagem.html`) — as opções por cidade-base e o que foi reservado.
+- **Mapa** (`mapa.html`) — as paradas na ordem em que serão visitadas.
+
+Há ainda uma **versão offline** (`roteiro-offline.html` e as `offline-*.html`), com CSS, JS e fotos embutidos, para os trechos sem sinal. O mapa fica de fora dela, porque depende de tiles da rede.
+
+Para regerar: `python3 ~/.claude/skills/agente-viagem/scripts/build.py` dentro de `site/`, depois `python3 scripts/gera-atracoes.py`, e o build de novo para atualizar a versão offline.
 
 ## Decisões em aberto
 

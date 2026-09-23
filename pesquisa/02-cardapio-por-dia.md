@@ -31,6 +31,8 @@ Cada dia tem uma **âncora** (o deslocamento ou o compromisso que não se move) 
 | 🅑 | Volta pelo centro histórico iluminado, mesa na calçada | 🟢 | Costuma ter música ao vivo |
 | 🅑 | Direto para a pousada, dormir | 🟢 | Escolha legítima depois de 7h ao volante |
 
+> **Correção de 23/09/2026 — o Paraguassu não fica em Lençóis.** A opção acima nasceu errada: o restaurante fica na Rua Caetité, em **Mucugê**, no hotel Refúgio na Serra. O menu degustação de sábado continua existindo, mas o grupo não passa nenhum sábado em Mucugê — está lá na segunda 19 e na terça 20. A votação desta noite fica valendo como foi feita, sem esta linha; o restaurante passou para as noites de Mucugê.
+
 ---
 
 ## Domingo, 18/10 — Lençóis sem sair de Lençóis
