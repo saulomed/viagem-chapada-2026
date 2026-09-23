@@ -628,6 +628,13 @@ a.fato-selo:hover { opacity: 0.75; }
 }
 .footer a { color: var(--white); opacity: 0.85; }
 .footer .sync-row { margin-top: 14px; display: flex; gap: 10px; justify-content: center; align-items: center; flex-wrap: wrap; }
+.footer-offline { margin-top: 16px; }
+.footer-offline a {
+  display: inline-block; padding: 8px 18px; border-radius: 999px; text-decoration: none;
+  border: 1.5px solid rgba(255, 255, 255, 0.4); font-size: 0.8rem; opacity: 0.9;
+  transition: opacity 0.2s, border-color 0.2s;
+}
+.footer-offline a:hover { opacity: 1; border-color: var(--white); }
 .sync-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--text-light); display: inline-block; }
 .sync-dot.synced { background: var(--ok); }
 .sync-dot.syncing { background: var(--highlight); }
@@ -679,7 +686,7 @@ a.fato-selo:hover { opacity: 0.75; }
 }
 
 @media print {
-  .nav-bar, .footer .sync-row, .modal-overlay { display: none !important; }
+  .nav-bar, .footer .sync-row, .footer-offline, .modal-overlay { display: none !important; }
   .fade-in { opacity: 1 !important; transform: none !important; }
   .day-detail { box-shadow: none; }
 }

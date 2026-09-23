@@ -301,18 +301,6 @@ DIAS = [
     },
 ]
 
-FORA = [
-    ('Igatu e a Gruna do Brejo', 'Com o Poço Azul preso às 12h30 na segunda, a vila só cabia reduzida a uma hora, e ela não fica no caminho do Poço Azul a Mucugê.'),
-    ('Ribeirão do Meio, Poço do Diabo, Mosquito e Marimbus', 'Não couberam: os dias de Lençóis foram para o Pai Inácio, a Fumaça e as grutas.'),
-    ('Poço Encantado (Itaetê)', 'Fora da janela dos raios em outubro.'),
-    ('Piatã', '~3h por asfalto de Mucugê, e o atalho tem 46 km de estrada vicinal de serra. É uma viagem própria.'),
-    ('Atalho Mucugê–Guiné–Palmeiras', 'Economizaria perto de uma hora na quinta, mas são ~60 km de terra na serra. Mesmo critério de Piatã.'),
-    ('Cachoeira do Sossego', '14 km ida e volta sobre leito de rio.'),
-    ('Rio de Contas', 'O centro histórico mais rico dos três, mas a 128 km de Mucugê — mais de 2h por trecho.'),
-    ('Pernoite em Morro do Chapéu', 'A volta sai direto de Lençóis. A cidade continua no roteiro, como parada da estrada de casa.'),
-    ('Trilha de descida à base do Ferro Doido', 'O mirante já entrega a vista, e o dia da volta não tem folga para isso.'),
-]
-
 RESTAURANTES = [
     ('Lençóis', ['Quilombola — godó de banana verde, cortado de palma',
                  'Cozinha Aberta', 'Bodega',
@@ -652,11 +640,6 @@ barra_filtros = (
     '<button class="filtro-limpa" type="button">limpar filtros</button></p>'
 )
 
-fora_html = ''.join(
-    f'<div class="kv"><span class="k">{B.esc(n)}</span><span class="v">{B.esc(m)}</span></div>'
-    for n, m in FORA
-)
-
 rest_html = ''.join(
     '<div class="info-card fade-in"><h3>' + B.esc(cidade) + '</h3><ul class="rest-lista">'
     + ''.join(f'<li>{B.esc(r)}</li>' for r in lista) + '</ul></div>'
@@ -729,14 +712,6 @@ corpo = (
       '<p class="section-desc">Levantamento gastronômico acumulado, por trecho do roteiro.</p>'
       '</div>'
       f'<div class="info-grid">{rest_html}</div>'
-      '</section>'
-    + '<section class="section">'
-      '<div class="section-header fade-in">'
-      '<span class="section-tag">Descartado</span>'
-      '<h2 class="section-title">O que ficou de fora, e por quê</h2>'
-      '<p class="section-desc">Para ninguém achar que foi esquecimento.</p>'
-      '</div>'
-      f'<div class="info-card fade-in">{fora_html}</div>'
       '</section>'
     + '<section class="section">'
       '<div class="section-header fade-in">'

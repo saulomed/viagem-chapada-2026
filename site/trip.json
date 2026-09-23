@@ -566,7 +566,7 @@
             "Pelo asfalto: BA-142 de volta por Mucugê e Andaraí, depois BR-242 para o oeste, passando pela entrada de Lençóis e pelo Pai Inácio.",
             "⚠️ É o trecho mais longo da viagem depois das duas travessias de Juazeiro.",
             "💡 Sair às 7h mesmo indo só à Pratinha: é o que mantém a Lapa Doce possível e dá folga para o almoço.",
-            "💡 Existe um atalho por Guiné e Palmeiras que economiza perto de uma hora, mas são ~60 km de estrada de terra na serra. Pelo mesmo critério que tirou Piatã do roteiro, fica de fora.",
+            "💡 Existe um atalho por Guiné e Palmeiras que economiza perto de uma hora, mas são ~60 km de estrada de terra na serra. Fica de fora.",
             "📍 <a href=\"https://www.google.com/maps/dir/Ibicoara%2C%20BA/Fazenda%20Pratinha%2C%20Iraquara%2C%20BA\" target=\"_blank\">Google Maps</a>"
           ],
           "duration": {
@@ -704,7 +704,6 @@
           "title": "🍽️ Almoço em Jacobina",
           "items": [
             "É o encaixe natural de horário e a melhor estrutura da rota: cerca de 4h30 depois da saída, com a metade do caminho já feita.",
-            "⚠️ Restaurante ainda não escolhido.",
             "💡 Alternativa mais tarde: Senhor do Bonfim, a cerca de 1h de Jacobina."
           ],
           "duration": {
@@ -1568,8 +1567,7 @@
         "De Ibicoara até a Pratinha são ~215 a 230 km pelo asfalto, cerca de 4h15, e depois mais 1h até Lençóis.",
         "✅ <strong>A Pratinha é o plano principal.</strong> A Lapa Doce é decidida no dia, e a aposta do grupo é não fazê-la.",
         "<strong>A regra para a Lapa Doce entrar:</strong> estar em Iraquara até as 11h15, com o grupo disposto. Depois disso ela não cabe, porque a Pratinha fecha a entrada às 16h e a saída para Lençóis precisa ser até 16h30.",
-        "Sair de Ibicoara às 7h mesmo indo só à Pratinha: mantém a Lapa Doce possível e dá folga para o almoço.",
-        "O atalho por Guiné e Palmeiras economiza perto de uma hora, mas tem ~60 km de terra na serra. Fica de fora pelo mesmo critério de Piatã."
+        "Sair de Ibicoara às 7h mesmo indo só à Pratinha: mantém a Lapa Doce possível e dá folga para o almoço."
       ]
     },
     {
@@ -1659,23 +1657,18 @@
     "hospedagem": [
       {
         "emoji": "🛏️",
-        "title": "Dois quartos de casal, padrão intermediário",
-        "text": "É o padrão do grupo. As opções abaixo estão nessa faixa — em Ibicoara, onde a oferta é pequena, entrou também a mais cara da cidade, marcada como tal."
-      },
-      {
-        "emoji": "⚠️",
-        "title": "Os preços ainda não são cotação",
-        "text": "São diárias \"a partir de\", levantadas em blogs e guias sem as datas da viagem. Outubro é baixa temporada na Chapada, mas o valor real só sai cotando 17–19, 19–21, 21–22 e 22–23/10. <strong>Confirmar também se é por quarto ou por pessoa.</strong>"
+        "title": "Um quarto de casal para cada casal",
+        "text": "É o padrão do grupo, categoria intermediária. O preço de cada card é <strong>do quarto</strong>, para a estadia inteira daquela base — o valor entre parênteses é a soma dos dois, só para dimensionar o gasto."
       },
       {
         "emoji": "🔁",
         "title": "Lençóis aparece duas vezes",
-        "text": "Dias 17–19 e 22–23, com Mucugê e Ibicoara no meio. Se a mesma pousada segurar as duas estadias, dá para negociar as três noites juntas e deixar mala guardada."
+        "text": "Dias 17–19 e 22–23, com Mucugê e Ibicoara no meio. Se a mesma pousada segurar as duas estadias, dá para negociar as três noites juntas e deixar mala guardada. <strong>Mansão Mascarenhas, Vila Caribé e Casa Viva a Vida</strong> têm vaga nas duas janelas."
       },
       {
         "emoji": "🔗",
-        "title": "Cada opção tem link para cotar",
-        "text": "O botão <strong>Ver oferta</strong> abre a página de reserva — Booking quando existe, site próprio quando a pousada vende direto. Onde havia os dois, o segundo entra como link extra no card. Abrir com as datas reais e <strong>2 quartos para 2 adultos cada</strong> é o que transforma o \"a partir de\" em preço de verdade."
+        "title": "Cada botão já abre com as datas",
+        "text": "O <strong>Ver oferta</strong> leva à Booking com as datas daquela base e um quarto para dois adultos — é a mesma busca que gerou o preço do card. Como cada casal reserva o seu, vale combinar a pousada antes e reservar no mesmo dia: em várias delas sobram um ou dois quartos nesse preço."
       }
     ]
   }
