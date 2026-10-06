@@ -5,7 +5,7 @@
       "descoberta",
       "pesquisa"
     ],
-    "updatedAt": "2026-09-23"
+    "updatedAt": "2026-10-06"
   },
   "meta": {
     "slug": "chapada-diamantina-2026",
@@ -159,24 +159,24 @@
       "kind": "imprensa"
     },
     "booking-lencois-1": {
-      "label": "Booking — Lençóis, 17–19/10, 1 quarto de casal, café incluído",
-      "url": "https://www.booking.com/searchresults.pt-br.html?ss=Len%C3%A7%C3%B3is%2C+Bahia%2C+Brasil&checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1&order=bayesian_review_score&nflt=mealplan%3D1",
-      "consultadoEm": "2026-09-23"
+      "label": "Booking — Lençóis, 17–19/10, 1 quarto, 2 adultos",
+      "consultadoEm": "2026-10-06",
+      "url": "https://www.booking.com/searchresults.pt-br.html?ss=Len%C3%A7%C3%B3is%2C+Bahia%2C+Brasil&checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1&order=bayesian_review_score"
     },
     "booking-mucuge": {
-      "label": "Booking — Mucugê, 19–21/10, 1 quarto de casal, café incluído",
-      "url": "https://www.booking.com/searchresults.pt-br.html?ss=Mucug%C3%AA%2C+Bahia%2C+Brasil&checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1&order=bayesian_review_score&nflt=mealplan%3D1",
-      "consultadoEm": "2026-09-23"
+      "label": "Booking — Mucugê, 19–21/10, 1 quarto, 2 adultos",
+      "consultadoEm": "2026-10-06",
+      "url": "https://www.booking.com/searchresults.pt-br.html?ss=Mucug%C3%AA%2C+Bahia%2C+Brasil&checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1&order=bayesian_review_score"
     },
     "booking-ibicoara": {
-      "label": "Booking — Ibicoara, 21–22/10, 1 quarto de casal",
-      "url": "https://www.booking.com/searchresults.pt-br.html?ss=Ibicoara%2C+Bahia%2C+Brasil&checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1&order=bayesian_review_score",
-      "consultadoEm": "2026-09-23"
+      "label": "Booking — Ibicoara, 21–22/10, 1 quarto, 2 adultos",
+      "consultadoEm": "2026-10-06",
+      "url": "https://www.booking.com/searchresults.pt-br.html?ss=Ibicoara%2C+Bahia%2C+Brasil&checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1&order=bayesian_review_score"
     },
     "booking-lencois-2": {
-      "label": "Booking — Lençóis, 22–23/10, 1 quarto de casal, café incluído",
-      "url": "https://www.booking.com/searchresults.pt-br.html?ss=Len%C3%A7%C3%B3is%2C+Bahia%2C+Brasil&checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1&order=bayesian_review_score&nflt=mealplan%3D1",
-      "consultadoEm": "2026-09-23"
+      "label": "Booking — Lençóis, 22–23/10, 1 quarto, 2 adultos",
+      "consultadoEm": "2026-10-06",
+      "url": "https://www.booking.com/searchresults.pt-br.html?ss=Len%C3%A7%C3%B3is%2C+Bahia%2C+Brasil&checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1&order=bayesian_review_score"
     }
   },
   "days": [
@@ -820,91 +820,80 @@
         ],
         "options": [
           {
-            "name": "Vila Caribé",
-            "desc": "Quarto duplo amplo com cama de casal, a 700 m do centro, café incluído e cancelamento grátis. O mais barato da cidade entre as pousadas de nota alta — a ressalva é que só tem 20 avaliações.",
-            "price": {
-              "text": "R$ 500 o quarto · 2 noites (R$ 1.000 os dois casais)",
-              "status": "cotado",
-              "source": "booking-lencois-1"
-            },
-            "rating": "9,6 Booking (20 avaliações)",
-            "url": "https://www.booking.com/searchresults.pt-br.html?ss=Vila+Carib%C3%A9+Len%C3%A7%C3%B3is%2C+Bahia&checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1&group_children=0"
-          },
-          {
             "name": "Vila das Estrelas — Guesthouse",
             "desc": "A 300 m do centro, com estacionamento grátis e café nota 10. Nas datas da viagem o que sobra é o quarto triplo com vista da montanha.",
             "price": {
-              "text": "R$ 508 o quarto · 2 noites (R$ 1.016 os dois casais)",
+              "text": "R$ 484 o quarto · 2 noites (R$ 968 os dois casais)",
               "status": "cotado",
               "source": "booking-lencois-1"
             },
-            "rating": "9,7 Booking (205 avaliações)",
-            "url": "https://www.booking.com/searchresults.pt-br.html?ss=Vila+das+Estrelas+%E2%80%94+Guesthouse+Len%C3%A7%C3%B3is%2C+Bahia&checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1&group_children=0"
+            "rating": "9,7 Booking (209 avaliações)",
+            "url": "https://www.booking.com/hotel/br/vila-das-estrelas.pt-br.html?checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1"
+          },
+          {
+            "name": "Suítes VarandaLu",
+            "desc": "Suíte com varanda a 350 m do centro. Nota de localização 9,5 — e segue entre as mais baratas da cidade.",
+            "price": {
+              "text": "R$ 524 o quarto · 2 noites (R$ 1.048 os dois casais)",
+              "status": "cotado",
+              "source": "booking-lencois-1"
+            },
+            "rating": "9,6 Booking (67 avaliações)",
+            "url": "https://www.booking.com/hotel/br/casa-de-luciana-lencois.pt-br.html?checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1"
           },
           {
             "name": "Mansão Mascarenhas",
-            "desc": "Quarto duplo deluxe com varanda, a 500 m do centro. Café nota 10 e cancelamento grátis. <strong>Tem vaga também na noite de 22/10</strong> — é a candidata mais forte para segurar as duas estadias de Lençóis.",
+            "desc": "Quarto duplo deluxe com varanda, a 500 m do centro. Café nota 10 e cancelamento grátis. <strong>Tem vaga também na noite de 22/10</strong> — é a candidata mais forte para segurar as duas estadias.",
             "price": {
-              "text": "R$ 690 o quarto · 2 noites (R$ 1.380 os dois casais)",
+              "text": "R$ 658 o quarto · 2 noites (R$ 1.316 os dois casais)",
               "status": "cotado",
               "source": "booking-lencois-1"
             },
-            "rating": "9,7 Booking (140 avaliações)",
-            "url": "https://www.booking.com/searchresults.pt-br.html?ss=Mans%C3%A3o+Mascarenhas+Len%C3%A7%C3%B3is%2C+Bahia&checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1&group_children=0"
+            "rating": "9,7 Booking (142 avaliações)",
+            "url": "https://www.booking.com/hotel/br/mansao-mascarenhas.pt-br.html?checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1"
           },
           {
             "name": "Hospedagem do Sítio",
             "desc": "Quarto com vista do jardim a 600 m do centro, com estacionamento grátis. Nota de localização 9,6 e café 9,2.",
             "price": {
-              "text": "R$ 700 o quarto · 2 noites (R$ 1.400 os dois casais)",
+              "text": "R$ 666 o quarto · 2 noites (R$ 1.332 os dois casais)",
               "status": "cotado",
               "source": "booking-lencois-1"
             },
             "rating": "9,6 Booking (128 avaliações)",
-            "url": "https://www.booking.com/searchresults.pt-br.html?ss=Hospedagem+do+S%C3%ADtio+Len%C3%A7%C3%B3is%2C+Bahia&checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1&group_children=0"
-          },
-          {
-            "name": "Suítes VarandaLu",
-            "desc": "Suíte com varanda a 350 m do centro. Nota de localização 9,5.",
-            "price": {
-              "text": "R$ 738 o quarto · 2 noites (R$ 1.476 os dois casais)",
-              "status": "cotado",
-              "source": "booking-lencois-1"
-            },
-            "rating": "9,6 Booking (67 avaliações)",
-            "url": "https://www.booking.com/searchresults.pt-br.html?ss=Su%C3%ADtes+VarandaLu+Len%C3%A7%C3%B3is%2C+Bahia&checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1&group_children=0"
+            "url": "https://www.booking.com/hotel/br/hospedagem-do-sitio.pt-br.html?checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1"
           },
           {
             "name": "Villa Allma",
             "desc": "Quarto queen com vista do jardim, a 700 m do centro. Quase 500 avaliações sustentando o 9,7.",
             "price": {
-              "text": "R$ 780 o quarto · 2 noites (R$ 1.560 os dois casais)",
+              "text": "R$ 742 o quarto · 2 noites (R$ 1.484 os dois casais)",
               "status": "cotado",
               "source": "booking-lencois-1"
             },
-            "rating": "9,7 Booking (495 avaliações)",
-            "url": "https://www.booking.com/searchresults.pt-br.html?ss=Villa+Allma+Len%C3%A7%C3%B3is%2C+Bahia&checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1&group_children=0"
+            "rating": "9,7 Booking (494 avaliações)",
+            "url": "https://www.booking.com/hotel/br/jardim-serrano-lencois.pt-br.html?checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1"
           },
           {
             "name": "Pousada Casa Viva a Vida",
             "desc": "Quarto com vista do jardim a 700 m do centro, café orgânico e estacionamento grátis.",
             "price": {
-              "text": "R$ 861 o quarto · 2 noites (R$ 1.722 os dois casais)",
+              "text": "R$ 820 o quarto · 2 noites (R$ 1.640 os dois casais)",
               "status": "cotado",
               "source": "booking-lencois-1"
             },
             "rating": "9,7 Booking (266 avaliações)",
-            "url": "https://www.booking.com/searchresults.pt-br.html?ss=Pousada+Casa+Viva+a+Vida+Len%C3%A7%C3%B3is%2C+Bahia&checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1&group_children=0"
+            "url": "https://www.booking.com/hotel/br/casa-viva-a-vida-b-amp-b.pt-br.html?checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1"
           },
           {
             "name": "Pouso da Trilha",
-            "desc": "Suíte superior a 50 m do centro histórico, a pé de tudo. <strong>Atenção</strong>: nestas datas só há um quarto disponível — serve para um casal, não para os dois.",
+            "desc": "Suíte superior a 50 m do centro histórico, a pé de tudo. <strong>Atenção</strong>: nestas datas só há um quarto no preço — serve para um casal, não para os dois.",
             "price": {
-              "text": "R$ 968 o quarto · 2 noites (R$ 1.936 os dois casais)",
+              "text": "R$ 922 o quarto · 2 noites (R$ 1.844 os dois casais)",
               "status": "cotado",
               "source": "booking-lencois-1"
             },
-            "rating": "9,4 Booking (694 avaliações)",
+            "rating": "9,4 Booking (691 avaliações)",
             "url": "https://www.booking.com/hotel/br/pouso-da-trilha-hospedagem.pt-br.html?checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1",
             "confirmationUrls": [
               {
@@ -917,11 +906,11 @@
             "name": "Pousada Vila Serrano",
             "desc": "Suíte com vista da piscina, a 500 m do centro, com jardim e aluguel de bicicletas. Café nota 10 e cancelamento grátis.",
             "price": {
-              "text": "R$ 1.258 o quarto · 2 noites (R$ 2.516 os dois casais)",
+              "text": "R$ 1.272 o quarto · 2 noites (R$ 2.544 os dois casais)",
               "status": "cotado",
               "source": "booking-lencois-1"
             },
-            "rating": "9,4 Booking (658 avaliações)",
+            "rating": "9,4 Booking (656 avaliações)",
             "url": "https://www.booking.com/hotel/br/pousada-vila-serrano.pt-br.html?checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1",
             "confirmationUrls": [
               {
@@ -931,27 +920,21 @@
             ]
           },
           {
-            "name": "Portal Lençóis",
-            "desc": "Quarto deluxe com varanda, piscina e academia, a 200 m do centro. <strong>A cotação derrubou o mito</strong>: a nota real é 7,9, com custo-benefício 7,0 — e o quarto sai por R$ 757 a diária, o dobro do que a pesquisa de agosto estimava. Sem cancelamento grátis fica R$ 1.363.",
+            "name": "Hotel de Lençóis",
+            "desc": "Quarto família superior a 500 m do centro, com piscina e restaurante. Café nota 9,9 — o mais estruturado depois do Canto das Águas.",
             "price": {
-              "text": "R$ 1.514 o quarto · 2 noites (R$ 3.028 os dois casais)",
+              "text": "R$ 2.558 o quarto · 2 noites (R$ 5.116 os dois casais)",
               "status": "cotado",
               "source": "booking-lencois-1"
             },
-            "rating": "7,9 Booking (504 avaliações)",
-            "url": "https://www.booking.com/hotel/br/portal-lencois.pt-br.html?checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1",
-            "confirmationUrls": [
-              {
-                "label": "Site do hotel",
-                "url": "https://portal.bahiatophotels.com/"
-              }
-            ]
+            "rating": "9,6 Booking (672 avaliações)",
+            "url": "https://www.booking.com/hotel/br/de-lenassois.pt-br.html?checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1"
           },
           {
             "name": "Hotel Canto das Águas",
             "desc": "Apartamento deluxe com vista do jardim, à beira do rio, a 300 m do centro. Piscina, sauna e spa — o mais estruturado da cidade.",
             "price": {
-              "text": "R$ 2.742 o quarto · 2 noites (R$ 5.484 os dois casais)",
+              "text": "R$ 2.648 o quarto · 2 noites (R$ 5.296 os dois casais)",
               "status": "cotado",
               "source": "booking-lencois-1"
             },
@@ -968,11 +951,11 @@
             "name": "Vila Pugliesi Hotel Boutique",
             "desc": "Quarto deluxe a 200 m do centro histórico, com piscina e bar. A melhor nota da cidade — e a diária mais cara da lista.",
             "price": {
-              "text": "R$ 3.118 o quarto · 2 noites (R$ 6.236 os dois casais)",
+              "text": "R$ 2.970 o quarto · 2 noites (R$ 5.940 os dois casais)",
               "status": "cotado",
               "source": "booking-lencois-1"
             },
-            "rating": "9,8 Booking (254 avaliações)",
+            "rating": "9,8 Booking (252 avaliações)",
             "url": "https://www.booking.com/hotel/br/vila-pugliesi-boutique.pt-br.html?checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1"
           }
         ]
@@ -991,17 +974,6 @@
         ],
         "options": [
           {
-            "name": "Pousada Encanto da Roça",
-            "desc": "Quarto duplo de casal a 100 m do centro, café nota 10 e cancelamento grátis. O melhor custo-benefício de Mucugê nas datas da viagem.",
-            "price": {
-              "text": "R$ 540 o quarto · 2 noites (R$ 1.080 os dois casais)",
-              "status": "cotado",
-              "source": "booking-mucuge"
-            },
-            "rating": "9,0 Booking (72 avaliações)",
-            "url": "https://www.booking.com/searchresults.pt-br.html?ss=Pousada+Encanto+da+Ro%C3%A7a+Mucug%C3%AA%2C+Bahia&checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1&group_children=0"
-          },
-          {
             "name": "Casa di Vó",
             "desc": "Quarto família a 500 m do centro, com cancelamento grátis e café 9,5.",
             "price": {
@@ -1009,29 +981,18 @@
               "status": "cotado",
               "source": "booking-mucuge"
             },
-            "rating": "9,4 Booking (284 avaliações)",
-            "url": "https://www.booking.com/searchresults.pt-br.html?ss=Casa+di+V%C3%B3+Mucug%C3%AA%2C+Bahia&checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1&group_children=0"
-          },
-          {
-            "name": "Escalada Hospedagens",
-            "desc": "Apartamento inteiro com cama de casal, a 450 m do centro. Cancelamento grátis, sem pré-pagamento, e sete unidades livres pelo mesmo preço.",
-            "price": {
-              "text": "R$ 740 o quarto · 2 noites (R$ 1.480 os dois casais)",
-              "status": "cotado",
-              "source": "booking-mucuge"
-            },
-            "rating": "9,5 Booking (456 avaliações)",
-            "url": "https://www.booking.com/searchresults.pt-br.html?ss=Escalada+Hospedagens+Mucug%C3%AA%2C+Bahia&checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1&group_children=0"
+            "rating": "9,4 Booking (277 avaliações)",
+            "url": "https://www.booking.com/hotel/br/casa-di-vo-mucuge1.pt-br.html?checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1"
           },
           {
             "name": "Pousada Monte Azul",
             "desc": "Toda em madeira, com bar e lareira, a 500 m do centro. A mais avaliada de Mucugê, com café nota 10, cancelamento grátis e sem pré-pagamento.",
             "price": {
-              "text": "R$ 767 o quarto · 2 noites (R$ 1.534 os dois casais)",
+              "text": "R$ 730 o quarto · 2 noites (R$ 1.460 os dois casais)",
               "status": "cotado",
               "source": "booking-mucuge"
             },
-            "rating": "9,0 Booking (588 avaliações)",
+            "rating": "9,0 Booking (587 avaliações)",
             "url": "https://www.booking.com/hotel/br/pousada-monte-azul.pt-br.html?checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1",
             "confirmationUrls": [
               {
@@ -1041,81 +1002,81 @@
             ]
           },
           {
-            "name": "Cafe Preto Pousada e Bistrô",
-            "desc": "Quarto triplo standard a 150 m do centro, com bistrô no local e café nota 10. A nota geral é a mais baixa da lista.",
+            "name": "Escalada Hospedagens",
+            "desc": "Apartamento inteiro com cama de casal, a 450 m do centro. Cancelamento grátis, sem pré-pagamento, e cinco unidades livres pelo mesmo preço.",
             "price": {
-              "text": "R$ 890 o quarto · 2 noites (R$ 1.780 os dois casais)",
+              "text": "R$ 740 o quarto · 2 noites (R$ 1.480 os dois casais)",
               "status": "cotado",
               "source": "booking-mucuge"
             },
-            "rating": "8,3 Booking (414 avaliações)",
-            "url": "https://www.booking.com/searchresults.pt-br.html?ss=Cafe+Preto+Pousada+e+Bistr%C3%B4+Mucug%C3%AA%2C+Bahia&checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1&group_children=0"
+            "rating": "9,5 Booking (454 avaliações)",
+            "url": "https://www.booking.com/hotel/br/escalada-hospedagens-e-eventos.pt-br.html?checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1"
           },
           {
-            "name": "Villa Hortensia",
-            "desc": "Apartamento inteiro com cama king a 150 m do centro. Café nota 10, cancelamento grátis e sem pré-pagamento.",
+            "name": "Chalés Pôr do Sol",
+            "desc": "Chalé inteiro em Mucugê, bem avaliado mas ainda com poucas avaliações. Opção nova, vale conferir estrutura e café antes de fechar.",
             "price": {
-              "text": "R$ 1.056 o quarto · 2 noites (R$ 2.112 os dois casais)",
+              "text": "R$ 810 o quarto · 2 noites (R$ 1.620 os dois casais)",
               "status": "cotado",
               "source": "booking-mucuge"
             },
-            "rating": "9,7 Booking (307 avaliações)",
-            "url": "https://www.booking.com/searchresults.pt-br.html?ss=Villa+Hortensia+Mucug%C3%AA%2C+Bahia&checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1&group_children=0"
-          },
-          {
-            "name": "Pousada Céu da Chapadha",
-            "desc": "Quarto standard de casal a 150 m do centro. Nota de localização 9,9 e cancelamento grátis.",
-            "price": {
-              "text": "R$ 1.112 o quarto · 2 noites (R$ 2.224 os dois casais)",
-              "status": "cotado",
-              "source": "booking-mucuge"
-            },
-            "rating": "9,7 Booking (117 avaliações)",
-            "url": "https://www.booking.com/searchresults.pt-br.html?ss=Pousada+C%C3%A9u+da+Chapadha+Mucug%C3%AA%2C+Bahia&checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1&group_children=0"
+            "rating": "9,7 Booking (7 avaliações)",
+            "url": "https://www.booking.com/hotel/br/chales-por-do-sol-mucuge.pt-br.html?checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1"
           },
           {
             "name": "Oforasteiro",
             "desc": "Villa de pedra inteira, com sala e quintal, a 150 m do centro. Café nota 10.",
             "price": {
-              "text": "R$ 1.142 o quarto · 2 noites (R$ 2.284 os dois casais)",
+              "text": "R$ 982 o quarto · 2 noites (R$ 1.964 os dois casais)",
               "status": "cotado",
               "source": "booking-mucuge"
             },
-            "rating": "9,4 Booking (355 avaliações)",
+            "rating": "9,4 Booking (354 avaliações)",
             "url": "https://www.booking.com/hotel/br/estalagem-oforasteiro.pt-br.html?checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1"
           },
           {
-            "name": "Moã Charme Hotel",
-            "desc": "Suíte no casarão tombado do centro histórico. <strong>É a antiga Villa Santo Antônio</strong>: foi reformada e renomeada, a nota caiu de 9,3 para 8,9 e a diária passou de \"a partir de R$ 297\" para R$ 870.",
+            "name": "Pousada Céu da Chapadha",
+            "desc": "Quarto standard de casal a 150 m do centro. Nota de localização 9,9 e cancelamento grátis.",
             "price": {
-              "text": "R$ 1.740 o quarto · 2 noites (R$ 3.480 os dois casais)",
+              "text": "R$ 1.136 o quarto · 2 noites (R$ 2.272 os dois casais)",
               "status": "cotado",
               "source": "booking-mucuge"
             },
-            "rating": "8,9 Booking (172 avaliações)",
+            "rating": "9,7 Booking (118 avaliações)",
+            "url": "https://www.booking.com/hotel/br/pousada-ceu-mucuge.pt-br.html?checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1"
+          },
+          {
+            "name": "Villa Hortensia",
+            "desc": "Apartamento inteiro com cama king a 150 m do centro. Café nota 10, cancelamento grátis e sem pré-pagamento.",
+            "price": {
+              "text": "R$ 1.160 o quarto · 2 noites (R$ 2.320 os dois casais)",
+              "status": "cotado",
+              "source": "booking-mucuge"
+            },
+            "rating": "9,7 Booking (312 avaliações)",
+            "url": "https://www.booking.com/hotel/br/villa-hortensia.pt-br.html?checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1"
+          },
+          {
+            "name": "Moã Charme Hotel",
+            "desc": "Suíte no casarão tombado do centro histórico. <strong>É a antiga Villa Santo Antônio</strong>: reformada e renomeada, a nota caiu para 8,9 e a diária subiu forte.",
+            "price": {
+              "text": "R$ 1.680 o quarto · 2 noites (R$ 3.360 os dois casais)",
+              "status": "cotado",
+              "source": "booking-mucuge"
+            },
+            "rating": "8,9 Booking (173 avaliações)",
             "url": "https://www.booking.com/hotel/br/villa-santo-antonio-mucuge-mucuge.pt-br.html?checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1"
           },
           {
             "name": "Refúgio na Serra Boutique Hotel",
             "desc": "Suíte com sala e jacuzzi, a 400 m do centro. Bem acima da faixa intermediária definida pelo grupo.",
             "price": {
-              "text": "R$ 3.519 o quarto · 2 noites (R$ 7.038 os dois casais)",
+              "text": "R$ 3.520 o quarto · 2 noites (R$ 7.040 os dois casais)",
               "status": "cotado",
               "source": "booking-mucuge"
             },
-            "rating": "9,7 Booking (72 avaliações)",
-            "url": "https://www.booking.com/searchresults.pt-br.html?ss=Ref%C3%BAgio+na+Serra+Boutique+Hotel+Mucug%C3%AA%2C+Bahia&checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1&group_children=0"
-          },
-          {
-            "name": "Pousada Flor de Açucena",
-            "desc": "Fora de Mucugê: fica em Igatu, a 13,6 km, na estrada de Andaraí. Quarto deluxe de casal com piscina e cancelamento grátis. Entra na lista só se o grupo quiser dormir na cidade-fantasma do garimpo.",
-            "price": {
-              "text": "R$ 800 o quarto · 2 noites (R$ 1.600 os dois casais)",
-              "status": "cotado",
-              "source": "booking-mucuge"
-            },
-            "rating": "9,5 Booking (285 avaliações)",
-            "url": "https://www.booking.com/searchresults.pt-br.html?ss=Pousada+Flor+de+A%C3%A7ucena+Mucug%C3%AA%2C+Bahia&checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1&group_children=0"
+            "rating": "9,7 Booking (73 avaliações)",
+            "url": "https://www.booking.com/hotel/br/refugio-na-serra-boutique-mucuge.pt-br.html?checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1"
           }
         ]
       },
@@ -1133,37 +1094,81 @@
         ],
         "options": [
           {
-            "name": "Pousada Encanto dos Mognos",
-            "desc": "Quarto duplo de casal a 1,9 km do centro, café incluído, cancelamento grátis e pagamento na chegada. A mais barata com quarto de casal de verdade.",
+            "name": "Vista do Sincorá",
+            "desc": "Casa de temporada com vista para a serra, na cidade. Nota 9,3, mas ainda com só 7 avaliações.",
             "price": {
-              "text": "R$ 250 o quarto · 1 noite (R$ 500 os dois casais)",
+              "text": "R$ 190 o quarto · 1 noite (R$ 380 os dois casais)",
               "status": "cotado",
               "source": "booking-ibicoara"
             },
-            "rating": "8,7 Booking (42 avaliações)",
-            "url": "https://www.booking.com/searchresults.pt-br.html?ss=Pousada+Encanto+dos+Mognos+Ibicoara%2C+Bahia&checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1&group_children=0"
+            "rating": "9,3 Booking (7 avaliações)",
+            "url": "https://www.booking.com/hotel/br/vista-do-sincora.pt-br.html?checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1"
+          },
+          {
+            "name": "Casa Jatobá",
+            "desc": "Casa de um quarto em Ibicoara, muito bem avaliada (9,8) com pouquíssimas avaliações.",
+            "price": {
+              "text": "R$ 193 o quarto · 1 noite (R$ 386 os dois casais)",
+              "status": "cotado",
+              "source": "booking-ibicoara"
+            },
+            "rating": "9,8 Booking (6 avaliações)",
+            "url": "https://www.booking.com/hotel/br/casa-jatoba-ibicoara.pt-br.html?checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1"
+          },
+          {
+            "name": "Chalé Mascarenhas",
+            "desc": "Quarto quádruplo com cancelamento grátis, a 11,9 km do centro. <strong>Sem café da manhã</strong> e longe de tudo — entra pelo preço e pela nota.",
+            "price": {
+              "text": "R$ 219 o quarto · 1 noite (R$ 438 os dois casais)",
+              "status": "cotado",
+              "source": "booking-ibicoara"
+            },
+            "rating": "9,5 Booking (15 avaliações)",
+            "url": "https://www.booking.com/hotel/br/chale-mascarenhas.pt-br.html?checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1"
+          },
+          {
+            "name": "Recanto Cachoeiras de Ibicoara",
+            "desc": "Quarto com cama queen e varanda, a 6,2 km do centro. A melhor nota de Ibicoara. <strong>Sem café da manhã</strong>; o valor já inclui as taxas.",
+            "price": {
+              "text": "R$ 238 o quarto · 1 noite (R$ 476 os dois casais)",
+              "status": "cotado",
+              "source": "booking-ibicoara"
+            },
+            "rating": "9,9 Booking (61 avaliações)",
+            "url": "https://www.booking.com/hotel/br/recanto-cachoeiras-de-ibicoara.pt-br.html?checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1"
+          },
+          {
+            "name": "Pousada Encanto dos Mognos",
+            "desc": "Quarto duplo de casal a 1,9 km do centro, café incluído, cancelamento grátis e pagamento na chegada.",
+            "price": {
+              "text": "R$ 238 o quarto · 1 noite (R$ 476 os dois casais)",
+              "status": "cotado",
+              "source": "booking-ibicoara"
+            },
+            "rating": "8,6 Booking (44 avaliações)",
+            "url": "https://www.booking.com/hotel/br/encanto-dos-mognos.pt-br.html?checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1"
           },
           {
             "name": "Pousada Mirante das Serras",
             "desc": "Chalé inteiro com café incluído e cancelamento grátis. Fica a 9,2 km do centro — some com a ideia de jantar na cidade.",
             "price": {
-              "text": "R$ 260 o quarto · 1 noite (R$ 520 os dois casais)",
+              "text": "R$ 248 o quarto · 1 noite (R$ 496 os dois casais)",
               "status": "cotado",
               "source": "booking-ibicoara"
             },
-            "rating": "9,3 Booking (167 avaliações)",
-            "url": "https://www.booking.com/searchresults.pt-br.html?ss=Pousada+Mirante+das+Serras+Ibicoara%2C+Bahia&checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1&group_children=0"
+            "rating": "9,3 Booking (164 avaliações)",
+            "url": "https://www.booking.com/hotel/br/chale-mirante-das-serras.pt-br.html?checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1"
           },
           {
             "name": "Pousada Serra Aquarela",
-            "desc": "Chalé de um quarto com sala, na própria estrada do Buracão, a 6,2 km do centro. Café incluído. <strong>Reservando um quarto por casal ela volta à mesa</strong>: no pacote de dois quartos só sobrava o chalé inteiro de três dormitórios.",
+            "desc": "Chalé de um quarto com sala, na própria estrada do Buracão, a 6,2 km do centro. Café incluído.",
             "price": {
-              "text": "R$ 261 o quarto · 1 noite (R$ 522 os dois casais)",
+              "text": "R$ 249 o quarto · 1 noite (R$ 498 os dois casais)",
               "status": "cotado",
               "source": "booking-ibicoara"
             },
-            "rating": "8,6 Booking (109 avaliações)",
-            "url": "https://www.booking.com/searchresults.pt-br.html?ss=Pousada+Serra+Aquarela+Ibicoara%2C+Bahia&checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1&group_children=0",
+            "rating": "8,5 Booking (110 avaliações)",
+            "url": "https://www.booking.com/hotel/br/chales-serra-aquarela-chale-amarelo-doce.pt-br.html?checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1",
             "confirmationUrls": [
               {
                 "label": "Instagram",
@@ -1175,78 +1180,56 @@
             "name": "Pousada Capão do Mel",
             "desc": "Quarto duplo com cama king, a 4,1 km do centro, café incluído.",
             "price": {
-              "text": "R$ 290 o quarto · 1 noite (R$ 580 os dois casais)",
+              "text": "R$ 276 o quarto · 1 noite (R$ 552 os dois casais)",
               "status": "cotado",
               "source": "booking-ibicoara"
             },
-            "rating": "8,6 Booking (66 avaliações)",
-            "url": "https://www.booking.com/searchresults.pt-br.html?ss=Pousada+Cap%C3%A3o+do+Mel+Ibicoara%2C+Bahia&checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1&group_children=0"
+            "rating": "8,6 Booking (65 avaliações)",
+            "url": "https://www.booking.com/hotel/br/pousada-capao-do-mel.pt-br.html?checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1"
           },
           {
             "name": "Hotel Raio do Sol",
             "desc": "Quarto duplo de casal a 200 m do centro de Ibicoara, café incluído e cancelamento grátis. A opção central mais bem avaliada.",
             "price": {
-              "text": "R$ 300 o quarto · 1 noite (R$ 600 os dois casais)",
+              "text": "R$ 278 o quarto · 1 noite (R$ 556 os dois casais)",
               "status": "cotado",
               "source": "booking-ibicoara"
             },
             "rating": "9,1 Booking (86 avaliações)",
-            "url": "https://www.booking.com/searchresults.pt-br.html?ss=Hotel+Raio+do+Sol+Ibicoara%2C+Bahia&checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1&group_children=0"
+            "url": "https://www.booking.com/hotel/br/raio-do-sol-ibicoara.pt-br.html?checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1"
           },
           {
-            "name": "Diamantina Falls Boutique Hotel & Spa",
-            "desc": "A 250 m do centro, com jacuzzi e restaurante, café incluído e cancelamento grátis. A nota caiu de 9,1 em agosto para 8,8.",
+            "name": "Suítes Mirante da Águia",
+            "desc": "Casa de temporada com vista, muito bem avaliada (9,9) e com preço de pousada simples.",
             "price": {
-              "text": "R$ 300 o quarto · 1 noite (R$ 600 os dois casais)",
+              "text": "R$ 286 o quarto · 1 noite (R$ 572 os dois casais)",
               "status": "cotado",
               "source": "booking-ibicoara"
             },
-            "rating": "8,8 Booking (101 avaliações)",
+            "rating": "9,9 Booking (71 avaliações)",
+            "url": "https://www.booking.com/hotel/br/suites-mirante-da-aguia.pt-br.html?checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1"
+          },
+          {
+            "name": "Diamantina Falls Boutique Hotel & Spa",
+            "desc": "A 250 m do centro, com jacuzzi e restaurante, café incluído e cancelamento grátis.",
+            "price": {
+              "text": "R$ 333 o quarto · 1 noite (R$ 666 os dois casais)",
+              "status": "cotado",
+              "source": "booking-ibicoara"
+            },
+            "rating": "8,7 Booking (109 avaliações)",
             "url": "https://www.booking.com/hotel/br/diamantina-falls-boutique.pt-br.html?checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1"
           },
           {
             "name": "Pousada Kabana de Pedra",
-            "desc": "Chalé de casal em volta do jardim com piscina, na estrada do Buracão — encurta o dia da cachoeira. Café da manhã \"excepcional\", restaurante no local e cancelamento grátis até 14/10. <strong>Só aceita dinheiro</strong>: o pré-pagamento é por transferência bancária combinada direto com a pousada.",
+            "desc": "Chalé de casal em volta do jardim com piscina, na estrada do Buracão — encurta o dia da cachoeira. Café da manhã \"excepcional\" e cancelamento grátis. <strong>Só aceita dinheiro</strong>.",
             "price": {
-              "text": "R$ 368 o quarto · 1 noite (R$ 736 os dois casais)",
+              "text": "R$ 350 o quarto · 1 noite (R$ 700 os dois casais)",
               "status": "cotado",
               "source": "booking-ibicoara"
             },
-            "rating": "9,0 Booking (143 avaliações)",
+            "rating": "9,0 Booking (141 avaliações)",
             "url": "https://www.booking.com/hotel/br/pousada-kabana-de-pedra.pt-br.html?checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1"
-          },
-          {
-            "name": "Chalé Mascarenhas",
-            "desc": "Quarto quádruplo com cancelamento grátis, a 11,9 km do centro. <strong>Sem café da manhã</strong> e longe de tudo — entra pelo preço e pela nota.",
-            "price": {
-              "text": "R$ 230 o quarto · 1 noite (R$ 460 os dois casais)",
-              "status": "cotado",
-              "source": "booking-ibicoara"
-            },
-            "rating": "9,5 Booking (15 avaliações)",
-            "url": "https://www.booking.com/searchresults.pt-br.html?ss=Chal%C3%A9+Mascarenhas+Ibicoara%2C+Bahia&checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1&group_children=0"
-          },
-          {
-            "name": "Recanto Cachoeiras de Ibicoara",
-            "desc": "Quarto com cama queen e varanda, a 6,2 km do centro. A melhor nota de Ibicoara. <strong>Sem café da manhã</strong>; o valor já inclui as taxas.",
-            "price": {
-              "text": "R$ 274 o quarto · 1 noite (R$ 548 os dois casais)",
-              "status": "cotado",
-              "source": "booking-ibicoara"
-            },
-            "rating": "9,9 Booking (61 avaliações)",
-            "url": "https://www.booking.com/searchresults.pt-br.html?ss=Recanto+Cachoeiras+de+Ibicoara+Ibicoara%2C+Bahia&checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1&group_children=0"
-          },
-          {
-            "name": "Pousada Terra de Gigantes",
-            "desc": "Chalé inteiro a 5,2 km do centro, com café incluído. Nota altíssima, mas com apenas 13 avaliações.",
-            "price": {
-              "text": "R$ 691 o quarto · 1 noite (R$ 1.382 os dois casais)",
-              "status": "cotado",
-              "source": "booking-ibicoara"
-            },
-            "rating": "9,7 Booking (13 avaliações)",
-            "url": "https://www.booking.com/searchresults.pt-br.html?ss=Pousada+Terra+de+Gigantes+Ibicoara%2C+Bahia&checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1&group_children=0"
           }
         ]
       },
@@ -1265,101 +1248,79 @@
         "options": [
           {
             "name": "Vila Caribé",
-            "desc": "A 700 m do centro, café incluído. É a mesma casa da primeira estadia — dá para tentar negociar as três noites juntas.",
+            "desc": "A 700 m do centro, café incluído. É a mesma casa da primeira estadia — mas agora só tem vaga nesta noite; está esgotada em 17–19.",
             "price": {
-              "text": "R$ 240 o quarto · 1 noite (R$ 480 os dois casais)",
+              "text": "R$ 229 o quarto · 1 noite (R$ 458 os dois casais)",
               "status": "cotado",
               "source": "booking-lencois-2"
             },
             "rating": "9,6 Booking (20 avaliações)",
-            "url": "https://www.booking.com/searchresults.pt-br.html?ss=Vila+Carib%C3%A9+Len%C3%A7%C3%B3is%2C+Bahia&checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1&group_children=0"
+            "url": "https://www.booking.com/hotel/br/vila-caribe.pt-br.html?checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1"
           },
           {
             "name": "Pousada da Rita",
             "desc": "Quarto de casal a 50 m do centro, com estacionamento e cancelamento grátis. O endereço mais central da lista pelo menor preço.",
             "price": {
-              "text": "R$ 260 o quarto · 1 noite (R$ 520 os dois casais)",
+              "text": "R$ 248 o quarto · 1 noite (R$ 496 os dois casais)",
               "status": "cotado",
               "source": "booking-lencois-2"
             },
-            "rating": "9,0 Booking (127 avaliações)",
-            "url": "https://www.booking.com/searchresults.pt-br.html?ss=Pousada+da+Rita+Len%C3%A7%C3%B3is%2C+Bahia&checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1&group_children=0"
+            "rating": "9,0 Booking (129 avaliações)",
+            "url": "https://www.booking.com/hotel/br/pousada-da-rita.pt-br.html?checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1"
           },
           {
             "name": "Suítes VarandaLu",
             "desc": "Suíte júnior deluxe com cama de casal, a 350 m do centro.",
             "price": {
-              "text": "R$ 324 o quarto · 1 noite (R$ 648 os dois casais)",
+              "text": "R$ 257 o quarto · 1 noite (R$ 514 os dois casais)",
               "status": "cotado",
               "source": "booking-lencois-2"
             },
             "rating": "9,6 Booking (67 avaliações)",
-            "url": "https://www.booking.com/searchresults.pt-br.html?ss=Su%C3%ADtes+VarandaLu+Len%C3%A7%C3%B3is%2C+Bahia&checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1&group_children=0"
-          },
-          {
-            "name": "Canto Verde Pousada",
-            "desc": "Quarto duplo de casal a 400 m do centro, com cancelamento grátis.",
-            "price": {
-              "text": "R$ 340 o quarto · 1 noite (R$ 680 os dois casais)",
-              "status": "cotado",
-              "source": "booking-lencois-2"
-            },
-            "rating": "9,3 Booking (186 avaliações)",
-            "url": "https://www.booking.com/searchresults.pt-br.html?ss=Canto+Verde+Pousada+Len%C3%A7%C3%B3is%2C+Bahia&checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1&group_children=0"
-          },
-          {
-            "name": "Mansão Mascarenhas",
-            "desc": "O mesmo quarto duplo deluxe da primeira estadia, a 500 m do centro, pela metade da diária. Disponível nas duas janelas.",
-            "price": {
-              "text": "R$ 345 o quarto · 1 noite (R$ 690 os dois casais)",
-              "status": "cotado",
-              "source": "booking-lencois-2"
-            },
-            "rating": "9,7 Booking (140 avaliações)",
-            "url": "https://www.booking.com/searchresults.pt-br.html?ss=Mans%C3%A3o+Mascarenhas+Len%C3%A7%C3%B3is%2C+Bahia&checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1&group_children=0"
-          },
-          {
-            "name": "Pousada Alto do Cajueiro",
-            "desc": "Quarto duplo standard a 800 m do centro, com cancelamento grátis. A pousada com mais avaliações de Lençóis — e fechada para a primeira estadia.",
-            "price": {
-              "text": "R$ 350 o quarto · 1 noite (R$ 700 os dois casais)",
-              "status": "cotado",
-              "source": "booking-lencois-2"
-            },
-            "rating": "9,0 Booking (743 avaliações)",
-            "url": "https://www.booking.com/searchresults.pt-br.html?ss=Pousada+Alto+do+Cajueiro+Len%C3%A7%C3%B3is%2C+Bahia&checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1&group_children=0"
-          },
-          {
-            "name": "Casa Papa-Vento Pousada",
-            "desc": "Quarto duplo com vista do jardim, a 700 m do centro, com cancelamento grátis.",
-            "price": {
-              "text": "R$ 355 o quarto · 1 noite (R$ 710 os dois casais)",
-              "status": "cotado",
-              "source": "booking-lencois-2"
-            },
-            "rating": "9,4 Booking (36 avaliações)",
-            "url": "https://www.booking.com/searchresults.pt-br.html?ss=Casa+Papa-Vento+Pousada+Len%C3%A7%C3%B3is%2C+Bahia&checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1&group_children=0"
+            "url": "https://www.booking.com/hotel/br/casa-de-luciana-lencois.pt-br.html?checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1"
           },
           {
             "name": "Villa Allma",
             "desc": "Quarto queen com vista da piscina, a 700 m do centro.",
             "price": {
-              "text": "R$ 375 o quarto · 1 noite (R$ 750 os dois casais)",
+              "text": "R$ 310 o quarto · 1 noite (R$ 620 os dois casais)",
               "status": "cotado",
               "source": "booking-lencois-2"
             },
-            "rating": "9,7 Booking (495 avaliações)",
-            "url": "https://www.booking.com/searchresults.pt-br.html?ss=Villa+Allma+Len%C3%A7%C3%B3is%2C+Bahia&checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1&group_children=0"
+            "rating": "9,7 Booking (494 avaliações)",
+            "url": "https://www.booking.com/hotel/br/jardim-serrano-lencois.pt-br.html?checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1"
+          },
+          {
+            "name": "Mansão Mascarenhas",
+            "desc": "O mesmo quarto duplo deluxe da primeira estadia, a 500 m do centro, pela metade da diária. Disponível nas duas janelas.",
+            "price": {
+              "text": "R$ 329 o quarto · 1 noite (R$ 658 os dois casais)",
+              "status": "cotado",
+              "source": "booking-lencois-2"
+            },
+            "rating": "9,7 Booking (142 avaliações)",
+            "url": "https://www.booking.com/hotel/br/mansao-mascarenhas.pt-br.html?checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1"
+          },
+          {
+            "name": "Pousada Alto do Cajueiro",
+            "desc": "Quarto duplo standard a 800 m do centro, com cancelamento grátis. A pousada com mais avaliações de Lençóis — e fechada para a primeira estadia.",
+            "price": {
+              "text": "R$ 333 o quarto · 1 noite (R$ 666 os dois casais)",
+              "status": "cotado",
+              "source": "booking-lencois-2"
+            },
+            "rating": "9,1 Booking (740 avaliações)",
+            "url": "https://www.booking.com/hotel/br/pousada-alto-do-cajueiro.pt-br.html?checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1"
           },
           {
             "name": "Pouso da Trilha",
-            "desc": "Suíte standard de casal a 50 m do centro histórico. <strong>Nesta noite há quatro quartos livres</strong>, ao contrário de 17–19, quando sobra um só.",
+            "desc": "Suíte standard de casal a 50 m do centro histórico. Nesta noite há seis quartos livres, ao contrário de 17–19, quando sobra um só.",
             "price": {
-              "text": "R$ 385 o quarto · 1 noite (R$ 770 os dois casais)",
+              "text": "R$ 367 o quarto · 1 noite (R$ 734 os dois casais)",
               "status": "cotado",
               "source": "booking-lencois-2"
             },
-            "rating": "9,4 Booking (694 avaliações)",
+            "rating": "9,4 Booking (691 avaliações)",
             "url": "https://www.booking.com/hotel/br/pouso-da-trilha-hospedagem.pt-br.html?checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1",
             "confirmationUrls": [
               {
@@ -1372,27 +1333,27 @@
             "name": "Pousada Casa Viva a Vida",
             "desc": "Quarto duplo com vista do jardim, a 700 m do centro. Também tem vaga em 17–19.",
             "price": {
-              "text": "R$ 410 o quarto · 1 noite (R$ 820 os dois casais)",
+              "text": "R$ 390 o quarto · 1 noite (R$ 780 os dois casais)",
               "status": "cotado",
               "source": "booking-lencois-2"
             },
             "rating": "9,7 Booking (266 avaliações)",
-            "url": "https://www.booking.com/searchresults.pt-br.html?ss=Pousada+Casa+Viva+a+Vida+Len%C3%A7%C3%B3is%2C+Bahia&checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1&group_children=0"
+            "url": "https://www.booking.com/hotel/br/casa-viva-a-vida-b-amp-b.pt-br.html?checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1"
           },
           {
             "name": "Pousada Vila Serrano",
             "desc": "Villa com vista do jardim, a 500 m do centro. A mesma casa da primeira estadia, por menos da metade da diária.",
             "price": {
-              "text": "R$ 545 o quarto · 1 noite (R$ 1.090 os dois casais)",
+              "text": "R$ 519 o quarto · 1 noite (R$ 1.038 os dois casais)",
               "status": "cotado",
               "source": "booking-lencois-2"
             },
-            "rating": "9,4 Booking (658 avaliações)",
+            "rating": "9,4 Booking (656 avaliações)",
             "url": "https://www.booking.com/hotel/br/pousada-vila-serrano.pt-br.html?checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1",
             "confirmationUrls": [
               {
                 "label": "Site da pousada",
-                "url": "https://www.vilaserrano.com/"
+                "url": "https://vilaserrano.com/"
               }
             ]
           },
@@ -1400,7 +1361,7 @@
             "name": "Hotel Canto das Águas",
             "desc": "Apartamento deluxe com vista do jardim, a 300 m do centro, à beira do rio.",
             "price": {
-              "text": "R$ 1.244 o quarto · 1 noite (R$ 2.488 os dois casais)",
+              "text": "R$ 1.185 o quarto · 1 noite (R$ 2.370 os dois casais)",
               "status": "cotado",
               "source": "booking-lencois-2"
             },
@@ -1418,12 +1379,14 @@
     ],
     "pendencias": [
       "Os preços são <strong>por quarto de casal</strong>, para a estadia inteira daquela base — é o que cada casal vai pagar na sua própria reserva. O valor entre parênteses é a soma dos dois quartos, só para dimensionar o gasto do grupo.",
-      "Cotações da Booking de 23/09/2026, nas datas exatas de cada base, 2 adultos em 1 quarto, com impostos e taxas incluídos.",
-      "Padrão do grupo: quarto de casal, categoria intermediária. Onde a pousada não tinha duplo livre, o quarto cotado foi o menor disponível que acomoda o casal — está dito na descrição.",
-      "Preço de Booking muda com a procura: use esta lista para escolher, e cote de novo na hora de fechar.",
-      "Lençóis aparece em duas estadias (17–19 e 22–23). Mansão Mascarenhas, Vila Caribé e Casa Viva a Vida têm vaga nas duas janelas — são as candidatas a segurar as três noites.",
+      "Cotação refeita na <strong>Booking em 06/10/2026</strong>, nas datas exatas de cada base, 2 adultos em 1 quarto. Alguns valores excluem a taxa municipal de 5%.",
+      "Só entram na lista pousadas com <strong>nota acima de 8,5</strong>. Saíram Portal Lençóis (8,0), Cafe Preto (8,3) e Pousada Licuri (8,2).",
+      "Padrão do grupo: quarto de casal, categoria intermediária. Onde a pousada não tinha duplo livre, o quarto cotado foi o menor que acomoda o casal — está dito na descrição.",
+      "Preço de Booking muda com a procura: use esta lista para escolher e <strong>cote de novo na hora de fechar</strong>.",
+      "<strong>Esgotadas em 06/10:</strong> Lençóis 17–19 — Vila Caribé, Pousada da Rita, Alto do Cajueiro e Canto dos Pássaros; Mucugê 19–21 — Encanto da Roça e Diamantino Residence; Ibicoara 21–22 — Terra de Gigantes e Residencial Maria de Lourdes. Reservar cedo.",
+      "Lençóis aparece em duas estadias (17–19 e 22–23). <strong>Mansão Mascarenhas</strong> e <strong>Casa Viva a Vida</strong> têm vaga nas duas janelas; Vila Caribé só em 22–23, e Vila das Estrelas e Hospedagem do Sítio só em 17–19.",
       "Ibicoara é a reserva mais urgente: uma noite só, cidade pequena, e as opções centrais têm poucos quartos.",
-      "A Kabana de Pedra cancela grátis até 14/10 e cobra por transferência bancária antecipada, em dinheiro. Decidir com folga desse prazo.",
+      "A Kabana de Pedra cancela grátis e cobra por transferência bancária antecipada, em dinheiro. Decidir com folga.",
       "Como cada casal reserva por conta própria, vale combinar a pousada antes e reservar no mesmo dia: em várias delas sobram um ou dois quartos no preço cotado."
     ]
   },
@@ -1670,12 +1633,12 @@
       {
         "emoji": "🔁",
         "title": "Lençóis aparece duas vezes",
-        "text": "Dias 17–19 e 22–23, com Mucugê e Ibicoara no meio. Se a mesma pousada segurar as duas estadias, dá para negociar as três noites juntas e deixar mala guardada. <strong>Mansão Mascarenhas, Vila Caribé e Casa Viva a Vida</strong> têm vaga nas duas janelas."
+        "text": "Dias 17–19 e 22–23, com Mucugê e Ibicoara no meio. Se a mesma pousada segurar as duas estadias, dá para negociar as três noites juntas e deixar mala guardada. <strong>Mansão Mascarenhas</strong> e <strong>Casa Viva a Vida</strong> têm vaga nas duas janelas; Vila Caribé só na última noite."
       },
       {
         "emoji": "🔗",
         "title": "Cada botão já abre com as datas",
-        "text": "O <strong>Ver oferta</strong> leva à Booking com as datas daquela base e um quarto para dois adultos — é a mesma busca que gerou o preço do card. Como cada casal reserva o seu, vale combinar a pousada antes e reservar no mesmo dia: em várias delas sobram um ou dois quartos nesse preço."
+        "text": "O <strong>Ver oferta</strong> leva à Booking com as datas daquela base e um quarto para dois adultos — é a mesma busca que gerou o preço do card. Cotações de <strong>06/10/2026</strong>: confira antes de fechar, porque preço de Booking muda com a procura. Como cada casal reserva o seu, vale combinar a pousada antes e reservar no mesmo dia."
       }
     ]
   }
