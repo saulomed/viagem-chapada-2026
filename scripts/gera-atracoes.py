@@ -821,6 +821,7 @@ for f in faltando:
     print(f'⚠️  foto ausente: {f}')
 
 B.write(os.path.join(ROOT, PAGE),
-        B.shell(trip, 'Atrações', corpo, PAGE, PAGES, scripts=SCRIPT))
+        B.shell(trip, 'Atrações', corpo, PAGE, PAGES,
+                scripts='<script>' + SCRIPT + '</script>'))
 print(f'✅ {PAGE} — {total} atrações · {com_foto} com foto · '
       f'{imperdiveis} imperdíveis · {escolhidas} no roteiro')

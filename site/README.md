@@ -2,7 +2,7 @@
 
 Roteiro interativo da viagem a Chapada Diamantina, Bahia (17/10 a 23/10).
 
-🔒 Site local — não publicado. Para publicar, defina `features.publish` como `"pages"` ou `"netlify"` no `trip.json` e rode o build de novo.
+🌐 **[Ver o site](https://chapada-diamantina-2026.netlify.app/)** — hospedado no Netlify
 
 ## Páginas
 
@@ -10,6 +10,7 @@ Roteiro interativo da viagem a Chapada Diamantina, Bahia (17/10 a 23/10).
 - `hospedagem.html` — 🏨 Hospedagem
 - `mapa.html` — 🌍 Mapa
 - `atracoes.html` — 📸 Atrações
+- `restaurantes.html` — 🍽️ Restaurantes
 
 ## Como atualizar
 
@@ -21,7 +22,7 @@ python3 <caminho-da-skill>/scripts/build.py    # 2. regenere o site
 git add -A && git commit -m "Atualiza roteiro" && git push   # 3. versione
 ```
 
-Não há deploy configurado: o `git push` só versiona os arquivos.
+O Netlify republica sozinho a cada push em `main`.
 
 ## Stack
 

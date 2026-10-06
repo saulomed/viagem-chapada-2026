@@ -722,8 +722,8 @@
 
   // ═══════════ modal de sincronização ═══════════
   function initSync() {
+    if (!window.GistSync) return;
     var overlay = $('#syncModal');
-    if (!overlay || !window.GistSync) return;
 
     window.GistSync.onStatusChange(function (status) {
       var dot = $('#syncDot'), label = $('#syncLabel');
@@ -733,35 +733,40 @@
       if (label) label.textContent = texts[status] || '';
     });
 
-    window.openSyncModal = function () {
-      $('#syncGistId').value = localStorage.getItem(P + '_gist_id') || '';
-      $('#syncPat').value = '';
-      $('#syncFeedback').textContent = '';
-      $('#syncDisconnect').style.display = window.GistSync.isConfigured() ? '' : 'none';
-      overlay.classList.add('open');
-    };
-    window.closeSyncModal = function (e) {
-      if (e && e.target !== e.currentTarget) return;
-      overlay.classList.remove('open');
-    };
-    window.saveSyncConfig = function () {
-      var id = $('#syncGistId').value.trim(), pat = $('#syncPat').value.trim();
-      var fb = $('#syncFeedback');
-      if (!id || !pat) { fb.textContent = 'Preencha Gist ID e token.'; return; }
-      window.GistSync.saveCredentials(id, pat);
-      fb.textContent = 'Testando…';
-      window.GistSync.testConnection().then(function (ok) {
-        if (!ok) { fb.textContent = 'Não consegui acessar o Gist. Confira o ID e o token.'; return; }
-        window.GistSync.syncOnLoad().then(function () {
-          overlay.classList.remove('open');
-          location.reload();
+    // O modal só existe no gistSync (que precisa de Gist ID + token). O
+    // siteSync é gerenciado pelo servidor, atrás do gate de senha, e roda
+    // sem modal — por isso os handlers ficam condicionados à presença dele.
+    if (overlay) {
+      window.openSyncModal = function () {
+        $('#syncGistId').value = localStorage.getItem(P + '_gist_id') || '';
+        $('#syncPat').value = '';
+        $('#syncFeedback').textContent = '';
+        $('#syncDisconnect').style.display = window.GistSync.isConfigured() ? '' : 'none';
+        overlay.classList.add('open');
+      };
+      window.closeSyncModal = function (e) {
+        if (e && e.target !== e.currentTarget) return;
+        overlay.classList.remove('open');
+      };
+      window.saveSyncConfig = function () {
+        var id = $('#syncGistId').value.trim(), pat = $('#syncPat').value.trim();
+        var fb = $('#syncFeedback');
+        if (!id || !pat) { fb.textContent = 'Preencha Gist ID e token.'; return; }
+        window.GistSync.saveCredentials(id, pat);
+        fb.textContent = 'Testando…';
+        window.GistSync.testConnection().then(function (ok) {
+          if (!ok) { fb.textContent = 'Não consegui acessar o Gist. Confira o ID e o token.'; return; }
+          window.GistSync.syncOnLoad().then(function () {
+            overlay.classList.remove('open');
+            location.reload();
+          });
         });
-      });
-    };
-    window.disconnectSync = function () {
-      window.GistSync.clearCredentials();
-      overlay.classList.remove('open');
-    };
+      };
+      window.disconnectSync = function () {
+        window.GistSync.clearCredentials();
+        overlay.classList.remove('open');
+      };
+    }
 
     if (window.GistSync.isConfigured()) {
       window.GistSync.syncOnLoad().then(function (changed) { if (changed) location.reload(); });

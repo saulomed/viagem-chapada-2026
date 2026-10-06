@@ -3,5 +3,13 @@ Thumbs.db
 *.log
 .claude/
 
-# Netlify
+# Node / Netlify
+node_modules/
 .netlify/
+
+# segredos locais (a versão de exemplo pode ser versionada)
+.env
+.env.local
+
+# gerado pelo build (a config real do Netlify é o netlify.toml da raiz)
+/site/netlify.toml

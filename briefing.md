@@ -94,16 +94,31 @@ Nada. Nenhuma pousada, ingresso ou guia reservado até o momento.
 
 ## O site do roteiro
 
-Gerado a partir de `site/trip.json` — **o HTML não se edita à mão**. Quatro abas:
+Gerado a partir de `site/trip.json` — **o HTML não se edita à mão**. Cinco abas:
 
 - **Roteiro** (`index.html`) — o dia a dia, com os horários, trajetos e o que está reservado. Cada dia termina com o atalho para o dia seguinte, e os blocos com um lugar catalogado trazem o link **ℹ️ Sobre o lugar**.
 - **Atrações** (`atracoes.html`) — a ficha de cada lugar da viagem: foto, resumo, nível de recomendação e os blogs e vídeos que sustentam a nota. Substituiu o antigo cardápio de opções em 23/09/2026, mantendo a curadoria e os filtros por dia. As fotos vêm do Wikimedia Commons, baixadas no projeto e creditadas na própria página.
+- **Restaurantes** (`restaurantes.html`) — a curadoria gastronômica por base, com filtros combináveis de base, refeição, tipo de cozinha, faixa de preço, atalhos e busca por texto. Criada em 02/10/2026, com 70 lugares em 8 bases (Lençóis, Capão, Poço Azul, Mucugê, Ibicoara, Iraquara/Pratinha, estrada e Juazeiro/Petrolina).
 - **Hospedagem** (`hospedagem.html`) — as opções por cidade-base e o que foi reservado.
 - **Mapa** (`mapa.html`) — as paradas na ordem em que serão visitadas.
 
 Há ainda uma **versão offline** (`roteiro-offline.html` e as `offline-*.html`), com CSS, JS e fotos embutidos, para os trechos sem sinal. O mapa fica de fora dela, porque depende de tiles da rede.
 
-Para regerar: `python3 ~/.claude/skills/agente-viagem/scripts/build.py` dentro de `site/`, depois `python3 scripts/gera-atracoes.py`, e o build de novo para atualizar a versão offline.
+Para regerar: `python3 ~/.claude/skills/agente-viagem/scripts/build.py site`, depois `python3 scripts/gera-atracoes.py` e `python3 scripts/gera-restaurantes.py`, e o build de novo para atualizar a versão offline. O conteúdo de cada página extra vive no seu gerador (`scripts/gera-*.py`), não no `trip.json`.
+
+## Estado compartilhado e senha (02/10/2026)
+
+O que se marca no site (checklist da tela inicial, reservas de hospedagem e do carro) deixa de ficar preso ao `localStorage` de um navegador e passa a valer para qualquer pessoa que acesse. Primeiro só existe `localStorage` como cache/offline; a fonte de verdade é o servidor do próprio site.
+
+- **Estado compartilhado** (`features.siteSync`): uma Netlify Function em `/api/state` guarda um único documento JSON no Netlify Blobs. O servidor mescla o que chega com o que já existe (o checklist é unido item a item), então o que um marca aparece no outro. O cliente é o `site-sync.js`, que expõe a mesma interface do antigo `gist-sync.js` — ninguém precisa colar token.
+- **Senha única do grupo**: uma Edge Function em `netlify/edge-functions/gate.js` roda **antes de qualquer byte sair** e exige cookie assinado no site inteiro, inclusive `/api/state`. A senha vive só em variável de ambiente e nunca chega ao navegador. Sem cookie, a resposta é a tela de login; o link **Sair** no rodapé limpa a sessão.
+
+Arquivos: `netlify/edge-functions/gate.js`, `netlify/functions/state.mjs` + `_state-logic.mjs`, `netlify.toml` (config real), `package.json` (depende de `@netlify/blobs`) e `.env.example`.
+
+**Rodar local:** `cp .env.example .env`, ajuste a senha e o segredo, e `npx netlify-cli dev`. Sem as duas variáveis o portão fica aberto (útil para editar o site).
+
+**Publicar:** conectar o repositório no Netlify (publish `site`, sem build step) e definir `SITE_PASSWORD` e `SESSION_SECRET` em *Project configuration → Environment variables*. A versão offline (`roteiro-offline.html` e `offline-*.html`) continua sem sincronizar e sem senha, porque é feita para abrir sem rede.
+
 
 ## Decisões em aberto
 

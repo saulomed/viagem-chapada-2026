@@ -1,0 +1,10 @@
+{
+  "name": "viagem-chapada-2026",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Roteiro da viagem à Chapada Diamantina 2026. Site estático gerado + funções Netlify de auth e estado compartilhado.",
+  "dependencies": {
+    "@netlify/blobs": "^11.0.0"
+  }
+}

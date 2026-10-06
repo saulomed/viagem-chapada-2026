@@ -866,3 +866,44 @@ a.fato-selo:hover { opacity: 0.75; }
 /* a âncora vinda do roteiro não pode parar embaixo do menu fixo */
 .opt-card { scroll-margin-top: calc(var(--nav-h) + 16px); }
 .opt-card:target { border-color: var(--accent); border-left-color: var(--accent); box-shadow: var(--shadow-lg); }
+
+
+/* ─── restaurantes.html — curadoria gastronômica ─── */
+.rest-card .opt-corpo { padding: 1rem 1.1rem 1.15rem; }
+.rest-card { border-left-color: var(--primary); }
+.rest-card[data-no-roteiro="sim"] { border-left-color: var(--ok); }
+.rest-card[data-top="sim"] { border-left-color: var(--accent); }
+.rest-faixa {
+  font-family: 'JetBrains Mono', monospace; font-size: .82rem; font-weight: 700;
+  color: var(--primary); letter-spacing: .02em;
+}
+.rest-refeicoes { margin: .35rem 0 .6rem; font-size: .8rem; font-weight: 600; color: var(--text-muted); }
+.rest-dias { margin: .6rem 0 0; font-size: .78rem; color: var(--text-light); }
+.rest-local { color: var(--text-muted); font-weight: 500; }
+.rest-tags { display: flex; flex-wrap: wrap; gap: .3rem; margin: .65rem 0 0; }
+.rest-tag {
+  font-size: .7rem; font-weight: 600; padding: .2rem .5rem; border-radius: 999px;
+  background: var(--bg-alt); color: var(--text-muted); border: 1px solid var(--border);
+}
+.rest-conta-bloco { font-size: .78rem; font-weight: 700; color: var(--text-light); margin-left: auto; }
+.rest-cab .dia-tit { justify-content: flex-start; }
+.rest-bloco { scroll-margin-top: calc(var(--nav-h, 58px) + 16px); }
+.rest-legenda { margin-top: .75rem; }
+
+/* busca por texto */
+.filtro-busca { display: flex; align-items: center; gap: .6rem; margin: 0 0 1rem; flex-wrap: wrap; }
+.filtro-busca-rot {
+  font-size: .7rem; font-weight: 700; letter-spacing: .07em;
+  text-transform: uppercase; color: var(--text-light);
+}
+#rest-busca {
+  flex: 1 1 240px; min-width: 200px; font: inherit; font-size: .9rem;
+  padding: .55rem .8rem; border-radius: var(--radius-sm);
+  border: 1px solid var(--border); background: var(--surface); color: var(--text);
+}
+#rest-busca:focus { outline: 2px solid var(--primary); outline-offset: 1px; border-color: var(--primary); }
+
+@media (max-width: 640px) {
+  .rest-conta-bloco { display: none; }
+  #rest-busca { flex: 1 1 100%; }
+}

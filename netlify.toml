@@ -1,7 +1,18 @@
-# Site estático: um único index.html, sem etapa de build.
+# Site estático: HTML pronto na pasta `site`, sem build step.
+# O Netlify ainda precisa instalar as dependências das funções (package.json).
+#
+# Variáveis de ambiente obrigatórias (Project configuration → Environment variables):
+#   SITE_PASSWORD   senha única do grupo (protege o site inteiro)
+#   SESSION_SECRET  string aleatória longa para assinar o cookie de sessão
 [build]
   publish = "site"
   command = ""
+
+# /api/state devolve o estado compartilhado; nunca pode ser cacheado.
+[[headers]]
+  for = "/api/state"
+  [headers.values]
+    Cache-Control = "no-store"
 
 [[headers]]
   for = "/*"

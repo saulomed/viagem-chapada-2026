@@ -1,0 +1,1858 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-palette="desert">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Chapada Diamantina 2026 — roteiro de viagem">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<title>[OFFLINE] Restaurantes</title>
+
+<style>/* ═══════════════════════════════════════════════════════════
+   Design System — Roteiro de Viagem
+   Gerado por agente-viagem/scripts/build.py — não editar aqui.
+   ═══════════════════════════════════════════════════════════ */
+
+/* ─── PALETAS ─── */
+/* --link e --accent-text são as versões de --secondary e --accent que podem
+   virar texto pequeno: as originais são cores de marca e reprovam no WCAG AA
+   (4,5:1) sobre --bg-alt. Todas as duplas abaixo foram medidas contra o
+   --bg-alt da própria paleta. */
+:root,
+:root[data-palette="jungle"] {
+  --primary: #1a3a2a;
+  --primary-light: #2d5a3f;
+  --secondary: #3d7a5a;
+  --secondary-light: #5ca87a;
+  --accent: #e85d3a;
+  --accent-dark: #c44a2d;
+  --highlight: #d4a843;
+  --bg: #faf3e6;
+  --bg-alt: #f5e6c8;
+  --surface: #fefdfb;
+  --border: #e8d4a8;
+  --shadow-rgb: 26, 58, 42;
+  --link: #376e51;
+  --accent-text: #b63515;
+}
+
+:root[data-palette="ocean"] {
+  --primary: #0d3b4f;
+  --primary-light: #175a75;
+  --secondary: #1e7f9e;
+  --secondary-light: #4fb3cc;
+  --accent: #ff6f5e;
+  --accent-dark: #d8503f;
+  --highlight: #f2b544;
+  --bg: #f3f8fa;
+  --bg-alt: #dceef3;
+  --surface: #ffffff;
+  --border: #c5dfe7;
+  --shadow-rgb: 13, 59, 79;
+  --link: #196d88;
+  --accent-text: #cb1500;
+}
+
+:root[data-palette="desert"] {
+  --primary: #5a2f1e;
+  --primary-light: #7d452c;
+  --secondary: #b4633a;
+  --secondary-light: #d99263;
+  --accent: #2f7d6a;
+  --accent-dark: #205a4c;
+  --highlight: #e0a63c;
+  --bg: #fbf3ea;
+  --bg-alt: #f2e2d0;
+  --surface: #fffdfa;
+  --border: #e3cdb4;
+  --shadow-rgb: 90, 47, 30;
+  --link: #93502f;
+  --accent-text: #286c5b;
+}
+
+:root[data-palette="alpine"] {
+  --primary: #1e2c3d;
+  --primary-light: #33465e;
+  --secondary: #4a6b8a;
+  --secondary-light: #7fa3c2;
+  --accent: #c0392b;
+  --accent-dark: #96291d;
+  --highlight: #d8b45c;
+  --bg: #f4f6f9;
+  --bg-alt: #e3e9f0;
+  --surface: #ffffff;
+  --border: #ccd6e2;
+  --shadow-rgb: 30, 44, 61;
+  --link: #476785;
+  --accent-text: #b73629;
+}
+
+:root[data-palette="urban"] {
+  --primary: #23262b;
+  --primary-light: #3c414a;
+  --secondary: #5b6270;
+  --secondary-light: #8d95a4;
+  --accent: #e0a020;
+  --accent-dark: #b87f12;
+  --highlight: #d94f4f;
+  --bg: #f6f6f7;
+  --bg-alt: #e8e9ec;
+  --surface: #ffffff;
+  --border: #d6d8dd;
+  --shadow-rgb: 35, 38, 43;
+  --link: #5b6270;
+  --accent-text: #845e12;
+}
+
+:root[data-palette="pampa"] {
+  --primary: #33401f;
+  --primary-light: #4d5f30;
+  --secondary: #7a8c4a;
+  --secondary-light: #a8b878;
+  --accent: #7b2233;
+  --accent-dark: #5c1826;
+  --highlight: #cfa04a;
+  --bg: #f8f6ee;
+  --bg-alt: #ece7d6;
+  --surface: #fffefa;
+  --border: #d9d2bc;
+  --shadow-rgb: 51, 64, 31;
+  --link: #5b6837;
+  --accent-text: #7b2132;
+}
+
+:root {
+  --text: #2a2520;
+  --text-muted: #6b6560;
+  /* medidos contra o --bg-alt mais escuro das paletas: pior caso 4,8:1 */
+  --text-light: #66615d;
+  --white: #fff;
+  --ok: #246e45;
+  --warn: #8c5417;
+  --danger: #b13427;
+  --shadow-sm: 0 1px 3px rgba(var(--shadow-rgb), 0.08);
+  --shadow-md: 0 4px 16px rgba(var(--shadow-rgb), 0.10);
+  --shadow-lg: 0 12px 40px rgba(var(--shadow-rgb), 0.15);
+  --shadow-xl: 0 20px 60px rgba(var(--shadow-rgb), 0.20);
+  --radius: 16px;
+  --radius-sm: 10px;
+  --radius-xs: 6px;
+  --nav-h: 58px;
+  /* altura real do .page-header, medida pelo app.js nas páginas internas */
+  --header-h: 0px;
+}
+
+/* ─── BASE ─── */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .serif { font-family: 'Playfair Display', Georgia, serif; }
+.mono, .block-time, .cal-num, .amount { font-family: 'JetBrains Mono', 'Courier New', monospace; }
+
+a { color: var(--link); }
+img { max-width: 100%; }
+
+/* ─── FOCO ─── */
+/* O navegador descarta o anel padrão em qualquer elemento com fundo ou borda
+   customizados — sem isto, navegar por teclado é navegar às cegas. */
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: var(--radius-xs);
+}
+:focus:not(:focus-visible) { outline: none; }
+
+/* ─── HERO ─── */
+.hero {
+  /* 100vh ocupava a primeira tela inteira sem nenhum elemento acionável e
+     empurrava o roteiro para bem longe do topo */
+  min-height: clamp(520px, 78svh, 820px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 60px clamp(24px, 6vw, 80px);
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(175deg, rgba(var(--shadow-rgb), 0.75) 0%, rgba(var(--shadow-rgb), 0.35) 40%, rgba(var(--shadow-rgb), 0.6) 100%),
+    var(--hero-image, linear-gradient(160deg, var(--primary), var(--primary-light) 50%, var(--accent-dark))) center/cover no-repeat;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 200px;
+  background: linear-gradient(to top, var(--bg), transparent);
+  z-index: 1;
+}
+
+.hero-content { position: relative; z-index: 2; max-width: 900px; }
+.hero-eyebrow {
+  font-size: 0.82rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--white); opacity: 0.85; margin-bottom: 16px; font-weight: 500;
+}
+.hero-title {
+  font-size: clamp(2.8rem, 9vw, 6rem); font-weight: 900; line-height: 1.02;
+  color: var(--white); margin-bottom: 18px; text-shadow: 0 4px 30px rgba(0,0,0,0.35);
+}
+.hero-sub { font-size: clamp(1rem, 2.4vw, 1.35rem); color: var(--white); opacity: 0.94; max-width: 620px; }
+.hero-meta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.hero-cta {
+  display: inline-flex; align-items: center; gap: 8px; align-self: flex-start;
+  margin-top: 26px; padding: 14px 26px; min-height: 48px;
+  background: var(--white); color: var(--primary); text-decoration: none;
+  font-family: inherit; font-size: 0.95rem; font-weight: 700;
+  border: none; border-radius: 100px; cursor: pointer;
+  box-shadow: var(--shadow-lg); transition: transform .16s ease;
+}
+.hero-cta:hover { transform: translateY(-2px); }
+.hero-chip {
+  background: rgba(255,255,255,0.16); backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.28); color: var(--white);
+  padding: 8px 16px; border-radius: 100px; font-size: 0.86rem; font-weight: 500;
+}
+
+/* ─── PAGE HEADER (páginas internas) ─── */
+.page-header {
+  background: linear-gradient(140deg, var(--primary), var(--primary-light));
+  color: var(--white);
+  padding: clamp(40px, 8vw, 72px) clamp(24px, 6vw, 80px) clamp(32px, 6vw, 56px);
+  position: relative;
+}
+/* Com foto de fundo (meta.pageImages): o degradê da paleta vira véu por cima
+   da imagem. Sem ele o título branco some em qualquer foto clara. */
+.page-header.has-image {
+  background:
+    linear-gradient(140deg, rgba(var(--shadow-rgb), 0.90), rgba(var(--shadow-rgb), 0.58) 55%, rgba(var(--shadow-rgb), 0.80)),
+    var(--page-image) center/cover no-repeat;
+  padding-top: clamp(56px, 10vw, 104px);
+  padding-bottom: clamp(44px, 8vw, 80px);
+}
+.page-header.has-image h1 { text-shadow: 0 3px 20px rgba(0, 0, 0, 0.4); }
+.page-header.has-image p { text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45); }
+.page-header .eyebrow {
+  font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.8; margin-bottom: 12px;
+}
+.page-header h1 { font-size: clamp(2rem, 6vw, 3.4rem); font-weight: 800; line-height: 1.1; }
+.page-header p { opacity: 0.9; margin-top: 12px; max-width: 640px; }
+.page-header a.back { color: var(--white); opacity: 0.85; text-decoration: none; font-size: 0.88rem; }
+
+/* ─── NAV ─── */
+.nav-bar {
+  position: sticky; top: 0; z-index: 100; isolation: isolate;
+  background: rgba(255,255,255,0.92); backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border); box-shadow: var(--shadow-sm);
+}
+/* No celular boa parte dos itens fica fora da tela e a barra de rolagem está
+   escondida: o degradê é a única pista de que há mais coisa à direita.
+   Só aparece quando de fato há transbordo (.nav-bar.overflowing, do app.js). */
+.nav-bar.overflowing::after {
+  content: ''; position: absolute; top: 0; right: 0; bottom: 0; width: 56px;
+  pointer-events: none; z-index: 2;
+  background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.97) 70%);
+}
+.nav-inner {
+  display: flex; gap: 4px; padding: 10px clamp(16px, 4vw, 40px);
+  overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch;
+  scroll-padding-inline: 16px;
+}
+.nav-inner::-webkit-scrollbar { display: none; }
+.nav-btn {
+  flex: 0 0 auto; border: none; background: transparent; cursor: pointer;
+  font-family: inherit; font-size: 0.88rem; font-weight: 500; color: var(--text-muted);
+  padding: 9px 15px; border-radius: 100px; white-space: nowrap;
+  text-decoration: none; transition: background .18s, color .18s;
+  min-height: 44px; display: inline-flex; align-items: center;
+}
+.nav-btn:hover { background: var(--bg-alt); color: var(--text); }
+.nav-btn.active { background: var(--primary); color: var(--white); }
+
+.rate-bar {
+  display: none; text-align: center; font-size: 0.78rem; color: var(--text-muted);
+  background: var(--bg-alt); padding: 6px 16px; font-family: 'JetBrains Mono', monospace;
+}
+.rate-bar.visible { display: block; }
+
+/* ─── SECTION ─── */
+.section { padding: clamp(48px, 8vw, 92px) clamp(24px, 6vw, 80px); max-width: 1240px; margin: 0 auto; }
+.section-header { margin-bottom: 36px; }
+.section-tag {
+  display: inline-block; font-size: 0.74rem; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--accent-text); font-weight: 600; margin-bottom: 10px;
+}
+.section-title { font-size: clamp(1.7rem, 4.5vw, 2.7rem); font-weight: 700; line-height: 1.15; }
+.section-desc { color: var(--text-muted); margin-top: 10px; max-width: 680px; }
+
+/* ─── ALERTS ─── */
+.alerts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(268px, 1fr)); gap: 18px; }
+.alert-card {
+  background: var(--surface); border-radius: var(--radius); padding: 22px;
+  border-left: 4px solid var(--warn); box-shadow: var(--shadow-md);
+}
+.alert-card.high { border-left-color: var(--danger); }
+.alert-card.medium { border-left-color: var(--warn); }
+.alert-card.info { border-left-color: var(--secondary); }
+.alert-card h3 { font-size: 1.06rem; margin-bottom: 10px; display: flex; gap: 8px; align-items: center; }
+.alert-card ul { list-style: none; }
+.alert-card li { font-size: 0.9rem; color: var(--text-muted); padding: 4px 0 4px 14px; position: relative; }
+.alert-card li::before { content: '·'; position: absolute; left: 2px; color: var(--accent); font-weight: 700; }
+
+/* ─── TODO ─── */
+.todo-summary {
+  display: flex; align-items: center; gap: 14px; margin-bottom: 22px;
+  background: var(--surface); border-radius: var(--radius); padding: 16px 20px; box-shadow: var(--shadow-sm);
+}
+.todo-bar { flex: 1; height: 8px; background: var(--bg-alt); border-radius: 100px; overflow: hidden; }
+.todo-bar span { display: block; height: 100%; background: linear-gradient(90deg, var(--secondary), var(--secondary-light)); transition: width .4s; }
+.todo-pct { font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 0.9rem; }
+
+.todo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 18px; }
+.todo-card { background: var(--surface); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow-md); border: 1px solid var(--border); }
+.todo-card.done { border-color: var(--ok); }
+.todo-card h3 { font-size: 1.02rem; margin-bottom: 4px; }
+.todo-card .sub { font-size: 0.78rem; color: var(--text-light); margin-bottom: 12px; }
+.todo-item {
+  display: flex; gap: 10px; align-items: flex-start; padding: 11px 0; cursor: pointer;
+  font-size: 0.9rem; border-top: 1px solid var(--border); min-height: 44px;
+}
+.todo-item:first-of-type { border-top: none; }
+.todo-item .box {
+  flex: 0 0 22px; width: 22px; height: 22px; margin-top: 1px; border-radius: 6px;
+  border: 2px solid var(--border); display: grid; place-items: center; font-size: 11px; color: var(--white);
+}
+.todo-item.done .box { background: var(--ok); border-color: var(--ok); }
+.todo-item.done .txt { text-decoration: line-through; color: var(--text-light); }
+.todo-item.auto { cursor: default; }
+.todo-auto-label { font-size: 0.72rem; color: var(--ok); padding-left: 28px; }
+
+/* ─── CALENDÁRIO ─── */
+.calendar-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(104px, 1fr)); gap: 12px; margin-bottom: 32px; }
+.cal-day {
+  background: var(--surface); border: 2px solid var(--border); border-radius: var(--radius-sm);
+  padding: 14px 10px; text-align: center; cursor: pointer; transition: transform .18s, border-color .18s, box-shadow .18s;
+  /* é um <button>: sem isto herdaria a fonte e a largura do agente do usuário */
+  font: inherit; color: inherit; width: 100%; display: block;
+}
+.cal-day:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.cal-day.active { background: var(--primary); border-color: var(--primary); color: var(--white); }
+.cal-wd { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.7; }
+.cal-num { font-size: 1.3rem; font-weight: 600; margin: 4px 0; }
+.cal-emoji { font-size: 1.2rem; }
+.cal-city { font-size: 0.72rem; opacity: 0.85; margin-top: 4px; }
+
+/* ─── DETALHE DO DIA ─── */
+.day-detail { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow-lg); overflow: hidden; }
+.day-head { background: linear-gradient(135deg, var(--primary), var(--primary-light)); color: var(--white); padding: 26px clamp(20px, 4vw, 34px); }
+.day-head .num { font-size: 0.76rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.8; }
+.day-head h3 { font-size: clamp(1.35rem, 3.5vw, 2rem); margin: 6px 0; }
+.day-head .route { font-size: 0.88rem; opacity: 0.88; }
+.day-body { padding: clamp(20px, 4vw, 34px); }
+
+.block { display: grid; grid-template-columns: 110px 1fr; gap: 18px; padding: 18px 0; border-top: 1px solid var(--border); }
+.block:first-child { border-top: none; padding-top: 0; }
+.block-time { font-size: 0.8rem; color: var(--accent-text); font-weight: 500; padding-top: 2px; }
+.block-title { font-weight: 600; margin-bottom: 8px; display: flex; flex-wrap: wrap; gap: 8px; align-items: baseline; }
+.block-tip { font-size: 0.72rem; background: var(--bg-alt); color: var(--text-muted); padding: 2px 9px; border-radius: 100px; }
+.block-items { list-style: none; }
+.block-items li { font-size: 0.9rem; color: var(--text-muted); padding: 3px 0 3px 15px; position: relative; }
+.block-items li::before { content: '›'; position: absolute; left: 0; color: var(--secondary-light); }
+.block-duration { font-size: 0.78rem; color: var(--text-light); font-family: 'JetBrains Mono', monospace; margin-top: 6px; }
+.block-links { margin-top: 8px; display: flex; gap: 14px; flex-wrap: wrap; font-size: 0.82rem; }
+.block-links a { text-decoration: none; font-weight: 500; }
+
+/* ─── NAVEGAÇÃO ENTRE OS DIAS ─── */
+/* Fecha o dia com a saída óbvia: o dia seguinte, sem voltar ao calendário. */
+.day-nav {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+  margin-top: 28px; padding-top: 22px; border-top: 1px solid var(--border);
+}
+.day-nav-btn {
+  display: flex; flex-direction: column; gap: 2px; min-height: 44px;
+  font: inherit; text-align: left; cursor: pointer;
+  background: var(--bg); color: var(--text);
+  border: 1.5px solid var(--border); border-radius: var(--radius-sm);
+  padding: 12px 16px; transition: border-color .16s ease, transform .16s ease;
+}
+.day-nav-btn:hover { border-color: var(--accent); transform: translateY(-2px); }
+.day-nav-btn.next { text-align: right; align-items: flex-end; }
+.day-nav-dir {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--accent-text);
+}
+.day-nav-day { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--text-muted); }
+.day-nav-title { font-weight: 600; font-size: 0.92rem; line-height: 1.3; }
+
+/* ─── PROCEDÊNCIA DOS NÚMEROS ─── */
+/* Selo ao lado de um preço: de onde ele veio e quanto confiar nele. */
+.fato-selo {
+  display: inline-block; font-size: 0.78em; text-decoration: none;
+  vertical-align: baseline; margin-left: 2px; cursor: help;
+  /* o selo aparece dentro de .opt-price e .price-tag, que usam monoespaçada —
+     sem uma fonte de emoji explícita, 📋 vira quadradinho vazio */
+  font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
+}
+a.fato-selo { cursor: pointer; }
+a.fato-selo:hover { opacity: 0.75; }
+.fato-legendas { display: flex; flex-wrap: wrap; gap: 18px; margin-bottom: 22px; }
+.fato-legenda { font-size: 0.84rem; color: var(--text-muted); }
+.fontes { list-style: none; display: grid; gap: 10px; }
+.fonte-item {
+  display: flex; gap: 12px; align-items: flex-start;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 12px; padding: 12px 16px;
+}
+.fonte-kind { flex: 0 0 auto; font-size: 1rem; line-height: 1.4; cursor: help; }
+.fonte-txt { font-size: 0.9rem; }
+.fonte-meta {
+  display: block; margin-top: 3px; font-size: 0.76rem; color: var(--text-muted);
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+}
+
+/* ─── OPÇÕES DO DIA (blocks[].options[]) ─── */
+/* Dia-cardápio: nada marcado, escolhe-se uma opção na hora. */
+.day-options { list-style: none; margin: 10px 0 4px; display: grid; gap: 8px; }
+.day-option {
+  display: flex; gap: 10px; align-items: baseline;
+  background: var(--bg-alt); border-radius: 10px; padding: 10px 13px;
+  font-size: 0.9rem; line-height: 1.5;
+}
+.opt-num {
+  flex: 0 0 auto; font-weight: 700; color: var(--link);
+  font-size: 1rem; line-height: 1.35;
+}
+.opt-body { color: var(--text-muted); }
+.opt-body strong { color: var(--text); }
+.opt-pet {
+  display: inline-block; vertical-align: middle; margin-right: 7px;
+  font-size: 0.7rem; font-weight: 600; color: #fff;
+  padding: 2px 8px; border-radius: 100px; white-space: nowrap;
+}
+.opt-pet.pet-sim { background: #2f7d4a; }
+.opt-pet.pet-nao { background: #a8342a; }
+.opt-pet.pet-talvez { background: #b8892b; }
+.opt-price {
+  display: block; margin-top: 4px; font-size: 0.78rem;
+  font-family: 'JetBrains Mono', 'Courier New', monospace; color: var(--link);
+}
+
+.price-tag {
+  display: inline-block; background: var(--bg-alt); color: var(--text);
+  font-size: 0.8rem; font-weight: 600; padding: 3px 11px; border-radius: 100px; margin-top: 8px;
+}
+
+/* ─── HOTÉIS ─── */
+.hotel-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(268px, 1fr)); gap: 18px; }
+.hotel-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 20px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 8px;
+}
+.hotel-card.reserved { border-color: var(--ok); border-width: 2px; }
+.hotel-card h4 { font-size: 1rem; font-weight: 600; }
+.hotel-card .desc { font-size: 0.86rem; color: var(--text-muted); flex: 1; }
+.hotel-price { font-family: 'JetBrains Mono', monospace; font-weight: 600; color: var(--accent-text); }
+.hotel-badge { font-size: 0.72rem; background: var(--ok); color: var(--white); padding: 2px 9px; border-radius: 100px; align-self: flex-start; }
+.hotel-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 6px; }
+.btn {
+  border: none; cursor: pointer; font-family: inherit; font-size: 0.84rem; font-weight: 600;
+  padding: 8px 16px; border-radius: 100px; text-decoration: none; display: inline-block;
+  background: var(--primary); color: var(--white); transition: opacity .18s;
+}
+.btn:hover { opacity: 0.88; }
+.btn.ghost { background: transparent; color: var(--primary); border: 1.5px solid var(--border); }
+.btn.danger { background: var(--danger); }
+
+/* ─── CUSTOS ─── */
+.summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; }
+.cost-card { background: var(--surface); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border); }
+.cost-card .label { font-size: 0.82rem; color: var(--text-muted); }
+.cost-card .amount { font-size: 1.35rem; font-weight: 700; color: var(--primary); margin-top: 6px; display: block; }
+.cost-card.total { background: linear-gradient(135deg, var(--primary), var(--primary-light)); color: var(--white); }
+.cost-card.total .label, .cost-card.total .amount { color: var(--white); }
+
+.table-wrap { overflow-x: auto; }
+.cost-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 520px; }
+.cost-table th {
+  text-align: left; font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--text-light); padding: 10px 12px; border-bottom: 2px solid var(--border);
+}
+.cost-table td { padding: 12px; border-bottom: 1px solid var(--border); }
+.cost-table .cost-amount { font-family: 'JetBrains Mono', monospace; font-weight: 600; white-space: nowrap; }
+.category-header { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.category-emoji { font-size: 1.4rem; }
+.category-title { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; flex: 1; }
+.category-total { font-family: 'JetBrains Mono', monospace; font-weight: 600; color: var(--accent-text); }
+.status { font-size: 0.72rem; padding: 3px 10px; border-radius: 100px; white-space: nowrap; }
+.status.confirmado { background: rgba(36,110,69,0.12); color: var(--ok); }
+.status.cotado { background: rgba(140,84,23,0.12); color: var(--warn); }
+.status.estimado { background: var(--bg-alt); color: var(--text-muted); }
+
+/* ─── INFO / TIPS ─── */
+.info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(268px, 1fr)); gap: 18px; }
+.info-card, .tip-card {
+  background: var(--surface); border-radius: var(--radius); padding: 22px;
+  box-shadow: var(--shadow-sm); border: 1px solid var(--border);
+}
+.info-card h3, .tip-card h3 { font-size: 1rem; margin-bottom: 8px; display: flex; gap: 8px; }
+.info-card p, .tip-card p { font-size: 0.9rem; color: var(--text-muted); }
+.info-card ul { list-style: none; margin-top: 8px; }
+.info-card li { font-size: 0.88rem; color: var(--text-muted); padding: 3px 0 3px 15px; position: relative; }
+.info-card li::before { content: '›'; position: absolute; left: 0; color: var(--secondary-light); }
+.info-card .kv { display: flex; justify-content: space-between; gap: 12px; padding: 7px 0; border-top: 1px solid var(--border); font-size: 0.88rem; }
+.info-card .kv:first-of-type { border-top: none; }
+.info-card .kv .k { color: var(--text-muted); }
+.info-card .kv .v { font-weight: 600; text-align: right; }
+.required-tag { font-size: 0.7rem; background: var(--danger); color: var(--white); padding: 2px 8px; border-radius: 100px; }
+
+/* ─── CONVERSOR ─── */
+.converter { background: var(--surface); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow-md); max-width: 620px; }
+.conv-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; }
+.conv-field label { font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-light); }
+.conv-field input {
+  width: 100%; font-family: 'JetBrains Mono', monospace; font-size: 1.1rem; padding: 10px 12px;
+  border: 1.5px solid var(--border); border-radius: var(--radius-sm); background: var(--bg); color: var(--text);
+}
+.conv-rates { font-size: 0.78rem; color: var(--text-light); margin-top: 12px; font-family: 'JetBrains Mono', monospace; }
+
+/* ─── MAPA ─── */
+/* calc(100vh - nav) ignorava o .page-header, que passa de 300px: o mapa nascia
+   meia tela abaixo da dobra. --header-h é medido pelo app.js. */
+.map-layout {
+  display: grid; grid-template-columns: 380px 1fr; grid-template-rows: minmax(0, 1fr);
+  height: calc(100svh - var(--nav-h) - var(--header-h)); min-height: 340px;
+}
+#map { height: 100%; width: 100%; }
+.stop-list { overflow-y: auto; background: var(--bg); border-right: 1px solid var(--border); padding: 16px; }
+.stop-card {
+  position: relative;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm);
+  padding: 14px; margin-bottom: 12px; transition: border-color .18s, transform .18s;
+}
+.stop-card:hover { transform: translateX(3px); }
+.stop-card.active { border-color: var(--accent); border-width: 2px; }
+.stop-card:has(.stop-title:focus-visible) { outline: 3px solid var(--accent); outline-offset: 3px; }
+.stop-card .n { font-family: 'JetBrains Mono', monospace; font-size: 0.74rem; color: var(--text-light); }
+.stop-card h4 { font-size: 0.98rem; margin: 2px 0 4px; }
+/* o cursor prometia que o card inteiro era clicável, mas só o título respondia.
+   O ::after do botão do título cobre o card; a lista e os links ficam por cima
+   para continuarem selecionáveis. */
+.stop-title {
+  font: inherit; color: inherit; text-align: left; background: none;
+  border: none; padding: 0; cursor: pointer; outline: none;
+}
+.stop-title::after { content: ''; position: absolute; inset: 0; z-index: 1; }
+.stop-card ul, .stop-card .deep-links, .stop-dist { position: relative; z-index: 2; }
+.stop-card .days { font-size: 0.76rem; color: var(--text-muted); }
+.stop-card ul { list-style: none; margin-top: 8px; }
+.stop-card li { font-size: 0.8rem; color: var(--text-muted); padding-left: 12px; position: relative; }
+.stop-card li::before { content: '·'; position: absolute; left: 2px; color: var(--accent); }
+.stop-dist { font-size: 0.74rem; color: var(--text-light); font-family: 'JetBrains Mono', monospace; margin-top: 8px; }
+.marker-pin { border-radius: 50%; display: grid; place-items: center; font-size: 17px; }
+.deep-links { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+.deep-link {
+  font-size: 0.74rem; font-weight: 600; text-decoration: none; padding: 10px 14px; border-radius: 100px;
+  background: var(--bg); color: var(--text); border: 1px solid var(--border); transition: background .16s ease;
+  min-height: 40px; display: inline-flex; align-items: center;
+}
+.deep-link:hover { background: var(--secondary-light); color: var(--white); border-color: var(--secondary-light); }
+
+/* ─── seletor de rota ─── */
+/* sem rotas alternativas o contêiner é renderizado vazio: sem isto sobrava uma
+   faixa branca com borda entre o menu e o mapa */
+.route-toolbar:empty { display: none; }
+.route-toolbar {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
+  margin: -8px 0 16px; padding: 14px 16px; background: var(--surface);
+  border: 1px solid var(--border); border-radius: var(--radius-sm);
+}
+.route-toolbar-label { font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-light); margin-right: 2px; }
+.route-btn {
+  font: inherit; font-size: 0.84rem; font-weight: 600; cursor: pointer; padding: 8px 14px;
+  border-radius: var(--radius-sm); border: 1.5px solid var(--border); background: var(--bg); color: var(--text-muted);
+  transition: all .16s ease; display: flex; flex-direction: column; align-items: flex-start; gap: 2px; line-height: 1.3;
+}
+.route-btn .route-btn-tag { font-size: 0.7rem; font-weight: 500; color: var(--text-light); text-transform: none; letter-spacing: 0; }
+.route-btn:hover { border-color: var(--accent); color: var(--text); }
+.route-btn.active { background: var(--accent); border-color: var(--accent); color: var(--white); }
+.route-btn.active .route-btn-tag { color: rgba(255,255,255,0.85); }
+.route-note { flex: 1 1 220px; font-size: 0.78rem; color: var(--text-light); margin-left: auto; }
+
+/* ─── pinos de apoio no mapa (cidades de passagem e pontos de interesse) ─── */
+.wp-pin {
+  width: 20px; height: 20px; border-radius: 50% 50% 50% 3px; transform: rotate(-45deg);
+  background: var(--secondary); border: 2px solid var(--white); box-shadow: 0 2px 6px rgba(0,0,0,.35);
+}
+.poi-pin {
+  width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; font-size: 14px;
+  background: var(--surface); border: 2px solid var(--accent); box-shadow: 0 2px 6px rgba(0,0,0,.35);
+}
+.map-popup { font-size: 0.85rem; line-height: 1.5; max-width: 240px; }
+.map-popup strong { display: block; margin-bottom: 4px; }
+.map-popup .map-popup-city { font-size: 0.76rem; color: var(--text-light); margin-bottom: 6px; }
+.map-popup .map-popup-src { font-size: 0.72rem; color: var(--text-light); margin-top: 6px; }
+
+.map-legend {
+  display: flex; flex-wrap: wrap; gap: 16px; margin-top: 14px; font-size: 0.78rem; color: var(--text-muted);
+}
+.map-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.map-legend i { width: 12px; height: 12px; display: inline-block; border-radius: 50%; }
+.map-legend i.diamond { background: var(--secondary); border-radius: 2px; transform: rotate(45deg); }
+.map-legend i.ring { background: var(--surface); border: 2px solid var(--accent); }
+
+/* ─── MODAL ─── */
+.modal-overlay {
+  display: none; position: fixed; inset: 0; z-index: 500;
+  background: rgba(0,0,0,0.5); backdrop-filter: blur(3px); place-items: center; padding: 20px;
+}
+.modal-overlay.open { display: grid; }
+.modal { background: var(--surface); border-radius: var(--radius); padding: 26px; width: 100%; max-width: 440px; box-shadow: var(--shadow-xl); }
+.modal h3 { font-size: 1.2rem; margin-bottom: 6px; }
+.modal .modal-sub { font-size: 0.86rem; color: var(--text-muted); margin-bottom: 18px; }
+.modal label { display: block; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-light); margin: 12px 0 4px; }
+.modal input {
+  width: 100%; padding: 10px 12px; border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm); font-family: inherit; font-size: 0.94rem; background: var(--bg); color: var(--text);
+}
+.modal-actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 20px; }
+.modal-error { color: var(--danger); font-size: 0.82rem; margin-top: 10px; min-height: 18px; }
+.date-chips { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+.date-chip {
+  font-size: 0.78rem; padding: 5px 12px; border-radius: 100px; cursor: pointer;
+  border: 1.5px solid var(--border); background: transparent; font-family: inherit; color: var(--text);
+}
+.date-chip.active { background: var(--primary); color: var(--white); border-color: var(--primary); }
+
+/* ─── FOOTER ─── */
+.footer {
+  background: var(--primary); color: var(--white); text-align: center;
+  padding: 44px clamp(24px, 6vw, 80px); font-size: 0.86rem;
+}
+.footer a { color: var(--white); opacity: 0.85; }
+.footer .sync-row { margin-top: 14px; display: flex; gap: 10px; justify-content: center; align-items: center; flex-wrap: wrap; }
+.footer-offline { margin-top: 16px; }
+.footer-offline a {
+  display: inline-block; padding: 8px 18px; border-radius: 999px; text-decoration: none;
+  border: 1.5px solid rgba(255, 255, 255, 0.4); font-size: 0.8rem; opacity: 0.9;
+  transition: opacity 0.2s, border-color 0.2s;
+}
+.footer-offline a:hover { opacity: 1; border-color: var(--white); }
+.sync-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--text-light); display: inline-block; }
+.sync-dot.synced { background: var(--ok); }
+.sync-dot.syncing { background: var(--highlight); }
+.sync-dot.error { background: var(--danger); }
+
+/* ─── CONVERSÃO DE MOEDA ─── */
+.brl { display: block; font-size: 0.8em; color: var(--text-light); font-weight: 500; }
+.price-tag .brl, .price-value .brl { display: inline; }
+
+/* ─── ANIMAÇÃO ─── */
+.fade-in { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+.fade-in.visible { opacity: 1; transform: none; }
+
+/* o .fade-in só volta a aparecer pelo IntersectionObserver: sem script,
+   a página inteira ficaria em branco */
+@media (scripting: none) {
+  .fade-in { opacity: 1 !important; transform: none !important; }
+}
+
+/* quem pediu menos movimento no sistema não deve ganhar fade nem rolagem suave */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .fade-in { opacity: 1 !important; transform: none !important; }
+}
+
+/* ─── RESPONSIVO ─── */
+@media (max-width: 900px) {
+  .map-layout { grid-template-columns: 1fr; height: auto; }
+  /* empilhado, a lista de paradas vinha antes do mapa — na página do mapa,
+     o mapa só começava depois de rolar a lista inteira */
+  #map { order: -1; height: min(58svh, calc(100svh - var(--header-h) - var(--nav-h) - 92px)); min-height: 300px; }
+  .stop-list { max-height: none; border-right: none; border-top: 1px solid var(--border); }
+}
+
+@media (max-width: 600px) {
+  .block { grid-template-columns: 1fr; gap: 6px; }
+  .block-time { font-size: 0.76rem; }
+  .calendar-grid { grid-template-columns: repeat(auto-fit, minmax(88px, 1fr)); gap: 8px; }
+  .hero { min-height: clamp(460px, 68svh, 640px); padding-bottom: 44px; }
+  .todo-summary { flex-wrap: wrap; }
+  .day-nav { grid-template-columns: 1fr; }
+  .day-nav-btn.next { text-align: left; align-items: flex-start; }
+}
+
+@media print {
+  .nav-bar, .footer .sync-row, .footer-offline, .modal-overlay { display: none !important; }
+  .fade-in { opacity: 1 !important; transform: none !important; }
+  .day-detail { box-shadow: none; }
+}
+
+
+/* ─── customCss do trip.json ─── */
+
+/* ─── atracoes.html — fichas dos lugares ─── */
+.filtros { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 2rem; }
+.filtro-btn {
+  font: inherit; font-size: .85rem; font-weight: 600; cursor: pointer;
+  padding: .45rem .9rem; border-radius: 999px;
+  border: 1px solid var(--border); background: var(--surface); color: var(--text-muted);
+  transition: background .15s, color .15s, border-color .15s;
+}
+.filtro-btn:hover { border-color: var(--primary); color: var(--text); }
+.filtro-btn.ativo { background: var(--primary); border-color: var(--primary); color: var(--white); }
+
+.dia-bloco { margin: 0 0 2.75rem; }
+.dia-cab { margin: 0 0 1rem; }
+.dia-tit {
+  display: flex; align-items: center; gap: .6rem; flex-wrap: wrap;
+  margin: 0 0 .35rem; font-size: 1.25rem;
+}
+.dia-chip {
+  font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  padding: .25rem .6rem; border-radius: 999px;
+  background: var(--bg-alt); color: var(--primary); border: 1px solid var(--border);
+}
+.dia-ancora { margin: 0; font-size: .9rem; color: var(--text-muted); }
+
+.opt-grid {
+  display: grid; gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+.opt-card {
+  border: 1px solid var(--border); border-left: 3px solid var(--border);
+  border-radius: var(--radius); background: var(--surface); padding: 1rem 1.1rem;
+}
+.opt-card.sel-ok { border-left-color: var(--ok); }
+.opt-card.sel-duv { border-left-color: var(--warn); }
+.opt-card.sel-conf { border-left-color: var(--danger); }
+.opt-top {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: .5rem; margin: 0 0 .5rem;
+}
+.opt-selo { font-size: .75rem; font-weight: 700; color: var(--text-muted); }
+.sel-ok .opt-selo { color: var(--ok); }
+.sel-duv .opt-selo { color: var(--warn); }
+.sel-conf .opt-selo { color: var(--danger); }
+.opt-tipo {
+  font-size: .68rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
+  color: var(--text-light);
+}
+.opt-nome { margin: 0 0 .3rem; font-size: 1rem; line-height: 1.35; }
+.opt-onde { margin: 0 0 .5rem; font-size: .8rem; font-weight: 600; color: var(--primary); }
+.opt-nota { margin: 0; font-size: .88rem; line-height: 1.55; color: var(--text-muted); }
+
+.rest-lista { margin: .5rem 0 0; padding-left: 1.1rem; }
+.rest-lista li { font-size: .88rem; line-height: 1.6; color: var(--text-muted); }
+
+@media (max-width: 640px) {
+  .opt-grid { grid-template-columns: 1fr; }
+  .filtros { gap: .4rem; }
+  .filtro-btn { font-size: .8rem; padding: .4rem .75rem; }
+}
+
+/* níveis de recomendação */
+.opt-rec { font-size: .72rem; font-weight: 800; letter-spacing: .02em; }
+.opt-rec.rec1 { color: var(--ok); }
+.opt-rec.rec2 { color: var(--primary); }
+.opt-rec.rec3 { color: var(--text-muted); }
+.opt-rec.rec4 { color: var(--warn); }
+.opt-card { border-left-color: var(--border); }
+.opt-selo { font-weight: 700; }
+.sel-ok .opt-selo { color: var(--ok); }
+.sel-duv .opt-selo { color: var(--warn); }
+.sel-conf .opt-selo { color: var(--danger); }
+.legenda { display: flex; flex-wrap: wrap; gap: .35rem 1.1rem; margin: .9rem 0 0; }
+.leg-item { font-size: .8rem; color: var(--text-muted); }
+.leg-item b { margin-right: .2rem; }
+.opt-onde { display: block; }
+
+
+/* ─── barra de filtros combinados ─── */
+.filtro-barra {
+  border: 1px solid var(--border); border-radius: var(--radius);
+  background: var(--bg-alt); padding: 1rem 1.1rem .35rem; margin: 0 0 2rem;
+}
+.filtro-grupo { display: flex; align-items: baseline; gap: .85rem; margin: 0 0 .35rem; }
+.filtro-rot {
+  flex: 0 0 6.5rem; font-size: .7rem; font-weight: 700;
+  letter-spacing: .07em; text-transform: uppercase; color: var(--text-light);
+}
+.filtro-barra .filtros { margin: 0 0 .55rem; }
+.filtro-n {
+  display: inline-block; margin-left: .3rem; padding: 0 .35rem;
+  border-radius: 999px; background: var(--bg-alt);
+  font-size: .7rem; font-weight: 700; color: var(--text-light);
+}
+.filtro-btn.ativo .filtro-n { background: rgba(255, 255, 255, .22); color: var(--white); }
+.rec-btn.rec1:not(.ativo) { color: var(--ok); }
+.rec-btn.rec2:not(.ativo) { color: var(--primary); }
+.rec-btn.rec4:not(.ativo) { color: var(--warn); }
+.filtro-saida {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  margin: .25rem 0 .65rem; font-size: .8rem; color: var(--text-muted);
+}
+.filtro-limpa {
+  font: inherit; font-size: .78rem; cursor: pointer; padding: 0;
+  border: 0; background: none; color: var(--primary); text-decoration: underline;
+}
+.dia-vazio { display: none; margin: 0; font-size: .85rem; color: var(--text-light); font-style: italic; }
+.dia-bloco.sem-resultado .dia-vazio { display: block; }
+.dia-bloco.sem-resultado .opt-grid { display: none; }
+
+/* ─── links de blog e vídeo dentro do card ─── */
+.opt-links {
+  display: flex; flex-wrap: wrap; gap: .35rem;
+  margin: .85rem 0 0; padding-top: .75rem; border-top: 1px solid var(--border);
+}
+.opt-link {
+  display: inline-block; max-width: 100%; overflow: hidden;
+  text-overflow: ellipsis; white-space: nowrap;
+  font-size: .74rem; font-weight: 600; text-decoration: none;
+  padding: .28rem .6rem; border-radius: 999px;
+  border: 1px solid var(--border); background: var(--bg-alt); color: var(--text-muted);
+  transition: border-color .15s, color .15s;
+}
+.opt-link:hover { border-color: var(--primary); color: var(--primary); }
+.opt-link.video { color: var(--danger); }
+.opt-link.video:hover { border-color: var(--danger); }
+.opt-link.insta { color: var(--link); }
+.opt-link.insta:hover { border-color: var(--link); }
+/* a marca do Instagram vai como SVG embutido: acompanha a cor do chip e
+   sobrevive nas páginas offline, onde nenhuma fonte de ícone chegaria */
+.opt-link.insta { gap: .38rem; }
+.ico-insta { flex: 0 0 auto; vertical-align: -2px; }
+
+@media (max-width: 640px) {
+  .filtro-grupo { display: block; }
+  .filtro-rot { display: block; margin: 0 0 .35rem; }
+  .filtro-barra { padding: .9rem .8rem .3rem; }
+  .opt-link { font-size: .72rem; }
+}
+
+/* ─── alvos de toque de 44px nos filtros ─── */
+/* o restante dos ajustes de acessibilidade vive no theme.css da skill */
+.filtro-btn { min-height: 44px; display: inline-flex; align-items: center; }
+.filtro-limpa { min-height: 44px; }
+.opt-link { min-height: 40px; display: inline-flex; align-items: center; padding: .4rem .7rem; }
+
+/* ─── cards de atração com foto ─── */
+.opt-card { display: flex; flex-direction: column; padding: 0; overflow: hidden; }
+.opt-corpo { padding: 1rem 1.1rem 1.15rem; display: flex; flex-direction: column; flex: 1; }
+.opt-foto {
+  position: relative; aspect-ratio: 3 / 2; background: var(--bg-alt);
+  border-bottom: 1px solid var(--border);
+}
+.opt-foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* sem foto o card não pode virar um buraco na grade: um degradê da paleta
+   segura o ritmo da coluna */
+.opt-foto.sem-foto {
+  aspect-ratio: 5 / 1;
+  background: linear-gradient(120deg, var(--primary), var(--primary-light) 60%, var(--secondary));
+}
+/* crédito obrigatório das licenças CC, sem roubar a foto */
+.opt-foto-cred {
+  position: absolute; right: 8px; bottom: 8px;
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 30px; height: 30px; border-radius: 50%; text-decoration: none;
+  font-size: .8rem; line-height: 1;
+  background: rgba(255, 255, 255, .85); border: 1px solid var(--border);
+}
+.opt-foto-cred:hover { background: var(--white); }
+.opt-nota { flex: 1; }
+/* a âncora vinda do roteiro não pode parar embaixo do menu fixo */
+.opt-card { scroll-margin-top: calc(var(--nav-h) + 16px); }
+.opt-card:target { border-color: var(--accent); border-left-color: var(--accent); box-shadow: var(--shadow-lg); }
+
+
+/* ─── restaurantes.html — curadoria gastronômica ─── */
+.rest-card .opt-corpo { padding: 1rem 1.1rem 1.15rem; }
+.rest-card { border-left-color: var(--primary); }
+.rest-card[data-no-roteiro="sim"] { border-left-color: var(--ok); }
+.rest-card[data-top="sim"] { border-left-color: var(--accent); }
+.rest-faixa {
+  font-family: 'JetBrains Mono', monospace; font-size: .82rem; font-weight: 700;
+  color: var(--primary); letter-spacing: .02em;
+}
+.rest-refeicoes { margin: .35rem 0 .6rem; font-size: .8rem; font-weight: 600; color: var(--text-muted); }
+.rest-dias { margin: .6rem 0 0; font-size: .78rem; color: var(--text-light); }
+.rest-local { color: var(--text-muted); font-weight: 500; }
+.rest-tags { display: flex; flex-wrap: wrap; gap: .3rem; margin: .65rem 0 0; }
+.rest-tag {
+  font-size: .7rem; font-weight: 600; padding: .2rem .5rem; border-radius: 999px;
+  background: var(--bg-alt); color: var(--text-muted); border: 1px solid var(--border);
+}
+.rest-conta-bloco { font-size: .78rem; font-weight: 700; color: var(--text-light); margin-left: auto; }
+.rest-cab .dia-tit { justify-content: flex-start; }
+.rest-bloco { scroll-margin-top: calc(var(--nav-h, 58px) + 16px); }
+.rest-legenda { margin-top: .75rem; }
+
+/* busca por texto */
+.filtro-busca { display: flex; align-items: center; gap: .6rem; margin: 0 0 1rem; flex-wrap: wrap; }
+.filtro-busca-rot {
+  font-size: .7rem; font-weight: 700; letter-spacing: .07em;
+  text-transform: uppercase; color: var(--text-light);
+}
+#rest-busca {
+  flex: 1 1 240px; min-width: 200px; font: inherit; font-size: .9rem;
+  padding: .55rem .8rem; border-radius: var(--radius-sm);
+  border: 1px solid var(--border); background: var(--surface); color: var(--text);
+}
+#rest-busca:focus { outline: 2px solid var(--primary); outline-offset: 1px; border-color: var(--primary); }
+
+@media (max-width: 640px) {
+  .rest-conta-bloco { display: none; }
+  #rest-busca { flex: 1 1 100%; }
+}
+</style>
+
+<style>
+body, .nav-btn, .modal input { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important; }
+h1, h2, h3, .serif, .category-title { font-family: Georgia, 'Times New Roman', serif !important; }
+.mono, .block-time, .cal-num, .amount, .cost-amount { font-family: 'Courier New', monospace !important; }
+#converter-section, .sync-row, .rate-bar { display: none !important; }
+</style><script>
+window.TRIP_RATE = null; window.LOCAL_RATE = null;
+window.toHomeText = function(){ return ''; };
+window.withHome = function(h){ return h; };
+window.applyConversion = function(){};
+window.GistSync = { isConfigured: function(){ return false; }, debouncedSave: function(){},
+  onStatusChange: function(){}, syncOnLoad: function(){ return Promise.resolve(false); } };
+</script></head>
+<body class=""><div style="background:linear-gradient(135deg,#e85d3a,#c44a2d);color:#fff;text-align:center;padding:10px 20px;font-size:.85rem;font-weight:500;position:relative;z-index:200">📴 Versão offline — gerada em <span id="offdate"></span> · sem conversão de moeda</div><script>document.getElementById("offdate").textContent=new Date().toLocaleDateString("pt-BR");</script>
+<header class="page-header has-image" style="--page-image:url('imagens/atracoes/centro-historico-lencois.jpg')"><div class="eyebrow">Onde comer na estrada</div><h1>Restaurantes</h1><p>70 lugares em 8 bases, com filtros para escolher na hora. A curadoria junta blogs de viagem, guias regionais e as listas de avaliação de 02/10/2026. Faixa de preço e horário mudam: confirme antes de contar com eles.</p></header><nav class="nav-bar" id="navbar"><div class="nav-inner"><a class="nav-btn" href="roteiro-offline.html">← Roteiro</a><a class="nav-btn" href="roteiro-offline.html">🗓️ Roteiro</a><a class="nav-btn" href="offline-hospedagem.html">🏨 Hospedagem</a><a class="nav-btn" href="mapa.html">🌍 Mapa</a><a class="nav-btn" href="offline-atracoes.html">📸 Atrações</a></div></nav><section class="section"><div class="section-header fade-in"><span class="section-tag">Como usar</span><h2 class="section-title">Escolher o jantar estando já na cidade</h2><p class="section-desc">Os filtros se combinam: dá para pedir, por exemplo, <em>só os regionais de Mucugê que servem jantar</em>, ou <em>um almoço barato no Vale do Capão</em>. A busca por texto procura no nome, no prato, no bairro e no tipo de cozinha. As bases seguem a ordem do roteiro, para bater com o dia em que vocês estão lá.</p><p class="section-desc">Cada card traz onde fica, em que refeições encaixa, a faixa de preço e os atalhos de quem tem opção vegetariana, música ao vivo, vista, delivery ou já está citado no roteiro. O <strong>⭐</strong> marca a escolha da curadoria dentro da base — não é obrigação, é por onde começar a decidir.</p><div class="legenda rest-legenda"><span class="leg-item"><b>$</b> até ~R$ 40 por pessoa</span><span class="leg-item"><b>$$</b> ~R$ 40 a 90 por pessoa</span><span class="leg-item"><b>$$$</b> acima de ~R$ 90 por pessoa</span></div></div><div class="filtro-barra rest-filtro-barra"><div class="filtro-busca"><label class="filtro-busca-rot" for="rest-busca">🔎 Buscar</label><input id="rest-busca" type="search" autocomplete="off" placeholder="nome, prato, bairro ou tipo de cozinha…"></div><div class="filtro-grupo"><span class="filtro-rot">Base</span><div class="filtros"><button class="filtro-btn ativo" data-eixo="cidade" data-valor="todas">Todas</button><button class="filtro-btn" data-eixo="cidade" data-valor="lencois">🏛️ Lençóis <span class="filtro-n">20</span></button><button class="filtro-btn" data-eixo="cidade" data-valor="capao">🥾 Vale do Capão (Caeté-Açu) <span class="filtro-n">10</span></button><button class="filtro-btn" data-eixo="cidade" data-valor="poco-azul">💧 Poço Azul / Nova Redenção <span class="filtro-n">1</span></button><button class="filtro-btn" data-eixo="cidade" data-valor="mucuge">⛏️ Mucugê <span class="filtro-n">11</span></button><button class="filtro-btn" data-eixo="cidade" data-valor="ibicoara">🏞️ Ibicoara <span class="filtro-n">9</span></button><button class="filtro-btn" data-eixo="cidade" data-valor="iraquara">🕳️ Iraquara / Pratinha <span class="filtro-n">4</span></button><button class="filtro-btn" data-eixo="cidade" data-valor="estrada">🚗 Estrada <span class="filtro-n">9</span></button><button class="filtro-btn" data-eixo="cidade" data-valor="juazeiro">🏠 Juazeiro / Petrolina <span class="filtro-n">6</span></button></div></div><div class="filtro-grupo"><span class="filtro-rot">Refeição</span><div class="filtros"><button class="filtro-btn ativo" data-eixo="refeicao" data-valor="todas">Todas</button><button class="filtro-btn" data-eixo="refeicao" data-valor="cafe">☕ Café da manhã <span class="filtro-n">6</span></button><button class="filtro-btn" data-eixo="refeicao" data-valor="almoco">🌤️ Almoço <span class="filtro-n">42</span></button><button class="filtro-btn" data-eixo="refeicao" data-valor="jantar">🌙 Jantar <span class="filtro-n">53</span></button><button class="filtro-btn" data-eixo="refeicao" data-valor="petisco">🍺 Petisco / bar <span class="filtro-n">8</span></button></div></div><div class="filtro-grupo"><span class="filtro-rot">Cozinha</span><div class="filtros"><button class="filtro-btn ativo" data-eixo="cozinha" data-valor="todas">Todas</button><button class="filtro-btn" data-eixo="cozinha" data-valor="regional">🍲 Regional baiana <span class="filtro-n">11</span></button><button class="filtro-btn" data-eixo="cozinha" data-valor="contemporanea">✨ Contemporânea / autoral <span class="filtro-n">14</span></button><button class="filtro-btn" data-eixo="cozinha" data-valor="italiana">🍝 Italiana / massas <span class="filtro-n">7</span></button><button class="filtro-btn" data-eixo="cozinha" data-valor="pizza">🍕 Pizzaria <span class="filtro-n">7</span></button><button class="filtro-btn" data-eixo="cozinha" data-valor="mar">🦐 Frutos do mar <span class="filtro-n">2</span></button><button class="filtro-btn" data-eixo="cozinha" data-valor="carne">🥩 Carnes / steakhouse <span class="filtro-n">4</span></button><button class="filtro-btn" data-eixo="cozinha" data-valor="japonesa">🍣 Japonesa <span class="filtro-n">3</span></button><button class="filtro-btn" data-eixo="cozinha" data-valor="vegetariana">🥗 Vegetariana / saudável <span class="filtro-n">2</span></button><button class="filtro-btn" data-eixo="cozinha" data-valor="cafe">☕ Café / padaria / doces <span class="filtro-n">4</span></button><button class="filtro-btn" data-eixo="cozinha" data-valor="lanche">🍔 Lanches / hambúrguer <span class="filtro-n">3</span></button><button class="filtro-btn" data-eixo="cozinha" data-valor="selfservice">🍽️ Self-service / a quilo <span class="filtro-n">5</span></button><button class="filtro-btn" data-eixo="cozinha" data-valor="caseira">🏡 Comida caseira <span class="filtro-n">8</span></button></div></div><div class="filtro-grupo"><span class="filtro-rot">Preço</span><div class="filtros"><button class="filtro-btn ativo" data-eixo="faixa" data-valor="todas">Todos</button><button class="filtro-btn" data-eixo="faixa" data-valor="1" title="até ~R$ 40 por pessoa">$ <span class="filtro-n">24</span></button><button class="filtro-btn" data-eixo="faixa" data-valor="2" title="~R$ 40 a 90 por pessoa">$$ <span class="filtro-n">40</span></button><button class="filtro-btn" data-eixo="faixa" data-valor="3" title="acima de ~R$ 90 por pessoa">$$$ <span class="filtro-n">6</span></button></div></div><div class="filtro-grupo"><span class="filtro-rot">Atalhos</span><div class="filtros"><button class="filtro-btn ativo" data-eixo="extra" data-valor="todos">Tudo</button><button class="filtro-btn" data-eixo="extra" data-valor="top">⭐ Escolha da curadoria <span class="filtro-n">17</span></button><button class="filtro-btn" data-eixo="extra" data-valor="no-roteiro">✅ Já citado no roteiro <span class="filtro-n">10</span></button><button class="filtro-btn" data-eixo="extra" data-valor="vegetariano">🥗 Opções vegetarianas <span class="filtro-n">28</span></button><button class="filtro-btn" data-eixo="extra" data-valor="musica">🎶 Música ao vivo <span class="filtro-n">1</span></button><button class="filtro-btn" data-eixo="extra" data-valor="vista">🌅 Vista ou ao ar livre <span class="filtro-n">4</span></button><button class="filtro-btn" data-eixo="extra" data-valor="delivery">🛵 Delivery <span class="filtro-n">1</span></button></div></div><p class="filtro-saida"><span id="rest-conta"></span><button class="filtro-limpa" type="button">limpar filtros</button></p></div><div class="rest-bloco dia-bloco" data-cidade="lencois"><div class="rest-cab dia-cab"><h2 class="dia-tit"><span class="dia-chip">🏛️ Lençóis</span><span class="rest-conta-bloco">20 lugares</span></h2><p class="dia-ancora">Dias 1, 2 e 6 · o maior polo de comida da viagem, tudo a pé no centro histórico.</p></div><div class="opt-grid rest-grid"><article class="opt-card rest-card fade-in" data-cidade="lencois" data-cozinha="contemporanea" data-faixa="3" data-refeicoes="jantar" data-busca="cozinha aberta slow food centro histórico lençóis contemporânea / autoral jantar 🌸 pátio arborizado reserva recomendada alta gastronomia regional em pátio aberto e arborizado, com a proposta de &quot;refeição com calma&quot; — o ritmo tranquilo do grupo combina exatamente. selo tripadvisor de slow food, produtos regionais e orgânicos e atendimento em vários idiomas. é o jantar mais autoral de lençóis." data-top="sim" data-no-roteiro="sim" data-vegetariano="sim" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="acima de ~R$ 90 por pessoa">$$$</span><span class="opt-tipo">✨ Contemporânea / autoral</span></div><h3 class="opt-nome">Cozinha Aberta Slow Food</h3><p class="opt-onde">Lençóis Lençóis · <span class="rest-local">Centro histórico</span></p><p class="rest-refeicoes">🍴 Jantar</p><p class="opt-nota">Alta gastronomia regional em pátio aberto e arborizado, com a proposta de "refeição com calma" — o ritmo tranquilo do grupo combina exatamente. Selo TripAdvisor de Slow Food, produtos regionais e orgânicos e atendimento em vários idiomas. É o jantar mais autoral de Lençóis.</p><div class="rest-tags"><span class="rest-tag">🌸 Pátio arborizado</span><span class="rest-tag">Reserva recomendada</span></div><div class="opt-links"><a class="opt-link insta" href="https://www.instagram.com/cozinhaaberta/" target="_blank" rel="noopener" title="@cozinhaaberta">📷 @cozinhaaberta</a></div></div></article><article class="opt-card rest-card fade-in" data-cidade="lencois" data-cozinha="regional" data-faixa="2" data-refeicoes="almoco jantar" data-busca="quilombola centro histórico lençóis regional baiana almoço · jantar 🎶 música ao vivo prato típico reserva recomendada cozinha baiana de raiz servida por gente de comunidades quilombolas: o  godó de banana verde  (herança do garimpo), o cortado de palma, a moqueca de camarão com banana da terra e um acarajé muito elogiado. tem som ao vivo na calçada e chope artesanal." data-top="sim" data-no-roteiro="sim" data-vegetariano="sim" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">🍲 Regional baiana</span></div><h3 class="opt-nome">Quilombola</h3><p class="opt-onde">Lençóis Lençóis · <span class="rest-local">Centro histórico</span></p><p class="rest-refeicoes">🍴 Almoço · Jantar</p><p class="opt-nota">Cozinha baiana de raiz servida por gente de comunidades quilombolas: o <strong>godó de banana verde</strong> (herança do garimpo), o cortado de palma, a moqueca de camarão com banana da terra e um acarajé muito elogiado. Tem som ao vivo na calçada e chope artesanal.</p><div class="rest-dias">🕒 Todos os dias, 16h30–23h30</div><div class="rest-tags"><span class="rest-tag">🎶 Música ao vivo</span><span class="rest-tag">Prato típico</span><span class="rest-tag">Reserva recomendada</span></div><div class="opt-links"><a class="opt-link insta" href="https://www.instagram.com/restaurantequilombola/" target="_blank" rel="noopener" title="@restaurantequilombola">📷 @restaurantequilombola</a></div></div></article><article class="opt-card rest-card fade-in" data-cidade="lencois" data-cozinha="regional" data-faixa="2" data-refeicoes="almoco jantar" data-busca="lampião culinária nordestina centro histórico lençóis regional baiana almoço · jantar cozinha regional reserva recomendada clássico nordestino de releituras bem-feitas, com o bobó de camarão e o filé mignon de sol entre as melhores pedidas. ambiente descontraído no centro, boa entrada para a cozinha da região na primeira noite." data-top="sim" data-no-roteiro="sim" data-vegetariano="nao" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">🍲 Regional baiana</span></div><h3 class="opt-nome">Lampião Culinária Nordestina</h3><p class="opt-onde">Lençóis Lençóis · <span class="rest-local">Centro histórico</span></p><p class="rest-refeicoes">🍴 Almoço · Jantar</p><p class="opt-nota">Clássico nordestino de releituras bem-feitas, com o bobó de camarão e o filé mignon de sol entre as melhores pedidas. Ambiente descontraído no centro, boa entrada para a cozinha da região na primeira noite.</p><div class="rest-tags"><span class="rest-tag">Cozinha regional</span><span class="rest-tag">Reserva recomendada</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="lencois" data-cozinha="mar" data-faixa="2" data-refeicoes="almoco jantar" data-busca="garimpo gourmet centro histórico lençóis frutos do mar almoço · jantar porções generosas especialista em frutos do mar com sabor regional e porções generosas: picanha, moqueca e bobó de camarão, arroz de polvo. fica na esquina da rua de acesso ao centrinho, com salão grande — bom para um grupo de quatro." data-top="nao" data-no-roteiro="sim" data-vegetariano="nao" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">🦐 Frutos do mar</span></div><h3 class="opt-nome">Garimpo Gourmet</h3><p class="opt-onde">Lençóis Lençóis · <span class="rest-local">Centro histórico</span></p><p class="rest-refeicoes">🍴 Almoço · Jantar</p><p class="opt-nota">Especialista em frutos do mar com sabor regional e porções generosas: picanha, moqueca e bobó de camarão, arroz de polvo. Fica na esquina da rua de acesso ao centrinho, com salão grande — bom para um grupo de quatro.</p><div class="rest-dias">🕒 11h–22h, almoço e jantar</div><div class="rest-tags"><span class="rest-tag">Porções generosas</span></div><div class="opt-links"><a class="opt-link insta" href="https://www.instagram.com/gourmet_garimpo/" target="_blank" rel="noopener" title="@gourmet_garimpo">📷 @gourmet_garimpo</a></div></div></article><article class="opt-card rest-card fade-in" data-cidade="lencois" data-cozinha="contemporanea" data-faixa="2" data-refeicoes="jantar" data-busca="bistrô do mato centro histórico lençóis contemporânea / autoral jantar ☕ café especial opções vegetarianas a casa dos crepes: camarão, filé mignon, carne de sol e palmito de jaca, além de risotos e escondidinhos. o café é selecionado na serra e vem com demonstração de preparo na mesa. tem terraço reservado, bom para o grupo. fecha às terças." data-top="nao" data-no-roteiro="sim" data-vegetariano="sim" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">✨ Contemporânea / autoral</span></div><h3 class="opt-nome">Bistrô do Mato</h3><p class="opt-onde">Lençóis Lençóis · <span class="rest-local">Centro histórico</span></p><p class="rest-refeicoes">🍴 Jantar</p><p class="opt-nota">A casa dos crepes: camarão, filé mignon, carne de sol e palmito de jaca, além de risotos e escondidinhos. O café é selecionado na Serra e vem com demonstração de preparo na mesa. Tem terraço reservado, bom para o grupo. Fecha às terças.</p><div class="rest-dias">🕒 16h–23h, fecha terça</div><div class="rest-tags"><span class="rest-tag">☕ Café especial</span><span class="rest-tag">Opções vegetarianas</span></div><div class="opt-links"><a class="opt-link insta" href="https://www.instagram.com/bistrodomatolencois/" target="_blank" rel="noopener" title="@bistrodomatolencois">📷 @bistrodomatolencois</a></div></div></article><article class="opt-card rest-card fade-in" data-cidade="lencois" data-cozinha="contemporanea" data-faixa="2" data-refeicoes="almoco jantar" data-busca="quarar resto &amp; café centro histórico lençóis contemporânea / autoral almoço · jantar ☕ café opções vegetarianas casa da primeira barista de lençóis, que funciona como restaurante e café ao mesmo tempo. os campeões são a lasanha e o escondidinho de camarão, e a sobremesa mais pedida é a &quot;doce infância&quot;. fecha às segundas." data-top="nao" data-no-roteiro="nao" data-vegetariano="sim" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">✨ Contemporânea / autoral</span></div><h3 class="opt-nome">Quarar Resto &amp; Café</h3><p class="opt-onde">Lençóis Lençóis · <span class="rest-local">Centro histórico</span></p><p class="rest-refeicoes">🍴 Almoço · Jantar</p><p class="opt-nota">Casa da primeira barista de Lençóis, que funciona como restaurante e café ao mesmo tempo. Os campeões são a lasanha e o escondidinho de camarão, e a sobremesa mais pedida é a "Doce Infância". Fecha às segundas.</p><div class="rest-dias">🕒 16h–23h, terça a domingo</div><div class="rest-tags"><span class="rest-tag">☕ Café</span><span class="rest-tag">Opções vegetarianas</span></div><div class="opt-links"><a class="opt-link insta" href="https://www.instagram.com/quarar_restoecafe/" target="_blank" rel="noopener" title="@quarar_restoecafe">📷 @quarar_restoecafe</a></div></div></article><article class="opt-card rest-card fade-in" data-cidade="lencois" data-cozinha="italiana" data-faixa="2" data-refeicoes="jantar" data-busca="cozinha italiana da marisa rua das pedras lençóis italiana / massas jantar massa artesanal pizza na pedra massas artesanais e molhos de família, com o fettuccine de camarão como carro-chefe e pizza de fermentação natural assada na pedra. dona marisa trouxe a receita de nápoles e mantém mesa na calçada da rua das pedras." data-top="nao" data-no-roteiro="nao" data-vegetariano="nao" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">🍝 Italiana / massas</span></div><h3 class="opt-nome">Cozinha Italiana da Marisa</h3><p class="opt-onde">Lençóis Lençóis · <span class="rest-local">Rua das Pedras</span></p><p class="rest-refeicoes">🍴 Jantar</p><p class="opt-nota">Massas artesanais e molhos de família, com o fettuccine de camarão como carro-chefe e pizza de fermentação natural assada na pedra. Dona Marisa trouxe a receita de Nápoles e mantém mesa na calçada da Rua das Pedras.</p><div class="rest-dias">🕒 17h–23h, todos os dias</div><div class="rest-tags"><span class="rest-tag">Massa artesanal</span><span class="rest-tag">Pizza na pedra</span></div><div class="opt-links"><a class="opt-link insta" href="https://www.instagram.com/cozinhaitalianalencois/" target="_blank" rel="noopener" title="@cozinhaitalianalencois">📷 @cozinhaitalianalencois</a></div></div></article><article class="opt-card rest-card fade-in" data-cidade="lencois" data-cozinha="italiana" data-faixa="2" data-refeicoes="jantar" data-busca="cascalho centro histórico lençóis italiana / massas jantar bacalhau opções vegetarianas pizzas artesanais de oito fatias, massas, filé à parmegiana e um bacalhau à moda da casa que virou assinatura. comandado pessoalmente pela proprietária. fecha às terças." data-top="nao" data-no-roteiro="nao" data-vegetariano="sim" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">🍝 Italiana / massas</span></div><h3 class="opt-nome">Cascalho</h3><p class="opt-onde">Lençóis Lençóis · <span class="rest-local">Centro histórico</span></p><p class="rest-refeicoes">🍴 Jantar</p><p class="opt-nota">Pizzas artesanais de oito fatias, massas, filé à parmegiana e um bacalhau à moda da casa que virou assinatura. Comandado pessoalmente pela proprietária. Fecha às terças.</p><div class="rest-dias">🕒 16h–23h30, fecha terça</div><div class="rest-tags"><span class="rest-tag">Bacalhau</span><span class="rest-tag">Opções vegetarianas</span></div><div class="opt-links"><a class="opt-link insta" href="https://www.instagram.com/cascalhorestaurante/" target="_blank" rel="noopener" title="@cascalhorestaurante">📷 @cascalhorestaurante</a></div></div></article><article class="opt-card rest-card fade-in" data-cidade="lencois" data-cozinha="contemporanea" data-faixa="2" data-refeicoes="jantar petisco" data-busca="colors rua da baderna lençóis contemporânea / autoral jantar · petisco / bar 🌅 mesas na rua drinques cozinha mediterrânea com pegada argentina, produtos orgânicos e do sítio da casa: filé ao cabernet com fettuccine ao gorgonzola, tapas, ceviche e saladas. fica na esquina da rua da baderna, o point da noite, com a rua das sombrinhas coloridas." data-top="nao" data-no-roteiro="nao" data-vegetariano="nao" data-musica="nao" data-vista="sim" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">✨ Contemporânea / autoral</span></div><h3 class="opt-nome">Colors</h3><p class="opt-onde">Lençóis Lençóis · <span class="rest-local">Rua da Baderna</span></p><p class="rest-refeicoes">🍴 Jantar · Petisco / bar</p><p class="opt-nota">Cozinha mediterrânea com pegada argentina, produtos orgânicos e do sítio da casa: filé ao Cabernet com fettuccine ao gorgonzola, tapas, ceviche e saladas. Fica na esquina da Rua da Baderna, o point da noite, com a rua das sombrinhas coloridas.</p><div class="rest-tags"><span class="rest-tag">🌅 Mesas na rua</span><span class="rest-tag">Drinques</span></div><div class="opt-links"><a class="opt-link insta" href="https://www.instagram.com/colors.restobar/" target="_blank" rel="noopener" title="@colors.restobar">📷 @colors.restobar</a></div></div></article><article class="opt-card rest-card fade-in" data-cidade="lencois" data-cozinha="japonesa" data-faixa="2" data-refeicoes="jantar" data-busca="santo chico sushi bar centro histórico lençóis japonesa jantar sushi drinques sushi no meio da chapada: sashimi, niguiri, poke, temaki e combinados, com a dupla de sofia (camarão empanado com lâmina de salmão maçaricado) entre os especiais. boa saída quando o grupo quiser variar da comida baiana." data-top="nao" data-no-roteiro="nao" data-vegetariano="nao" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">🍣 Japonesa</span></div><h3 class="opt-nome">Santo Chico Sushi Bar</h3><p class="opt-onde">Lençóis Lençóis · <span class="rest-local">Centro histórico</span></p><p class="rest-refeicoes">🍴 Jantar</p><p class="opt-nota">Sushi no meio da Chapada: sashimi, niguiri, poke, temaki e combinados, com a dupla de Sofia (camarão empanado com lâmina de salmão maçaricado) entre os especiais. Boa saída quando o grupo quiser variar da comida baiana.</p><div class="rest-tags"><span class="rest-tag">Sushi</span><span class="rest-tag">Drinques</span></div><div class="opt-links"><a class="opt-link insta" href="https://www.instagram.com/santochicosushibar/" target="_blank" rel="noopener" title="@santochicosushibar">📷 @santochicosushibar</a></div></div></article><article class="opt-card rest-card fade-in" data-cidade="lencois" data-cozinha="contemporanea" data-faixa="3" data-refeicoes="almoco jantar" data-busca="azul restaurante — canto das águas hotel canto das águas lençóis contemporânea / autoral almoço · jantar à beira-rio reserva recomendada restaurante do hotel à beira do rio, com menu que vai da cozinha regional à internacional e arte em cada detalhe do ambiente. o jantar mais estruturado da cidade, para uma noite de despedida caprichada." data-top="sim" data-no-roteiro="nao" data-vegetariano="nao" data-musica="nao" data-vista="sim" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="acima de ~R$ 90 por pessoa">$$$</span><span class="opt-tipo">✨ Contemporânea / autoral</span></div><h3 class="opt-nome">Azul Restaurante — Canto das Águas</h3><p class="opt-onde">Lençóis Lençóis · <span class="rest-local">Hotel Canto das Águas</span></p><p class="rest-refeicoes">🍴 Almoço · Jantar</p><p class="opt-nota">Restaurante do hotel à beira do rio, com menu que vai da cozinha regional à internacional e arte em cada detalhe do ambiente. O jantar mais estruturado da cidade, para uma noite de despedida caprichada.</p><div class="rest-tags"><span class="rest-tag">À beira-rio</span><span class="rest-tag">Reserva recomendada</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="lencois" data-cozinha="contemporanea" data-faixa="3" data-refeicoes="almoco jantar" data-busca="roda d'água — hotel de lençóis hotel de lençóis lençóis contemporânea / autoral almoço · jantar adega reserva recomendada cozinha de estudo sobre costumes e práticas gastronômicas locais, da entrada à sobremesa, com adega climatizada. requeinte sem sair do centro tombado." data-top="nao" data-no-roteiro="nao" data-vegetariano="nao" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="acima de ~R$ 90 por pessoa">$$$</span><span class="opt-tipo">✨ Contemporânea / autoral</span></div><h3 class="opt-nome">Roda d'Água — Hotel de Lençóis</h3><p class="opt-onde">Lençóis Lençóis · <span class="rest-local">Hotel de Lençóis</span></p><p class="rest-refeicoes">🍴 Almoço · Jantar</p><p class="opt-nota">Cozinha de estudo sobre costumes e práticas gastronômicas locais, da entrada à sobremesa, com adega climatizada. Requeinte sem sair do centro tombado.</p><div class="rest-tags"><span class="rest-tag">Adega</span><span class="rest-tag">Reserva recomendada</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="lencois" data-cozinha="contemporanea" data-faixa="2" data-refeicoes="jantar" data-busca="sabor da serra centro histórico lençóis contemporânea / autoral jantar opções vegetarianas ingredientes da região risoto baiano de carne de sol reduzida na cachaça, filé mignon na manteiga noisette, moquecas e pratos vegetarianos como o fettuccine de cacau ao shimeji. sobremesa de sorvete de tapioca com licuri da região." data-top="nao" data-no-roteiro="nao" data-vegetariano="sim" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">✨ Contemporânea / autoral</span></div><h3 class="opt-nome">Sabor da Serra</h3><p class="opt-onde">Lençóis Lençóis · <span class="rest-local">Centro histórico</span></p><p class="rest-refeicoes">🍴 Jantar</p><p class="opt-nota">Risoto baiano de carne de sol reduzida na cachaça, filé mignon na manteiga noisette, moquecas e pratos vegetarianos como o fettuccine de cacau ao shimeji. Sobremesa de sorvete de tapioca com licuri da região.</p><div class="rest-dias">🕒 16h–23h, segunda a sábado</div><div class="rest-tags"><span class="rest-tag">Opções vegetarianas</span><span class="rest-tag">Ingredientes da região</span></div><div class="opt-links"><a class="opt-link insta" href="https://www.instagram.com/sabordaserralencois/" target="_blank" rel="noopener" title="@sabordaserralencois">📷 @sabordaserralencois</a></div></div></article><article class="opt-card rest-card fade-in" data-cidade="lencois" data-cozinha="italiana" data-faixa="2" data-refeicoes="jantar" data-busca="a doce vida centro histórico lençóis italiana / massas jantar massa artesanal casa acolhedora de 16 anos, com o nhoque nordestino (banana, carne seca e queijo coalho) como carro-chefe, além de camarão ao curry, filé ao vinho e massas. mesas ao ar livre em frente ao salão." data-top="nao" data-no-roteiro="nao" data-vegetariano="nao" data-musica="nao" data-vista="sim" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">🍝 Italiana / massas</span></div><h3 class="opt-nome">A Doce Vida</h3><p class="opt-onde">Lençóis Lençóis · <span class="rest-local">Centro histórico</span></p><p class="rest-refeicoes">🍴 Jantar</p><p class="opt-nota">Casa acolhedora de 16 anos, com o nhoque nordestino (banana, carne seca e queijo coalho) como carro-chefe, além de camarão ao curry, filé ao vinho e massas. Mesas ao ar livre em frente ao salão.</p><div class="rest-tags"><span class="rest-tag">Massa artesanal</span></div><div class="opt-links"><a class="opt-link insta" href="https://www.instagram.com/adocevidarestaurante/" target="_blank" rel="noopener" title="@adocevidarestaurante">📷 @adocevidarestaurante</a></div></div></article><article class="opt-card rest-card fade-in" data-cidade="lencois" data-cozinha="caseira" data-faixa="1" data-refeicoes="jantar" data-busca="restaurante da bete rua da baderna lençóis comida caseira jantar preço justo comida caseira farta na rua da baderna, do tipo que repõe a energia depois da trilha: carne de sol com fritas e feijão tropeiro, moqueca de peixe, massas e crepes. preço justo e porções individuais ou para dois." data-top="nao" data-no-roteiro="nao" data-vegetariano="nao" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="até ~R$ 40 por pessoa">$</span><span class="opt-tipo">🏡 Comida caseira</span></div><h3 class="opt-nome">Restaurante da Bete</h3><p class="opt-onde">Lençóis Lençóis · <span class="rest-local">Rua da Baderna</span></p><p class="rest-refeicoes">🍴 Jantar</p><p class="opt-nota">Comida caseira farta na Rua da Baderna, do tipo que repõe a energia depois da trilha: carne de sol com fritas e feijão tropeiro, moqueca de peixe, massas e crepes. Preço justo e porções individuais ou para dois.</p><div class="rest-dias">🕒 17h–23h, todos os dias</div><div class="rest-tags"><span class="rest-tag">Preço justo</span></div><div class="opt-links"><a class="opt-link insta" href="https://www.instagram.com/restaurantedabete8/" target="_blank" rel="noopener" title="@restaurantedabete8">📷 @restaurantedabete8</a></div></div></article><article class="opt-card rest-card fade-in" data-cidade="lencois" data-cozinha="selfservice" data-faixa="1" data-refeicoes="almoco jantar" data-busca="aquarela culinária gourmet centro histórico lençóis self-service / a quilo almoço · jantar 🎶 música ao vivo vegetariano self-service e à la carte o dia todo, com risotos, filé com massa e molho gorgonzola e o risoto de camarão com brie entre os campeões. churrasco de sexta a domingo e música ao vivo nas sextas." data-top="nao" data-no-roteiro="nao" data-vegetariano="sim" data-musica="sim" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="até ~R$ 40 por pessoa">$</span><span class="opt-tipo">🍽️ Self-service / a quilo</span></div><h3 class="opt-nome">Aquarela Culinária Gourmet</h3><p class="opt-onde">Lençóis Lençóis · <span class="rest-local">Centro histórico</span></p><p class="rest-refeicoes">🍴 Almoço · Jantar</p><p class="opt-nota">Self-service e à la carte o dia todo, com risotos, filé com massa e molho gorgonzola e o risoto de camarão com brie entre os campeões. Churrasco de sexta a domingo e música ao vivo nas sextas.</p><div class="rest-tags"><span class="rest-tag">🎶 Música ao vivo</span><span class="rest-tag">Vegetariano</span></div><div class="opt-links"><a class="opt-link insta" href="https://www.instagram.com/aquarelaculinariagourmet/" target="_blank" rel="noopener" title="@aquarelaculinariagourmet">📷 @aquarelaculinariagourmet</a></div></div></article><article class="opt-card rest-card fade-in" data-cidade="lencois" data-cozinha="selfservice" data-faixa="1" data-refeicoes="almoco" data-busca="o bode centro histórico lençóis self-service / a quilo almoço self-service almoço rápido self-service caprichado de comida regional, a opção prática para o almoço entre um passeio e outro, sem abrir mão do tempero baiano." data-top="nao" data-no-roteiro="nao" data-vegetariano="nao" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="até ~R$ 40 por pessoa">$</span><span class="opt-tipo">🍽️ Self-service / a quilo</span></div><h3 class="opt-nome">O Bode</h3><p class="opt-onde">Lençóis Lençóis · <span class="rest-local">Centro histórico</span></p><p class="rest-refeicoes">🍴 Almoço</p><p class="opt-nota">Self-service caprichado de comida regional, a opção prática para o almoço entre um passeio e outro, sem abrir mão do tempero baiano.</p><div class="rest-tags"><span class="rest-tag">Self-service</span><span class="rest-tag">Almoço rápido</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="lencois" data-cozinha="cafe" data-faixa="1" data-refeicoes="cafe petisco" data-busca="café do mato centro histórico lençóis café / padaria / doces café da manhã · petisco / bar ☕ café da região crepes crepe de borda de parmesão torradinho e café 100% arábica torrado na região, coado na hora. bom para o café da manhã reforçado ou uma pausa à tarde no centro." data-top="nao" data-no-roteiro="nao" data-vegetariano="nao" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="até ~R$ 40 por pessoa">$</span><span class="opt-tipo">☕ Café / padaria / doces</span></div><h3 class="opt-nome">Café do Mato</h3><p class="opt-onde">Lençóis Lençóis · <span class="rest-local">Centro histórico</span></p><p class="rest-refeicoes">🍴 Café da manhã · Petisco / bar</p><p class="opt-nota">Crepe de borda de parmesão torradinho e café 100% arábica torrado na região, coado na hora. Bom para o café da manhã reforçado ou uma pausa à tarde no centro.</p><div class="rest-tags"><span class="rest-tag">☕ Café da região</span><span class="rest-tag">Crepes</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="lencois" data-cozinha="lanche" data-faixa="1" data-refeicoes="petisco" data-busca="bavarois centro histórico lençóis lanches / hambúrguer petisco / bar sobremesa hambúrgueres, confeitaria e sorvetes artesanais. resolve o lanche da tarde ou a sobremesa depois do jantar." data-top="nao" data-no-roteiro="nao" data-vegetariano="nao" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="até ~R$ 40 por pessoa">$</span><span class="opt-tipo">🍔 Lanches / hambúrguer</span></div><h3 class="opt-nome">Bavarois</h3><p class="opt-onde">Lençóis Lençóis · <span class="rest-local">Centro histórico</span></p><p class="rest-refeicoes">🍴 Petisco / bar</p><p class="opt-nota">Hambúrgueres, confeitaria e sorvetes artesanais. Resolve o lanche da tarde ou a sobremesa depois do jantar.</p><div class="rest-tags"><span class="rest-tag">Sobremesa</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="lencois" data-cozinha="italiana" data-faixa="2" data-refeicoes="jantar" data-busca="do vale delivery entrega na pousada lençóis italiana / massas jantar delivery pizzas, lasanhas, rondelli e massas artesanais entregues na pousada, das 18h à meia-noite. a saída para a noite em que ninguém quer sair depois de um dia de trilha." data-top="nao" data-no-roteiro="nao" data-vegetariano="nao" data-musica="nao" data-vista="nao" data-delivery="sim"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">🍝 Italiana / massas</span></div><h3 class="opt-nome">Do Vale Delivery</h3><p class="opt-onde">Lençóis Lençóis · <span class="rest-local">Entrega na pousada</span></p><p class="rest-refeicoes">🍴 Jantar</p><p class="opt-nota">Pizzas, lasanhas, rondelli e massas artesanais entregues na pousada, das 18h à meia-noite. A saída para a noite em que ninguém quer sair depois de um dia de trilha.</p><div class="rest-dias">🕒 18h–0h, quarta a segunda</div><div class="rest-tags"><span class="rest-tag">Delivery</span></div><div class="opt-links"><a class="opt-link insta" href="https://www.instagram.com/dovaledelivery/" target="_blank" rel="noopener" title="@dovaledelivery">📷 @dovaledelivery</a></div></div></article></div><p class="dia-vazio">Nenhum restaurante desta base passa no filtro atual.</p></div><div class="rest-bloco dia-bloco" data-cidade="capao"><div class="rest-cab dia-cab"><h2 class="dia-tit"><span class="dia-chip">🥾 Vale do Capão (Caeté-Açu)</span><span class="rest-conta-bloco">10 lugares</span></h2><p class="dia-ancora">Dia 2 · almoço depois da Fumaça, a 3 km da portaria da trilha.</p></div><div class="opt-grid rest-grid"><article class="opt-card rest-card fade-in" data-cidade="capao" data-cozinha="pizza" data-faixa="2" data-refeicoes="almoco jantar" data-busca="pizzaria capão grande vila do capão vale do capão (caeté-açu) pizzaria almoço · jantar forno a lenha vegetariano a pizza integral de forno a lenha que virou lenda no capão, com apenas dois sabores: cenoura com queijo e banana com mel e queijo. dá para pedir metade de cada e ver a pizza sair do forno direto para a mesa. ótima depois de um dia de trilha." data-top="sim" data-no-roteiro="nao" data-vegetariano="sim" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">🍕 Pizzaria</span></div><h3 class="opt-nome">Pizzaria Capão Grande</h3><p class="opt-onde">Vale do Capão (Caeté-Açu) Vale do Capão (Caeté-Açu) · <span class="rest-local">Vila do Capão</span></p><p class="rest-refeicoes">🍴 Almoço · Jantar</p><p class="opt-nota">A pizza integral de forno a lenha que virou lenda no Capão, com apenas dois sabores: cenoura com queijo e banana com mel e queijo. Dá para pedir metade de cada e ver a pizza sair do forno direto para a mesa. Ótima depois de um dia de trilha.</p><div class="rest-tags"><span class="rest-tag">Forno a lenha</span><span class="rest-tag">Vegetariano</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="capao" data-cozinha="contemporanea" data-faixa="3" data-refeicoes="jantar" data-busca="bistrô orquídea negra vila do capão vale do capão (caeté-açu) contemporânea / autoral jantar carta de vinhos reserva recomendada cozinha criativa da chef jakie lessa, misturando itália, frança, brasil, espanha e áfrica, com carta de vinhos. o jantar mais elaborado do vale, para quem quiser comemorar o dia da fumaça." data-top="sim" data-no-roteiro="nao" data-vegetariano="nao" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="acima de ~R$ 90 por pessoa">$$$</span><span class="opt-tipo">✨ Contemporânea / autoral</span></div><h3 class="opt-nome">Bistrô Orquídea Negra</h3><p class="opt-onde">Vale do Capão (Caeté-Açu) Vale do Capão (Caeté-Açu) · <span class="rest-local">Vila do Capão</span></p><p class="rest-refeicoes">🍴 Jantar</p><p class="opt-nota">Cozinha criativa da chef Jakie Lessa, misturando Itália, França, Brasil, Espanha e África, com carta de vinhos. O jantar mais elaborado do vale, para quem quiser comemorar o dia da Fumaça.</p><div class="rest-tags"><span class="rest-tag">Carta de vinhos</span><span class="rest-tag">Reserva recomendada</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="capao" data-cozinha="regional" data-faixa="2" data-refeicoes="almoco jantar" data-busca="ôxe! restô vila do capão vale do capão (caeté-açu) regional baiana almoço · jantar cozinha nordestina o sabor do nordeste no capão, em pratos generosos que agradam quem acabou de subir a fumaça e quer comida de verdade." data-top="nao" data-no-roteiro="nao" data-vegetariano="nao" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">🍲 Regional baiana</span></div><h3 class="opt-nome">Ôxe! Restô</h3><p class="opt-onde">Vale do Capão (Caeté-Açu) Vale do Capão (Caeté-Açu) · <span class="rest-local">Vila do Capão</span></p><p class="rest-refeicoes">🍴 Almoço · Jantar</p><p class="opt-nota">O sabor do nordeste no Capão, em pratos generosos que agradam quem acabou de subir a Fumaça e quer comida de verdade.</p><div class="rest-tags"><span class="rest-tag">Cozinha nordestina</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="capao" data-cozinha="contemporanea" data-faixa="2" data-refeicoes="jantar" data-busca="gatto sete bistrô vila do capão vale do capão (caeté-açu) contemporânea / autoral jantar bistrô bistrô concorrido da vila, com pratos bem executados e ambiente aconchegante. entra bem como jantar leve antes da volta para lençóis." data-top="sim" data-no-roteiro="nao" data-vegetariano="nao" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">✨ Contemporânea / autoral</span></div><h3 class="opt-nome">Gatto Sete Bistrô</h3><p class="opt-onde">Vale do Capão (Caeté-Açu) Vale do Capão (Caeté-Açu) · <span class="rest-local">Vila do Capão</span></p><p class="rest-refeicoes">🍴 Jantar</p><p class="opt-nota">Bistrô concorrido da vila, com pratos bem executados e ambiente aconchegante. Entra bem como jantar leve antes da volta para Lençóis.</p><div class="rest-tags"><span class="rest-tag">Bistrô</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="capao" data-cozinha="carne" data-faixa="2" data-refeicoes="almoco jantar" data-busca="charrúa restaurante vila do capão vale do capão (caeté-açu) carnes / steakhouse almoço · jantar parrilla parrilla uruguaia no meio da chapada, a mais bem avaliada do vale. para quem quiser um corte no almoço do dia da fumaça." data-top="nao" data-no-roteiro="nao" data-vegetariano="nao" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">🥩 Carnes / steakhouse</span></div><h3 class="opt-nome">Charrúa Restaurante</h3><p class="opt-onde">Vale do Capão (Caeté-Açu) Vale do Capão (Caeté-Açu) · <span class="rest-local">Vila do Capão</span></p><p class="rest-refeicoes">🍴 Almoço · Jantar</p><p class="opt-nota">Parrilla uruguaia no meio da Chapada, a mais bem avaliada do vale. Para quem quiser um corte no almoço do dia da Fumaça.</p><div class="rest-tags"><span class="rest-tag">Parrilla</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="capao" data-cozinha="vegetariana" data-faixa="2" data-refeicoes="almoco jantar" data-busca="herbívoras bistrô vila do capão vale do capão (caeté-açu) vegetariana / saudável almoço · jantar vegetariano vegano cozinha vegetariana e vegana criativa, uma das razões de o capão ser conhecido pela comida saudável. resolve o almoço de quem não come carne." data-top="nao" data-no-roteiro="nao" data-vegetariano="sim" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">🥗 Vegetariana / saudável</span></div><h3 class="opt-nome">Herbívoras Bistrô</h3><p class="opt-onde">Vale do Capão (Caeté-Açu) Vale do Capão (Caeté-Açu) · <span class="rest-local">Vila do Capão</span></p><p class="rest-refeicoes">🍴 Almoço · Jantar</p><p class="opt-nota">Cozinha vegetariana e vegana criativa, uma das razões de o Capão ser conhecido pela comida saudável. Resolve o almoço de quem não come carne.</p><div class="rest-tags"><span class="rest-tag">Vegetariano</span><span class="rest-tag">Vegano</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="capao" data-cozinha="vegetariana" data-faixa="2" data-refeicoes="almoco" data-busca="natural bistrô vila do capão vale do capão (caeté-açu) vegetariana / saudável almoço saudável vegetariano refeições leves e naturais, com ingredientes frescos da região. alternativa tranquila na vila, a poucos minutos da portaria da fumaça." data-top="nao" data-no-roteiro="nao" data-vegetariano="sim" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">🥗 Vegetariana / saudável</span></div><h3 class="opt-nome">Natural Bistrô</h3><p class="opt-onde">Vale do Capão (Caeté-Açu) Vale do Capão (Caeté-Açu) · <span class="rest-local">Vila do Capão</span></p><p class="rest-refeicoes">🍴 Almoço</p><p class="opt-nota">Refeições leves e naturais, com ingredientes frescos da região. Alternativa tranquila na vila, a poucos minutos da portaria da Fumaça.</p><div class="rest-tags"><span class="rest-tag">Saudável</span><span class="rest-tag">Vegetariano</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="capao" data-cozinha="caseira" data-faixa="1" data-refeicoes="almoco" data-busca="comida caseira da dona beli vila do capão vale do capão (caeté-açu) comida caseira almoço preço justo comida caseira de fogão simples, no esquema que fez a fama do capão: prato do dia barato e bem servido." data-top="nao" data-no-roteiro="nao" data-vegetariano="sim" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="até ~R$ 40 por pessoa">$</span><span class="opt-tipo">🏡 Comida caseira</span></div><h3 class="opt-nome">Comida Caseira da Dona Beli</h3><p class="opt-onde">Vale do Capão (Caeté-Açu) Vale do Capão (Caeté-Açu) · <span class="rest-local">Vila do Capão</span></p><p class="rest-refeicoes">🍴 Almoço</p><p class="opt-nota">Comida caseira de fogão simples, no esquema que fez a fama do Capão: prato do dia barato e bem servido.</p><div class="rest-tags"><span class="rest-tag">Preço justo</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="capao" data-cozinha="lanche" data-faixa="1" data-refeicoes="petisco" data-busca="pastel de palmito de jaca início da trilha da fumaça vale do capão (caeté-açu) lanches / hambúrguer petisco / bar típico da região o quitute-símbolo do capão, vendido nas lanchonetes aos pés da trilha da fumaça. melhor deixar para a volta, quando bate o cansaço — também tem queijo, carne e açaí." data-top="nao" data-no-roteiro="nao" data-vegetariano="sim" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="até ~R$ 40 por pessoa">$</span><span class="opt-tipo">🍔 Lanches / hambúrguer</span></div><h3 class="opt-nome">Pastel de palmito de jaca</h3><p class="opt-onde">Vale do Capão (Caeté-Açu) Vale do Capão (Caeté-Açu) · <span class="rest-local">Início da trilha da Fumaça</span></p><p class="rest-refeicoes">🍴 Petisco / bar</p><p class="opt-nota">O quitute-símbolo do Capão, vendido nas lanchonetes aos pés da trilha da Fumaça. Melhor deixar para a volta, quando bate o cansaço — também tem queijo, carne e açaí.</p><div class="rest-tags"><span class="rest-tag">Típico da região</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="capao" data-cozinha="cafe" data-faixa="1" data-refeicoes="cafe petisco" data-busca="terroá cafés especiais vila do capão vale do capão (caeté-açu) café / padaria / doces café da manhã · petisco / bar ☕ café especial cafés especiais da região para começar o dia antes da trilha ou fechar a tarde na vila." data-top="nao" data-no-roteiro="nao" data-vegetariano="nao" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="até ~R$ 40 por pessoa">$</span><span class="opt-tipo">☕ Café / padaria / doces</span></div><h3 class="opt-nome">Terroá Cafés Especiais</h3><p class="opt-onde">Vale do Capão (Caeté-Açu) Vale do Capão (Caeté-Açu) · <span class="rest-local">Vila do Capão</span></p><p class="rest-refeicoes">🍴 Café da manhã · Petisco / bar</p><p class="opt-nota">Cafés especiais da região para começar o dia antes da trilha ou fechar a tarde na vila.</p><div class="rest-tags"><span class="rest-tag">☕ Café especial</span></div></div></article></div><p class="dia-vazio">Nenhum restaurante desta base passa no filtro atual.</p></div><div class="rest-bloco dia-bloco" data-cidade="poco-azul"><div class="rest-cab dia-cab"><h2 class="dia-tit"><span class="dia-chip">💧 Poço Azul / Nova Redenção</span><span class="rest-conta-bloco">1 lugares</span></h2><p class="dia-ancora">Dia 3 · almoço na chegada, entre a flutuação e a estrada para Mucugê.</p></div><div class="opt-grid rest-grid"><article class="opt-card rest-card fade-in" data-cidade="poco-azul" data-cozinha="caseira" data-faixa="1" data-refeicoes="almoco jantar" data-busca="apa restaurante &amp; cia a 200 m do poço azul poço azul / nova redenção comida caseira almoço · jantar ao lado do poço azul preço justo a 200 metros do poço azul, é o almoço natural do dia da flutuação. comida caseira da região — palma, godó e mamão verde — feita por gente de nova redenção. funciona de sábado à noite até sexta às 17h." data-top="sim" data-no-roteiro="sim" data-vegetariano="sim" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="até ~R$ 40 por pessoa">$</span><span class="opt-tipo">🏡 Comida caseira</span></div><h3 class="opt-nome">APA Restaurante &amp; Cia</h3><p class="opt-onde">Poço Azul / Nova Redenção Poço Azul / Nova Redenção · <span class="rest-local">A 200 m do Poço Azul</span></p><p class="rest-refeicoes">🍴 Almoço · Jantar</p><p class="opt-nota">A 200 metros do Poço Azul, é o almoço natural do dia da flutuação. Comida caseira da região — palma, godó e mamão verde — feita por gente de Nova Redenção. Funciona de sábado à noite até sexta às 17h.</p><div class="rest-dias">🕒 Sáb a sex; fecha sexta às 17h</div><div class="rest-tags"><span class="rest-tag">Ao lado do Poço Azul</span><span class="rest-tag">Preço justo</span></div><div class="opt-links"><a class="opt-link insta" href="https://www.instagram.com/restaurante_apa_reserva/" target="_blank" rel="noopener" title="@restaurante_apa_reserva">📷 @restaurante_apa_reserva</a></div></div></article></div><p class="dia-vazio">Nenhum restaurante desta base passa no filtro atual.</p></div><div class="rest-bloco dia-bloco" data-cidade="mucuge"><div class="rest-cab dia-cab"><h2 class="dia-tit"><span class="dia-chip">⛏️ Mucugê</span><span class="rest-conta-bloco">11 lugares</span></h2><p class="dia-ancora">Dias 3 e 4 · a melhor gastronomia do eixo sul, dentro do conjunto tombado.</p></div><div class="opt-grid rest-grid"><article class="opt-card rest-card fade-in" data-cidade="mucuge" data-cozinha="contemporanea" data-faixa="3" data-refeicoes="almoco jantar" data-busca="paraguassu rua caetité, 40b — centro histórico mucugê contemporânea / autoral almoço · jantar reserva recomendada menu degustação sábado o jantar mais elaborado do eixo sul, do chef andré chequer, dentro do hotel refúgio na serra e da área tombada. cozinha contemporânea com toque regional, adega convidativa e carta de drinques. almoço das 12h às 15h e jantar das 19h às 23h; o  menu degustação é tradicional aos sábados  — e o grupo não passa sábado em mucugê." data-top="sim" data-no-roteiro="sim" data-vegetariano="nao" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="acima de ~R$ 90 por pessoa">$$$</span><span class="opt-tipo">✨ Contemporânea / autoral</span></div><h3 class="opt-nome">Paraguassu</h3><p class="opt-onde">Mucugê Mucugê · <span class="rest-local">Rua Caetité, 40B — centro histórico</span></p><p class="rest-refeicoes">🍴 Almoço · Jantar</p><p class="opt-nota">O jantar mais elaborado do eixo sul, do chef André Chequer, dentro do hotel Refúgio na Serra e da área tombada. Cozinha contemporânea com toque regional, adega convidativa e carta de drinques. Almoço das 12h às 15h e jantar das 19h às 23h; o <strong>menu degustação é tradicional aos sábados</strong> — e o grupo não passa sábado em Mucugê.</p><div class="rest-dias">🕒 12h–15h e 19h–23h, todos os dias</div><div class="rest-tags"><span class="rest-tag">Reserva recomendada</span><span class="rest-tag">Menu degustação sábado</span></div><div class="opt-links"><a class="opt-link insta" href="https://www.instagram.com/restaurante_paraguassu/" target="_blank" rel="noopener" title="@restaurante_paraguassu">📷 @restaurante_paraguassu</a></div></div></article><article class="opt-card rest-card fade-in" data-cidade="mucuge" data-cozinha="pizza" data-faixa="2" data-refeicoes="jantar petisco" data-busca="beco da bateia centro histórico mucugê pizzaria jantar · petisco / bar pizza coquetéis clima cultural um beco cultural no centro tombado que reúne a  pizza da garagem , famosa pela pizza e pelas massas, e o matuto, conhecido pelos coquetéis e petiscos. ambiente muito bem decorado, com playlist de pop e rock. aberto das 18h30 às 22h." data-top="sim" data-no-roteiro="nao" data-vegetariano="nao" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">🍕 Pizzaria</span></div><h3 class="opt-nome">Beco da Bateia</h3><p class="opt-onde">Mucugê Mucugê · <span class="rest-local">Centro histórico</span></p><p class="rest-refeicoes">🍴 Jantar · Petisco / bar</p><p class="opt-nota">Um beco cultural no centro tombado que reúne a <strong>Pizza da Garagem</strong>, famosa pela pizza e pelas massas, e o Matuto, conhecido pelos coquetéis e petiscos. Ambiente muito bem decorado, com playlist de pop e rock. Aberto das 18h30 às 22h.</p><div class="rest-dias">🕒 18h30–22h</div><div class="rest-tags"><span class="rest-tag">Pizza</span><span class="rest-tag">Coquetéis</span><span class="rest-tag">Clima cultural</span></div><div class="opt-links"><a class="opt-link insta" href="https://www.instagram.com/becodabateia/" target="_blank" rel="noopener" title="@becodabateia">📷 @becodabateia</a></div></div></article><article class="opt-card rest-card fade-in" data-cidade="mucuge" data-cozinha="pizza" data-faixa="2" data-refeicoes="almoco jantar" data-busca="restaurante e pizzaria point da chapada centro da cidade mucugê pizzaria almoço · jantar pizza parmegiana o restaurante mais avaliado de mucugê: pizzas de forno a lenha, o famoso filé à parmegiana e refeições completas. resolve almoço e jantar no mesmo lugar, no centro." data-top="nao" data-no-roteiro="nao" data-vegetariano="nao" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">🍕 Pizzaria</span></div><h3 class="opt-nome">Restaurante e Pizzaria Point da Chapada</h3><p class="opt-onde">Mucugê Mucugê · <span class="rest-local">Centro da cidade</span></p><p class="rest-refeicoes">🍴 Almoço · Jantar</p><p class="opt-nota">O restaurante mais avaliado de Mucugê: pizzas de forno a lenha, o famoso filé à parmegiana e refeições completas. Resolve almoço e jantar no mesmo lugar, no centro.</p><div class="rest-tags"><span class="rest-tag">Pizza</span><span class="rest-tag">Parmegiana</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="mucuge" data-cozinha="pizza" data-faixa="2" data-refeicoes="jantar" data-busca="pizzaria d'enrico centro da cidade mucugê pizzaria jantar pizza pizzaria entre as mais bem avaliadas da cidade, uma alternativa simples para a noite depois de um dia de cachoeira." data-top="nao" data-no-roteiro="nao" data-vegetariano="nao" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">🍕 Pizzaria</span></div><h3 class="opt-nome">Pizzaria d'Enrico</h3><p class="opt-onde">Mucugê Mucugê · <span class="rest-local">Centro da cidade</span></p><p class="rest-refeicoes">🍴 Jantar</p><p class="opt-nota">Pizzaria entre as mais bem avaliadas da cidade, uma alternativa simples para a noite depois de um dia de cachoeira.</p><div class="rest-tags"><span class="rest-tag">Pizza</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="mucuge" data-cozinha="carne" data-faixa="2" data-refeicoes="almoco jantar" data-busca="restaurante sabor da picanha centro da cidade mucugê carnes / steakhouse almoço · jantar carne na brasa indicação do próprio chef andré chequer entre os lugares de mucugê. carnes na brasa para quem quiser um jantar mais substancioso." data-top="nao" data-no-roteiro="nao" data-vegetariano="nao" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">🥩 Carnes / steakhouse</span></div><h3 class="opt-nome">Restaurante Sabor da Picanha</h3><p class="opt-onde">Mucugê Mucugê · <span class="rest-local">Centro da cidade</span></p><p class="rest-refeicoes">🍴 Almoço · Jantar</p><p class="opt-nota">Indicação do próprio chef André Chequer entre os lugares de Mucugê. Carnes na brasa para quem quiser um jantar mais substancioso.</p><div class="rest-tags"><span class="rest-tag">Carne na brasa</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="mucuge" data-cozinha="japonesa" data-faixa="2" data-refeicoes="jantar" data-busca="mizu mucugê sushi bar centro da cidade mucugê japonesa jantar sushi sushi no meio do garimpo, também na lista do chef andré chequer. boa válvula de escape quando a comida baiana pesar dois dias seguidos." data-top="nao" data-no-roteiro="nao" data-vegetariano="nao" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">🍣 Japonesa</span></div><h3 class="opt-nome">Mizu Mucugê Sushi Bar</h3><p class="opt-onde">Mucugê Mucugê · <span class="rest-local">Centro da cidade</span></p><p class="rest-refeicoes">🍴 Jantar</p><p class="opt-nota">Sushi no meio do garimpo, também na lista do chef André Chequer. Boa válvula de escape quando a comida baiana pesar dois dias seguidos.</p><div class="rest-tags"><span class="rest-tag">Sushi</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="mucuge" data-cozinha="cafe" data-faixa="1" data-refeicoes="cafe almoco" data-busca="bia maria café centro da cidade mucugê café / padaria / doces café da manhã · almoço ☕ café café e comida leve, citado pelos chefs locais. começa o dia da visita ao parque municipal sem pressa." data-top="nao" data-no-roteiro="nao" data-vegetariano="sim" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="até ~R$ 40 por pessoa">$</span><span class="opt-tipo">☕ Café / padaria / doces</span></div><h3 class="opt-nome">Bia Maria Café</h3><p class="opt-onde">Mucugê Mucugê · <span class="rest-local">Centro da cidade</span></p><p class="rest-refeicoes">🍴 Café da manhã · Almoço</p><p class="opt-nota">Café e comida leve, citado pelos chefs locais. Começa o dia da visita ao Parque Municipal sem pressa.</p><div class="rest-tags"><span class="rest-tag">☕ Café</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="mucuge" data-cozinha="caseira" data-faixa="1" data-refeicoes="almoco" data-busca="comida caseira da dona nena centro da cidade mucugê comida caseira almoço fogão a lenha preço justo a comida é servida no próprio fogão a lenha da dona nena, com mesas na cozinha e no quintal. simples, limpinho e o almoço mais afetivo da cidade." data-top="sim" data-no-roteiro="nao" data-vegetariano="sim" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="até ~R$ 40 por pessoa">$</span><span class="opt-tipo">🏡 Comida caseira</span></div><h3 class="opt-nome">Comida Caseira da Dona Nena</h3><p class="opt-onde">Mucugê Mucugê · <span class="rest-local">Centro da cidade</span></p><p class="rest-refeicoes">🍴 Almoço</p><p class="opt-nota">A comida é servida no próprio fogão a lenha da Dona Nena, com mesas na cozinha e no quintal. Simples, limpinho e o almoço mais afetivo da cidade.</p><div class="rest-tags"><span class="rest-tag">Fogão a lenha</span><span class="rest-tag">Preço justo</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="mucuge" data-cozinha="lanche" data-faixa="1" data-refeicoes="jantar petisco" data-busca="sertãozinho centro da cidade mucugê lanches / hambúrguer jantar · petisco / bar hambúrguer artesanal hambúrgueres artesanais para recarregar depois do parque municipal, numa noite sem cerimônia." data-top="nao" data-no-roteiro="nao" data-vegetariano="nao" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="até ~R$ 40 por pessoa">$</span><span class="opt-tipo">🍔 Lanches / hambúrguer</span></div><h3 class="opt-nome">Sertãozinho</h3><p class="opt-onde">Mucugê Mucugê · <span class="rest-local">Centro da cidade</span></p><p class="rest-refeicoes">🍴 Jantar · Petisco / bar</p><p class="opt-nota">Hambúrgueres artesanais para recarregar depois do Parque Municipal, numa noite sem cerimônia.</p><div class="rest-tags"><span class="rest-tag">Hambúrguer artesanal</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="mucuge" data-cozinha="italiana" data-faixa="2" data-refeicoes="jantar" data-busca="capim rosa chá centro da cidade mucugê italiana / massas jantar massa leve vegetariano a pizza de chapati — massa mais leve — para quem quer algo menos pesado à noite. fica na hospedagem de mesmo nome." data-top="nao" data-no-roteiro="nao" data-vegetariano="sim" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">🍝 Italiana / massas</span></div><h3 class="opt-nome">Capim Rosa Chá</h3><p class="opt-onde">Mucugê Mucugê · <span class="rest-local">Centro da cidade</span></p><p class="rest-refeicoes">🍴 Jantar</p><p class="opt-nota">A pizza de chapati — massa mais leve — para quem quer algo menos pesado à noite. Fica na hospedagem de mesmo nome.</p><div class="rest-tags"><span class="rest-tag">Massa leve</span><span class="rest-tag">Vegetariano</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="mucuge" data-cozinha="contemporanea" data-faixa="2" data-refeicoes="jantar" data-busca="bistrô café.com centro histórico mucugê contemporânea / autoral jantar clima tranquilo ambiente tranquilo e romântico para a noite, com cozinha de bistrô no centro histórico." data-top="nao" data-no-roteiro="nao" data-vegetariano="nao" data-musica="nao" data-vista="sim" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">✨ Contemporânea / autoral</span></div><h3 class="opt-nome">Bistrô Café.Com</h3><p class="opt-onde">Mucugê Mucugê · <span class="rest-local">Centro histórico</span></p><p class="rest-refeicoes">🍴 Jantar</p><p class="opt-nota">Ambiente tranquilo e romântico para a noite, com cozinha de bistrô no centro histórico.</p><div class="rest-tags"><span class="rest-tag">Clima tranquilo</span></div></div></article></div><p class="dia-vazio">Nenhum restaurante desta base passa no filtro atual.</p></div><div class="rest-bloco dia-bloco" data-cidade="ibicoara"><div class="rest-cab dia-cab"><h2 class="dia-tit"><span class="dia-chip">🏞️ Ibicoara</span><span class="rest-conta-bloco">9 lugares</span></h2><p class="dia-ancora">Dia 5 · almoço na volta do Buracão e jantar na vila depois do Sítio Canjerana.</p></div><div class="opt-grid rest-grid"><article class="opt-card rest-card fade-in" data-cidade="ibicoara" data-cozinha="contemporanea" data-faixa="3" data-refeicoes="almoco jantar" data-busca="espaço gourmet fazenda produtiva zona rural de ibicoara ibicoara contemporânea / autoral almoço · jantar reserva obrigatória experiência autoral a melhor avaliação de ibicoara: culinária tratada como arte, com ingredientes de qualidade, entradas servidas com flores comestíveis e molhos da casa.  exige reserva  — é o jantar especial da noite na vila." data-top="sim" data-no-roteiro="nao" data-vegetariano="nao" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="acima de ~R$ 90 por pessoa">$$$</span><span class="opt-tipo">✨ Contemporânea / autoral</span></div><h3 class="opt-nome">Espaço Gourmet Fazenda Produtiva</h3><p class="opt-onde">Ibicoara Ibicoara · <span class="rest-local">Zona rural de Ibicoara</span></p><p class="rest-refeicoes">🍴 Almoço · Jantar</p><p class="opt-nota">A melhor avaliação de Ibicoara: culinária tratada como arte, com ingredientes de qualidade, entradas servidas com flores comestíveis e molhos da casa. <strong>Exige reserva</strong> — é o jantar especial da noite na vila.</p><div class="rest-tags"><span class="rest-tag">Reserva obrigatória</span><span class="rest-tag">Experiência autoral</span></div><div class="opt-links"><a class="opt-link insta" href="https://www.instagram.com/fazendaprodutiva/" target="_blank" rel="noopener" title="@fazendaprodutiva">📷 @fazendaprodutiva</a></div></div></article><article class="opt-card rest-card fade-in" data-cidade="ibicoara" data-cozinha="caseira" data-faixa="2" data-refeicoes="almoco" data-busca="restaurante mandioca — sítio monte alegre sítio monte alegre ibicoara comida caseira almoço comida da roça opções vegetarianas cozinha caseira do sítio, entre as mais bem avaliadas da cidade. prato farto e ingredientes da roça, boa parada na volta do buracão." data-top="sim" data-no-roteiro="nao" data-vegetariano="sim" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">🏡 Comida caseira</span></div><h3 class="opt-nome">Restaurante Mandioca — Sítio Monte Alegre</h3><p class="opt-onde">Ibicoara Ibicoara · <span class="rest-local">Sítio Monte Alegre</span></p><p class="rest-refeicoes">🍴 Almoço</p><p class="opt-nota">Cozinha caseira do sítio, entre as mais bem avaliadas da cidade. Prato farto e ingredientes da roça, boa parada na volta do Buracão.</p><div class="rest-tags"><span class="rest-tag">Comida da roça</span><span class="rest-tag">Opções vegetarianas</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="ibicoara" data-cozinha="regional" data-faixa="1" data-refeicoes="almoco jantar cafe" data-busca="restaurante quintal licuri campo redondo, estrada das cachoeiras ibicoara regional baiana almoço · jantar · café da manhã preço justo lanche para trilha na estrada das cachoeiras do buracão, licuri e fumacinha, a partir de r$ 35 por pessoa. carne de sol na manteiga e frango perfumado entre os pratos, além de café da manhã e lanche para trilha. almoço forte nos fins de semana." data-top="nao" data-no-roteiro="nao" data-vegetariano="sim" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="até ~R$ 40 por pessoa">$</span><span class="opt-tipo">🍲 Regional baiana</span></div><h3 class="opt-nome">Restaurante Quintal Licuri</h3><p class="opt-onde">Ibicoara Ibicoara · <span class="rest-local">Campo Redondo, estrada das cachoeiras</span></p><p class="rest-refeicoes">🍴 Almoço · Jantar · Café da manhã</p><p class="opt-nota">Na estrada das cachoeiras do Buracão, Licuri e Fumacinha, a partir de R$ 35 por pessoa. Carne de sol na manteiga e frango perfumado entre os pratos, além de café da manhã e lanche para trilha. Almoço forte nos fins de semana.</p><div class="rest-tags"><span class="rest-tag">Preço justo</span><span class="rest-tag">Lanche para trilha</span></div><div class="opt-links"><a class="opt-link insta" href="https://www.instagram.com/quintal_licuri/" target="_blank" rel="noopener" title="@quintal_licuri">📷 @quintal_licuri</a></div></div></article><article class="opt-card rest-card fade-in" data-cidade="ibicoara" data-cozinha="caseira" data-faixa="1" data-refeicoes="almoco jantar" data-busca="point dos amigos centro de ibicoara ibicoara comida caseira almoço · jantar preço justo ponto concorrido da cidade, com comida bem avaliada e preço amigável. boa alternativa central quando a fazenda produtiva estiver cheia." data-top="nao" data-no-roteiro="nao" data-vegetariano="nao" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="até ~R$ 40 por pessoa">$</span><span class="opt-tipo">🏡 Comida caseira</span></div><h3 class="opt-nome">Point dos Amigos</h3><p class="opt-onde">Ibicoara Ibicoara · <span class="rest-local">Centro de Ibicoara</span></p><p class="rest-refeicoes">🍴 Almoço · Jantar</p><p class="opt-nota">Ponto concorrido da cidade, com comida bem avaliada e preço amigável. Boa alternativa central quando a Fazenda Produtiva estiver cheia.</p><div class="rest-tags"><span class="rest-tag">Preço justo</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="ibicoara" data-cozinha="regional" data-faixa="1" data-refeicoes="almoco jantar" data-busca="restaurante raízes centro de ibicoara ibicoara regional baiana almoço · jantar abre cedo aberto das 8h às 22h (domingo até o meio-dia), é o tipo de lugar que resolve café, almoço e jantar sem deslocamento. comida regional do dia a dia." data-top="nao" data-no-roteiro="nao" data-vegetariano="sim" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="até ~R$ 40 por pessoa">$</span><span class="opt-tipo">🍲 Regional baiana</span></div><h3 class="opt-nome">Restaurante Raízes</h3><p class="opt-onde">Ibicoara Ibicoara · <span class="rest-local">Centro de Ibicoara</span></p><p class="rest-refeicoes">🍴 Almoço · Jantar</p><p class="opt-nota">Aberto das 8h às 22h (domingo até o meio-dia), é o tipo de lugar que resolve café, almoço e jantar sem deslocamento. Comida regional do dia a dia.</p><div class="rest-dias">🕒 8h–22h</div><div class="rest-tags"><span class="rest-tag">Abre cedo</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="ibicoara" data-cozinha="pizza" data-faixa="1" data-refeicoes="jantar petisco" data-busca="trilheiru's restaurante e pizzaria centro de ibicoara ibicoara pizzaria jantar · petisco / bar pizza drinks petiscos pizzas, drinks e petiscos à noite, o point descontraído da vila depois do sítio canjerana." data-top="nao" data-no-roteiro="nao" data-vegetariano="nao" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="até ~R$ 40 por pessoa">$</span><span class="opt-tipo">🍕 Pizzaria</span></div><h3 class="opt-nome">Trilheiru's Restaurante e Pizzaria</h3><p class="opt-onde">Ibicoara Ibicoara · <span class="rest-local">Centro de Ibicoara</span></p><p class="rest-refeicoes">🍴 Jantar · Petisco / bar</p><p class="opt-nota">Pizzas, drinks e petiscos à noite, o point descontraído da vila depois do Sítio Canjerana.</p><div class="rest-tags"><span class="rest-tag">Pizza</span><span class="rest-tag">Drinks</span><span class="rest-tag">Petiscos</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="ibicoara" data-cozinha="contemporanea" data-faixa="2" data-refeicoes="jantar" data-busca="restaurante &amp; gastrobar mudra centro de ibicoara ibicoara contemporânea / autoral jantar drinks clima jovem gastrobar com pratos mais elaborados e drinks, uma das novidades da gastronomia de ibicoara." data-top="nao" data-no-roteiro="nao" data-vegetariano="nao" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">✨ Contemporânea / autoral</span></div><h3 class="opt-nome">Restaurante &amp; Gastrobar Mudra</h3><p class="opt-onde">Ibicoara Ibicoara · <span class="rest-local">Centro de Ibicoara</span></p><p class="rest-refeicoes">🍴 Jantar</p><p class="opt-nota">Gastrobar com pratos mais elaborados e drinks, uma das novidades da gastronomia de Ibicoara.</p><div class="rest-tags"><span class="rest-tag">Drinks</span><span class="rest-tag">Clima jovem</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="ibicoara" data-cozinha="pizza" data-faixa="1" data-refeicoes="almoco jantar" data-busca="cheiro verde restaurante e pizzaria centro de ibicoara ibicoara pizzaria almoço · jantar pizza preço justo restaurante e pizzaria de bairro, opção simples para o jantar na vila sem reserva." data-top="nao" data-no-roteiro="nao" data-vegetariano="nao" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="até ~R$ 40 por pessoa">$</span><span class="opt-tipo">🍕 Pizzaria</span></div><h3 class="opt-nome">Cheiro Verde Restaurante e Pizzaria</h3><p class="opt-onde">Ibicoara Ibicoara · <span class="rest-local">Centro de Ibicoara</span></p><p class="rest-refeicoes">🍴 Almoço · Jantar</p><p class="opt-nota">Restaurante e pizzaria de bairro, opção simples para o jantar na vila sem reserva.</p><div class="rest-tags"><span class="rest-tag">Pizza</span><span class="rest-tag">Preço justo</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="ibicoara" data-cozinha="regional" data-faixa="1" data-refeicoes="almoco jantar" data-busca="restaurante vitão centro de ibicoara ibicoara regional baiana almoço · jantar comida regional uma das casas mais recentes do centro, com comida regional e ambiente novo." data-top="nao" data-no-roteiro="nao" data-vegetariano="nao" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="até ~R$ 40 por pessoa">$</span><span class="opt-tipo">🍲 Regional baiana</span></div><h3 class="opt-nome">Restaurante Vitão</h3><p class="opt-onde">Ibicoara Ibicoara · <span class="rest-local">Centro de Ibicoara</span></p><p class="rest-refeicoes">🍴 Almoço · Jantar</p><p class="opt-nota">Uma das casas mais recentes do centro, com comida regional e ambiente novo.</p><div class="rest-tags"><span class="rest-tag">Comida regional</span></div></div></article></div><p class="dia-vazio">Nenhum restaurante desta base passa no filtro atual.</p></div><div class="rest-bloco dia-bloco" data-cidade="iraquara"><div class="rest-cab dia-cab"><h2 class="dia-tit"><span class="dia-chip">🕳️ Iraquara / Pratinha</span><span class="rest-conta-bloco">4 lugares</span></h2><p class="dia-ancora">Dia 6 · almoço na Fazenda Pratinha ou no caminho das grutas.</p></div><div class="opt-grid rest-grid"><article class="opt-card rest-card fade-in" data-cidade="iraquara" data-cozinha="caseira" data-faixa="2" data-refeicoes="almoco" data-busca="restaurante gruta azul — fazenda pratinha fazenda pratinha iraquara / pratinha comida caseira almoço na fazenda galinha caipira vegetariano dentro da fazenda pratinha, no caminho da gruta azul: pratos à la carte e porções, com a galinha caipira como destaque e opções vegetarianas. é o almoço que encaixa na tarde da pratinha sem precisar sair da fazenda." data-top="sim" data-no-roteiro="sim" data-vegetariano="sim" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">🏡 Comida caseira</span></div><h3 class="opt-nome">Restaurante Gruta Azul — Fazenda Pratinha</h3><p class="opt-onde">Iraquara / Pratinha Iraquara / Pratinha · <span class="rest-local">Fazenda Pratinha</span></p><p class="rest-refeicoes">🍴 Almoço</p><p class="opt-nota">Dentro da Fazenda Pratinha, no caminho da Gruta Azul: pratos à la carte e porções, com a galinha caipira como destaque e opções vegetarianas. É o almoço que encaixa na tarde da Pratinha sem precisar sair da fazenda.</p><div class="rest-tags"><span class="rest-tag">Na fazenda</span><span class="rest-tag">Galinha caipira</span><span class="rest-tag">Vegetariano</span></div><div class="opt-links"><a class="opt-link insta" href="https://www.instagram.com/restaurantegrutazul/" target="_blank" rel="noopener" title="@restaurantegrutazul">📷 @restaurantegrutazul</a></div></div></article><article class="opt-card rest-card fade-in" data-cidade="iraquara" data-cozinha="caseira" data-faixa="2" data-refeicoes="almoco" data-busca="restaurante joão de barro — fazenda pratinha fazenda pratinha iraquara / pratinha comida caseira almoço na fazenda segunda opção dentro da fazenda pratinha, no interior da propriedade. resolve o almoço do dia das grutas sem deslocamento." data-top="nao" data-no-roteiro="sim" data-vegetariano="nao" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">🏡 Comida caseira</span></div><h3 class="opt-nome">Restaurante João de Barro — Fazenda Pratinha</h3><p class="opt-onde">Iraquara / Pratinha Iraquara / Pratinha · <span class="rest-local">Fazenda Pratinha</span></p><p class="rest-refeicoes">🍴 Almoço</p><p class="opt-nota">Segunda opção dentro da Fazenda Pratinha, no interior da propriedade. Resolve o almoço do dia das grutas sem deslocamento.</p><div class="rest-tags"><span class="rest-tag">Na fazenda</span></div><div class="opt-links"><a class="opt-link insta" href="https://www.instagram.com/restaurantegrutazul/" target="_blank" rel="noopener" title="@restaurantegrutazul">📷 @restaurantegrutazul</a></div></div></article><article class="opt-card rest-card fade-in" data-cidade="iraquara" data-cozinha="selfservice" data-faixa="1" data-refeicoes="almoco" data-busca="restaurante da lapa doce complexo da lapa doce iraquara / pratinha self-service / a quilo almoço buffet só se a lapa doce entrar no complexo da gruta da lapa doce, funciona no esquema de buffet — prático e barato para quem emendar a gruta com a pratinha. só faz sentido se a lapa doce entrar no dia 22." data-top="nao" data-no-roteiro="nao" data-vegetariano="sim" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="até ~R$ 40 por pessoa">$</span><span class="opt-tipo">🍽️ Self-service / a quilo</span></div><h3 class="opt-nome">Restaurante da Lapa Doce</h3><p class="opt-onde">Iraquara / Pratinha Iraquara / Pratinha · <span class="rest-local">Complexo da Lapa Doce</span></p><p class="rest-refeicoes">🍴 Almoço</p><p class="opt-nota">No complexo da Gruta da Lapa Doce, funciona no esquema de buffet — prático e barato para quem emendar a gruta com a Pratinha. Só faz sentido se a Lapa Doce entrar no dia 22.</p><div class="rest-tags"><span class="rest-tag">Buffet</span><span class="rest-tag">Só se a Lapa Doce entrar</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="iraquara" data-cozinha="regional" data-faixa="1" data-refeicoes="almoco jantar" data-busca="restaurante paulistano centro de iraquara iraquara / pratinha regional baiana almoço · jantar comida regional na estrada entre os mais bem avaliados de iraquara, boa parada de estrada se a fome chegar antes ou depois das grutas." data-top="nao" data-no-roteiro="nao" data-vegetariano="nao" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="até ~R$ 40 por pessoa">$</span><span class="opt-tipo">🍲 Regional baiana</span></div><h3 class="opt-nome">Restaurante Paulistano</h3><p class="opt-onde">Iraquara / Pratinha Iraquara / Pratinha · <span class="rest-local">Centro de Iraquara</span></p><p class="rest-refeicoes">🍴 Almoço · Jantar</p><p class="opt-nota">Entre os mais bem avaliados de Iraquara, boa parada de estrada se a fome chegar antes ou depois das grutas.</p><div class="rest-tags"><span class="rest-tag">Comida regional</span><span class="rest-tag">Na estrada</span></div></div></article></div><p class="dia-vazio">Nenhum restaurante desta base passa no filtro atual.</p></div><div class="rest-bloco dia-bloco" data-cidade="estrada"><div class="rest-cab dia-cab"><h2 class="dia-tit"><span class="dia-chip">🚗 Estrada · Morro do Chapéu, Jacobina e Senhor do Bonfim</span><span class="rest-conta-bloco">9 lugares</span></h2><p class="dia-ancora">Dia 7 (e almoço da ida, no dia 1) · as paradas de estrada.</p></div><div class="opt-grid rest-grid"><article class="opt-card rest-card fade-in" data-cidade="estrada" data-cozinha="italiana" data-faixa="2" data-refeicoes="almoco jantar" data-busca="eusépio pizzaria e restaurante morro do chapéu estrada · morro do chapéu, jacobina e senhor do bonfim italiana / massas almoço · jantar desde 1962 cozinha italiana um cantinho da itália em morro do chapéu desde 1962, fundado por eusébio garofani, da região de perugia. pizza e massa com história — o almoço ou jantar da parada na cidade na volta." data-top="sim" data-no-roteiro="nao" data-vegetariano="nao" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">🍝 Italiana / massas</span></div><h3 class="opt-nome">Eusépio Pizzaria e Restaurante</h3><p class="opt-onde">Estrada · Morro do Chapéu, Jacobina e Senhor do Bonfim Estrada · Morro do Chapéu, Jacobina e Senhor do Bonfim · <span class="rest-local">Morro do Chapéu</span></p><p class="rest-refeicoes">🍴 Almoço · Jantar</p><p class="opt-nota">Um cantinho da Itália em Morro do Chapéu desde 1962, fundado por Eusébio Garofani, da região de Perugia. Pizza e massa com história — o almoço ou jantar da parada na cidade na volta.</p><div class="rest-tags"><span class="rest-tag">Desde 1962</span><span class="rest-tag">Cozinha italiana</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="estrada" data-cozinha="regional" data-faixa="2" data-refeicoes="almoco jantar" data-busca="casarão morro do chapéu estrada · morro do chapéu, jacobina e senhor do bonfim regional baiana almoço · jantar cozinha baiana comida da bahia com identidade e sabor afetivo, um dos poucos restaurantes da chapada em que os relatos destacam a cozinha local de raiz." data-top="nao" data-no-roteiro="nao" data-vegetariano="nao" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">🍲 Regional baiana</span></div><h3 class="opt-nome">Casarão</h3><p class="opt-onde">Estrada · Morro do Chapéu, Jacobina e Senhor do Bonfim Estrada · Morro do Chapéu, Jacobina e Senhor do Bonfim · <span class="rest-local">Morro do Chapéu</span></p><p class="rest-refeicoes">🍴 Almoço · Jantar</p><p class="opt-nota">Comida da Bahia com identidade e sabor afetivo, um dos poucos restaurantes da Chapada em que os relatos destacam a cozinha local de raiz.</p><div class="rest-tags"><span class="rest-tag">Cozinha baiana</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="estrada" data-cozinha="regional" data-faixa="2" data-refeicoes="almoco jantar" data-busca="restaurante colonial morro do chapéu estrada · morro do chapéu, jacobina e senhor do bonfim regional baiana almoço · jantar cozinha afetiva cozinha representativa da chapada diamantina, montada para lembrar a infância e os sabores da região." data-top="nao" data-no-roteiro="nao" data-vegetariano="sim" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">🍲 Regional baiana</span></div><h3 class="opt-nome">Restaurante Colonial</h3><p class="opt-onde">Estrada · Morro do Chapéu, Jacobina e Senhor do Bonfim Estrada · Morro do Chapéu, Jacobina e Senhor do Bonfim · <span class="rest-local">Morro do Chapéu</span></p><p class="rest-refeicoes">🍴 Almoço · Jantar</p><p class="opt-nota">Cozinha representativa da Chapada Diamantina, montada para lembrar a infância e os sabores da região.</p><div class="rest-tags"><span class="rest-tag">Cozinha afetiva</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="estrada" data-cozinha="pizza" data-faixa="2" data-refeicoes="jantar" data-busca="varanda bistrô morro do chapéu estrada · morro do chapéu, jacobina e senhor do bonfim pizzaria jantar forno a lenha pizza no forno a lenha, aberta de terça a domingo a partir das 18h. boa para a noite em morro do chapéu." data-top="nao" data-no-roteiro="nao" data-vegetariano="nao" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">🍕 Pizzaria</span></div><h3 class="opt-nome">Varanda Bistrô</h3><p class="opt-onde">Estrada · Morro do Chapéu, Jacobina e Senhor do Bonfim Estrada · Morro do Chapéu, Jacobina e Senhor do Bonfim · <span class="rest-local">Morro do Chapéu</span></p><p class="rest-refeicoes">🍴 Jantar</p><p class="opt-nota">Pizza no forno a lenha, aberta de terça a domingo a partir das 18h. Boa para a noite em Morro do Chapéu.</p><div class="rest-dias">🕒 Ter a dom, a partir das 18h</div><div class="rest-tags"><span class="rest-tag">Forno a lenha</span></div><div class="opt-links"><a class="opt-link insta" href="https://www.instagram.com/varandabistromdc/" target="_blank" rel="noopener" title="@varandabistromdc">📷 @varandabistromdc</a></div></div></article><article class="opt-card rest-card fade-in" data-cidade="estrada" data-cozinha="selfservice" data-faixa="1" data-refeicoes="almoco" data-busca="rancho catarinense jacobina estrada · morro do chapéu, jacobina e senhor do bonfim self-service / a quilo almoço buffet a quilo metade do caminho buffet a quilo e à la carte, um dos almoços mais bem avaliados de jacobina. é o encaixe natural de horário na metade do caminho de volta — cerca de 4h30 depois da saída de lençóis." data-top="sim" data-no-roteiro="sim" data-vegetariano="sim" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="até ~R$ 40 por pessoa">$</span><span class="opt-tipo">🍽️ Self-service / a quilo</span></div><h3 class="opt-nome">Rancho Catarinense</h3><p class="opt-onde">Estrada · Morro do Chapéu, Jacobina e Senhor do Bonfim Estrada · Morro do Chapéu, Jacobina e Senhor do Bonfim · <span class="rest-local">Jacobina</span></p><p class="rest-refeicoes">🍴 Almoço</p><p class="opt-nota">Buffet a quilo e à la carte, um dos almoços mais bem avaliados de Jacobina. É o encaixe natural de horário na metade do caminho de volta — cerca de 4h30 depois da saída de Lençóis.</p><div class="rest-tags"><span class="rest-tag">Buffet a quilo</span><span class="rest-tag">Metade do caminho</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="estrada" data-cozinha="carne" data-faixa="2" data-refeicoes="almoco jantar" data-busca="deck steakhouse jacobina estrada · morro do chapéu, jacobina e senhor do bonfim carnes / steakhouse almoço · jantar carnes steakhouse muito bem avaliada em jacobina, para um almoço mais reforçado na estrada." data-top="nao" data-no-roteiro="nao" data-vegetariano="nao" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">🥩 Carnes / steakhouse</span></div><h3 class="opt-nome">Deck Steakhouse</h3><p class="opt-onde">Estrada · Morro do Chapéu, Jacobina e Senhor do Bonfim Estrada · Morro do Chapéu, Jacobina e Senhor do Bonfim · <span class="rest-local">Jacobina</span></p><p class="rest-refeicoes">🍴 Almoço · Jantar</p><p class="opt-nota">Steakhouse muito bem avaliada em Jacobina, para um almoço mais reforçado na estrada.</p><div class="rest-tags"><span class="rest-tag">Carnes</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="estrada" data-cozinha="mar" data-faixa="2" data-refeicoes="almoco jantar" data-busca="casa do mar jacobina estrada · morro do chapéu, jacobina e senhor do bonfim frutos do mar almoço · jantar frutos do mar frutos do mar com boa avaliação em jacobina, surpresa agradável na rota de volta." data-top="nao" data-no-roteiro="nao" data-vegetariano="nao" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">🦐 Frutos do mar</span></div><h3 class="opt-nome">Casa do Mar</h3><p class="opt-onde">Estrada · Morro do Chapéu, Jacobina e Senhor do Bonfim Estrada · Morro do Chapéu, Jacobina e Senhor do Bonfim · <span class="rest-local">Jacobina</span></p><p class="rest-refeicoes">🍴 Almoço · Jantar</p><p class="opt-nota">Frutos do mar com boa avaliação em Jacobina, surpresa agradável na rota de volta.</p><div class="rest-tags"><span class="rest-tag">Frutos do mar</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="estrada" data-cozinha="italiana" data-faixa="2" data-refeicoes="almoco jantar" data-busca="cucina artezanalle jacobina estrada · morro do chapéu, jacobina e senhor do bonfim italiana / massas almoço · jantar massa artesanal cozinha italiana artesanal em jacobina, alternativa à buffet na parada do almoço." data-top="nao" data-no-roteiro="nao" data-vegetariano="nao" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">🍝 Italiana / massas</span></div><h3 class="opt-nome">Cucina Artezanalle</h3><p class="opt-onde">Estrada · Morro do Chapéu, Jacobina e Senhor do Bonfim Estrada · Morro do Chapéu, Jacobina e Senhor do Bonfim · <span class="rest-local">Jacobina</span></p><p class="rest-refeicoes">🍴 Almoço · Jantar</p><p class="opt-nota">Cozinha italiana artesanal em Jacobina, alternativa à buffet na parada do almoço.</p><div class="rest-tags"><span class="rest-tag">Massa artesanal</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="estrada" data-cozinha="regional" data-faixa="1" data-refeicoes="cafe almoco" data-busca="o cuscuz jacobina / senhor do bonfim estrada · morro do chapéu, jacobina e senhor do bonfim regional baiana café da manhã · almoço café sertanejo preço justo cuscuz e café sertanejo, parada leve na saída de juazeiro ou na volta. senhor do bonfim, cerca de 1h depois de jacobina, tem estrutura parecida para quem preferir esticar." data-top="nao" data-no-roteiro="nao" data-vegetariano="sim" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="até ~R$ 40 por pessoa">$</span><span class="opt-tipo">🍲 Regional baiana</span></div><h3 class="opt-nome">O Cuscuz</h3><p class="opt-onde">Estrada · Morro do Chapéu, Jacobina e Senhor do Bonfim Estrada · Morro do Chapéu, Jacobina e Senhor do Bonfim · <span class="rest-local">Jacobina / Senhor do Bonfim</span></p><p class="rest-refeicoes">🍴 Café da manhã · Almoço</p><p class="opt-nota">Cuscuz e café sertanejo, parada leve na saída de Juazeiro ou na volta. Senhor do Bonfim, cerca de 1h depois de Jacobina, tem estrutura parecida para quem preferir esticar.</p><div class="rest-tags"><span class="rest-tag">Café sertanejo</span><span class="rest-tag">Preço justo</span></div></div></article></div><p class="dia-vazio">Nenhum restaurante desta base passa no filtro atual.</p></div><div class="rest-bloco dia-bloco" data-cidade="juazeiro"><div class="rest-cab dia-cab"><h2 class="dia-tit"><span class="dia-chip">🏠 Juazeiro / Petrolina</span><span class="rest-conta-bloco">6 lugares</span></h2><p class="dia-ancora">Chegada na sexta à noite e o fim de semana em casa.</p></div><div class="opt-grid rest-grid"><article class="opt-card rest-card fade-in" data-cidade="juazeiro" data-cozinha="japonesa" data-faixa="2" data-refeicoes="jantar" data-busca="777 sushi bistrô juazeiro juazeiro / petrolina japonesa jantar jantar da chegada sushi em juazeiro para o jantar da chegada, na sexta à noite — o roteiro já prevê sushi no primeiro dia em casa." data-top="sim" data-no-roteiro="nao" data-vegetariano="nao" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">🍣 Japonesa</span></div><h3 class="opt-nome">777 Sushi Bistrô</h3><p class="opt-onde">Juazeiro / Petrolina Juazeiro / Petrolina · <span class="rest-local">Juazeiro</span></p><p class="rest-refeicoes">🍴 Jantar</p><p class="opt-nota">Sushi em Juazeiro para o jantar da chegada, na sexta à noite — o roteiro já prevê sushi no primeiro dia em casa.</p><div class="rest-tags"><span class="rest-tag">Jantar da chegada</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="juazeiro" data-cozinha="selfservice" data-faixa="1" data-refeicoes="almoco" data-busca="restaurante macaxeira juazeiro juazeiro / petrolina self-service / a quilo almoço self-service regional self-service por quilo com comida regional, opção prática do dia a dia em juazeiro." data-top="nao" data-no-roteiro="nao" data-vegetariano="sim" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="até ~R$ 40 por pessoa">$</span><span class="opt-tipo">🍽️ Self-service / a quilo</span></div><h3 class="opt-nome">Restaurante Macaxeira</h3><p class="opt-onde">Juazeiro / Petrolina Juazeiro / Petrolina · <span class="rest-local">Juazeiro</span></p><p class="rest-refeicoes">🍴 Almoço</p><p class="opt-nota">Self-service por quilo com comida regional, opção prática do dia a dia em Juazeiro.</p><div class="rest-tags"><span class="rest-tag">Self-service</span><span class="rest-tag">Regional</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="juazeiro" data-cozinha="cafe" data-faixa="1" data-refeicoes="cafe" data-busca="cantinho da dani juazeiro juazeiro / petrolina café / padaria / doces café da manhã ☕ café da manhã café da manhã servido das 7h às 15h, na rua argentina. bom para a manhã antes de pegar a estrada de volta à chapada." data-top="nao" data-no-roteiro="nao" data-vegetariano="sim" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="até ~R$ 40 por pessoa">$</span><span class="opt-tipo">☕ Café / padaria / doces</span></div><h3 class="opt-nome">Cantinho da Dani</h3><p class="opt-onde">Juazeiro / Petrolina Juazeiro / Petrolina · <span class="rest-local">Juazeiro</span></p><p class="rest-refeicoes">🍴 Café da manhã</p><p class="opt-nota">Café da manhã servido das 7h às 15h, na Rua Argentina. Bom para a manhã antes de pegar a estrada de volta à Chapada.</p><div class="rest-dias">🕒 7h–15h</div><div class="rest-tags"><span class="rest-tag">☕ Café da manhã</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="juazeiro" data-cozinha="regional" data-faixa="2" data-refeicoes="almoco jantar" data-busca="flor de mandacaru petrolina juazeiro / petrolina regional baiana almoço · jantar cozinha típica culinária típica do vale do são francisco, há quase 10 anos entre as primeiras da lista de quem vive ou visita petrolina." data-top="nao" data-no-roteiro="nao" data-vegetariano="sim" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">🍲 Regional baiana</span></div><h3 class="opt-nome">Flor de Mandacaru</h3><p class="opt-onde">Juazeiro / Petrolina Juazeiro / Petrolina · <span class="rest-local">Petrolina</span></p><p class="rest-refeicoes">🍴 Almoço · Jantar</p><p class="opt-nota">Culinária típica do Vale do São Francisco, há quase 10 anos entre as primeiras da lista de quem vive ou visita Petrolina.</p><div class="rest-tags"><span class="rest-tag">Cozinha típica</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="juazeiro" data-cozinha="carne" data-faixa="2" data-refeicoes="jantar" data-busca="bar do gaúcho petrolina juazeiro / petrolina carnes / steakhouse jantar churrasco carnes e churrasco muito bem avaliados em petrolina, para uma noite do fim de semana em casa." data-top="nao" data-no-roteiro="nao" data-vegetariano="nao" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">🥩 Carnes / steakhouse</span></div><h3 class="opt-nome">Bar do Gaúcho</h3><p class="opt-onde">Juazeiro / Petrolina Juazeiro / Petrolina · <span class="rest-local">Petrolina</span></p><p class="rest-refeicoes">🍴 Jantar</p><p class="opt-nota">Carnes e churrasco muito bem avaliados em Petrolina, para uma noite do fim de semana em casa.</p><div class="rest-tags"><span class="rest-tag">Churrasco</span></div></div></article><article class="opt-card rest-card fade-in" data-cidade="juazeiro" data-cozinha="contemporanea" data-faixa="2" data-refeicoes="almoco jantar" data-busca="nossa casa juazeiro juazeiro / petrolina contemporânea / autoral almoço · jantar pratos variados restaurante de pratos variados em juazeiro, opção para o almoço ou jantar do fim de semana." data-top="nao" data-no-roteiro="nao" data-vegetariano="sim" data-musica="nao" data-vista="nao" data-delivery="nao"><div class="opt-corpo"><div class="opt-top"><span class="rest-faixa" title="~R$ 40 a 90 por pessoa">$$</span><span class="opt-tipo">✨ Contemporânea / autoral</span></div><h3 class="opt-nome">Nossa Casa</h3><p class="opt-onde">Juazeiro / Petrolina Juazeiro / Petrolina · <span class="rest-local">Juazeiro</span></p><p class="rest-refeicoes">🍴 Almoço · Jantar</p><p class="opt-nota">Restaurante de pratos variados em Juazeiro, opção para o almoço ou jantar do fim de semana.</p><div class="rest-tags"><span class="rest-tag">Pratos variados</span></div></div></article></div><p class="dia-vazio">Nenhum restaurante desta base passa no filtro atual.</p></div></section><section class="section"><div class="section-header fade-in"><span class="section-tag">Prático</span><h2 class="section-title">Três coisas que valem saber</h2></div><div class="info-grid"><div class="info-card fade-in"><h3>⏰ Horário de restaurante escorrega</h3><ul class="rest-lista"><li>Várias casas só abrem para o jantar, a partir das 16h30–18h, e algumas só fecham bem tarde. O 💡 está no card quando encontramos o horário publicado.</li><li>Segunda e terça são as folgas mais comuns na Chapada. Lençóis tem poucas fechadas nesses dias; nas cidades menores, vale confirmar antes de sair.</li><li>O jantar de domingo 18 em Lençóis é o mais apertado: o carro sai às 6h15 para a Fumaça, então jantem cedo e perto da pousada.</li></ul></div><div class="info-card fade-in"><h3>💳 Dinheiro e reserva</h3><ul class="rest-lista"><li>Os restaurantes mais concorridos (Cozinha Aberta, Paraguassu, Espaço Gourmet Fazenda Produtiva) pedem reserva — vale ligar ou chamar no Instagram na véspera.</li><li>Em vilas pequenas, como o Capão e Ibicoara, alguns estabelecimentos só aceitam dinheiro. Reforce o caixa antes de subir a serra.</li><li>O almoço dentro dos atrativos (Poço Azul, Pratinha, Lapa Doce) resolve o dia sem deslocamento — está listado nas bases de cada trecho.</li></ul></div><div class="info-card fade-in"><h3>🍽️ Para todos os gostos</h3><ul class="rest-lista"><li>Quem não come carne tem opção fácil em quase toda base — os cards marcados com 🥗 reúnem as casas com pratos vegetarianos confirmados.</li><li>Palmito de jaca, godó de banana verde e cortado de palma são quitutes da região que quase não se acham fora daqui. Vale provar ao menos uma vez.</li><li>O eixo sul fecha cedo; Lençóis e o Capão são os lugares de esticar a noite com música ao vivo.</li></ul></div></div></section><section class="section"><div class="section-header fade-in"><span class="section-tag">Procedência</span><h2 class="section-title">De onde vem a curadoria</h2><p class="section-desc">Blogs de viagem, guias regionais e listas de avaliação consultados em 02/10/2026. Onde as fontes divergiram, prevaleceu o que tinha fonte mais recente ou mais de um relato concordando.</p></div><div class="info-card fade-in"><div class="kv"><span class="k"><a href="https://rota1976.com/tour-gastro-onde-comer-bem-em-lencois-na-chapada-diamantina-ba/" target="_blank" rel="noopener">Rota 1976 — Tour gastrô: onde comer bem em Lençóis ↗</a></span><span class="v">casa por casa em Lençóis: pratos, horários e faixa de preço</span></div><div class="kv"><span class="k"><a href="https://guia.melhoresdestinos.com.br/onde-comer-na-chapada-diamantina-221-2879-p.html" target="_blank" rel="noopener">Melhores Destinos — Onde comer na Chapada Diamantina ↗</a></span><span class="v">panorama de Lençóis, Capão, Mucugê e dos restaurantes dentro dos atrativos</span></div><div class="kv"><span class="k"><a href="https://www.guiachapadadiamantina.com.br/10-restaurantes-elegantes-chapada-diamantina-2/" target="_blank" rel="noopener">Guia Chapada Diamantina — 8 restaurantes elegantes ↗</a></span><span class="v">Cozinha Aberta, Orquídea Negra, Paraguassu e Roda d’Água</span></div><div class="kv"><span class="k"><a href="https://www.cnnbrasil.com.br/viagemegastronomia/gastronomia/onde-os-chefs-comem-com-andre-chequer-na-chapada-diamantina/" target="_blank" rel="noopener">CNN Viagem &amp; Gastronomia — Onde os chefs comem: André Chequer ↗</a></span><span class="v">as indicações do chef do Paraguassu para Mucugê</span></div><div class="kv"><span class="k"><a href="https://portalvaledocapao.com.br/guia-comercial/bares-restaurantes/" target="_blank" rel="noopener">Portal Vale do Capão — Bares e restaurantes ↗</a></span><span class="v">guia comercial da vila, com os tipos de cozinha</span></div><div class="kv"><span class="k"><a href="https://www.fazendapratinha.com.br/restaurantes/" target="_blank" rel="noopener">Fazenda Pratinha — Restaurantes ↗</a></span><span class="v">Restaurante Gruta Azul e João de Barro, dentro da fazenda</span></div><div class="kv"><span class="k"><a href="https://www.tripadvisor.com.br/Restaurants-g635725-Lencois_State_of_Bahia.html" target="_blank" rel="noopener">TripAdvisor — listas por cidade ↗</a></span><span class="v">ranking e avaliações de Lençóis, Mucugê, Ibicoara, Capão, Morro do Chapéu e Jacobina</span></div><div class="kv"><span class="k">Instagram dos estabelecimentos</span><span class="v">cardápio, horário e disponibilidade do dia — cada card tem o perfil quando existe</span></div></div></section><section class="section"><div class="section-header fade-in"><span class="section-tag">Fotos</span><h2 class="section-title">Crédito do cabeçalho</h2><p class="section-desc">A foto do topo é do centro histórico de Lençóis, do Wikimedia Commons, já baixada no projeto.</p></div><div class="info-card fade-in"><div class="kv"><span class="k">Centro histórico de Lençóis — Rua das Pedras</span><span class="v">Diego Carrion Serrano · <a href="https://commons.wikimedia.org/wiki/File:Luar_sobre_a_cidade_de_Len%C3%A7ois.JPG" target="_blank" rel="noopener">CC BY-SA 3.0</a></span></div></div></section><footer class="footer"><div>Chapada Diamantina 2026 · Saulo, Lorena, Ricardo e Michele</div><div style="opacity:.7;margin-top:6px;font-size:.8rem">17/10 a 23/10 · roteiro gerado automaticamente</div><div class="sync-row"><span class="sync-dot" id="syncDot"></span><span id="syncLabel">Sincronizando…</span><button class="btn ghost" style="padding:5px 14px;font-size:.78rem" onclick="location.href='/__logout'">Sair</button></div></footer>
+<script>window.TRIP_DATA = {};
+window.TRIP_FX = {"display": "BRL", "home": "BRL", "local": "BRL", "prefix": "chapada2026", "symbol": "R$", "homeSymbol": "R$"};
+window.TRIP_SYNC = {"prefix": "chapada2026"};</script>
+
+
+
+<script>// app.js — lógica compartilhada do roteiro. Cada módulo só roda se seus elementos existem.
+// Dados vêm de window.TRIP_DATA, injetado pelo build.
+(function () {
+  'use strict';
+
+  var D = window.TRIP_DATA || {};
+  var META = D.meta || {};
+  var P = META.storagePrefix || 'trip';
+  var K = { todos: P + '_todos', bookings: P + '_bookings', car: P + '_car_booking' };
+
+  var WEEKDAYS = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
+
+  // ═══════════ helpers ═══════════
+  function $(s, r) { return (r || document).querySelector(s); }
+  function $$(s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
+  function el(tag, cls, html) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (html != null) e.innerHTML = html;
+    return e;
+  }
+  function readJSON(key, fallback) {
+    try { return JSON.parse(localStorage.getItem(key)) || fallback; } catch (e) { return fallback; }
+  }
+  function writeJSON(key, val) {
+    localStorage.setItem(key, JSON.stringify(val));
+    if (window.GistSync && window.GistSync.isConfigured()) window.GistSync.debouncedSave();
+  }
+  function parseISO(iso) { var p = String(iso).split('-'); return new Date(+p[0], +p[1] - 1, +p[2]); }
+  function fmtBR(iso) { var p = String(iso).split('-'); return p[2] + '/' + p[1]; }
+  function weekday(iso) { return WEEKDAYS[parseISO(iso).getDay()]; }
+  function reconvert(root) { if (window.applyConversion) window.applyConversion(root); }
+  function esc(t) {
+    return String(t == null ? '' : t).replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  // ═══════════ procedência de um número ═══════════
+  // Espelha fato_html() do build.py: um preço pode ser string (como sempre) ou
+  // { text, status, source }. O selo separa preço oficial de estimativa.
+  var STATUS_SELO = {
+    confirmado: ['✅', 'Confirmado — já reservado ou pago'],
+    cotado: ['🔎', 'Cotado — preço verificado na fonte oficial'],
+    estimado: ['⚠️', 'Estimado — sem fonte oficial, confirme antes de contar com o valor']
+  };
+
+  function fatoHTML(v) {
+    if (v == null) return '';
+    if (typeof v !== 'object') return esc(v);
+    var txt = esc(v.text || '');
+    var selo = STATUS_SELO[v.status];
+    if (!selo) return txt;
+    var src = (D.sources || {})[v.source || ''];
+    var titulo = selo[1];
+    if (src) {
+      titulo += ' · ' + (src.label || '');
+      // data de consulta precisa do ano: fmtBR() corta para DD/MM
+      if (src.consultadoEm) {
+        var pd = String(src.consultadoEm).split('-');
+        titulo += ' (consultado em ' + pd[2] + '/' + pd[1] + '/' + pd[0] + ')';
+      }
+      if (src.url) {
+        return txt + ' <a class="fato-selo st-' + v.status + '" href="' + esc(src.url) +
+               '" target="_blank" rel="noopener" title="' + esc(titulo) + '">' + selo[0] + '</a>';
+      }
+    }
+    return txt + ' <span class="fato-selo st-' + v.status + '" title="' + esc(titulo) + '">' +
+           selo[0] + '</span>';
+  }
+
+  // ═══════════ fade-in ═══════════
+  // .fade-in nasce com opacity 0 e só aparece ao ganhar .visible. Observar
+  // apenas o que existe no load deixa invisível todo card criado depois — ou
+  // reexibido depois de um filtro. O MutationObserver fecha esse buraco, e
+  // window.revelar() serve para quem precisa exibir na hora, sem esperar rolagem.
+  var fadeIO = null;
+
+  function observarFade(raiz) {
+    if (!fadeIO) return;
+    var alvos = (raiz && raiz.classList && raiz.classList.contains('fade-in')) ? [raiz] : [];
+    alvos = alvos.concat($$('.fade-in', raiz || document));
+    alvos.forEach(function (e) { if (!e.classList.contains('visible')) fadeIO.observe(e); });
+  }
+
+  // Exibe imediatamente, sem depender de rolagem. Use depois de filtrar,
+  // reordenar ou inserir cards por JS.
+  window.revelar = function (raiz) {
+    var alvos = (raiz && raiz.classList && raiz.classList.contains('fade-in')) ? [raiz] : [];
+    alvos = alvos.concat($$('.fade-in', raiz || document));
+    alvos.forEach(function (e) { e.classList.add('visible'); });
+  };
+
+  function initFadeIn() {
+    if (!window.IntersectionObserver) { window.revelar(document); return; }
+    fadeIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('visible'); fadeIO.unobserve(e.target); }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    observarFade(document);
+
+    if (window.MutationObserver) {
+      new MutationObserver(function (muts) {
+        muts.forEach(function (m) {
+          Array.prototype.forEach.call(m.addedNodes, function (n) {
+            if (n.nodeType === 1) observarFade(n);
+          });
+        });
+      }).observe(document.body, { childList: true, subtree: true });
+    }
+  }
+
+  // ═══════════ navegação ═══════════
+  window.navigateTo = function (selector) {
+    var target = $(selector);
+    if (!target) return;
+    var nav = $('#navbar');
+    var offset = (nav ? nav.offsetHeight : 0) + 10;
+    window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - offset, behavior: 'smooth' });
+  };
+
+  function initNavSpy() {
+    var btns = $$('.nav-btn[data-section]');
+    if (!btns.length) return;
+    var nav = $('#navbar');
+    window.addEventListener('scroll', function () {
+      var offset = (nav ? nav.offsetHeight : 0) + 24;
+      var current = '';
+      btns.forEach(function (b) {
+        var sec = document.getElementById(b.dataset.section);
+        if (sec && sec.getBoundingClientRect().top <= offset) current = b.dataset.section;
+      });
+      btns.forEach(function (b) { b.classList.toggle('active', b.dataset.section === current); });
+    }, { passive: true });
+  }
+
+  // ═══════════ reservas de hospedagem ═══════════
+  function getBookings() {
+    var raw = readJSON(K.bookings, {});
+    var out = {};
+    Object.keys(raw).forEach(function (loc) {
+      out[loc] = Array.isArray(raw[loc]) ? raw[loc] : [raw[loc]];
+    });
+    return out;
+  }
+
+  function findBookingForDay(day, bookings) {
+    var arr = (bookings[day.location] || []);
+    var hit = arr.find(function (b) {
+      if (!b.checkin || !b.checkout) return true;
+      return day.date >= b.checkin && day.date < b.checkout;
+    });
+    if (hit) return hit;
+    var loc = (D.lodging && D.lodging.locations || []).find(function (l) { return l.id === day.location; });
+    if (!loc) return null;
+    var reserved = (loc.options || []).find(function (o) { return o.reserved; });
+    return reserved ? Object.assign({ _fromData: true }, reserved) : null;
+  }
+
+  // ═══════════ calendário + detalhe do dia ═══════════
+  function initCalendar() {
+    var grid = $('#calendarGrid');
+    var detail = $('#dayDetail');
+    if (!grid || !detail || !D.days) return;
+
+    var current = 0, first = true;
+
+    D.days.forEach(function (d, i) {
+      // <button>, não <div>: o dia precisa ser alcançável por Tab e anunciado
+      // como controle pelos leitores de tela
+      var c = el('button', 'cal-day');
+      c.type = 'button';
+      c.setAttribute('aria-pressed', 'false');
+      c.innerHTML =
+        '<div class="cal-wd">' + weekday(d.date) + '</div>' +
+        '<div class="cal-num">' + fmtBR(d.date) + '</div>' +
+        '<div class="cal-emoji">' + (d.emoji || '📍') + '</div>' +
+        '<div class="cal-city">' + d.city + '</div>';
+      c.addEventListener('click', function () { select(i); });
+      grid.appendChild(c);
+    });
+
+    function select(i) {
+      current = i;
+      $$('.cal-day', grid).forEach(function (c, j) {
+        c.classList.toggle('active', i === j);
+        c.setAttribute('aria-pressed', i === j ? 'true' : 'false');
+      });
+      render(D.days[i]);
+      if (!first) {
+        setTimeout(function () { window.navigateTo('#dayDetail'); }, 60);
+      }
+      first = false;
+    }
+
+    // ①②③… gerados pelo site. Numerar à mão dentro do texto foi o que já
+    // produziu dois "⑤" no mesmo bloco sem ninguém perceber.
+    var CIRCULOS = '①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮';
+    var PET_SELO = {
+      sim: ['pet-sim', '🐕 pode ir'],
+      nao: ['pet-nao', '🚫 sem pet'],
+      confirmar: ['pet-talvez', '🐕 a confirmar']
+    };
+    var TEM_PET = !!((META.profile || {}).pets || []).length;
+
+    function renderOption(o, i) {
+      var selo = TEM_PET && o.pet && PET_SELO[o.pet];
+      return '<li class="day-option">' +
+        '<span class="opt-num">' + (CIRCULOS.charAt(i) || (i + 1) + '.') + '</span>' +
+        '<span class="opt-body">' +
+          (selo ? '<span class="opt-pet ' + selo[0] + '">' + selo[1] + '</span>' : '') +
+          '<strong>' + o.title + '</strong>' +
+          (o.text ? ' — ' + o.text : '') +
+          (o.price ? '<span class="opt-price">' + fatoHTML(o.price) + '</span>' : '') +
+        '</span>' +
+      '</li>';
+    }
+
+    function renderBlock(b) {
+      var links = [];
+      if (b.maps) links.push('<a href="' + b.maps + '" target="_blank" rel="noopener">📍 Google Maps</a>');
+      if (b.waze) links.push('<a href="' + b.waze + '" target="_blank" rel="noopener">🧭 Waze</a>');
+      // b.attraction é o slug do card na página de atrações: leva de "o que
+      // fazemos às 16h15" para "o que é esse lugar"
+      if (b.attraction && D.attractionsPage) {
+        links.push('<a href="' + D.attractionsPage + '#' + b.attraction + '">ℹ️ Sobre o lugar</a>');
+      }
+
+      var opcoes = (b.options || []).length
+        ? '<ol class="day-options">' + b.options.map(renderOption).join('') + '</ol>'
+        : '';
+
+      return '<div class="block">' +
+        '<div class="block-time">' + b.time + '</div>' +
+        '<div>' +
+          '<div class="block-title">' + b.title +
+            (b.tip ? '<span class="block-tip">' + b.tip + '</span>' : '') +
+          '</div>' +
+          '<ul class="block-items">' + (b.items || []).map(function (it) { return '<li>' + it + '</li>'; }).join('') + '</ul>' +
+          opcoes +
+          (b.duration ? '<div class="block-duration">⏱ ' + fatoHTML(b.duration) + '</div>' : '') +
+          (links.length ? '<div class="block-links">' + links.join('') + '</div>' : '') +
+          (b.price ? '<div class="price-tag">' + fatoHTML(b.price) + '</div>' : '') +
+        '</div>' +
+      '</div>';
+    }
+
+    function render(d) {
+      var bookings = getBookings();
+      var stay = findBookingForDay(d, bookings);
+      var loc = (D.lodging && D.lodging.locations || []).find(function (l) { return l.id === d.location; });
+
+      var stayHTML = '';
+      if (stay) {
+        var confirmations = (stay.confirmationUrls || []).map(function (c) {
+          return '<a href="' + c.url + '" target="_blank" rel="noopener">📄 ' + c.label + '</a>';
+        }).join('');
+        stayHTML =
+          '<div class="hotel-card reserved" style="margin-top:24px">' +
+            '<span class="hotel-badge">✅ Reservado</span>' +
+            '<h4>🏨 ' + stay.name + '</h4>' +
+            (stay.desc ? '<div class="desc">' + stay.desc + '</div>' : '') +
+            (stay.price ? '<div class="hotel-price">' + stay.price + '</div>' : '') +
+            (stay.checkin ? '<div class="block-duration">' + fmtBR(stay.checkin) + ' → ' + fmtBR(stay.checkout) + '</div>' : '') +
+            (confirmations ? '<div class="block-links">' + confirmations + '</div>' : '') +
+          '</div>';
+      } else if (loc) {
+        stayHTML = '<div style="margin-top:24px"><a class="btn ghost" href="hospedagem.html#' + loc.id + '">Ver opções de hospedagem em ' + loc.name + ' →</a></div>';
+      }
+
+      detail.innerHTML =
+        '<div class="day-head">' +
+          '<div class="num">Dia ' + d.num + ' · ' + weekday(d.date) + ' ' + fmtBR(d.date) + '</div>' +
+          '<h3>' + (d.emoji || '') + ' ' + d.title + '</h3>' +
+          (d.route ? '<div class="route">' + d.route + '</div>' : '') +
+        '</div>' +
+        '<div class="day-body">' + (d.blocks || []).map(renderBlock).join('') + stayHTML +
+          dayNavHTML(d) +
+        '</div>';
+
+      $$('.day-nav-btn', detail).forEach(function (b) {
+        b.addEventListener('click', function () { select(+b.dataset.go); });
+      });
+      reconvert(detail);
+    }
+
+    // O detalhe do dia é longo: quem chega ao fim teria de rolar tudo de volta
+    // até o calendário só para ver o dia seguinte.
+    function dayNavHTML(d) {
+      var i = D.days.indexOf(d);
+      if (D.days.length < 2) return '';
+      function botao(j, dir, rotulo) {
+        var o = D.days[j];
+        if (!o) return '<span></span>';
+        return '<button type="button" class="day-nav-btn ' + dir + '" data-go="' + j + '">' +
+          '<span class="day-nav-dir">' + rotulo + '</span>' +
+          '<span class="day-nav-day">' + (o.emoji || '') + ' ' + weekday(o.date) + ' ' + fmtBR(o.date) + '</span>' +
+          '<span class="day-nav-title">' + o.title + '</span>' +
+        '</button>';
+      }
+      return '<nav class="day-nav" aria-label="Navegação entre os dias">' +
+        botao(i - 1, 'prev', '← Dia anterior') +
+        botao(i + 1, 'next', 'Próximo dia →') +
+      '</nav>';
+    }
+
+    select(0);
+    window.addEventListener('fx-ready', function () { render(D.days[current]); });
+    window.addEventListener('storage', function (e) {
+      if (e.key === K.bookings) render(D.days[current]);
+    });
+  }
+
+  // ═══════════ checklist ═══════════
+  function initTodos() {
+    var grid = $('#todoGrid');
+    if (!grid || !D.todos) return;
+
+    function autoState(item) {
+      if (item.autoType === 'car') {
+        var car = readJSON(K.car, null);
+        return car ? { label: 'Reserva salva' + (car.confirmation ? ' · ' + car.confirmation : '') } : null;
+      }
+      if (item.autoType === 'booking' && item.autoKey) {
+        var arr = getBookings()[item.autoKey] || [];
+        var hit = item.autoDate
+          ? arr.find(function (b) { return !b.checkin || (item.autoDate >= b.checkin && item.autoDate < b.checkout); })
+          : arr[0];
+        return hit ? { label: hit.name + (hit.checkin ? ' · ' + fmtBR(hit.checkin) : '') } : null;
+      }
+      return null;
+    }
+
+    function render() {
+      var todos = readJSON(K.todos, {});
+      var total = 0, done = 0;
+      grid.innerHTML = '';
+
+      D.todos.forEach(function (group) {
+        var groupDone = 0;
+        var items = (group.items || []).map(function (item) {
+          var auto = autoState(item);
+          var isDone = !!auto || todos[item.id] === true;
+          total++;
+          if (isDone) { done++; groupDone++; }
+          return '<div class="todo-item' + (isDone ? ' done' : '') + (auto ? ' auto' : '') + '" data-id="' + item.id + '"' +
+              (auto ? '' : ' role="button" tabindex="0"') + '>' +
+              '<span class="box">' + (isDone ? '✓' : '') + '</span>' +
+              '<span class="txt">' + item.text + '</span>' +
+            '</div>' +
+            (auto ? '<div class="todo-auto-label">🔗 ' + auto.label + '</div>' : '');
+        }).join('');
+
+        var card = el('div', 'todo-card fade-in' + (groupDone === (group.items || []).length ? ' done' : ''));
+        card.innerHTML =
+          '<h3>' + (group.emoji || '') + ' ' + group.city + '</h3>' +
+          (group.subtitle ? '<div class="sub">' + group.subtitle + '</div>' : '') +
+          items;
+        grid.appendChild(card);
+        card.classList.add('visible');
+      });
+
+      var pct = total ? Math.round(done / total * 100) : 0;
+      var bar = $('#todoBar'), lbl = $('#todoPct');
+      if (bar) bar.style.width = pct + '%';
+      if (lbl) lbl.textContent = done + '/' + total + ' · ' + pct + '%';
+    }
+
+    grid.addEventListener('click', function (e) {
+      var item = e.target.closest('.todo-item');
+      if (!item || item.classList.contains('auto')) return;
+      var todos = readJSON(K.todos, {});
+      todos[item.dataset.id] = !todos[item.dataset.id];
+      writeJSON(K.todos, todos);
+      render();
+    });
+
+    render();
+    window.addEventListener('storage', function (e) {
+      if (e.key === K.todos || e.key === K.bookings) render();
+    });
+    window.__renderTodos = render;
+  }
+
+  // ═══════════ resumo de custos ═══════════
+  function initCostSummary() {
+    var grid = $('#summaryGrid');
+    if (!grid || !D.costs) return;
+    (D.costs.categories || []).forEach(function (c) {
+      var card = el('div', 'cost-card fade-in');
+      card.innerHTML = '<div class="label">' + (c.emoji || '') + ' ' + c.title + '</div>' +
+                       '<span class="amount">' + c.totalLabel + '</span>';
+      grid.appendChild(card);
+    });
+    var total = el('div', 'cost-card total fade-in');
+    total.innerHTML = '<div class="label">Total estimado</div><span class="amount">' + D.costs.totalLabel + '</span>';
+    grid.appendChild(total);
+    reconvert(grid);
+  }
+
+  // ═══════════ conversor de moeda ═══════════
+  function initConverter() {
+    var dsp = $('#conv-display');
+    if (!dsp) return;
+    var home = $('#conv-home'), local = $('#conv-local'), rates = $('#conv-rates');
+    var busy = false;
+
+    function num(v) { return parseFloat(String(v).replace(/\./g, '').replace(',', '.')) || 0; }
+    function show(v) { return v ? v.toLocaleString('pt-BR', { maximumFractionDigits: 2 }) : ''; }
+
+    function sync(source) {
+      if (busy || !window.TRIP_RATE) return;
+      busy = true;
+      var base = source === 'display' ? num(dsp.value)
+        : source === 'home' ? num(home.value) / window.TRIP_RATE
+        : num(local.value) / (window.LOCAL_RATE || 1);
+      if (source !== 'display') dsp.value = show(base);
+      if (source !== 'home' && home) home.value = show(base * window.TRIP_RATE);
+      if (source !== 'local' && local && window.LOCAL_RATE) local.value = show(base * window.LOCAL_RATE);
+      busy = false;
+    }
+
+    dsp.addEventListener('input', function () { sync('display'); });
+    if (home) home.addEventListener('input', function () { sync('home'); });
+    if (local) local.addEventListener('input', function () { sync('local'); });
+
+    window.addEventListener('fx-ready', function () {
+      if (rates) {
+        rates.textContent = '1 ' + META.currency.display + ' = ' + window.TRIP_RATE.toFixed(3) + ' ' + META.currency.home +
+          (window.LOCAL_RATE ? '  ·  1 ' + META.currency.display + ' = ' + window.LOCAL_RATE.toFixed(2) + ' ' + META.currency.local : '');
+      }
+      dsp.value = '100';
+      sync('display');
+    });
+  }
+
+  // ═══════════ hospedagem: marcar reserva ═══════════
+  function initLodging() {
+    var root = $('#lodgingRoot');
+    if (!root) return;
+    var pending = null;
+
+    function refresh() {
+      var bookings = getBookings();
+      $$('.hotel-card[data-hotel]', root).forEach(function (card) {
+        var loc = card.dataset.location;
+        var name = card.dataset.name;
+        var hit = (bookings[loc] || []).find(function (b) { return b.name === name; });
+        var preset = card.dataset.reserved === 'true';
+        card.classList.toggle('reserved', !!hit || preset);
+        var btn = $('.js-book', card);
+        if (btn) {
+          btn.textContent = hit ? 'Cancelar reserva' : (preset ? 'Confirmar datas' : 'Marcar como reservado');
+          btn.classList.toggle('danger', !!hit);
+        }
+        var info = $('.js-booking-info', card);
+        if (info) {
+          info.innerHTML = hit && hit.checkin
+            ? '<div class="block-duration">' + fmtBR(hit.checkin) + ' → ' + fmtBR(hit.checkout) +
+              (hit.cancelDate ? ' · cancelamento grátis até ' + fmtBR(hit.cancelDate) : '') +
+              (hit.pin ? ' · cód. ' + hit.pin : '') + '</div>'
+            : '';
+        }
+      });
+      if (window.__renderTodos) window.__renderTodos();
+    }
+
+    root.addEventListener('click', function (e) {
+      var btn = e.target.closest('.js-book');
+      if (!btn) return;
+      var card = btn.closest('.hotel-card');
+      var loc = card.dataset.location, name = card.dataset.name;
+      var bookings = getBookings();
+      var arr = bookings[loc] || [];
+      var idx = arr.findIndex(function (b) { return b.name === name; });
+
+      if (idx >= 0) {
+        arr.splice(idx, 1);
+        bookings[loc] = arr;
+        writeJSON(K.bookings, bookings);
+        refresh();
+        return;
+      }
+      pending = { card: card, location: loc, name: name };
+      openModal(loc, name);
+    });
+
+    function openModal(loc, name) {
+      var overlay = $('#bookingModal');
+      $('#bookingHotelName').textContent = name;
+      $('#bookingError').textContent = '';
+      var location = (D.lodging.locations || []).find(function (l) { return l.id === loc; });
+      var chips = $('#bookingChips');
+      chips.innerHTML = '';
+      ((location && location.dates) || []).forEach(function (d, i) {
+        var chip = el('button', 'date-chip', (d.label || fmtBR(d.checkin) + ' → ' + fmtBR(d.checkout)));
+        chip.type = 'button';
+        chip.addEventListener('click', function () {
+          $$('.date-chip', chips).forEach(function (c) { c.classList.remove('active'); });
+          chip.classList.add('active');
+          $('#bookingCheckin').value = d.checkin;
+          $('#bookingCheckout').value = d.checkout;
+        });
+        chips.appendChild(chip);
+        if (i === 0) chip.click();
+      });
+      overlay.classList.add('open');
+    }
+
+    window.closeBookingModal = function (e) {
+      if (e && e.target !== e.currentTarget) return;
+      $('#bookingModal').classList.remove('open');
+      pending = null;
+    };
+
+    window.confirmBooking = function () {
+      if (!pending) return;
+      var checkin = $('#bookingCheckin').value, checkout = $('#bookingCheckout').value;
+      var err = $('#bookingError');
+      if (!checkin || !checkout) { err.textContent = 'Informe check-in e check-out.'; return; }
+      if (checkout <= checkin) { err.textContent = 'Check-out precisa ser depois do check-in.'; return; }
+
+      var bookings = getBookings();
+      var arr = bookings[pending.location] || [];
+      arr.push({
+        name: pending.name,
+        checkin: checkin,
+        checkout: checkout,
+        pin: $('#bookingPin').value.trim() || null,
+        cancelDate: $('#bookingCancel').value || null,
+        ts: Date.now()
+      });
+      bookings[pending.location] = arr;
+      writeJSON(K.bookings, bookings);
+      $('#bookingModal').classList.remove('open');
+      pending = null;
+      refresh();
+    };
+
+    refresh();
+    window.addEventListener('storage', function (e) { if (e.key === K.bookings) refresh(); });
+  }
+
+  // ═══════════ mapa ═══════════
+  function gmapsUrl(lat, lng) {
+    return 'https://www.google.com/maps/dir/?api=1&destination=' + lat + ',' + lng + '&travelmode=driving';
+  }
+  function wazeUrl(lat, lng) {
+    return 'https://waze.com/ul?ll=' + lat + ',' + lng + '&navigate=yes';
+  }
+
+  function initMap() {
+    if (!$('#map') || typeof L === 'undefined' || !D.stops || !D.stops.length) return;
+
+    var COLORS = { city: '#4fc3f7', nature: '#66bb6a', beach: '#ffb74d', mountain: '#9575cd', default: '#e85d3a' };
+    var stops = D.stops;
+    var route = D.route || {};
+    var alts = route.alternatives || [];
+    var waypoints = route.waypoints || [];
+    var pois = route.pois || [];
+
+    var map = L.map('map', { scrollWheelZoom: true, zoomControl: true });
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap', maxZoom: 18
+    }).addTo(map);
+
+    var stopCoords = stops.map(function (s) { return [s.lat, s.lng]; });
+
+    // ── cidades de passagem: conferência de que o trajeto está certo ──
+    var wpMarkers = [];
+    waypoints.forEach(function (w) {
+      var icon = L.divIcon({ className: '', html: '<div class="wp-pin"></div>', iconSize: [20, 20], iconAnchor: [10, 16] });
+      var wsrc = (D.sources || {})[w.source];
+      var m = L.marker([w.lat, w.lng], { icon: icon })
+        .bindPopup('<div class="map-popup"><strong>📍 ' + esc(w.name) + '</strong>' + esc(w.note || '') +
+                   (wsrc ? '<div class="map-popup-src">Fonte: <a href="' + esc(wsrc.url) + '" target="_blank" rel="noopener">' + esc(wsrc.label) + '</a></div>' : '') +
+                   '</div>');
+      wpMarkers.push({ marker: m, routes: w.routes || [] });
+    });
+
+    // ── restaurantes e postos ao longo da rota ──
+    var poiIcons = { posto: '⛽', restaurante: '🍽️' };
+    pois.forEach(function (p) {
+      var icon = L.divIcon({
+        className: '', html: '<div class="poi-pin">' + (poiIcons[p.type] || '📌') + '</div>',
+        iconSize: [28, 28], iconAnchor: [14, 14]
+      });
+      var src = (D.sources || {})[p.source];
+      var m = L.marker([p.lat, p.lng], { icon: icon })
+        .bindPopup('<div class="map-popup"><strong>' + (poiIcons[p.type] || '') + ' ' + esc(p.name) + '</strong>' +
+                   '<div class="map-popup-city">' + esc(p.city || '') + '</div>' + esc(p.note || '') +
+                   (src ? '<div class="map-popup-src">Fonte: <a href="' + esc(src.url) + '" target="_blank" rel="noopener">' + esc(src.label) + '</a></div>' : '') +
+                   '</div>');
+      wpMarkers.push({ marker: m, routes: p.routes || [] });
+    });
+
+    function updateWaypointVisibility(activeRouteId) {
+      wpMarkers.forEach(function (wm) {
+        var show = !wm.routes.length || !activeRouteId || wm.routes.indexOf(activeRouteId) !== -1;
+        var has = map.hasLayer(wm.marker);
+        if (show && !has) wm.marker.addTo(map);
+        if (!show && has) map.removeLayer(wm.marker);
+      });
+    }
+
+    // ── rota: real (OSRM) com alternativas, ou linha reta entre paradas se não houver dado de rota ──
+    var routeLayers = [];
+
+    function drawRoute(id) {
+      routeLayers.forEach(function (l) { map.removeLayer(l.outline); map.removeLayer(l.line); });
+      routeLayers = [];
+      var alt = alts.filter(function (a) { return a.id === id; })[0];
+      if (!alt) return;
+      var coords = alt.geometry;
+      var outline = L.polyline(coords, { color: '#fff', weight: 7, opacity: 0.65 }).addTo(map);
+      var line = L.polyline(coords, { color: alt.color || '#e85d3a', weight: 4, opacity: 0.95, lineCap: 'round' }).addTo(map);
+      routeLayers.push({ outline: outline, line: line });
+      updateWaypointVisibility(id);
+      map.fitBounds(L.latLngBounds(coords), { padding: [60, 60] });
+    }
+
+    var defaultAlt = alts.filter(function (a) { return a.default; })[0] || alts[0];
+
+    if (alts.length) {
+      var toolbar = $('#routeToolbar');
+      if (toolbar) {
+        toolbar.hidden = false;
+        var btnsHtml = '<span class="route-toolbar-label">Rota</span>';
+        alts.forEach(function (a) {
+          btnsHtml += '<button type="button" class="route-btn' + (a.id === defaultAlt.id ? ' active' : '') +
+            '" data-route="' + esc(a.id) + '">' +
+            esc(a.label) + '<span class="route-btn-tag">' + esc(a.tag || '') + ' · ' +
+            a.distanceKm + ' km · ~' + Math.round(a.durationMin / 60 * 10) / 10 + 'h</span></button>';
+        });
+        btnsHtml += (route.note ? '<span class="route-note">ℹ️ ' + esc(route.note) + '</span>' : '');
+        toolbar.innerHTML = btnsHtml;
+        $$('.route-btn', toolbar).forEach(function (b) {
+          b.addEventListener('click', function () {
+            $$('.route-btn', toolbar).forEach(function (o) { o.classList.remove('active'); });
+            b.classList.add('active');
+            drawRoute(b.getAttribute('data-route'));
+          });
+        });
+      }
+    } else {
+      L.polyline(stopCoords, { color: '#fff', weight: 7, opacity: 0.6 }).addTo(map);
+      L.polyline(stopCoords, { color: '#e85d3a', weight: 3, opacity: 0.95, dashArray: '1 8', lineCap: 'round' }).addTo(map);
+    }
+
+    // ── marcadores das paradas principais (bases do roteiro) ──
+    var markers = [], cards = [], active = -1;
+    var list = $('#stopList');
+
+    stops.forEach(function (s, i) {
+      var color = COLORS[s.category] || COLORS.default;
+      var icon = L.divIcon({
+        className: '',
+        html: '<div class="marker-pin" style="width:40px;height:40px;background:' + color +
+              ';border:3px solid #fff;box-shadow:0 3px 12px rgba(0,0,0,.4)">' + (s.emoji || s.n) + '</div>',
+        iconSize: [40, 40], iconAnchor: [20, 20]
+      });
+      var m = L.marker([s.lat, s.lng], { icon: icon }).addTo(map)
+        .bindPopup('<div class="map-popup"><strong>' + s.n + '. ' + esc(s.name) + '</strong>' + (s.days || '') +
+                   '<br>' + (s.highlights || []).slice(0, 3).map(function (h) { return '· ' + h; }).join('<br>') +
+                   '<div class="deep-links"><a class="deep-link" target="_blank" rel="noopener" href="' + gmapsUrl(s.lat, s.lng) + '">🗺️ Google Maps</a>' +
+                   '<a class="deep-link" target="_blank" rel="noopener" href="' + wazeUrl(s.lat, s.lng) + '">🧭 Waze</a></div></div>');
+      m.on('click', function () { select(i); });
+      markers.push(m);
+
+      if (list) {
+        var card = el('div', 'stop-card');
+        card.innerHTML =
+          '<div class="n">Parada ' + s.n + '</div>' +
+          // o título é um <button> cujo ::after cobre o card inteiro: um clique
+          // em qualquer ponto seleciona a parada, e o Tab chega até ele
+          '<h4><button type="button" class="stop-title">' + (s.emoji || '') + ' ' + esc(s.name) + '</button></h4>' +
+          '<div class="days">' + (s.days || '') + '</div>' +
+          '<ul>' + (s.highlights || []).slice(0, 4).map(function (h) { return '<li>' + h + '</li>'; }).join('') + '</ul>' +
+          (s.distNext ? '<div class="stop-dist">↓ ' + s.distNext + '</div>' : '') +
+          '<div class="deep-links"><a class="deep-link" target="_blank" rel="noopener" href="' + gmapsUrl(s.lat, s.lng) + '">🗺️ Google Maps</a>' +
+          '<a class="deep-link" target="_blank" rel="noopener" href="' + wazeUrl(s.lat, s.lng) + '">🧭 Waze</a></div>';
+        card.querySelector('.stop-title').addEventListener('click', function () { select(i); });
+        list.appendChild(card);
+        cards.push(card);
+      }
+    });
+
+    // ── legenda ──
+    var legend = $('#mapLegend');
+    if (legend && (waypoints.length || pois.length)) {
+      legend.hidden = false;
+      legend.innerHTML =
+        '<span><i></i> Parada do roteiro</span>' +
+        (waypoints.length ? '<span><i class="diamond"></i> Cidade de passagem</span>' : '') +
+        (pois.length ? '<span><i class="ring"></i> Restaurante / posto</span>' : '');
+    }
+
+    function select(i) {
+      active = i;
+      cards.forEach(function (c, j) { c.classList.toggle('active', i === j); });
+      map.setView([stops[i].lat, stops[i].lng], 10, { animate: true });
+      markers[i].openPopup();
+      if (cards[i]) cards[i].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    // adiado: no primeiro paint o contêiner do mapa ainda não tem o tamanho final
+    // (grid ainda assentando, viewport mobile ainda ajustando) — invalidateSize()
+    // força o Leaflet a reler o tamanho real antes de calcular o enquadramento.
+    // Dois requestAnimationFrame + um setTimeout garantem que pelo menos um ciclo
+    // completo de layout/paint já rodou antes de medir.
+    function settleMap() {
+      map.invalidateSize();
+      if (alts.length) drawRoute(defaultAlt.id);
+      else map.fitBounds(L.latLngBounds(stopCoords), { padding: [60, 60] });
+    }
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () { setTimeout(settleMap, 50); });
+    });
+    window.addEventListener('resize', function () { map.invalidateSize(); });
+    window.__mapSelect = select;
+  }
+
+  // ═══════════ modal de sincronização ═══════════
+  function initSync() {
+    if (!window.GistSync) return;
+    var overlay = $('#syncModal');
+
+    window.GistSync.onStatusChange(function (status) {
+      var dot = $('#syncDot'), label = $('#syncLabel');
+      if (!dot) return;
+      dot.className = 'sync-dot ' + status;
+      var texts = { idle: 'Sync desativado', syncing: 'Sincronizando…', synced: 'Sincronizado', error: 'Erro no sync' };
+      if (label) label.textContent = texts[status] || '';
+    });
+
+    // O modal só existe no gistSync (que precisa de Gist ID + token). O
+    // siteSync é gerenciado pelo servidor, atrás do gate de senha, e roda
+    // sem modal — por isso os handlers ficam condicionados à presença dele.
+    if (overlay) {
+      window.openSyncModal = function () {
+        $('#syncGistId').value = localStorage.getItem(P + '_gist_id') || '';
+        $('#syncPat').value = '';
+        $('#syncFeedback').textContent = '';
+        $('#syncDisconnect').style.display = window.GistSync.isConfigured() ? '' : 'none';
+        overlay.classList.add('open');
+      };
+      window.closeSyncModal = function (e) {
+        if (e && e.target !== e.currentTarget) return;
+        overlay.classList.remove('open');
+      };
+      window.saveSyncConfig = function () {
+        var id = $('#syncGistId').value.trim(), pat = $('#syncPat').value.trim();
+        var fb = $('#syncFeedback');
+        if (!id || !pat) { fb.textContent = 'Preencha Gist ID e token.'; return; }
+        window.GistSync.saveCredentials(id, pat);
+        fb.textContent = 'Testando…';
+        window.GistSync.testConnection().then(function (ok) {
+          if (!ok) { fb.textContent = 'Não consegui acessar o Gist. Confira o ID e o token.'; return; }
+          window.GistSync.syncOnLoad().then(function () {
+            overlay.classList.remove('open');
+            location.reload();
+          });
+        });
+      };
+      window.disconnectSync = function () {
+        window.GistSync.clearCredentials();
+        overlay.classList.remove('open');
+      };
+    }
+
+    if (window.GistSync.isConfigured()) {
+      window.GistSync.syncOnLoad().then(function (changed) { if (changed) location.reload(); });
+    }
+  }
+
+  // ═══════════ medidas de layout ═══════════
+  // O CSS não consegue medir o .page-header (padding em clamp de vw, foto ou
+  // não). Sem --header-h, o mapa em calc(100svh - nav) nascia abaixo da dobra.
+  function initLayoutMetrics() {
+    var header = $('.page-header');
+    var nav = $('#navbar');
+    var inner = $('.nav-inner');
+
+    function medir() {
+      var mapa = $('.map-layout');
+      var navH = nav ? nav.offsetHeight : 0;
+      // quando há mapa, o que interessa é o topo real dele (inclui margens e a
+      // barra de rotas); fora dele basta a altura do cabeçalho
+      var h = mapa
+        ? Math.round(mapa.getBoundingClientRect().top + window.pageYOffset) - navH
+        : (header ? Math.round(header.getBoundingClientRect().height) : 0);
+      document.documentElement.style.setProperty('--header-h', Math.max(0, h) + 'px');
+      // --nav-h no CSS é um chute de 58px; a barra real cresce com a fonte
+      if (navH) document.documentElement.style.setProperty('--nav-h', navH + 'px');
+      // o degradê da direita só faz sentido quando há itens fora da tela
+      if (nav && inner) nav.classList.toggle('overflowing', inner.scrollWidth > inner.clientWidth + 4);
+    }
+
+    medir();
+    window.addEventListener('resize', medir, { passive: true });
+    if (inner) inner.addEventListener('scroll', function () {
+      nav.classList.toggle('overflowing', inner.scrollLeft + inner.clientWidth < inner.scrollWidth - 4);
+    }, { passive: true });
+    // a foto do cabeçalho pode chegar depois e mudar a altura
+    window.addEventListener('load', medir);
+  }
+
+  // ═══════════ boot ═══════════
+  function boot() {
+    initLayoutMetrics();
+    initFadeIn();
+    initNavSpy();
+    initCalendar();
+    initTodos();
+    initCostSummary();
+    initConverter();
+    initLodging();
+    initMap();
+    initSync();
+    window.addEventListener('fx-ready', function () { reconvert(document); });
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
+  else boot();
+})();
+</script>
+
+<script>
+(function () {
+  // Seis eixos que se combinam por E: base, refeicao, cozinha, preco, atalho e busca.
+  var estado = { cidade: 'todas', refeicao: 'todas', cozinha: 'todas', faixa: 'todas', extra: 'todos', busca: '' };
+  var blocos = document.querySelectorAll('.rest-bloco');
+  var conta = document.getElementById('rest-conta');
+  var total = document.querySelectorAll('.rest-card').length;
+  var input = document.getElementById('rest-busca');
+
+  function normaliza(s) {
+    return (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  }
+
+  function limpo() {
+    return estado.cidade === 'todas' && estado.refeicao === 'todas'
+      && estado.cozinha === 'todas' && estado.faixa === 'todas'
+      && estado.extra === 'todos' && !estado.busca;
+  }
+
+  function passaExtra(card) {
+    if (estado.extra === 'todos') return true;
+    return card.getAttribute('data-' + estado.extra) === 'sim';
+  }
+
+  function passaBusca(card) {
+    if (!estado.busca) return true;
+    return normaliza(card.getAttribute('data-busca')).indexOf(normaliza(estado.busca)) !== -1;
+  }
+
+  function aplicar() {
+    var visiveis = 0;
+    blocos.forEach(function (bl) {
+      var baseOk = estado.cidade === 'todas' || bl.getAttribute('data-cidade') === estado.cidade;
+      var nesteBloco = 0;
+      bl.querySelectorAll('.rest-card').forEach(function (card) {
+        var ok = baseOk
+          && (estado.refeicao === 'todas' || (card.getAttribute('data-refeicoes') || '').split(' ').indexOf(estado.refeicao) !== -1)
+          && (estado.cozinha === 'todas' || card.getAttribute('data-cozinha') === estado.cozinha)
+          && (estado.faixa === 'todas' || card.getAttribute('data-faixa') === estado.faixa)
+          && passaExtra(card) && passaBusca(card);
+        card.style.display = ok ? '' : 'none';
+        if (ok) { nesteBloco++; visiveis++; if (window.revelar) window.revelar(card); }
+      });
+      bl.style.display = baseOk ? '' : 'none';
+      bl.classList.toggle('sem-resultado', baseOk && nesteBloco === 0);
+      if (baseOk && window.revelar) {
+        bl.querySelectorAll('.rest-cab .fade-in, .rest-cab').forEach(function (el) { window.revelar(el); });
+      }
+    });
+    if (conta) {
+      conta.textContent = limpo()
+        ? total + ' restaurantes catalogados'
+        : visiveis + ' de ' + total + ' restaurantes';
+    }
+    var botao = document.querySelector('.filtro-limpa');
+    if (botao) botao.style.visibility = limpo() ? 'hidden' : 'visible';
+  }
+
+  document.querySelectorAll('.filtro-btn').forEach(function (b) {
+    var eixo = b.getAttribute('data-eixo');
+    if (!eixo) return;
+    b.addEventListener('click', function () {
+      estado[eixo] = b.getAttribute('data-valor');
+      document.querySelectorAll('.filtro-btn[data-eixo="' + eixo + '"]').forEach(function (o) {
+        o.classList.toggle('ativo', o === b);
+      });
+      aplicar();
+    });
+  });
+
+  if (input) input.addEventListener('input', function () { estado.busca = input.value; aplicar(); });
+
+  var limpa = document.querySelector('.filtro-limpa');
+  if (limpa) {
+    limpa.addEventListener('click', function () {
+      estado = { cidade: 'todas', refeicao: 'todas', cozinha: 'todas', faixa: 'todas', extra: 'todos', busca: '' };
+      if (input) input.value = '';
+      document.querySelectorAll('.filtro-btn').forEach(function (o) {
+        var v = o.getAttribute('data-valor');
+        o.classList.toggle('ativo', v === 'todas' || v === 'todos');
+      });
+      aplicar();
+    });
+  }
+
+  aplicar();
+})();
+</script>
+</body>
+</html>
