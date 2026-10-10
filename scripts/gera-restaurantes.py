@@ -48,9 +48,9 @@ for _e in trip['meta'].get('extraPages') or []:
 # base -> (rótulo, emoji, linha de contexto no cabeçalho do bloco)
 CIDADES = [
     ('lencois', 'Lençóis', '🏛️',
-     'Dias 1, 2 e 6 · o maior polo de comida da viagem, tudo a pé no centro histórico.'),
+     'Dias 2 e 6 · o maior polo de comida da viagem, tudo a pé no centro histórico.'),
     ('capao', 'Vale do Capão (Caeté-Açu)', '🥾',
-     'Dia 2 · almoço depois da Fumaça, a 3 km da portaria da trilha.'),
+     'Dias 1 e 2 · jantar na noite de chegada e almoço depois da Fumaça, a 3 km da portaria. A vila janta cedo e só aceita espécie.'),
     ('poco-azul', 'Poço Azul / Nova Redenção', '💧',
      'Dia 3 · almoço na chegada, entre a flutuação e a estrada para Mucugê.'),
     ('mucuge', 'Mucugê', '⛏️',

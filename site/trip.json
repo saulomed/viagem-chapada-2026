@@ -5,7 +5,7 @@
       "descoberta",
       "pesquisa"
     ],
-    "updatedAt": "2026-10-06"
+    "updatedAt": "2026-10-10"
   },
   "meta": {
     "slug": "chapada-diamantina-2026",
@@ -158,11 +158,6 @@
       "consultadoEm": "2026-09-23",
       "kind": "imprensa"
     },
-    "booking-lencois-1": {
-      "label": "Booking — Lençóis, 17–19/10, 1 quarto, 2 adultos",
-      "consultadoEm": "2026-10-06",
-      "url": "https://www.booking.com/searchresults.pt-br.html?ss=Len%C3%A7%C3%B3is%2C+Bahia%2C+Brasil&checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1&order=bayesian_review_score"
-    },
     "booking-mucuge": {
       "label": "Booking — Mucugê, 19–21/10, 1 quarto, 2 adultos",
       "consultadoEm": "2026-10-06",
@@ -177,88 +172,116 @@
       "label": "Booking — Lençóis, 22–23/10, 1 quarto, 2 adultos",
       "consultadoEm": "2026-10-06",
       "url": "https://www.booking.com/searchresults.pt-br.html?ss=Len%C3%A7%C3%B3is%2C+Bahia%2C+Brasil&checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1&order=bayesian_review_score"
+    },
+    "rotas-maps": {
+      "label": "Google Maps — trechos remedidos para a nova base no Vale do Capão",
+      "url": "https://www.google.com/maps/dir/Juazeiro,+BA/Caet%C3%A9-A%C3%A7u,+Palmeiras,+BA/",
+      "consultadoEm": "2026-10-10",
+      "kind": "agregador"
+    },
+    "estrada-capao": {
+      "label": "Correio 24 Horas — a estrada Palmeiras ↔ Vale do Capão, asfaltada e entregue em 2025",
+      "url": "https://www.correio24horas.com.br/minha-bahia/depois-de-muita-treta-virou-realidade-via-que-liga-palmeiras-ao-vale-do-capao-deve-ser-entregue-em-abril-0225",
+      "consultadoEm": "2026-10-10",
+      "kind": "imprensa"
+    },
+    "capao-infra": {
+      "label": "Wikivoyage e guias locais — Vale do Capão: combustível, dinheiro, sinal e restaurantes",
+      "url": "https://en.wikivoyage.org/wiki/Vale_do_Cap%C3%A3o",
+      "consultadoEm": "2026-10-10",
+      "kind": "blog"
+    },
+    "booking-capao": {
+      "label": "Booking — Vale do Capão, 17–18/10, 1 quarto, 2 adultos",
+      "url": "https://www.booking.com/searchresults.pt-br.html?ss=Vale+do+Cap%C3%A3o%2C+Bahia%2C+Brasil&checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1",
+      "consultadoEm": "2026-10-10",
+      "kind": "agregador"
+    },
+    "booking-lencois-dom": {
+      "label": "Booking — Lençóis, 18–19/10 (domingo), 1 quarto, 2 adultos",
+      "url": "https://www.booking.com/searchresults.pt-br.html?ss=Len%C3%A7%C3%B3is%2C+Bahia%2C+Brasil&checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1",
+      "consultadoEm": "2026-10-10",
+      "kind": "agregador"
     }
   },
   "days": [
     {
       "num": 1,
       "date": "2026-10-17",
-      "emoji": "🌅",
-      "city": "Lençóis",
-      "title": "A estrada e o pôr do sol no Pai Inácio",
-      "route": "Juazeiro → Lençóis → Morro do Pai Inácio → Lençóis",
-      "location": "lencois",
+      "emoji": "🚗",
+      "city": "Vale do Capão",
+      "title": "A estrada até o pé da Fumaça",
+      "route": "Juazeiro → Palmeiras → Vale do Capão (Caeté-Açu)",
+      "location": "capao",
       "blocks": [
         {
-          "time": "06h30 – 14h · MANHÃ",
-          "title": "🚗 Juazeiro → Lençóis",
+          "time": "06h30 – 15h30 · O DIA INTEIRO NA ESTRADA",
+          "title": "🚗 Juazeiro → Vale do Capão",
           "items": [
-            "BR-407 até o sul, depois BR-242 para o oeste. É, junto com a volta, o trecho mais longo da viagem.",
-            "⚠️ Saída às 6h30 para chegar por volta das 14h. O Pai Inácio fecha a subida às 17h, então não há folga para sair tarde.",
+            "BR-407 até o sul, BR-242 para o oeste até Palmeiras e, de lá, a serra asfaltada até Caeté-Açu. É o trecho mais longo da viagem.",
+            "⚠️ <strong>526 km e 8h31 de volante.</strong> Saindo às 6h30, com cerca de 1h de paradas, a chegada fica por volta das 16h — ainda com luz, porque o sol se põe às 17h42.",
+            "⚠️ Hoje <strong>não</strong> há Pai Inácio: ele passou para o domingo, na volta da trilha, quando o morro já fica no caminho de Lençóis.",
             "💡 Abastecer e almoçar no caminho — Senhor do Bonfim e Jacobina têm a melhor estrutura da rota.",
-            "📍 <a href=\"https://www.google.com/maps/dir/Juazeiro%2C%20BA/Len%C3%A7%C3%B3is%2C%20BA\" target=\"_blank\">Google Maps</a> · <a href=\"https://www.waze.com/live-map/directions?to=ll.-12.5614%2C-41.3903\" target=\"_blank\">Waze</a>"
+            "💡 A estrada Palmeiras → Capão era de terra até 2024 e foi asfaltada em 2025. São ~20 km de serra, hoje em asfalto novo.",
+            "📍 <a href=\"https://www.google.com/maps/dir/Juazeiro%2C+BA/Caet%C3%A9-A%C3%A7u%2C+Palmeiras%2C+BA\" target=\"_blank\">Google Maps</a> · <a href=\"https://www.waze.com/live-map/directions?to=ll.-12.5959%2C-41.4975\" target=\"_blank\">Waze</a>"
           ],
           "duration": {
-            "text": "489 km · ~7h10",
+            "text": "526 km · 8h31",
             "status": "cotado",
-            "source": "rotas"
+            "source": "rotas-maps"
           }
         },
         {
-          "time": "14h – 16h15 · TARDE",
-          "title": "🏨 Chegada e check-in em Lençóis",
+          "time": "15h30 – 16h · PALMEIRAS",
+          "title": "⛽ A parada que não pode ser pulada",
           "items": [
-            "Base das duas primeiras noites, dentro do conjunto tombado pelo IPHAN.",
-            "Descanso depois da estrada. O carro sai de novo às 16h15.",
-            "💡 Para quem sobrar perna: o Rio Serrano fica a pé da pousada, dentro da cidade, e cabe em uma hora."
+            "⚠️ <strong>Último posto de combustível.</strong> Não há posto no Vale do Capão nem na estrada da serra. O tanque precisa sair cheio daqui — ele ainda tem que cobrir o domingo inteiro até Lençóis.",
+            "⚠️ <strong>Sacar dinheiro aqui.</strong> A vila não tem caixa eletrônico confiável, e guia, restaurante e artesanato costumam só aceitar espécie. Só o guia da Fumaça são R$ 250.",
+            "Daqui são ~20 km e ~40 min de serra asfaltada até Caeté-Açu."
+          ],
+          "tip": "Posto e dinheiro",
+          "duration": {
+            "text": "~20 km · ~40 min de serra asfaltada",
+            "status": "cotado",
+            "source": "estrada-capao"
+          }
+        },
+        {
+          "time": "16h – 18h · CHEGADA",
+          "title": "🏨 Check-in em Caeté-Açu",
+          "items": [
+            "A vila de <strong>Caeté-Açu</strong> é o núcleo do Vale do Capão — distrito de Palmeiras, não uma cidade. A portaria da trilha da Fumaça fica a <strong>3 km daqui</strong>.",
+            "⚠️ <strong>Sinal de celular fraco ou inexistente.</strong> Chegando, usar o Wi-Fi da pousada para confirmar o guia de amanhã e pedir o café da manhã para as 7h.",
+            "⚠️ Voltagem 220V. E é melhor não estacionar nas ruas internas da vila — algumas são estreitas e de terra.",
+            "💡 Hoje é dia de estrada: a tarde termina no check-in. O vale fica para amanhã de manhã, que é quando ele entrega o que interessa."
           ]
         },
         {
-          "time": "16h15 – 18h45 · FIM DE TARDE",
-          "title": "⛰️ Pôr do sol no Morro do Pai Inácio",
+          "time": "19h em diante · NOITE",
+          "title": "🍽️ Jantar na vila",
           "items": [
-            "26 km de Lençóis pela BR-242, sentido oeste.",
-            "⚠️ <strong>A subida só é liberada até as 17h.</strong> Sair de Lençóis às 16h15 para estar na portaria por volta das 16h45.",
-            "Subida de 20 a 30 minutos por escadaria e trilha curta até o platô, com vista de 360° para o Morro do Camelo e o Dois Irmãos.",
-            "Pôr do sol às 17h42. A volta são 26 km de BR-242 asfaltada já no escuro, com o grupo junto. Chegada em Lençóis por volta das 18h45.",
-            "💡 A taxa subiu para R$ 20 em 06/04/2026 (meia a R$ 10). São R$ 80 pelos quatro, pagos na guarita.",
-            "💡 Levar lanterna: a descida do platô acontece depois que o sol some.",
-            "📍 <a href=\"https://www.google.com/maps/dir/Len%C3%A7%C3%B3is%2C%20BA/Morro%20do%20Pai%20In%C3%A1cio%2C%20Palmeiras%2C%20BA\" target=\"_blank\">Google Maps</a>"
-          ],
-          "price": {
-            "text": "R$ 20 por pessoa",
-            "status": "cotado",
-            "source": "pai-inacio-taxa"
-          },
-          "duration": {
-            "text": "26 km · ~30–40 min até Lençóis",
-            "status": "cotado",
-            "source": "rotas"
-          },
-          "tip": "Subida até 17h",
-          "attraction": "morro-do-pai-inacio"
-        },
-        {
-          "time": "19h30 em diante · NOITE",
-          "title": "🍽️ Jantar em Lençóis",
-          "items": [
-            "⚠️ Domingo o carro sai às 6h15 para a Fumaça. Jantar sem esticar."
+            "⚠️ Amanhã o carro sai às 7h30 — são 3 km até a portaria, para entrar na trilha às 8h.",
+            "⚠️ A vila janta cedo e a cozinha é majoritariamente natural e vegetariana. Confirmar o horário com a pousada ainda hoje."
           ],
           "options": [
             {
-              "title": "Quilombola",
-              "text": "Godó de banana verde, cortado de palma. Cozinha baiana que quase não se acha fora daqui."
+              "title": "Pachamama",
+              "text": "O vegetariano mais citado da vila. Abre de sexta a domingo — o sábado está dentro."
             },
             {
-              "title": "Volta pelo centro histórico iluminado",
-              "text": "Mesa na calçada, costuma ter música ao vivo. Tudo a pé, sem pegar o carro."
+              "title": "Restaurante Bela Vista",
+              "text": "Galinha caipira, a cozinha tradicional do vale. A saída para quem não quer comida natural depois de 8h de estrada."
             },
             {
-              "title": "Direto para a pousada",
-              "text": "Escolha legítima: foram 7h de estrada e o despertador de domingo toca às 5h30."
+              "title": "Pizza Capão Grande",
+              "text": "Na praça São Sebastião. Simples, rápido e perto — e ninguém vai estar com energia para mais do que isso."
             }
           ],
-          "attraction": "quilombola"
+          "price": {
+            "text": "Levar espécie — a vila não tem caixa",
+            "status": "estimado",
+            "source": "capao-infra"
+          }
         }
       ]
     },
@@ -267,22 +290,22 @@
       "date": "2026-10-18",
       "emoji": "🥾",
       "city": "Lençóis",
-      "title": "Trekking no Cânion da Fumaça",
-      "route": "Lençóis → Vale do Capão → Lençóis",
+      "title": "A Fumaça de manhã, o Pai Inácio no fim da tarde",
+      "route": "Vale do Capão → Morro do Pai Inácio → Lençóis",
       "location": "lencois",
       "blocks": [
         {
-          "time": "06h15 – 07h45 · MADRUGADA",
-          "title": "🚗 Lençóis → Vale do Capão",
+          "time": "07h – 07h45 · MANHÃ",
+          "title": "☕ Café e 3 km até a portaria",
           "items": [
-            "BR-242 até Palmeiras e depois a estrada do Capão. A portaria da trilha fica a 3 km da vila de Caeté-Açu.",
-            "⚠️ Saída às 6h15: a trilha só recebe visitantes das 8h às 13h, e a subida leva no mínimo 2h30.",
-            "💡 Café da manhã para levar — poucas pousadas servem antes das 6h. Vale pedir na véspera.",
-            "📍 <a href=\"https://www.google.com/maps/dir/Len%C3%A7%C3%B3is%2C%20BA/Vale%20do%20Cap%C3%A3o%2C%20Palmeiras%2C%20BA\" target=\"_blank\">Google Maps</a>"
+            "Café da manhã às 7h, combinado com a pousada na véspera.",
+            "⚠️ As malas vão no carro: a próxima cama é em Lençóis. Não se volta ao Capão hoje.",
+            "A portaria fica a 3 km da vila, na estrada de Palmeiras — cerca de 10 minutos.",
+            "💡 Dormir a 3 km da trilha é a razão de ser desta mudança: no roteiro antigo este bloco eram 74 km e um despertador às 5h30."
           ],
           "duration": {
-            "text": "~74 km · ~1h30",
-            "status": "estimado",
+            "text": "3 km · ~10 min",
+            "status": "cotado",
             "source": "rotas-osrm"
           }
         },
@@ -293,6 +316,7 @@
             "É a trilha do alto do cânion: 6 km por sentido, 12 km ida e volta, com os 2 primeiros quilômetros em subida por degraus de pedra. Depois o terreno fica mais plano até a borda.",
             "Classificada de moderada a avançada. Mínimo de 2h30 subindo e cerca de 1h30 descendo.",
             "⚠️ <strong>Guia obrigatório</strong>, contratado na portaria ou direto com os condutores do Capão. A diária sai a R$ 250 para grupo de até 4 — contratando direto, custa um terço do preço de agência.",
+            "⚠️ A visitação recebe das 8h às 13h. Entrando às 8h, o grupo está de volta à vila por volta das 13h.",
             "⚠️ Calçado de trilha já amaciado, água, lanche e protetor. Não há estrutura no caminho.",
             "💡 No alto, a vista é do cânion por cima, deitado na pedra da borda. O guia indica onde é seguro chegar."
           ],
@@ -314,25 +338,75 @@
           "attraction": "cachoeira-da-fumaca"
         },
         {
-          "time": "13h30 – 15h · ALMOÇO",
+          "time": "13h – 14h30 · ALMOÇO",
           "title": "🍽️ Almoço na vila de Caeté-Açu",
           "items": [
-            "A vila fica a 3 km da portaria. Almoço tardio, sem pressa — mas com o relógio da volta em mente."
+            "A vila fica a 3 km da portaria — o reencontro de quem subiu com quem ficou.",
+            "⚠️ <strong>Hoje o almoço tem relógio.</strong> A saída é às 14h30: a subida do Pai Inácio só é liberada até as 17h, e são 47 km até lá."
           ],
           "attraction": "caete-acu"
         },
         {
-          "time": "15h – 16h30 · VOLTA",
-          "title": "🚗 Vale do Capão → Lençóis",
+          "time": "14h30 – 15h45 · TARDE",
+          "title": "🚗 Vale do Capão → Morro do Pai Inácio",
           "items": [
-            "⚠️ São 74 km, e esta travessia <strong>não</strong> está coberta pela exceção dos trechos curtos. Sair do Capão até as 16h para chegar a Lençóis antes do pôr do sol (17h42).",
-            "Noite livre em Lençóis. Segunda não tem hora para sair de manhã."
+            "Os ~20 km de serra asfaltada até Palmeiras e depois a BR-242 para leste. O morro fica na própria beira da BR.",
+            "💡 O Pai Inácio está no caminho de casa hoje — é por isso que ele saiu do sábado. Nenhum quilômetro é feito duas vezes.",
+            "📍 <a href=\"https://www.google.com/maps/dir/Caet%C3%A9-A%C3%A7u%2C+Palmeiras%2C+BA/Morro+do+Pai+In%C3%A1cio%2C+Palmeiras%2C+BA\" target=\"_blank\">Google Maps</a>"
           ],
           "duration": {
-            "text": "~74 km · ~1h30",
+            "text": "47 km · ~1h",
             "status": "estimado",
             "source": "rotas-osrm"
           }
+        },
+        {
+          "time": "15h45 – 18h45 · FIM DE TARDE",
+          "title": "⛰️ Pôr do sol no Morro do Pai Inácio",
+          "items": [
+            "⚠️ <strong>A subida só é liberada até as 17h.</strong> Chegando às 15h45, sobra mais de uma hora de margem — a folga que cobre um atraso da trilha.",
+            "Subida de 20 a 30 minutos por escadaria e trilha curta até o platô, com vista de 360° para o Morro do Camelo e o Dois Irmãos.",
+            "⚠️ Quem subiu a Fumaça de manhã já terá feito 12 km. <strong>A subida do morro é opcional</strong> — a vista da base e o fim de tarde no estacionamento também valem.",
+            "Pôr do sol às 17h42. Depois são 29 km de BR-242 asfaltada já no escuro, com o grupo junto — dentro da exceção acordada. Chegada a Lençóis por volta das 18h45.",
+            "💡 A taxa subiu para R$ 20 em 06/04/2026 (meia a R$ 10). São R$ 80 pelos quatro, pagos na guarita.",
+            "💡 Levar lanterna: a descida do platô acontece depois que o sol some.",
+            "📍 <a href=\"https://www.google.com/maps/dir/Morro+do+Pai+In%C3%A1cio%2C+Palmeiras%2C+BA/Len%C3%A7%C3%B3is%2C+BA\" target=\"_blank\">Google Maps</a>"
+          ],
+          "price": {
+            "text": "R$ 20 por pessoa",
+            "status": "cotado",
+            "source": "pai-inacio-taxa"
+          },
+          "duration": {
+            "text": "29 km · ~35 min até Lençóis",
+            "status": "cotado",
+            "source": "rotas"
+          },
+          "tip": "Subida até 17h",
+          "attraction": "morro-do-pai-inacio"
+        },
+        {
+          "time": "19h30 em diante · NOITE",
+          "title": "🍽️ Jantar em Lençóis",
+          "items": [
+            "Check-in na pousada e jantar no centro histórico, tudo a pé.",
+            "💡 Segunda não tem hora para sair de manhã — a única hora do dia é 12h30, no Poço Azul. Hoje dá para esticar."
+          ],
+          "options": [
+            {
+              "title": "Quilombola",
+              "text": "Godó de banana verde, cortado de palma. Cozinha baiana que quase não se acha fora daqui."
+            },
+            {
+              "title": "Volta pelo centro histórico iluminado",
+              "text": "Mesa na calçada, costuma ter música ao vivo. Tudo a pé, sem pegar o carro."
+            },
+            {
+              "title": "Direto para a pousada",
+              "text": "Escolha legítima: foram 12 km de trilha e mais a subida do morro."
+            }
+          ],
+          "attraction": "quilombola"
         }
       ]
     },
@@ -746,32 +820,49 @@
       "lat": -9.4111,
       "lng": -40.4986,
       "category": "city",
-      "distNext": "489 km · ~7h10",
+      "distNext": "526 km · 8h31 até o Vale do Capão",
       "highlights": [
         "Saída às 6h30",
-        "BR-407 + BR-242",
+        "BR-407 + BR-242 + a serra de Palmeiras",
         "Volta na sexta, com sol"
       ]
     },
     {
       "n": 2,
+      "name": "Vale do Capão",
+      "emoji": "🥾",
+      "days": "Dia 1 · 1 noite",
+      "dayRange": "Base da Fumaça",
+      "lat": -12.5959,
+      "lng": -41.4975,
+      "category": "nature",
+      "distNext": "47 km até o Pai Inácio · ~1h",
+      "highlights": [
+        "A portaria da trilha da Fumaça fica a 3 km da vila",
+        "Caeté-Açu é distrito de Palmeiras, não uma cidade",
+        "Último posto e último caixa ficam em Palmeiras",
+        "Sinal de celular fraco — Wi-Fi só nas pousadas"
+      ]
+    },
+    {
+      "n": 3,
       "name": "Lençóis",
       "emoji": "🏛️",
-      "days": "Dias 1, 2 e 6 · 3 noites",
+      "days": "Dias 2 e 6 · 2 noites",
       "dayRange": "Base do norte",
       "lat": -12.5614,
       "lng": -41.3903,
       "category": "city",
       "distNext": "~95 km até o Poço Azul · ~1h40",
       "highlights": [
-        "Pôr do sol no Morro do Pai Inácio, 26 km pela BR-242",
-        "Cachoeira da Fumaça por cima, saindo do Vale do Capão",
+        "Chegada no domingo, depois da Fumaça e do pôr do sol no Pai Inácio",
+        "Pôr do sol no Morro do Pai Inácio, 29 km pela BR-242",
         "Fazenda Pratinha na volta do sul, a ~1h — e a Lapa Doce, se der",
         "Centro tombado e o melhor polo de comida da viagem"
       ]
     },
     {
-      "n": 3,
+      "n": 4,
       "name": "Mucugê",
       "emoji": "⛏️",
       "days": "Dias 3 e 4 · 2 noites",
@@ -788,7 +879,7 @@
       ]
     },
     {
-      "n": 4,
+      "n": 5,
       "name": "Ibicoara",
       "emoji": "🍓",
       "days": "Dia 5 · 1 noite",
@@ -807,111 +898,258 @@
   "lodging": {
     "locations": [
       {
-        "id": "lencois",
-        "name": "Lençóis — primeira estadia",
-        "emoji": "🏛️",
-        "nights": "2 noites · 17 e 18/10",
+        "id": "capao",
+        "name": "Vale do Capão — Caeté-Açu",
+        "emoji": "🥾",
+        "nights": "1 noite · 17/10",
         "dates": [
           {
             "checkin": "2026-10-17",
-            "checkout": "2026-10-19",
-            "label": "Dias 1 e 2"
+            "checkout": "2026-10-18",
+            "label": "Dia 1"
           }
         ],
         "options": [
           {
-            "name": "Vila das Estrelas — Guesthouse",
-            "desc": "A 300 m do centro, com estacionamento grátis e café nota 10. Nas datas da viagem o que sobra é o quarto triplo com vista da montanha.",
+            "name": "Hospedagem Sabor da Trilha",
+            "desc": "Suíte júnior com varanda a 1,3 km do centro da vila. O mais barato acima de 8,5 — e sobram unidades no mesmo preço.",
             "price": {
-              "text": "R$ 484 o quarto · 2 noites (R$ 968 os dois casais)",
+              "text": "R$ 169 o quarto · 1 noite (R$ 338 os dois casais)",
               "status": "cotado",
-              "source": "booking-lencois-1"
+              "source": "booking-capao"
             },
-            "rating": "9,7 Booking (209 avaliações)",
-            "url": "https://www.booking.com/hotel/br/vila-das-estrelas.pt-br.html?checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1"
+            "rating": "9,3 Booking (61 avaliações)",
+            "url": "https://www.booking.com/hotel/br/sabor-da-trilha-suites.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1"
           },
           {
-            "name": "Suítes VarandaLu",
-            "desc": "Suíte com varanda a 350 m do centro. Nota de localização 9,5 — e segue entre as mais baratas da cidade.",
+            "name": "Casa do Capão",
+            "desc": "Suíte a 350 m do centro, com trilhas saindo da porta. Nota alta e duas unidades no mesmo preço. Não inclui café.",
             "price": {
-              "text": "R$ 524 o quarto · 2 noites (R$ 1.048 os dois casais)",
+              "text": "R$ 200 o quarto · 1 noite (R$ 400 os dois casais)",
               "status": "cotado",
-              "source": "booking-lencois-1"
+              "source": "booking-capao"
             },
-            "rating": "9,6 Booking (67 avaliações)",
-            "url": "https://www.booking.com/hotel/br/casa-de-luciana-lencois.pt-br.html?checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1"
+            "rating": "9,5 Booking (42 avaliações)",
+            "url": "https://www.booking.com/hotel/br/casa-do-capao.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1"
           },
           {
-            "name": "Mansão Mascarenhas",
-            "desc": "Quarto duplo deluxe com varanda, a 500 m do centro. Café nota 10 e cancelamento grátis. <strong>Tem vaga também na noite de 22/10</strong> — é a candidata mais forte para segurar as duas estadias.",
+            "name": "Pousada e Hostel Pé no Mato",
+            "desc": "Duplo econômico a <strong>50 m do centro</strong>, a localização mais bem avaliada da vila (9,6) e a casa com mais avaliações do Capão.",
             "price": {
-              "text": "R$ 658 o quarto · 2 noites (R$ 1.316 os dois casais)",
+              "text": "R$ 213 o quarto · 1 noite (R$ 426 os dois casais)",
               "status": "cotado",
-              "source": "booking-lencois-1"
+              "source": "booking-capao"
             },
-            "rating": "9,7 Booking (142 avaliações)",
-            "url": "https://www.booking.com/hotel/br/mansao-mascarenhas.pt-br.html?checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1"
+            "rating": "8,8 Booking (346 avaliações)",
+            "url": "https://www.booking.com/hotel/br/pousada-pa-c-no-mato.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1"
           },
           {
-            "name": "Hospedagem do Sítio",
-            "desc": "Quarto com vista do jardim a 600 m do centro, com estacionamento grátis. Nota de localização 9,6 e café 9,2.",
+            "name": "Chalé Diamante",
+            "desc": "<strong>Chalé inteiro de 2 quartos, 60 m², a 150 m do centro — resolve os dois casais em uma reserva só, por R$ 221 no total.</strong> Com cancelamento grátis e estacionamento. É a melhor conta da lista.",
             "price": {
-              "text": "R$ 666 o quarto · 2 noites (R$ 1.332 os dois casais)",
+              "text": "R$ 221 o chalé inteiro · 1 noite (os dois casais juntos)",
               "status": "cotado",
-              "source": "booking-lencois-1"
+              "source": "booking-capao"
             },
-            "rating": "9,6 Booking (128 avaliações)",
-            "url": "https://www.booking.com/hotel/br/hospedagem-do-sitio.pt-br.html?checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1"
+            "rating": "9,0 Booking (72 avaliações)",
+            "url": "https://www.booking.com/hotel/br/chale-proximo-a-vila-do-vale-do-capao-bahia.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1"
           },
           {
-            "name": "Villa Allma",
-            "desc": "Quarto queen com vista do jardim, a 700 m do centro. Quase 500 avaliações sustentando o 9,7.",
+            "name": "Pousada Bela Vista do Capão",
+            "desc": "Chalé inteiro de 30 m² com cozinha, a 1,5 km do centro. Quatro unidades livres no mesmo preço.",
             "price": {
-              "text": "R$ 742 o quarto · 2 noites (R$ 1.484 os dois casais)",
+              "text": "R$ 248 o quarto · 1 noite (R$ 496 os dois casais)",
               "status": "cotado",
-              "source": "booking-lencois-1"
+              "source": "booking-capao"
             },
-            "rating": "9,7 Booking (494 avaliações)",
-            "url": "https://www.booking.com/hotel/br/jardim-serrano-lencois.pt-br.html?checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1"
+            "rating": "9,6 Booking (141 avaliações)",
+            "url": "https://www.booking.com/hotel/br/pousada-bela-vista-do-capao.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1"
           },
           {
-            "name": "Pousada Casa Viva a Vida",
-            "desc": "Quarto com vista do jardim a 700 m do centro, café orgânico e estacionamento grátis.",
+            "name": "Pousada Tarumim",
+            "desc": "Duplo com cama king a 1,4 km do centro. <strong>Café da manhã incluído</strong> e paga na chegada — com a saída às 7h30 para a trilha, o café pesa.",
             "price": {
-              "text": "R$ 820 o quarto · 2 noites (R$ 1.640 os dois casais)",
+              "text": "R$ 270 o quarto · 1 noite (R$ 540 os dois casais)",
               "status": "cotado",
-              "source": "booking-lencois-1"
+              "source": "booking-capao"
             },
-            "rating": "9,7 Booking (266 avaliações)",
-            "url": "https://www.booking.com/hotel/br/casa-viva-a-vida-b-amp-b.pt-br.html?checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1"
+            "rating": "9,5 Booking (113 avaliações)",
+            "url": "https://www.booking.com/hotel/br/pousada-tarumim.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1"
           },
           {
-            "name": "Pouso da Trilha",
-            "desc": "Suíte superior a 50 m do centro histórico, a pé de tudo. <strong>Atenção</strong>: nestas datas só há um quarto no preço — serve para um casal, não para os dois.",
+            "name": "O Galpão Casa Flor",
+            "desc": "<strong>Casa inteira de 2 quartos a 30 m do centro</strong> — a outra opção que acomoda os dois casais numa reserva só, e a mais central de todas.",
             "price": {
-              "text": "R$ 922 o quarto · 2 noites (R$ 1.844 os dois casais)",
+              "text": "R$ 276 a casa inteira · 1 noite (os dois casais juntos)",
               "status": "cotado",
-              "source": "booking-lencois-1"
+              "source": "booking-capao"
             },
-            "rating": "9,4 Booking (691 avaliações)",
-            "url": "https://www.booking.com/hotel/br/pouso-da-trilha-hospedagem.pt-br.html?checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1",
+            "rating": "9,6 Booking (20 avaliações)",
+            "url": "https://www.booking.com/hotel/br/o-galpao-casa-flor.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1"
+          },
+          {
+            "name": "Entre Montanhas Capão",
+            "desc": "Duplo standard a 400 m do centro, com café da manhã incluído.",
+            "price": {
+              "text": "R$ 280 o quarto · 1 noite (R$ 560 os dois casais)",
+              "status": "cotado",
+              "source": "booking-capao"
+            },
+            "rating": "9,3 Booking (126 avaliações)",
+            "url": "https://www.booking.com/hotel/br/entre-montanhas-capao.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1"
+          },
+          {
+            "name": "Pousada Terras do Poente",
+            "desc": "Chalé de 50 m² com vista da montanha, a 5 km do centro, café incluído. Longe da vila — exige o carro para jantar.",
+            "price": {
+              "text": "R$ 330 o quarto · 1 noite (R$ 660 os dois casais)",
+              "status": "cotado",
+              "source": "booking-capao"
+            },
+            "rating": "9,6 Booking (59 avaliações)",
+            "url": "https://www.booking.com/hotel/br/pousada-terras-do-poente.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1"
+          },
+          {
+            "name": "Pousada Zazen",
+            "desc": "Apartamento térreo a 250 m do centro, café incluído. A pousada mais bem avaliada da vila com volume real de avaliações.",
+            "price": {
+              "text": "R$ 382 o quarto · 1 noite (R$ 764 os dois casais)",
+              "status": "cotado",
+              "source": "booking-capao"
+            },
+            "rating": "9,6 Booking (256 avaliações)",
+            "url": "https://www.booking.com/hotel/br/pousada-zazen.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1"
+          },
+          {
+            "name": "Pousada do Capão",
+            "desc": "Quarto quádruplo a 1,9 km do centro, café incluído. A mais estruturada do vale — é também a que tem internet própria, útil onde o celular não pega.",
+            "price": {
+              "text": "R$ 580 o quarto · 1 noite (R$ 1.160 os dois casais)",
+              "status": "cotado",
+              "source": "booking-capao"
+            },
+            "rating": "9,3 Booking (202 avaliações)",
+            "url": "https://www.booking.com/hotel/br/pousada-do-capapso.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1",
             "confirmationUrls": [
               {
                 "label": "Site da pousada",
-                "url": "https://www.pousodatrilha.com.br/"
+                "url": "https://www.pousadadocapao.com.br/"
               }
             ]
+          }
+        ]
+      },
+      {
+        "id": "lencois",
+        "name": "Lençóis — primeira estadia",
+        "emoji": "🏛️",
+        "nights": "1 noite · 18/10",
+        "dates": [
+          {
+            "checkin": "2026-10-18",
+            "checkout": "2026-10-19",
+            "label": "Dia 2"
+          }
+        ],
+        "options": [
+          {
+            "name": "Hostel Luz",
+            "desc": "Quarto duplo com banheiro privativo a 100 m do centro. Casa nova na Booking, com poucas avaliações — mas é o duplo privativo mais barato do centro.",
+            "price": {
+              "text": "R$ 110 o quarto · 1 noite (R$ 220 os dois casais)",
+              "status": "cotado",
+              "source": "booking-lencois-dom"
+            },
+            "rating": "9,6 Booking (10 avaliações)",
+            "url": "https://www.booking.com/hotel/br/luz-lencois.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1"
+          },
+          {
+            "name": "Visite Chapäda Hospedaria",
+            "desc": "Suíte família com sala, a 350 m do centro, com cancelamento grátis.",
+            "price": {
+              "text": "R$ 135 o quarto · 1 noite (R$ 270 os dois casais)",
+              "status": "cotado",
+              "source": "booking-lencois-dom"
+            },
+            "rating": "9,4 Booking (118 avaliações)",
+            "url": "https://www.booking.com/hotel/br/hostel-trip.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1"
+          },
+          {
+            "name": "Pousada Piçarras",
+            "desc": "Duplo a <strong>100 m do centro</strong>, com café da manhã incluído. A pousada tradicional mais barata da noite de domingo.",
+            "price": {
+              "text": "R$ 150 o quarto · 1 noite (R$ 300 os dois casais)",
+              "status": "cotado",
+              "source": "booking-lencois-dom"
+            },
+            "rating": "9,0 Booking (174 avaliações)",
+            "url": "https://www.booking.com/hotel/br/www-pousadapicarras-com-br.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1"
+          },
+          {
+            "name": "Suítes da Villa — Hospedaria",
+            "desc": "Duplo a 50 m do centro, com cancelamento grátis. A mais central da lista.",
+            "price": {
+              "text": "R$ 150 o quarto · 1 noite (R$ 300 os dois casais)",
+              "status": "cotado",
+              "source": "booking-lencois-dom"
+            },
+            "rating": "8,8 Booking (98 avaliações)",
+            "url": "https://www.booking.com/hotel/br/suites-da-villa.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1"
+          },
+          {
+            "name": "Chapada Casas da Izete",
+            "desc": "Duplo com banheiro privativo a 400 m do centro, café incluído e cancelamento grátis. Boa nota com volume real de avaliações.",
+            "price": {
+              "text": "R$ 190 o quarto · 1 noite (R$ 380 os dois casais)",
+              "status": "cotado",
+              "source": "booking-lencois-dom"
+            },
+            "rating": "9,1 Booking (271 avaliações)",
+            "url": "https://www.booking.com/hotel/br/lencois-da-chapada-casas.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1"
+          },
+          {
+            "name": "Aurora Suítes",
+            "desc": "Quarto família a 800 m do centro, café incluído, sem pré-pagamento. <strong>Tem vaga também na noite de 22/10</strong> — é a candidata para segurar as duas estadias em Lençóis.",
+            "price": {
+              "text": "R$ 198 o quarto · 1 noite (R$ 396 os dois casais)",
+              "status": "cotado",
+              "source": "booking-lencois-dom"
+            },
+            "rating": "9,3 Booking (92 avaliações)",
+            "url": "https://www.booking.com/hotel/br/aurora-suites-chapada-diamantina.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1"
+          },
+          {
+            "name": "Chalé Orion",
+            "desc": "Duplo com banheiro privativo a 600 m do centro, com cancelamento grátis.",
+            "price": {
+              "text": "R$ 200 o quarto · 1 noite (R$ 400 os dois casais)",
+              "status": "cotado",
+              "source": "booking-lencois-dom"
+            },
+            "rating": "9,5 Booking (44 avaliações)",
+            "url": "https://www.booking.com/hotel/br/complexo-halley-lencois.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1"
+          },
+          {
+            "name": "Casinha da Torre",
+            "desc": "<strong>Casa inteira de 2 quartos, 30 m², a 800 m do centro — acomoda os dois casais numa reserva só por R$ 207.</strong>",
+            "price": {
+              "text": "R$ 207 a casa inteira · 1 noite (os dois casais juntos)",
+              "status": "cotado",
+              "source": "booking-lencois-dom"
+            },
+            "rating": "9,4 Booking (14 avaliações)",
+            "url": "https://www.booking.com/hotel/br/casinha-da-torre.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1"
           },
           {
             "name": "Pousada Vila Serrano",
-            "desc": "Suíte com vista da piscina, a 500 m do centro, com jardim e aluguel de bicicletas. Café nota 10 e cancelamento grátis.",
+            "desc": "Villa com vista do jardim, a 500 m do centro, com piscina e café nota 10. O degrau de conforto acima do resto da lista.",
             "price": {
-              "text": "R$ 1.272 o quarto · 2 noites (R$ 2.544 os dois casais)",
+              "text": "R$ 545 o quarto · 1 noite (R$ 1.090 os dois casais)",
               "status": "cotado",
-              "source": "booking-lencois-1"
+              "source": "booking-lencois-dom"
             },
-            "rating": "9,4 Booking (656 avaliações)",
-            "url": "https://www.booking.com/hotel/br/pousada-vila-serrano.pt-br.html?checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1",
+            "rating": "9,4 Booking (657 avaliações)",
+            "url": "https://www.booking.com/hotel/br/pousada-vila-serrano.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1",
             "confirmationUrls": [
               {
                 "label": "Site da pousada",
@@ -921,42 +1159,14 @@
           },
           {
             "name": "Hotel de Lençóis",
-            "desc": "Quarto família superior a 500 m do centro, com piscina e restaurante. Café nota 9,9 — o mais estruturado depois do Canto das Águas.",
+            "desc": "Quarto deluxe com varanda, piscina e restaurante, a 500 m do centro. Café nota 9,9 e paga na chegada.",
             "price": {
-              "text": "R$ 2.558 o quarto · 2 noites (R$ 5.116 os dois casais)",
+              "text": "R$ 935 o quarto · 1 noite (R$ 1.870 os dois casais)",
               "status": "cotado",
-              "source": "booking-lencois-1"
+              "source": "booking-lencois-dom"
             },
-            "rating": "9,6 Booking (672 avaliações)",
-            "url": "https://www.booking.com/hotel/br/de-lenassois.pt-br.html?checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1"
-          },
-          {
-            "name": "Hotel Canto das Águas",
-            "desc": "Apartamento deluxe com vista do jardim, à beira do rio, a 300 m do centro. Piscina, sauna e spa — o mais estruturado da cidade.",
-            "price": {
-              "text": "R$ 2.648 o quarto · 2 noites (R$ 5.296 os dois casais)",
-              "status": "cotado",
-              "source": "booking-lencois-1"
-            },
-            "rating": "9,4 Booking (305 avaliações)",
-            "url": "https://www.booking.com/hotel/br/canto-das-aguas.pt-br.html?checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1",
-            "confirmationUrls": [
-              {
-                "label": "Site do hotel",
-                "url": "https://lencois.com.br/"
-              }
-            ]
-          },
-          {
-            "name": "Vila Pugliesi Hotel Boutique",
-            "desc": "Quarto deluxe a 200 m do centro histórico, com piscina e bar. A melhor nota da cidade — e a diária mais cara da lista.",
-            "price": {
-              "text": "R$ 2.970 o quarto · 2 noites (R$ 5.940 os dois casais)",
-              "status": "cotado",
-              "source": "booking-lencois-1"
-            },
-            "rating": "9,8 Booking (252 avaliações)",
-            "url": "https://www.booking.com/hotel/br/vila-pugliesi-boutique.pt-br.html?checkin=2026-10-17&checkout=2026-10-19&group_adults=2&no_rooms=1"
+            "rating": "9,6 Booking (671 avaliações)",
+            "url": "https://www.booking.com/hotel/br/de-lenassois.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1"
           }
         ]
       },
@@ -1396,29 +1606,50 @@
   },
   "todos": [
     {
+      "city": "Vale do Capão",
+      "emoji": "🥾",
+      "subtitle": "Dia 1 — 1 noite, a 3 km da trilha",
+      "items": [
+        {
+          "id": "capao-hotel",
+          "text": "Reservar a noite de 17/10 em Caeté-Açu",
+          "autoKey": "capao",
+          "autoType": "booking"
+        },
+        {
+          "id": "capao-guia-fumaca",
+          "text": "Contratar o guia da Fumaça para domingo 18, às 8h na portaria (obrigatório · R$ 250 para até 4 · em espécie)"
+        },
+        {
+          "id": "capao-cafe-7h",
+          "text": "Combinar com a pousada o café da manhã para as 7h de domingo (saída às 7h30)"
+        },
+        {
+          "id": "capao-jantar-sab",
+          "text": "Confirmar com a pousada qual restaurante da vila abre no sábado à noite e até que horas"
+        },
+        {
+          "id": "capao-dinheiro",
+          "text": "Sacar dinheiro e abastecer em Palmeiras antes de subir a serra — não há posto nem caixa na vila"
+        }
+      ]
+    },
+    {
       "city": "Lençóis",
       "emoji": "🏛️",
-      "subtitle": "Dias 1, 2 e 6 — 3 noites em duas estadias",
+      "subtitle": "Dias 2 e 6 — 2 noites em duas estadias",
       "items": [
         {
           "id": "lencois-hotel-1",
-          "text": "Reservar as noites de 17 e 18/10",
+          "text": "Reservar a noite de 18/10 (domingo, depois da Fumaça)",
           "autoKey": "lencois",
           "autoType": "booking"
         },
         {
           "id": "lencois-hotel-2",
-          "text": "Reservar a noite de 22/10 — de preferência na mesma pousada",
+          "text": "Reservar a noite de 22/10 — de preferência na mesma pousada (a Aurora Suítes tem vaga nas duas)",
           "autoKey": "lencois-volta",
           "autoType": "booking"
-        },
-        {
-          "id": "lencois-guia-fumaca",
-          "text": "Contratar o guia da Fumaça para domingo 18, às 8h na portaria (obrigatório · R$ 250 para até 4)"
-        },
-        {
-          "id": "lencois-cafe-cedo",
-          "text": "Pedir à pousada café da manhã para levar no domingo 18 (saída às 6h15)"
         },
         {
           "id": "lencois-pratinha-luz",
@@ -1429,8 +1660,8 @@
           "text": "Se a Lapa Doce entrar na quinta 22: confirmar horário e preço pelo contato do site oficial"
         },
         {
-          "id": "lencois-jantar-sab",
-          "text": "Reservar mesa para sábado 17, a partir das 19h30 — depois do Pai Inácio"
+          "id": "lencois-jantar-dom",
+          "text": "Reservar mesa para domingo 18, a partir das 19h30 — depois do Pai Inácio"
         }
       ]
     },
@@ -1519,14 +1750,27 @@
   "alerts": [
     {
       "emoji": "🥾",
-      "title": "Domingo 18: a Fumaça pede despertador às 5h30",
+      "title": "Domingo 18: a Fumaça de manhã e o Pai Inácio no fim da tarde",
       "level": "high",
       "items": [
         "<strong>O esforço:</strong> 6 km por sentido (12 ida e volta), sendo 2 km de subida em degraus de pedra. Classificada de moderada a avançada — mínimo 2h30 subindo e ~1h30 descendo.",
-        "<strong>O relógio:</strong> a trilha recebe visitantes das 8h às 13h, e o Capão fica a 1h30 de Lençóis. Sair às 6h15.",
-        "<strong>O dinheiro:</strong> guia obrigatório, R$ 250 a diária para até 4 pessoas — ~R$ 62,50 por pessoa.",
-        "<strong>A volta:</strong> são 74 km até Lençóis, fora da exceção dos trechos curtos. Sair do Capão até as 16h.",
+        "<strong>O relógio:</strong> a trilha recebe das 8h às 13h. Dormindo em Caeté-Açu, a portaria fica a 3 km — café às 7h, saída às 7h30. <strong>Não há mais despertador às 5h30 nem 74 km antes da trilha.</strong>",
+        "<strong>O dinheiro:</strong> guia obrigatório, R$ 250 a diária para até 4 pessoas — ~R$ 62,50 por pessoa, em espécie.",
+        "⚠️ <strong>O almoço tem hora:</strong> sair da vila às 14h30. São 47 km até o Pai Inácio, e a subida do morro fecha às 17h. Chegando às 15h45, a margem é de mais de uma hora.",
+        "⚠️ <strong>Dois esforços no mesmo dia.</strong> Quem subir a Fumaça terá feito 12 km antes do morro. A subida do Pai Inácio é opcional — a vista da base também vale.",
         "💡 Quem não quiser subir fica com a Cachoeira do Riachinho (5 a 10 min de trilha) e a vila. O grupo se reencontra no almoço."
+      ]
+    },
+    {
+      "emoji": "⛽",
+      "title": "Sábado 17: abastecer e sacar em Palmeiras, antes de subir a serra",
+      "level": "high",
+      "items": [
+        "<strong>Não há posto de combustível no Vale do Capão</strong> nem na estrada da serra. O último é em Palmeiras, ~20 km antes — e o tanque ainda precisa cobrir o domingo inteiro até Lençóis.",
+        "<strong>Não há caixa eletrônico confiável na vila.</strong> Guia, restaurante e artesanato costumam só aceitar espécie, e só o guia da Fumaça são R$ 250. Sacar em Palmeiras.",
+        "<strong>Sinal de celular fraco ou inexistente</strong> em Caeté-Açu. Wi-Fi existe nas pousadas — combinar guia e café da manhã assim que chegar.",
+        "A estrada Palmeiras → Capão era de terra até 2024 e foi asfaltada em 2025: hoje são ~20 km de asfalto novo, ~40 min. É o que tornou esta base possível.",
+        "💡 Voltagem 220V, e é melhor não estacionar nas ruas internas da vila."
       ]
     },
     {
@@ -1566,9 +1810,10 @@
       "level": "high",
       "items": [
         "Regra do grupo: as travessias acontecem entre o nascer e o pôr do sol. Em outubro o sol nasce por volta das 5h17 e se põe às 17h42.",
-        "✅ <strong>A exceção:</strong> trechos curtos de asfalto, de até ~30 min e com o grupo junto. Só um trecho do roteiro usa: a volta do Pai Inácio no sábado, chegando a Lençóis por volta das 18h45.",
-        "⚠️ <strong>O Pai Inácio fecha a subida às 17h.</strong> Sair de Lençóis às 16h15.",
-        "⚠️ Duas voltas encostam no pôr do sol e não entram na exceção: Capão → Lençóis no domingo (sair até 16h) e Pratinha → Lençóis na quinta (sair até 16h30)."
+        "✅ <strong>A exceção:</strong> trechos curtos de asfalto, de até ~30 min e com o grupo junto. Só um trecho do roteiro usa: a volta do Pai Inácio <strong>no domingo</strong>, 29 km de BR-242 até Lençóis, chegando por volta das 18h45.",
+        "✅ <strong>O sábado deixou de ter direção noturna.</strong> Indo direto ao Capão, a chegada é por volta das 16h — e o Pai Inácio passou para o domingo, quando ele já fica no caminho.",
+        "⚠️ <strong>O Pai Inácio fecha a subida às 17h.</strong> Sair da vila do Capão às 14h30.",
+        "⚠️ Uma volta ainda encosta no pôr do sol e não entra na exceção: Pratinha → Lençóis na quinta (sair até 16h30)."
       ]
     },
     {
@@ -1584,12 +1829,14 @@
     },
     {
       "emoji": "🏨",
-      "title": "Quatro pousadas, com Lençóis nas duas pontas",
-      "level": "medium",
+      "title": "Cinco reservas, e três bases nas três primeiras noites",
+      "level": "high",
       "items": [
-        "Lençóis (17–19), Mucugê (19–21), Ibicoara (21–22) e Lençóis de novo (22–23).",
-        "Vale perguntar à pousada de Lençóis se ela segura as três noites com o intervalo, para deixar mala guardada.",
-        "Ibicoara tem poucas pousadas e é uma noite só — é a reserva que mais vale fazer cedo."
+        "Vale do Capão (17–18), Lençóis (18–19), Mucugê (19–21), Ibicoara (21–22) e Lençóis de novo (22–23).",
+        "⚠️ <strong>É o custo da mudança:</strong> mala desfeita três vezes seguidas no começo da viagem. Vale arrumar uma mochila de uma noite para o Capão e deixar o resto no carro.",
+        "⚠️ A <strong>Mansão Mascarenhas</strong>, que segurava as duas estadias em Lençóis no desenho antigo, <strong>não tem vaga em 18/10</strong>. Hoje quem aparece nas duas janelas é a <strong>Aurora Suítes</strong>.",
+        "💡 No Capão, o <strong>Chalé Diamante</strong> (R$ 221) e o <strong>O Galpão Casa Flor</strong> (R$ 276) têm 2 quartos e resolvem os dois casais em uma reserva só.",
+        "Ibicoara tem poucas pousadas e é uma noite só — continua sendo a reserva que mais vale fazer cedo."
       ]
     },
     {
@@ -1615,8 +1862,8 @@
     "index": [
       {
         "emoji": "🗓️",
-        "title": "O roteiro está definido",
-        "text": "São sete dias, com volta na sexta 23. Os horários mostram o encaixe que funciona no relógio — nada está reservado ainda, e o que tem hora de verdade (Pai Inácio, Fumaça, Poço Azul, Buracão, Pratinha) está marcado com ⚠️ no próprio bloco."
+        "title": "O roteiro mudou a primeira noite",
+        "text": "São sete dias, com volta na sexta 23. Em 10/10/2026 o grupo trocou a base do sábado: em vez de Lençóis, o dia 17 vai direto para o <strong>Vale do Capão</strong>, a 3 km da trilha da Fumaça, e o <strong>Pai Inácio passa para o domingo</strong>, na volta da trilha. Nada está reservado ainda, e o que tem hora de verdade (Fumaça, Pai Inácio, Poço Azul, Buracão, Pratinha) está marcado com ⚠️ no próprio bloco."
       },
       {
         "emoji": "🍽️",
@@ -1628,17 +1875,22 @@
       {
         "emoji": "🛏️",
         "title": "Um quarto de casal para cada casal",
-        "text": "É o padrão do grupo, categoria intermediária. O preço de cada card é <strong>do quarto</strong>, para a estadia inteira daquela base — o valor entre parênteses é a soma dos dois, só para dimensionar o gasto."
+        "text": "É o padrão do grupo, categoria intermediária. O preço de cada card é <strong>do quarto</strong>, para a estadia inteira daquela base — o valor entre parênteses é a soma dos dois, só para dimensionar o gasto. Onde a acomodação é uma casa ou chalé de dois quartos, o preço já é dos dois casais juntos, e o card diz isso."
+      },
+      {
+        "emoji": "🥾",
+        "title": "A primeira noite mudou de lugar",
+        "text": "O sábado 17 agora termina no <strong>Vale do Capão</strong>, a 3 km da trilha da Fumaça, e Lençóis passa a ser a noite de domingo. São três bases em três noites — o custo da mudança —, mas o domingo perdeu 3h de carro e o despertador das 5h30. Cotações de <strong>10/10/2026</strong>."
       },
       {
         "emoji": "🔁",
         "title": "Lençóis aparece duas vezes",
-        "text": "Dias 17–19 e 22–23, com Mucugê e Ibicoara no meio. Se a mesma pousada segurar as duas estadias, dá para negociar as três noites juntas e deixar mala guardada. <strong>Mansão Mascarenhas</strong> e <strong>Casa Viva a Vida</strong> têm vaga nas duas janelas; Vila Caribé só na última noite."
+        "text": "Noites de 18/10 e 22/10, com Mucugê e Ibicoara no meio. A <strong>Aurora Suítes</strong> é a única da lista com vaga nas duas janelas — a Mansão Mascarenhas, que fazia esse papel antes, não tem mais vaga em 18/10."
       },
       {
         "emoji": "🔗",
         "title": "Cada botão já abre com as datas",
-        "text": "O <strong>Ver oferta</strong> leva à Booking com as datas daquela base e um quarto para dois adultos — é a mesma busca que gerou o preço do card. Cotações de <strong>06/10/2026</strong>: confira antes de fechar, porque preço de Booking muda com a procura. Como cada casal reserva o seu, vale combinar a pousada antes e reservar no mesmo dia."
+        "text": "O <strong>Ver oferta</strong> leva à Booking com as datas daquela base e um quarto para dois adultos já preenchidos."
       }
     ]
   }
