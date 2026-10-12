@@ -5,7 +5,7 @@
       "descoberta",
       "pesquisa"
     ],
-    "updatedAt": "2026-10-10"
+    "updatedAt": "2026-10-12"
   },
   "meta": {
     "slug": "chapada-diamantina-2026",
@@ -39,6 +39,10 @@
     "storagePrefix": "chapada2026",
     "palette": "desert",
     "extraPages": [
+      {
+        "file": "resumo.html",
+        "label": "⚡ Resumo"
+      },
       {
         "file": "atracoes.html",
         "label": "📸 Atrações"
@@ -77,7 +81,7 @@
       "decisionMaker": "Saulo"
     },
     "budget": null,
-    "customCss": "\n/* ─── atracoes.html — fichas dos lugares ─── */\n.filtros { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 2rem; }\n.filtro-btn {\n  font: inherit; font-size: .85rem; font-weight: 600; cursor: pointer;\n  padding: .45rem .9rem; border-radius: 999px;\n  border: 1px solid var(--border); background: var(--surface); color: var(--text-muted);\n  transition: background .15s, color .15s, border-color .15s;\n}\n.filtro-btn:hover { border-color: var(--primary); color: var(--text); }\n.filtro-btn.ativo { background: var(--primary); border-color: var(--primary); color: var(--white); }\n\n.dia-bloco { margin: 0 0 2.75rem; }\n.dia-cab { margin: 0 0 1rem; }\n.dia-tit {\n  display: flex; align-items: center; gap: .6rem; flex-wrap: wrap;\n  margin: 0 0 .35rem; font-size: 1.25rem;\n}\n.dia-chip {\n  font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;\n  padding: .25rem .6rem; border-radius: 999px;\n  background: var(--bg-alt); color: var(--primary); border: 1px solid var(--border);\n}\n.dia-ancora { margin: 0; font-size: .9rem; color: var(--text-muted); }\n\n.opt-grid {\n  display: grid; gap: 1rem;\n  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));\n}\n.opt-card {\n  border: 1px solid var(--border); border-left: 3px solid var(--border);\n  border-radius: var(--radius); background: var(--surface); padding: 1rem 1.1rem;\n}\n.opt-card.sel-ok { border-left-color: var(--ok); }\n.opt-card.sel-duv { border-left-color: var(--warn); }\n.opt-card.sel-conf { border-left-color: var(--danger); }\n.opt-top {\n  display: flex; align-items: center; justify-content: space-between;\n  gap: .5rem; margin: 0 0 .5rem;\n}\n.opt-selo { font-size: .75rem; font-weight: 700; color: var(--text-muted); }\n.sel-ok .opt-selo { color: var(--ok); }\n.sel-duv .opt-selo { color: var(--warn); }\n.sel-conf .opt-selo { color: var(--danger); }\n.opt-tipo {\n  font-size: .68rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;\n  color: var(--text-light);\n}\n.opt-nome { margin: 0 0 .3rem; font-size: 1rem; line-height: 1.35; }\n.opt-onde { margin: 0 0 .5rem; font-size: .8rem; font-weight: 600; color: var(--primary); }\n.opt-nota { margin: 0; font-size: .88rem; line-height: 1.55; color: var(--text-muted); }\n\n.rest-lista { margin: .5rem 0 0; padding-left: 1.1rem; }\n.rest-lista li { font-size: .88rem; line-height: 1.6; color: var(--text-muted); }\n\n@media (max-width: 640px) {\n  .opt-grid { grid-template-columns: 1fr; }\n  .filtros { gap: .4rem; }\n  .filtro-btn { font-size: .8rem; padding: .4rem .75rem; }\n}\n\n/* níveis de recomendação */\n.opt-rec { font-size: .72rem; font-weight: 800; letter-spacing: .02em; }\n.opt-rec.rec1 { color: var(--ok); }\n.opt-rec.rec2 { color: var(--primary); }\n.opt-rec.rec3 { color: var(--text-muted); }\n.opt-rec.rec4 { color: var(--warn); }\n.opt-card { border-left-color: var(--border); }\n.opt-selo { font-weight: 700; }\n.sel-ok .opt-selo { color: var(--ok); }\n.sel-duv .opt-selo { color: var(--warn); }\n.sel-conf .opt-selo { color: var(--danger); }\n.legenda { display: flex; flex-wrap: wrap; gap: .35rem 1.1rem; margin: .9rem 0 0; }\n.leg-item { font-size: .8rem; color: var(--text-muted); }\n.leg-item b { margin-right: .2rem; }\n.opt-onde { display: block; }\n\n\n/* ─── barra de filtros combinados ─── */\n.filtro-barra {\n  border: 1px solid var(--border); border-radius: var(--radius);\n  background: var(--bg-alt); padding: 1rem 1.1rem .35rem; margin: 0 0 2rem;\n}\n.filtro-grupo { display: flex; align-items: baseline; gap: .85rem; margin: 0 0 .35rem; }\n.filtro-rot {\n  flex: 0 0 6.5rem; font-size: .7rem; font-weight: 700;\n  letter-spacing: .07em; text-transform: uppercase; color: var(--text-light);\n}\n.filtro-barra .filtros { margin: 0 0 .55rem; }\n.filtro-n {\n  display: inline-block; margin-left: .3rem; padding: 0 .35rem;\n  border-radius: 999px; background: var(--bg-alt);\n  font-size: .7rem; font-weight: 700; color: var(--text-light);\n}\n.filtro-btn.ativo .filtro-n { background: rgba(255, 255, 255, .22); color: var(--white); }\n.rec-btn.rec1:not(.ativo) { color: var(--ok); }\n.rec-btn.rec2:not(.ativo) { color: var(--primary); }\n.rec-btn.rec4:not(.ativo) { color: var(--warn); }\n.filtro-saida {\n  display: flex; align-items: center; justify-content: space-between; gap: 1rem;\n  margin: .25rem 0 .65rem; font-size: .8rem; color: var(--text-muted);\n}\n.filtro-limpa {\n  font: inherit; font-size: .78rem; cursor: pointer; padding: 0;\n  border: 0; background: none; color: var(--primary); text-decoration: underline;\n}\n.dia-vazio { display: none; margin: 0; font-size: .85rem; color: var(--text-light); font-style: italic; }\n.dia-bloco.sem-resultado .dia-vazio { display: block; }\n.dia-bloco.sem-resultado .opt-grid { display: none; }\n\n/* ─── links de blog e vídeo dentro do card ─── */\n.opt-links {\n  display: flex; flex-wrap: wrap; gap: .35rem;\n  margin: .85rem 0 0; padding-top: .75rem; border-top: 1px solid var(--border);\n}\n.opt-link {\n  display: inline-block; max-width: 100%; overflow: hidden;\n  text-overflow: ellipsis; white-space: nowrap;\n  font-size: .74rem; font-weight: 600; text-decoration: none;\n  padding: .28rem .6rem; border-radius: 999px;\n  border: 1px solid var(--border); background: var(--bg-alt); color: var(--text-muted);\n  transition: border-color .15s, color .15s;\n}\n.opt-link:hover { border-color: var(--primary); color: var(--primary); }\n.opt-link.video { color: var(--danger); }\n.opt-link.video:hover { border-color: var(--danger); }\n.opt-link.insta { color: var(--link); }\n.opt-link.insta:hover { border-color: var(--link); }\n/* a marca do Instagram vai como SVG embutido: acompanha a cor do chip e\n   sobrevive nas páginas offline, onde nenhuma fonte de ícone chegaria */\n.opt-link.insta { gap: .38rem; }\n.ico-insta { flex: 0 0 auto; vertical-align: -2px; }\n\n@media (max-width: 640px) {\n  .filtro-grupo { display: block; }\n  .filtro-rot { display: block; margin: 0 0 .35rem; }\n  .filtro-barra { padding: .9rem .8rem .3rem; }\n  .opt-link { font-size: .72rem; }\n}\n\n/* ─── alvos de toque de 44px nos filtros ─── */\n/* o restante dos ajustes de acessibilidade vive no theme.css da skill */\n.filtro-btn { min-height: 44px; display: inline-flex; align-items: center; }\n.filtro-limpa { min-height: 44px; }\n.opt-link { min-height: 40px; display: inline-flex; align-items: center; padding: .4rem .7rem; }\n\n/* ─── cards de atração com foto ─── */\n.opt-card { display: flex; flex-direction: column; padding: 0; overflow: hidden; }\n.opt-corpo { padding: 1rem 1.1rem 1.15rem; display: flex; flex-direction: column; flex: 1; }\n.opt-foto {\n  position: relative; aspect-ratio: 3 / 2; background: var(--bg-alt);\n  border-bottom: 1px solid var(--border);\n}\n.opt-foto img { width: 100%; height: 100%; object-fit: cover; display: block; }\n/* sem foto o card não pode virar um buraco na grade: um degradê da paleta\n   segura o ritmo da coluna */\n.opt-foto.sem-foto {\n  aspect-ratio: 5 / 1;\n  background: linear-gradient(120deg, var(--primary), var(--primary-light) 60%, var(--secondary));\n}\n/* crédito obrigatório das licenças CC, sem roubar a foto */\n.opt-foto-cred {\n  position: absolute; right: 8px; bottom: 8px;\n  display: inline-flex; align-items: center; justify-content: center;\n  width: 30px; height: 30px; border-radius: 50%; text-decoration: none;\n  font-size: .8rem; line-height: 1;\n  background: rgba(255, 255, 255, .85); border: 1px solid var(--border);\n}\n.opt-foto-cred:hover { background: var(--white); }\n.opt-nota { flex: 1; }\n/* a âncora vinda do roteiro não pode parar embaixo do menu fixo */\n.opt-card { scroll-margin-top: calc(var(--nav-h) + 16px); }\n.opt-card:target { border-color: var(--accent); border-left-color: var(--accent); box-shadow: var(--shadow-lg); }\n\n\n/* ─── restaurantes.html — curadoria gastronômica ─── */\n.rest-card .opt-corpo { padding: 1rem 1.1rem 1.15rem; }\n.rest-card { border-left-color: var(--primary); }\n.rest-card[data-no-roteiro=\"sim\"] { border-left-color: var(--ok); }\n.rest-card[data-top=\"sim\"] { border-left-color: var(--accent); }\n.rest-faixa {\n  font-family: 'JetBrains Mono', monospace; font-size: .82rem; font-weight: 700;\n  color: var(--primary); letter-spacing: .02em;\n}\n.rest-refeicoes { margin: .35rem 0 .6rem; font-size: .8rem; font-weight: 600; color: var(--text-muted); }\n.rest-dias { margin: .6rem 0 0; font-size: .78rem; color: var(--text-light); }\n.rest-local { color: var(--text-muted); font-weight: 500; }\n.rest-tags { display: flex; flex-wrap: wrap; gap: .3rem; margin: .65rem 0 0; }\n.rest-tag {\n  font-size: .7rem; font-weight: 600; padding: .2rem .5rem; border-radius: 999px;\n  background: var(--bg-alt); color: var(--text-muted); border: 1px solid var(--border);\n}\n.rest-conta-bloco { font-size: .78rem; font-weight: 700; color: var(--text-light); margin-left: auto; }\n.rest-cab .dia-tit { justify-content: flex-start; }\n.rest-bloco { scroll-margin-top: calc(var(--nav-h, 58px) + 16px); }\n.rest-legenda { margin-top: .75rem; }\n\n/* busca por texto */\n.filtro-busca { display: flex; align-items: center; gap: .6rem; margin: 0 0 1rem; flex-wrap: wrap; }\n.filtro-busca-rot {\n  font-size: .7rem; font-weight: 700; letter-spacing: .07em;\n  text-transform: uppercase; color: var(--text-light);\n}\n#rest-busca {\n  flex: 1 1 240px; min-width: 200px; font: inherit; font-size: .9rem;\n  padding: .55rem .8rem; border-radius: var(--radius-sm);\n  border: 1px solid var(--border); background: var(--surface); color: var(--text);\n}\n#rest-busca:focus { outline: 2px solid var(--primary); outline-offset: 1px; border-color: var(--primary); }\n\n@media (max-width: 640px) {\n  .rest-conta-bloco { display: none; }\n  #rest-busca { flex: 1 1 100%; }\n}\n",
+    "customCss": "\n/* ─── atracoes.html — fichas dos lugares ─── */\n.filtros { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 2rem; }\n.filtro-btn {\n  font: inherit; font-size: .85rem; font-weight: 600; cursor: pointer;\n  padding: .45rem .9rem; border-radius: 999px;\n  border: 1px solid var(--border); background: var(--surface); color: var(--text-muted);\n  transition: background .15s, color .15s, border-color .15s;\n}\n.filtro-btn:hover { border-color: var(--primary); color: var(--text); }\n.filtro-btn.ativo { background: var(--primary); border-color: var(--primary); color: var(--white); }\n\n.dia-bloco { margin: 0 0 2.75rem; }\n.dia-cab { margin: 0 0 1rem; }\n.dia-tit {\n  display: flex; align-items: center; gap: .6rem; flex-wrap: wrap;\n  margin: 0 0 .35rem; font-size: 1.25rem;\n}\n.dia-chip {\n  font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;\n  padding: .25rem .6rem; border-radius: 999px;\n  background: var(--bg-alt); color: var(--primary); border: 1px solid var(--border);\n}\n.dia-ancora { margin: 0; font-size: .9rem; color: var(--text-muted); }\n\n.opt-grid {\n  display: grid; gap: 1rem;\n  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));\n}\n.opt-card {\n  border: 1px solid var(--border); border-left: 3px solid var(--border);\n  border-radius: var(--radius); background: var(--surface); padding: 1rem 1.1rem;\n}\n.opt-card.sel-ok { border-left-color: var(--ok); }\n.opt-card.sel-duv { border-left-color: var(--warn); }\n.opt-card.sel-conf { border-left-color: var(--danger); }\n.opt-top {\n  display: flex; align-items: center; justify-content: space-between;\n  gap: .5rem; margin: 0 0 .5rem;\n}\n.opt-selo { font-size: .75rem; font-weight: 700; color: var(--text-muted); }\n.sel-ok .opt-selo { color: var(--ok); }\n.sel-duv .opt-selo { color: var(--warn); }\n.sel-conf .opt-selo { color: var(--danger); }\n.opt-tipo {\n  font-size: .68rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;\n  color: var(--text-light);\n}\n.opt-nome { margin: 0 0 .3rem; font-size: 1rem; line-height: 1.35; }\n.opt-onde { margin: 0 0 .5rem; font-size: .8rem; font-weight: 600; color: var(--primary); }\n.opt-nota { margin: 0; font-size: .88rem; line-height: 1.55; color: var(--text-muted); }\n\n.rest-lista { margin: .5rem 0 0; padding-left: 1.1rem; }\n.rest-lista li { font-size: .88rem; line-height: 1.6; color: var(--text-muted); }\n\n@media (max-width: 640px) {\n  .opt-grid { grid-template-columns: 1fr; }\n  .filtros { gap: .4rem; }\n  .filtro-btn { font-size: .8rem; padding: .4rem .75rem; }\n}\n\n/* níveis de recomendação */\n.opt-rec { font-size: .72rem; font-weight: 800; letter-spacing: .02em; }\n.opt-rec.rec1 { color: var(--ok); }\n.opt-rec.rec2 { color: var(--primary); }\n.opt-rec.rec3 { color: var(--text-muted); }\n.opt-rec.rec4 { color: var(--warn); }\n.opt-card { border-left-color: var(--border); }\n.opt-selo { font-weight: 700; }\n.sel-ok .opt-selo { color: var(--ok); }\n.sel-duv .opt-selo { color: var(--warn); }\n.sel-conf .opt-selo { color: var(--danger); }\n.legenda { display: flex; flex-wrap: wrap; gap: .35rem 1.1rem; margin: .9rem 0 0; }\n.leg-item { font-size: .8rem; color: var(--text-muted); }\n.leg-item b { margin-right: .2rem; }\n.opt-onde { display: block; }\n\n\n/* ─── barra de filtros combinados ─── */\n.filtro-barra {\n  border: 1px solid var(--border); border-radius: var(--radius);\n  background: var(--bg-alt); padding: 1rem 1.1rem .35rem; margin: 0 0 2rem;\n}\n.filtro-grupo { display: flex; align-items: baseline; gap: .85rem; margin: 0 0 .35rem; }\n.filtro-rot {\n  flex: 0 0 6.5rem; font-size: .7rem; font-weight: 700;\n  letter-spacing: .07em; text-transform: uppercase; color: var(--text-light);\n}\n.filtro-barra .filtros { margin: 0 0 .55rem; }\n.filtro-n {\n  display: inline-block; margin-left: .3rem; padding: 0 .35rem;\n  border-radius: 999px; background: var(--bg-alt);\n  font-size: .7rem; font-weight: 700; color: var(--text-light);\n}\n.filtro-btn.ativo .filtro-n { background: rgba(255, 255, 255, .22); color: var(--white); }\n.rec-btn.rec1:not(.ativo) { color: var(--ok); }\n.rec-btn.rec2:not(.ativo) { color: var(--primary); }\n.rec-btn.rec4:not(.ativo) { color: var(--warn); }\n.filtro-saida {\n  display: flex; align-items: center; justify-content: space-between; gap: 1rem;\n  margin: .25rem 0 .65rem; font-size: .8rem; color: var(--text-muted);\n}\n.filtro-limpa {\n  font: inherit; font-size: .78rem; cursor: pointer; padding: 0;\n  border: 0; background: none; color: var(--primary); text-decoration: underline;\n}\n.dia-vazio { display: none; margin: 0; font-size: .85rem; color: var(--text-light); font-style: italic; }\n.dia-bloco.sem-resultado .dia-vazio { display: block; }\n.dia-bloco.sem-resultado .opt-grid { display: none; }\n\n/* ─── links de blog e vídeo dentro do card ─── */\n.opt-links {\n  display: flex; flex-wrap: wrap; gap: .35rem;\n  margin: .85rem 0 0; padding-top: .75rem; border-top: 1px solid var(--border);\n}\n.opt-link {\n  display: inline-block; max-width: 100%; overflow: hidden;\n  text-overflow: ellipsis; white-space: nowrap;\n  font-size: .74rem; font-weight: 600; text-decoration: none;\n  padding: .28rem .6rem; border-radius: 999px;\n  border: 1px solid var(--border); background: var(--bg-alt); color: var(--text-muted);\n  transition: border-color .15s, color .15s;\n}\n.opt-link:hover { border-color: var(--primary); color: var(--primary); }\n.opt-link.video { color: var(--danger); }\n.opt-link.video:hover { border-color: var(--danger); }\n.opt-link.insta { color: var(--link); }\n.opt-link.insta:hover { border-color: var(--link); }\n/* a marca do Instagram vai como SVG embutido: acompanha a cor do chip e\n   sobrevive nas páginas offline, onde nenhuma fonte de ícone chegaria */\n.opt-link.insta { gap: .38rem; }\n.ico-insta { flex: 0 0 auto; vertical-align: -2px; }\n\n@media (max-width: 640px) {\n  .filtro-grupo { display: block; }\n  .filtro-rot { display: block; margin: 0 0 .35rem; }\n  .filtro-barra { padding: .9rem .8rem .3rem; }\n  .opt-link { font-size: .72rem; }\n}\n\n/* ─── alvos de toque de 44px nos filtros ─── */\n/* o restante dos ajustes de acessibilidade vive no theme.css da skill */\n.filtro-btn { min-height: 44px; display: inline-flex; align-items: center; }\n.filtro-limpa { min-height: 44px; }\n.opt-link { min-height: 40px; display: inline-flex; align-items: center; padding: .4rem .7rem; }\n\n/* ─── cards de atração com foto ─── */\n.opt-card { display: flex; flex-direction: column; padding: 0; overflow: hidden; }\n.opt-corpo { padding: 1rem 1.1rem 1.15rem; display: flex; flex-direction: column; flex: 1; }\n.opt-foto {\n  position: relative; aspect-ratio: 3 / 2; background: var(--bg-alt);\n  border-bottom: 1px solid var(--border);\n}\n.opt-foto img { width: 100%; height: 100%; object-fit: cover; display: block; }\n/* sem foto o card não pode virar um buraco na grade: um degradê da paleta\n   segura o ritmo da coluna */\n.opt-foto.sem-foto {\n  aspect-ratio: 5 / 1;\n  background: linear-gradient(120deg, var(--primary), var(--primary-light) 60%, var(--secondary));\n}\n/* crédito obrigatório das licenças CC, sem roubar a foto */\n.opt-foto-cred {\n  position: absolute; right: 8px; bottom: 8px;\n  display: inline-flex; align-items: center; justify-content: center;\n  width: 30px; height: 30px; border-radius: 50%; text-decoration: none;\n  font-size: .8rem; line-height: 1;\n  background: rgba(255, 255, 255, .85); border: 1px solid var(--border);\n}\n.opt-foto-cred:hover { background: var(--white); }\n.opt-nota { flex: 1; }\n/* a âncora vinda do roteiro não pode parar embaixo do menu fixo */\n.opt-card { scroll-margin-top: calc(var(--nav-h) + 16px); }\n.opt-card:target { border-color: var(--accent); border-left-color: var(--accent); box-shadow: var(--shadow-lg); }\n\n\n/* ─── restaurantes.html — curadoria gastronômica ─── */\n.rest-card .opt-corpo { padding: 1rem 1.1rem 1.15rem; }\n.rest-card { border-left-color: var(--primary); }\n.rest-card[data-no-roteiro=\"sim\"] { border-left-color: var(--ok); }\n.rest-card[data-top=\"sim\"] { border-left-color: var(--accent); }\n.rest-faixa {\n  font-family: 'JetBrains Mono', monospace; font-size: .82rem; font-weight: 700;\n  color: var(--primary); letter-spacing: .02em;\n}\n.rest-refeicoes { margin: .35rem 0 .6rem; font-size: .8rem; font-weight: 600; color: var(--text-muted); }\n.rest-dias { margin: .6rem 0 0; font-size: .78rem; color: var(--text-light); }\n.rest-local { color: var(--text-muted); font-weight: 500; }\n.rest-tags { display: flex; flex-wrap: wrap; gap: .3rem; margin: .65rem 0 0; }\n.rest-tag {\n  font-size: .7rem; font-weight: 600; padding: .2rem .5rem; border-radius: 999px;\n  background: var(--bg-alt); color: var(--text-muted); border: 1px solid var(--border);\n}\n.rest-conta-bloco { font-size: .78rem; font-weight: 700; color: var(--text-light); margin-left: auto; }\n.rest-cab .dia-tit { justify-content: flex-start; }\n.rest-bloco { scroll-margin-top: calc(var(--nav-h, 58px) + 16px); }\n.rest-legenda { margin-top: .75rem; }\n\n/* busca por texto */\n.filtro-busca { display: flex; align-items: center; gap: .6rem; margin: 0 0 1rem; flex-wrap: wrap; }\n.filtro-busca-rot {\n  font-size: .7rem; font-weight: 700; letter-spacing: .07em;\n  text-transform: uppercase; color: var(--text-light);\n}\n#rest-busca {\n  flex: 1 1 240px; min-width: 200px; font: inherit; font-size: .9rem;\n  padding: .55rem .8rem; border-radius: var(--radius-sm);\n  border: 1px solid var(--border); background: var(--surface); color: var(--text);\n}\n#rest-busca:focus { outline: 2px solid var(--primary); outline-offset: 1px; border-color: var(--primary); }\n\n@media (max-width: 640px) {\n  .rest-conta-bloco { display: none; }\n  #rest-busca { flex: 1 1 100%; }\n}\n\n/* ─── resumo.html — a viagem em uma página ─── */\n.res-h2 { font-size: 1.45rem; margin: 0 0 .5rem; }\n.res-intro { color: var(--text-muted); margin: 0 0 1.5rem; max-width: 60ch; }\n.res-leg { padding: .1rem .45rem; border-radius: var(--radius-sm); font-weight: 600; font-size: .85em; }\n\n.res-camas-wrap, .res-tab-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }\n.res-camas { width: 100%; border-collapse: collapse; background: var(--surface);\n  border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }\n.res-camas th { text-align: left; font-size: .78rem; text-transform: uppercase;\n  letter-spacing: .06em; color: var(--text-muted); padding: .7rem .9rem;\n  background: var(--bg-alt); border-bottom: 1px solid var(--border); }\n.res-camas td { padding: .7rem .9rem; border-bottom: 1px solid var(--border); font-size: .95rem; }\n.res-camas tr:last-child td { border-bottom: 0; }\n.res-camas .res-dia { white-space: nowrap; color: var(--text-muted); font-variant-numeric: tabular-nums; }\n.res-camas .res-muda { white-space: nowrap; color: var(--text-muted); font-size: .88rem; }\n.res-camas tr.res-fica td { background: color-mix(in srgb, var(--ok) 10%, transparent); }\n.res-camas tr.res-fica .res-muda { color: var(--ok); font-weight: 600; }\n\n.res-dia-card { background: var(--surface); border: 1px solid var(--border);\n  border-radius: var(--radius); margin: 0 0 1.5rem; overflow: hidden; box-shadow: var(--shadow-lg); }\n.res-cab { padding: 1.1rem 1.2rem .9rem; border-bottom: 1px solid var(--border); background: var(--bg-alt); }\n.res-chip { display: inline-block; font-size: .75rem; font-weight: 700; letter-spacing: .07em;\n  text-transform: uppercase; color: var(--white); background: var(--primary);\n  padding: .22rem .6rem; border-radius: 999px; }\n.res-tit { font-size: 1.2rem; margin: .55rem 0 .2rem; line-height: 1.3; }\n.res-rota { margin: 0 0 .6rem; color: var(--text-muted); font-size: .88rem; }\n.res-camas-linha { margin: 0 0 .35rem; font-size: .92rem; }\n.res-recado { margin: 0; font-size: .88rem; color: var(--text-muted); font-style: italic; }\n\n.res-tab { width: 100%; border-collapse: collapse; }\n.res-tab td { padding: .7rem .9rem; border-bottom: 1px solid var(--border);\n  font-size: .93rem; vertical-align: top; }\n.res-tab tr:last-child td { border-bottom: 0; }\n.res-hora { white-space: nowrap; font-weight: 700; font-variant-numeric: tabular-nums;\n  color: var(--text); width: 1%; }\n.res-ico { margin-right: .45rem; }\n.res-onde { color: var(--text-muted); font-size: .86rem; width: 30%; }\n.res-linha.res-l-estrada td { background: color-mix(in srgb, var(--accent) 12%, transparent); }\n.res-linha.res-l-estrada .res-hora { color: var(--accent); }\n.res-linha.res-l-hora td { background: color-mix(in srgb, var(--warn) 13%, transparent); }\n.res-leg.res-l-estrada { background: color-mix(in srgb, var(--accent) 20%, transparent); }\n.res-leg.res-l-hora { background: color-mix(in srgb, var(--warn) 22%, transparent); }\n\n@media (max-width: 680px) {\n  .res-tab td, .res-camas td, .res-camas th { padding: .6rem .65rem; }\n  .res-tab td { font-size: .9rem; }\n  .res-onde { width: auto; }\n  .res-tab, .res-tab tbody, .res-tab tr, .res-tab td { display: block; }\n  .res-tab tr { border-bottom: 1px solid var(--border); padding: .2rem 0; }\n  .res-tab tr:last-child { border-bottom: 0; }\n  .res-tab td { border-bottom: 0; padding-top: .25rem; padding-bottom: .25rem; }\n  .res-hora { width: auto; padding-top: .7rem; }\n  .res-onde::before { content: '📍 '; }\n}\n",
     "heroImage": "imagens/cabecalhos/hero-pai-inacio.jpg",
     "pageImages": {
       "hospedagem.html": "imagens/cabecalhos/hospedagem-lencois.jpg",
@@ -159,14 +163,16 @@
       "kind": "imprensa"
     },
     "booking-mucuge": {
-      "label": "Booking — Mucugê, 19–21/10, 1 quarto, 2 adultos",
-      "consultadoEm": "2026-10-06",
-      "url": "https://www.booking.com/searchresults.pt-br.html?ss=Mucug%C3%AA%2C+Bahia%2C+Brasil&checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1&order=bayesian_review_score"
+      "label": "Booking — Mucugê, 19–20/10 (1 noite), 1 quarto, 2 adultos",
+      "url": "https://www.booking.com/searchresults.pt-br.html?ss=Mucug%C3%AA%2C+Bahia%2C+Brasil&checkin=2026-10-19&checkout=2026-10-20&group_adults=2&no_rooms=1",
+      "consultadoEm": "2026-10-12",
+      "kind": "agregador"
     },
     "booking-ibicoara": {
-      "label": "Booking — Ibicoara, 21–22/10, 1 quarto, 2 adultos",
-      "consultadoEm": "2026-10-06",
-      "url": "https://www.booking.com/searchresults.pt-br.html?ss=Ibicoara%2C+Bahia%2C+Brasil&checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1&order=bayesian_review_score"
+      "label": "Booking — Ibicoara, 20–22/10 (2 noites), 1 quarto, 2 adultos",
+      "url": "https://www.booking.com/searchresults.pt-br.html?ss=Ibicoara%2C+Bahia%2C+Brasil&checkin=2026-10-20&checkout=2026-10-22&group_adults=2&no_rooms=1",
+      "consultadoEm": "2026-10-12",
+      "kind": "agregador"
     },
     "booking-lencois-2": {
       "label": "Booking — Lençóis, 22–23/10, 1 quarto, 2 adultos",
@@ -174,9 +180,9 @@
       "url": "https://www.booking.com/searchresults.pt-br.html?ss=Len%C3%A7%C3%B3is%2C+Bahia%2C+Brasil&checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1&order=bayesian_review_score"
     },
     "rotas-maps": {
-      "label": "Google Maps — trechos remedidos para a nova base no Vale do Capão",
+      "label": "Google Maps — trechos remedidos em 10 e 12/10/2026 (Juazeiro → Caeté-Açu e Mucugê → Ibicoara)",
       "url": "https://www.google.com/maps/dir/Juazeiro,+BA/Caet%C3%A9-A%C3%A7u,+Palmeiras,+BA/",
-      "consultadoEm": "2026-10-10",
+      "consultadoEm": "2026-10-12",
       "kind": "agregador"
     },
     "estrada-capao": {
@@ -483,10 +489,10 @@
       "num": 4,
       "date": "2026-10-20",
       "emoji": "⛏️",
-      "city": "Mucugê",
-      "title": "Garimpo, cemitério e cachoeiras",
-      "route": "Mucugê — tudo a até 2 km do centro",
-      "location": "mucuge",
+      "city": "Ibicoara",
+      "title": "Garimpo e cemitério de manhã, Ibicoara ao fim do dia",
+      "route": "Mucugê — a pé — → Ibicoara",
+      "location": "ibicoara",
       "blocks": [
         {
           "time": "08h30 – 12h30 · MANHÃ",
@@ -495,45 +501,71 @@
             "O parque fica na saída para Andaraí, a menos de 2 km do centro. <strong>Um ingresso cobre tudo</strong>: o museu, a trilha do Projeto Sempre-Viva e as duas cachoeiras.",
             "O Museu Vivo do Garimpo é montado numa toca de garimpeiro restaurada, com diamantes, carbonados e máquinas de lapidação inglesas do século XIX.",
             "A Cachoeira da Piabinha fica a poucos minutos a pé da sede. O Tiburtino vem depois, a uns 20 minutos pela mesma trilha, larga e praticamente plana — tem poço raso de um lado e fundo do outro.",
-            "Aberto das 8h30 às 17h30.",
-            "💡 Roupa de banho na mochila.",
+            "Aberto das 8h30 às 17h30 — <strong>mas hoje o grupo sai às 12h30</strong>, porque a tarde termina em Ibicoara.",
+            "💡 Roupa de banho na mochila, e malas já prontas no quarto.",
             "📍 <a href=\"https://www.google.com/maps/dir/Mucug%C3%AA%2C%20BA/Parque%20Municipal%20de%20Mucug%C3%AA%2C%20BA\" target=\"_blank\">Google Maps</a>"
           ],
           "price": {
             "text": "R$ 20 por pessoa",
-            "status": "estimado",
+            "status": "cotado",
             "source": "parque-mucuge"
           },
-          "attraction": "parque-municipal-mucuge"
+          "attraction": "parque-municipal-de-mucuge-museu-piabinha-e-tiburtino"
         },
         {
-          "time": "12h30 – 15h · ALMOÇO",
-          "title": "🍽️ Almoço no centro e tarde sem programa",
+          "time": "12h30 – 14h · ALMOÇO",
+          "title": "🍽️ Almoço no centro e check-out",
           "items": [
-            "Dia leve de propósito: vem depois da Fumaça e antes do Buracão, e é o único da viagem sem estrada."
+            "Almoço no centro histórico e check-out da pousada. As malas vão para o carro.",
+            "💡 O dia é curto de propósito: vem depois da Fumaça e antes do Buracão."
           ]
         },
         {
-          "time": "15h30 – 17h · FIM DE TARDE",
-          "title": "⛪ Cemitério Bizantino (Santa Isabel)",
+          "time": "14h – 15h · TARDE",
+          "title": "⛪ Cemitério Bizantino (Santa Isabel) à luz do dia",
           "items": [
             "Mausoléus brancos em estilo bizantino, com torres e cruzes em miniatura, encravados ao pé do paredão de pedra. Construído entre 1850 e 1886, é apontado como único nas Américas nesse estilo.",
             "Fica na beira da BA-142, em frente a uma das entradas da cidade. Entrada gratuita, sem guia, visita rápida.",
-            "💡 À noite ele é iluminado — vale passar de novo depois do jantar."
+            "💡 Vocês já o viram iluminado na noite de segunda — hoje é a visita de perto, antes de pegar a estrada."
           ],
           "price": {
             "text": "gratuito",
-            "status": "estimado",
+            "status": "cotado",
             "source": "cemiterio-bizantino"
           },
-          "attraction": "cemiterio-bizantino"
+          "attraction": "cemiterio-santa-isabel-bizantino"
+        },
+        {
+          "time": "15h30 – 16h40 · FIM DE TARDE",
+          "title": "🚗 Mucugê → Ibicoara",
+          "items": [
+            "<strong>Mudança de base no fim do dia</strong>, para que amanhã a manhã comece já na cidade do Buracão.",
+            "BA-142 sentido sul, asfalto do começo ao fim.",
+            "✅ Saindo às 15h30, a chegada é às 16h40 — <strong>uma hora inteira antes do pôr do sol das 17h42</strong>. Nenhum trecho no escuro.",
+            "⚠️ Último horário seguro de saída: 16h30, que ainda chega às 17h36, na luz.",
+            "📍 <a href=\"https://www.google.com/maps/dir/Mucug%C3%AA%2C%20BA/Ibicoara%2C%20BA\" target=\"_blank\">Google Maps</a>"
+          ],
+          "duration": {
+            "text": "78,2 km · 1h06",
+            "status": "cotado",
+            "source": "rotas-maps"
+          }
+        },
+        {
+          "time": "16h40 – 19h · CHEGADA",
+          "title": "🏨 Check-in em Ibicoara",
+          "items": [
+            "Base das duas próximas noites — <strong>a única da viagem em que não se troca de cama</strong>.",
+            "⚠️ Confirmar com o condutor da ACVIB o ponto de encontro de amanhã, agora em Ibicoara mesmo.",
+            "Cidade pequena, de pousadas simples. Volta pela praça e jantar no centro."
+          ],
+          "attraction": "a-vila-de-ibicoara-a-noite"
         },
         {
           "time": "19h em diante · NOITE",
-          "title": "🌙 Última noite em Mucugê",
+          "title": "🌙 Jantar em Ibicoara",
           "items": [
-            "⚠️ <strong>Quarta o carro sai às 7h.</strong> O Buracão só aceita entrada até as 11h, e antes dele há 1h15 de asfalto e 28 km de terra.",
-            "Malas prontas na véspera e condutor do Buracão confirmado para 8h15 em Ibicoara."
+            "✅ <strong>Amanhã não há corrida.</strong> O carro sai às 8h e a portaria do Buracão fica a 28 km — contra os 7h e 1h15 de asfalto que o roteiro antigo exigia."
           ]
         }
       ]
@@ -543,40 +575,35 @@
       "date": "2026-10-21",
       "emoji": "🏞️",
       "city": "Ibicoara",
-      "title": "Buracão, café e morango",
-      "route": "Mucugê → Ibicoara → Buracão → Ibicoara",
+      "title": "Buracão sem corrida, café e morango",
+      "route": "Ibicoara → Buracão → Ibicoara",
       "location": "ibicoara",
       "blocks": [
         {
-          "time": "07h – 08h15 · MANHÃ",
-          "title": "🚗 Mucugê → Ibicoara",
+          "time": "07h30 – 08h · MANHÃ",
+          "title": "☕ Café e encontro com o condutor",
           "items": [
-            "Mudança de base. BA-142 sentido sul, todo em asfalto.",
-            "⚠️ Encontro com o condutor em Ibicoara, combinado na véspera com a Associação dos Condutores de Visitantes de Ibicoara (ACVIB).",
-            "📍 <a href=\"https://www.google.com/maps/dir/Mucug%C3%AA%2C%20BA/Ibicoara%2C%20BA\" target=\"_blank\">Google Maps</a>"
-          ],
-          "duration": {
-            "text": "~75 km · ~1h15",
-            "status": "estimado",
-            "source": "rotas-osrm"
-          }
+            "Café na pousada, sem pressa. As malas ficam — hoje se volta para a mesma cama.",
+            "⚠️ Encontro com o condutor da Associação dos Condutores de Visitantes de Ibicoara (ACVIB), combinado na véspera."
+          ]
         },
         {
-          "time": "08h15 – 09h15",
+          "time": "08h – 09h · MANHÃ",
           "title": "🚗 Ibicoara → portaria do Buracão",
           "items": [
             "São 28 km de estrada de terra até a portaria do parque.",
-            "⚠️ <strong>Última entrada às 11h.</strong> As fontes divergem no horário de fechamento (15h ou 17h) — confirmar com o condutor.",
+            "✅ <strong>Última entrada às 11h — chegando às 9h, sobram 2h de margem.</strong> Dormir em Ibicoara tirou 1h06 de asfalto da frente do passeio.",
+            "⚠️ As fontes divergem no horário de fechamento (15h ou 17h) — confirmar com o condutor.",
             "📍 <a href=\"https://www.google.com/maps/dir/Ibicoara%2C%20BA/Cachoeira%20do%20Burac%C3%A3o%2C%20Ibicoara%2C%20BA\" target=\"_blank\">Google Maps</a>"
           ],
           "duration": {
             "text": "~28 km de terra · ~1h",
             "status": "estimado",
-            "source": "buracao"
+            "source": "rotas-osrm"
           }
         },
         {
-          "time": "09h15 – 13h30 · DIA",
+          "time": "09h – 13h · DIA",
           "title": "🏞️ Cachoeira do Buracão",
           "items": [
             "O programa mais impressionante da viagem, e o ponto em que as fontes mais concordam.",
@@ -589,20 +616,19 @@
             "status": "estimado",
             "source": "buracao"
           },
-          "tip": "Entrada até 11h",
           "attraction": "cachoeira-do-buracao"
         },
         {
-          "time": "13h30 – 14h30 · VOLTA",
+          "time": "13h – 14h · VOLTA",
           "title": "🚗 Buracão → Ibicoara",
           "items": [
             "Os 28 km de terra com sol alto e folga larga.",
-            "Check-in na pousada e almoço tardio."
+            "Almoço tardio no centro."
           ],
           "duration": {
             "text": "~28 km de terra · ~1h",
             "status": "estimado",
-            "source": "buracao"
+            "source": "rotas-osrm"
           }
         },
         {
@@ -611,23 +637,22 @@
           "items": [
             "Colheita de morango direto do pé, trilha pelo cafezal sombreado e degustação de café especial na cafeteria do sítio. Cerca de 2h.",
             "Fica na beira da rodovia, a poucos minutos do centro de Ibicoara.",
-            "⚠️ <strong>Exige agendamento.</strong> A agenda publicada mostra um horário das 13h às 14h30 — que bate com a volta do Buracão. Pedir um horário depois das 15h pelo Instagram <a href=\"https://www.instagram.com/cafe_canjerana/\" target=\"_blank\">@cafe_canjerana</a> antes de contar com ele."
+            "⚠️ <strong>Exige agendamento.</strong> Pedir um horário depois das 15h pelo Instagram <a href=\"https://www.instagram.com/cafe_canjerana/\" target=\"_blank\">@cafe_canjerana</a>."
           ],
           "price": {
             "text": "R$ 80 a primeira pessoa + R$ 50 cada adicional",
             "status": "estimado",
             "source": "canjerana"
           },
-          "attraction": "sitio-canjerana"
+          "attraction": "sitio-canjerana-cafe-e-morango"
         },
         {
-          "time": "18h em diante · NOITE",
-          "title": "🏘️ A vila de Ibicoara",
+          "time": "19h em diante · NOITE",
+          "title": "🏘️ Segunda noite em Ibicoara",
           "items": [
-            "Cidade pequena, de pousadas simples. Volta pela praça e jantar no centro.",
-            "⚠️ Quinta é o dia mais longo de estrada no meio da viagem: o carro sai às 6h45."
-          ],
-          "attraction": "ibicoara"
+            "Volta pela praça e jantar no centro.",
+            "⚠️ <strong>Quinta é o dia mais longo de estrada no meio da viagem: o carro sai às 7h.</strong> Malas prontas hoje à noite."
+          ]
         }
       ]
     },
@@ -865,16 +890,16 @@
       "n": 4,
       "name": "Mucugê",
       "emoji": "⛏️",
-      "days": "Dias 3 e 4 · 2 noites",
+      "days": "Dias 3 e 4 · 1 noite",
       "dayRange": "Base do garimpo",
       "lat": -13.0053,
       "lng": -41.3706,
       "category": "mountain",
-      "distNext": "~75 km até Ibicoara · ~1h15",
+      "distNext": "78,2 km até Ibicoara · 1h06",
       "highlights": [
         "Poço Azul no caminho de chegada",
         "Parque Municipal: Museu Vivo do Garimpo, Piabinha e Tiburtino",
-        "Cemitério Bizantino, iluminado à noite",
+        "Cemitério Bizantino — iluminado na chegada, visitado na terça",
         "Centro tombado pelo IPHAN"
       ]
     },
@@ -882,15 +907,16 @@
       "n": 5,
       "name": "Ibicoara",
       "emoji": "🍓",
-      "days": "Dia 5 · 1 noite",
-      "dayRange": "Base do Buracão",
+      "days": "Dias 4 e 5 · 2 noites",
+      "dayRange": "Base do Buracão — a única parada dupla",
       "lat": -13.4131,
       "lng": -41.2851,
       "category": "nature",
       "distNext": "~215–230 km até a Pratinha · ~4h15",
       "highlights": [
-        "Cachoeira do Buracão, a 28 km de terra",
+        "Cachoeira do Buracão, a 28 km de terra, com saída às 8h",
         "Sítio Canjerana — café e morango",
+        "Chegada na tarde de terça, para a quarta começar sem estrada",
         "Vila pequena, de pousadas simples"
       ]
     }
@@ -1173,120 +1199,114 @@
       {
         "id": "mucuge",
         "name": "Mucugê",
-        "emoji": "🏞️",
-        "nights": "2 noites · 19 e 20/10",
+        "emoji": "⛏️",
+        "nights": "1 noite · 19/10",
         "dates": [
           {
             "checkin": "2026-10-19",
-            "checkout": "2026-10-21",
-            "label": "Dias 3 e 4"
+            "checkout": "2026-10-20",
+            "label": "Dia 3"
           }
         ],
         "options": [
           {
-            "name": "Casa di Vó",
-            "desc": "Quarto família a 500 m do centro, com cancelamento grátis e café 9,5.",
+            "name": "Jardim das Orquídeas",
+            "desc": "Apartamento inteiro a <strong>50 m do centro</strong>, o mais central e o mais barato da lista. Quase 300 avaliações sustentando a nota.",
             "price": {
-              "text": "R$ 700 o quarto · 2 noites (R$ 1.400 os dois casais)",
+              "text": "R$ 165 o quarto · 1 noite (R$ 330 os dois casais)",
+              "status": "cotado",
+              "source": "booking-mucuge"
+            },
+            "rating": "9,2 Booking (298 avaliações)",
+            "url": "https://www.booking.com/hotel/br/jardim-das-orquideas.pt-br.html?checkin=2026-10-19&checkout=2026-10-20&group_adults=2&no_rooms=1"
+          },
+          {
+            "name": "Casa Temporada Josy",
+            "desc": "<strong>Casa inteira de 3 quartos e 120 m² — acomoda os dois casais por R$ 200 no total.</strong> Cancelamento grátis e paga na chegada.",
+            "price": {
+              "text": "R$ 200 a casa inteira · 1 noite (os dois casais juntos)",
+              "status": "cotado",
+              "source": "booking-mucuge"
+            },
+            "rating": "9,8 Booking (4 avaliações)",
+            "url": "https://www.booking.com/hotel/br/casa-temporada-josy.pt-br.html?checkin=2026-10-19&checkout=2026-10-20&group_adults=2&no_rooms=1"
+          },
+          {
+            "name": "Tiny House — Refúgio Aconchegante",
+            "desc": "Apartamento inteiro de 30 m² com cozinha, a 600 m do centro.",
+            "price": {
+              "text": "R$ 209 o quarto · 1 noite (R$ 418 os dois casais)",
+              "status": "cotado",
+              "source": "booking-mucuge"
+            },
+            "rating": "9,8 Booking (23 avaliações)",
+            "url": "https://www.booking.com/hotel/br/tiny-house-mucuge.pt-br.html?checkin=2026-10-19&checkout=2026-10-20&group_adults=2&no_rooms=1"
+          },
+          {
+            "name": "Hospedaria Casa da Lia",
+            "desc": "Suíte superior a 500 m do centro, com cinco unidades livres no mesmo preço — resolve os dois quartos com folga.",
+            "price": {
+              "text": "R$ 230 o quarto · 1 noite (R$ 460 os dois casais)",
+              "status": "cotado",
+              "source": "booking-mucuge"
+            },
+            "rating": "9,0 Booking (56 avaliações)",
+            "url": "https://www.booking.com/hotel/br/casa-da-lia-mucuge.pt-br.html?checkin=2026-10-19&checkout=2026-10-20&group_adults=2&no_rooms=1"
+          },
+          {
+            "name": "Casa Siles 2",
+            "desc": "Casa inteira de 2 quartos a 800 m do centro — a outra que cabe os dois casais numa reserva só.",
+            "price": {
+              "text": "R$ 270 a casa inteira · 1 noite (os dois casais juntos)",
+              "status": "cotado",
+              "source": "booking-mucuge"
+            },
+            "rating": "9,4 Booking (18 avaliações)",
+            "url": "https://www.booking.com/hotel/br/casa-siles-2.pt-br.html?checkin=2026-10-19&checkout=2026-10-20&group_adults=2&no_rooms=1"
+          },
+          {
+            "name": "Casa di Vó",
+            "desc": "Quarto família a 500 m do centro, com café da manhã incluído. Cinco unidades no mesmo preço.",
+            "price": {
+              "text": "R$ 350 o quarto · 1 noite (R$ 700 os dois casais)",
               "status": "cotado",
               "source": "booking-mucuge"
             },
             "rating": "9,4 Booking (277 avaliações)",
-            "url": "https://www.booking.com/hotel/br/casa-di-vo-mucuge1.pt-br.html?checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1"
-          },
-          {
-            "name": "Pousada Monte Azul",
-            "desc": "Toda em madeira, com bar e lareira, a 500 m do centro. A mais avaliada de Mucugê, com café nota 10, cancelamento grátis e sem pré-pagamento.",
-            "price": {
-              "text": "R$ 730 o quarto · 2 noites (R$ 1.460 os dois casais)",
-              "status": "cotado",
-              "source": "booking-mucuge"
-            },
-            "rating": "9,0 Booking (587 avaliações)",
-            "url": "https://www.booking.com/hotel/br/pousada-monte-azul.pt-br.html?checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1",
-            "confirmationUrls": [
-              {
-                "label": "Site da pousada",
-                "url": "https://www.pousadamonteazul.com.br/"
-              }
-            ]
+            "url": "https://www.booking.com/hotel/br/casa-di-vo-mucuge1.pt-br.html?checkin=2026-10-19&checkout=2026-10-20&group_adults=2&no_rooms=1"
           },
           {
             "name": "Escalada Hospedagens",
-            "desc": "Apartamento inteiro com cama de casal, a 450 m do centro. Cancelamento grátis, sem pré-pagamento, e cinco unidades livres pelo mesmo preço.",
+            "desc": "Apartamento standard a 450 m do centro, café incluído e sem pré-pagamento.",
             "price": {
-              "text": "R$ 740 o quarto · 2 noites (R$ 1.480 os dois casais)",
+              "text": "R$ 370 o quarto · 1 noite (R$ 740 os dois casais)",
               "status": "cotado",
               "source": "booking-mucuge"
             },
             "rating": "9,5 Booking (454 avaliações)",
-            "url": "https://www.booking.com/hotel/br/escalada-hospedagens-e-eventos.pt-br.html?checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/escalada-hospedagens-e-eventos.pt-br.html?checkin=2026-10-19&checkout=2026-10-20&group_adults=2&no_rooms=1"
           },
           {
-            "name": "Chalés Pôr do Sol",
-            "desc": "Chalé inteiro em Mucugê, bem avaliado mas ainda com poucas avaliações. Opção nova, vale conferir estrutura e café antes de fechar.",
+            "name": "Pousada Monte Azul",
+            "desc": "Quarto família a 500 m do centro, café incluído, cancelamento grátis e paga na chegada.",
             "price": {
-              "text": "R$ 810 o quarto · 2 noites (R$ 1.620 os dois casais)",
+              "text": "R$ 383 o quarto · 1 noite (R$ 766 os dois casais)",
               "status": "cotado",
               "source": "booking-mucuge"
             },
-            "rating": "9,7 Booking (7 avaliações)",
-            "url": "https://www.booking.com/hotel/br/chales-por-do-sol-mucuge.pt-br.html?checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1"
+            "rating": "9,0 Booking (588 avaliações)",
+            "url": "https://www.booking.com/hotel/br/pousada-monte-azul.pt-br.html?checkin=2026-10-19&checkout=2026-10-20&group_adults=2&no_rooms=1"
           },
           {
-            "name": "Oforasteiro",
-            "desc": "Villa de pedra inteira, com sala e quintal, a 150 m do centro. Café nota 10.",
+            "name": "Casa Aconchegante no Centro Histórico",
+            "desc": "Casa inteira de 2 quartos a <strong>20 m do centro</strong>, dentro da área tombada, com cancelamento grátis.",
             "price": {
-              "text": "R$ 982 o quarto · 2 noites (R$ 1.964 os dois casais)",
+              "text": "R$ 540 a casa inteira · 1 noite (os dois casais juntos)",
               "status": "cotado",
               "source": "booking-mucuge"
             },
-            "rating": "9,4 Booking (354 avaliações)",
-            "url": "https://www.booking.com/hotel/br/estalagem-oforasteiro.pt-br.html?checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1"
-          },
-          {
-            "name": "Pousada Céu da Chapadha",
-            "desc": "Quarto standard de casal a 150 m do centro. Nota de localização 9,9 e cancelamento grátis.",
-            "price": {
-              "text": "R$ 1.136 o quarto · 2 noites (R$ 2.272 os dois casais)",
-              "status": "cotado",
-              "source": "booking-mucuge"
-            },
-            "rating": "9,7 Booking (118 avaliações)",
-            "url": "https://www.booking.com/hotel/br/pousada-ceu-mucuge.pt-br.html?checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1"
-          },
-          {
-            "name": "Villa Hortensia",
-            "desc": "Apartamento inteiro com cama king a 150 m do centro. Café nota 10, cancelamento grátis e sem pré-pagamento.",
-            "price": {
-              "text": "R$ 1.160 o quarto · 2 noites (R$ 2.320 os dois casais)",
-              "status": "cotado",
-              "source": "booking-mucuge"
-            },
-            "rating": "9,7 Booking (312 avaliações)",
-            "url": "https://www.booking.com/hotel/br/villa-hortensia.pt-br.html?checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1"
-          },
-          {
-            "name": "Moã Charme Hotel",
-            "desc": "Suíte no casarão tombado do centro histórico. <strong>É a antiga Villa Santo Antônio</strong>: reformada e renomeada, a nota caiu para 8,9 e a diária subiu forte.",
-            "price": {
-              "text": "R$ 1.680 o quarto · 2 noites (R$ 3.360 os dois casais)",
-              "status": "cotado",
-              "source": "booking-mucuge"
-            },
-            "rating": "8,9 Booking (173 avaliações)",
-            "url": "https://www.booking.com/hotel/br/villa-santo-antonio-mucuge-mucuge.pt-br.html?checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1"
-          },
-          {
-            "name": "Refúgio na Serra Boutique Hotel",
-            "desc": "Suíte com sala e jacuzzi, a 400 m do centro. Bem acima da faixa intermediária definida pelo grupo.",
-            "price": {
-              "text": "R$ 3.520 o quarto · 2 noites (R$ 7.040 os dois casais)",
-              "status": "cotado",
-              "source": "booking-mucuge"
-            },
-            "rating": "9,7 Booking (73 avaliações)",
-            "url": "https://www.booking.com/hotel/br/refugio-na-serra-boutique-mucuge.pt-br.html?checkin=2026-10-19&checkout=2026-10-21&group_adults=2&no_rooms=1"
+            "rating": "9,8 Booking (23 avaliações)",
+            "url": "https://www.booking.com/hotel/br/casa-dona-vera.pt-br.html?checkin=2026-10-19&checkout=2026-10-20&group_adults=2&no_rooms=1"
           }
         ]
       },
@@ -1294,152 +1314,113 @@
         "id": "ibicoara",
         "name": "Ibicoara",
         "emoji": "🍓",
-        "nights": "1 noite · 21/10",
+        "nights": "2 noites · 20 e 21/10",
         "dates": [
           {
-            "checkin": "2026-10-21",
+            "checkin": "2026-10-20",
             "checkout": "2026-10-22",
-            "label": "Dia 5"
+            "label": "Dias 4 e 5"
           }
         ],
         "options": [
           {
-            "name": "Vista do Sincorá",
-            "desc": "Casa de temporada com vista para a serra, na cidade. Nota 9,3, mas ainda com só 7 avaliações.",
+            "name": "Quarto Oliveira",
+            "desc": "Quarto família com banheiro privativo a 400 m do centro. O mais barato das duas noites.",
             "price": {
-              "text": "R$ 190 o quarto · 1 noite (R$ 380 os dois casais)",
+              "text": "R$ 270 o quarto · 2 noites (R$ 540 os dois casais)",
               "status": "cotado",
               "source": "booking-ibicoara"
             },
-            "rating": "9,3 Booking (7 avaliações)",
-            "url": "https://www.booking.com/hotel/br/vista-do-sincora.pt-br.html?checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1"
+            "rating": "10 Booking (1 avaliação)",
+            "url": "https://www.booking.com/hotel/br/hostel-flor-da-chapada-ibicoara.pt-br.html?checkin=2026-10-20&checkout=2026-10-22&group_adults=2&no_rooms=1"
+          },
+          {
+            "name": "Canto Ybykuara — Natural Guest House",
+            "desc": "Casa inteira com vista do parque, a 5,4 km do centro, com cancelamento grátis. Duas unidades no mesmo preço.",
+            "price": {
+              "text": "R$ 280 o quarto · 2 noites (R$ 560 os dois casais)",
+              "status": "cotado",
+              "source": "booking-ibicoara"
+            },
+            "rating": "9,2 Booking (34 avaliações)",
+            "url": "https://www.booking.com/hotel/br/canto-ybykuara-natural-guest-house.pt-br.html?checkin=2026-10-20&checkout=2026-10-22&group_adults=2&no_rooms=1"
+          },
+          {
+            "name": "Casa Arte Rupestre",
+            "desc": "Apartamento inteiro de 22 m² com cozinha, a 500 m do centro, com cancelamento grátis. <strong>A melhor nota entre as centrais.</strong>",
+            "price": {
+              "text": "R$ 306 o quarto · 2 noites (R$ 612 os dois casais)",
+              "status": "cotado",
+              "source": "booking-ibicoara"
+            },
+            "rating": "9,6 Booking (22 avaliações)",
+            "url": "https://www.booking.com/hotel/br/casa-arte-rupestre.pt-br.html?checkin=2026-10-20&checkout=2026-10-22&group_adults=2&no_rooms=1"
+          },
+          {
+            "name": "Chalé Canto do Sabiá",
+            "desc": "Chalé inteiro a 6,1 km do centro, com café da manhã incluído — raro na cidade.",
+            "price": {
+              "text": "R$ 342 o quarto · 2 noites (R$ 684 os dois casais)",
+              "status": "cotado",
+              "source": "booking-ibicoara"
+            },
+            "rating": "8,9 Booking (24 avaliações)",
+            "url": "https://www.booking.com/hotel/br/chale-canto-do-sabia-ibicoara.pt-br.html?checkin=2026-10-20&checkout=2026-10-22&group_adults=2&no_rooms=1"
+          },
+          {
+            "name": "Calango Hostel",
+            "desc": "Quarto duplo a 300 m do centro, paga na chegada. A melhor nota da cidade nestas datas.",
+            "price": {
+              "text": "R$ 360 o quarto · 2 noites (R$ 720 os dois casais)",
+              "status": "cotado",
+              "source": "booking-ibicoara"
+            },
+            "rating": "9,7 Booking (26 avaliações)",
+            "url": "https://www.booking.com/hotel/br/calango-hostel-ibicoara.pt-br.html?checkin=2026-10-20&checkout=2026-10-22&group_adults=2&no_rooms=1"
+          },
+          {
+            "name": "Vila Azul — Casa Completa",
+            "desc": "<strong>Casa inteira de 2 quartos e 80 m² — os dois casais por R$ 400 as duas noites.</strong> Fica a 8,1 km do centro, a caminho do Buracão.",
+            "price": {
+              "text": "R$ 400 a casa inteira · 2 noites (os dois casais juntos)",
+              "status": "cotado",
+              "source": "booking-ibicoara"
+            },
+            "rating": "10 Booking (2 avaliações)",
+            "url": "https://www.booking.com/hotel/br/vila-azul-casa-completa-em-ibicoara.pt-br.html?checkin=2026-10-20&checkout=2026-10-22&group_adults=2&no_rooms=1"
+          },
+          {
+            "name": "Vila Sincorá",
+            "desc": "Chalé para 4 com cozinha, <strong>a 2 km da portaria do Buracão</strong> — a 9,9 km do centro. Para quem quiser acordar ainda mais perto da trilha.",
+            "price": {
+              "text": "R$ 405 a casa inteira · 2 noites (os dois casais juntos)",
+              "status": "cotado",
+              "source": "booking-ibicoara"
+            },
+            "rating": "9,3 Booking (40 avaliações)",
+            "url": "https://www.booking.com/hotel/br/vila-sincora.pt-br.html?checkin=2026-10-20&checkout=2026-10-22&group_adults=2&no_rooms=1"
           },
           {
             "name": "Casa Jatobá",
-            "desc": "Casa de um quarto em Ibicoara, muito bem avaliada (9,8) com pouquíssimas avaliações.",
+            "desc": "Casa inteira de 80 m² com cozinha, a 1,3 km do centro.",
             "price": {
-              "text": "R$ 193 o quarto · 1 noite (R$ 386 os dois casais)",
+              "text": "R$ 405 o quarto · 2 noites (R$ 810 os dois casais)",
               "status": "cotado",
               "source": "booking-ibicoara"
             },
             "rating": "9,8 Booking (6 avaliações)",
-            "url": "https://www.booking.com/hotel/br/casa-jatoba-ibicoara.pt-br.html?checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/casa-jatoba-ibicoara.pt-br.html?checkin=2026-10-20&checkout=2026-10-22&group_adults=2&no_rooms=1"
           },
           {
             "name": "Chalé Mascarenhas",
-            "desc": "Quarto quádruplo com cancelamento grátis, a 11,9 km do centro. <strong>Sem café da manhã</strong> e longe de tudo — entra pelo preço e pela nota.",
+            "desc": "Quarto quádruplo a 11,9 km do centro, com cancelamento grátis. Longe de tudo.",
             "price": {
-              "text": "R$ 219 o quarto · 1 noite (R$ 438 os dois casais)",
+              "text": "R$ 460 o quarto · 2 noites (R$ 920 os dois casais)",
               "status": "cotado",
               "source": "booking-ibicoara"
             },
             "rating": "9,5 Booking (15 avaliações)",
-            "url": "https://www.booking.com/hotel/br/chale-mascarenhas.pt-br.html?checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1"
-          },
-          {
-            "name": "Recanto Cachoeiras de Ibicoara",
-            "desc": "Quarto com cama queen e varanda, a 6,2 km do centro. A melhor nota de Ibicoara. <strong>Sem café da manhã</strong>; o valor já inclui as taxas.",
-            "price": {
-              "text": "R$ 238 o quarto · 1 noite (R$ 476 os dois casais)",
-              "status": "cotado",
-              "source": "booking-ibicoara"
-            },
-            "rating": "9,9 Booking (61 avaliações)",
-            "url": "https://www.booking.com/hotel/br/recanto-cachoeiras-de-ibicoara.pt-br.html?checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1"
-          },
-          {
-            "name": "Pousada Encanto dos Mognos",
-            "desc": "Quarto duplo de casal a 1,9 km do centro, café incluído, cancelamento grátis e pagamento na chegada.",
-            "price": {
-              "text": "R$ 238 o quarto · 1 noite (R$ 476 os dois casais)",
-              "status": "cotado",
-              "source": "booking-ibicoara"
-            },
-            "rating": "8,6 Booking (44 avaliações)",
-            "url": "https://www.booking.com/hotel/br/encanto-dos-mognos.pt-br.html?checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1"
-          },
-          {
-            "name": "Pousada Mirante das Serras",
-            "desc": "Chalé inteiro com café incluído e cancelamento grátis. Fica a 9,2 km do centro — some com a ideia de jantar na cidade.",
-            "price": {
-              "text": "R$ 248 o quarto · 1 noite (R$ 496 os dois casais)",
-              "status": "cotado",
-              "source": "booking-ibicoara"
-            },
-            "rating": "9,3 Booking (164 avaliações)",
-            "url": "https://www.booking.com/hotel/br/chale-mirante-das-serras.pt-br.html?checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1"
-          },
-          {
-            "name": "Pousada Serra Aquarela",
-            "desc": "Chalé de um quarto com sala, na própria estrada do Buracão, a 6,2 km do centro. Café incluído.",
-            "price": {
-              "text": "R$ 249 o quarto · 1 noite (R$ 498 os dois casais)",
-              "status": "cotado",
-              "source": "booking-ibicoara"
-            },
-            "rating": "8,5 Booking (110 avaliações)",
-            "url": "https://www.booking.com/hotel/br/chales-serra-aquarela-chale-amarelo-doce.pt-br.html?checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1",
-            "confirmationUrls": [
-              {
-                "label": "Instagram",
-                "url": "https://www.instagram.com/pousadaserraaquarela/"
-              }
-            ]
-          },
-          {
-            "name": "Pousada Capão do Mel",
-            "desc": "Quarto duplo com cama king, a 4,1 km do centro, café incluído.",
-            "price": {
-              "text": "R$ 276 o quarto · 1 noite (R$ 552 os dois casais)",
-              "status": "cotado",
-              "source": "booking-ibicoara"
-            },
-            "rating": "8,6 Booking (65 avaliações)",
-            "url": "https://www.booking.com/hotel/br/pousada-capao-do-mel.pt-br.html?checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1"
-          },
-          {
-            "name": "Hotel Raio do Sol",
-            "desc": "Quarto duplo de casal a 200 m do centro de Ibicoara, café incluído e cancelamento grátis. A opção central mais bem avaliada.",
-            "price": {
-              "text": "R$ 278 o quarto · 1 noite (R$ 556 os dois casais)",
-              "status": "cotado",
-              "source": "booking-ibicoara"
-            },
-            "rating": "9,1 Booking (86 avaliações)",
-            "url": "https://www.booking.com/hotel/br/raio-do-sol-ibicoara.pt-br.html?checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1"
-          },
-          {
-            "name": "Suítes Mirante da Águia",
-            "desc": "Casa de temporada com vista, muito bem avaliada (9,9) e com preço de pousada simples.",
-            "price": {
-              "text": "R$ 286 o quarto · 1 noite (R$ 572 os dois casais)",
-              "status": "cotado",
-              "source": "booking-ibicoara"
-            },
-            "rating": "9,9 Booking (71 avaliações)",
-            "url": "https://www.booking.com/hotel/br/suites-mirante-da-aguia.pt-br.html?checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1"
-          },
-          {
-            "name": "Diamantina Falls Boutique Hotel & Spa",
-            "desc": "A 250 m do centro, com jacuzzi e restaurante, café incluído e cancelamento grátis.",
-            "price": {
-              "text": "R$ 333 o quarto · 1 noite (R$ 666 os dois casais)",
-              "status": "cotado",
-              "source": "booking-ibicoara"
-            },
-            "rating": "8,7 Booking (109 avaliações)",
-            "url": "https://www.booking.com/hotel/br/diamantina-falls-boutique.pt-br.html?checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1"
-          },
-          {
-            "name": "Pousada Kabana de Pedra",
-            "desc": "Chalé de casal em volta do jardim com piscina, na estrada do Buracão — encurta o dia da cachoeira. Café da manhã \"excepcional\" e cancelamento grátis. <strong>Só aceita dinheiro</strong>.",
-            "price": {
-              "text": "R$ 350 o quarto · 1 noite (R$ 700 os dois casais)",
-              "status": "cotado",
-              "source": "booking-ibicoara"
-            },
-            "rating": "9,0 Booking (141 avaliações)",
-            "url": "https://www.booking.com/hotel/br/pousada-kabana-de-pedra.pt-br.html?checkin=2026-10-21&checkout=2026-10-22&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/chale-mascarenhas.pt-br.html?checkin=2026-10-20&checkout=2026-10-22&group_adults=2&no_rooms=1"
           }
         ]
       },
@@ -1668,11 +1649,11 @@
     {
       "city": "Mucugê",
       "emoji": "⛏️",
-      "subtitle": "Dias 3 e 4 — 2 noites",
+      "subtitle": "Dia 3 — 1 noite",
       "items": [
         {
           "id": "mucuge-hotel",
-          "text": "Reservar as noites de 19 e 20/10",
+          "text": "Reservar a noite de 19/10",
           "autoKey": "mucuge",
           "autoType": "booking"
         },
@@ -1683,27 +1664,31 @@
         {
           "id": "mucuge-rota-poco",
           "text": "Conferir no Google Maps o trecho Poço Azul → Mucugê (BA-245) antes de sair"
+        },
+        {
+          "id": "mucuge-checkout-ter",
+          "text": "Avisar a pousada que o check-out é na terça, depois do almoço — as malas saem às 14h"
         }
       ]
     },
     {
       "city": "Ibicoara",
       "emoji": "🍓",
-      "subtitle": "Dia 5 — 1 noite",
+      "subtitle": "Dias 4 e 5 — 2 noites, a única base dupla",
       "items": [
         {
           "id": "ibicoara-hotel",
-          "text": "Reservar a noite de 21/10",
+          "text": "Reservar as noites de 20 e 21/10",
           "autoKey": "ibicoara",
           "autoType": "booking"
         },
         {
           "id": "mucuge-guia-buracao",
-          "text": "Contratar o condutor do Buracão com a ACVIB para quarta 21 — encontro às 8h15 em Ibicoara"
+          "text": "Contratar o condutor do Buracão com a ACVIB para quarta 21 — encontro às 8h em Ibicoara"
         },
         {
           "id": "ibicoara-canjerana",
-          "text": "Agendar a visita ao Sítio Canjerana (café + morango) para depois das 15h"
+          "text": "Agendar a visita ao Sítio Canjerana para quarta, depois das 15h, pelo Instagram @cafe_canjerana"
         }
       ]
     },
@@ -1774,6 +1759,17 @@
       ]
     },
     {
+      "emoji": "🧭",
+      "title": "O princípio: a mudança de base é sempre na véspera",
+      "level": "medium",
+      "items": [
+        "Decidido em 12/10/2026. <strong>Nenhuma manhã é gasta em estrada antes de um passeio</strong> — o carro muda de cidade no fim do dia anterior, com luz.",
+        "Dom 18: dorme-se a 3 km da portaria da Fumaça. Ter 20: a base vai para Ibicoara às 15h30, e a quarta começa a 28 km do Buracão.",
+        "As duas únicas manhãs que começam longe do programa do dia são as travessias de Juazeiro, no sábado e na sexta — e elas não têm passeio a proteger.",
+        "Segunda e quinta não violam o princípio: o Poço Azul e a Pratinha ficam <strong>no caminho</strong> entre duas bases, sem trecho repetido."
+      ]
+    },
+    {
       "emoji": "🚗",
       "title": "Quinta 22 é o dia mais pesado de estrada no meio da viagem",
       "level": "high",
@@ -1786,10 +1782,11 @@
     },
     {
       "emoji": "🏞️",
-      "title": "Buracão: última entrada às 11h",
-      "level": "high",
+      "title": "Buracão: última entrada às 11h — agora com 2h de margem",
+      "level": "medium",
       "items": [
-        "O parque só deixa entrar até as 11h. Saindo de Mucugê às 7h, chega-se a Ibicoara às 8h15 e à portaria por volta das 9h15.",
+        "O parque só deixa entrar até as 11h. <strong>Dormindo em Ibicoara desde terça</strong>, a saída é às 8h e a portaria fica a 28 km de terra: chegada por volta das 9h.",
+        "✅ O roteiro antigo saía de Mucugê às 7h e punha 1h06 de asfalto na frente do passeio. Essa hora foi movida para a tarde de terça, que não tem prazo nenhum.",
         "Condutor obrigatório, da Associação dos Condutores de Visitantes de Ibicoara (ACVIB). Combinar na véspera, com ponto de encontro em Ibicoara.",
         "As fontes divergem no horário de fechamento (15h ou 17h) e no valor do guia (R$ 150–200 por grupo contra R$ 35–40 por pessoa em outra fonte). Confirmar com a ACVIB."
       ]
@@ -1810,8 +1807,8 @@
       "level": "high",
       "items": [
         "Regra do grupo: as travessias acontecem entre o nascer e o pôr do sol. Em outubro o sol nasce por volta das 5h17 e se põe às 17h42.",
-        "✅ <strong>A exceção:</strong> trechos curtos de asfalto, de até ~30 min e com o grupo junto. Só um trecho do roteiro usa: a volta do Pai Inácio <strong>no domingo</strong>, 29 km de BR-242 até Lençóis, chegando por volta das 18h45.",
-        "✅ <strong>O sábado deixou de ter direção noturna.</strong> Indo direto ao Capão, a chegada é por volta das 16h — e o Pai Inácio passou para o domingo, quando ele já fica no caminho.",
+        "✅ <strong>A exceção:</strong> trechos curtos de asfalto, de até ~30 min e com o grupo junto. Só um trecho do roteiro usa: a volta do Pai Inácio no domingo, 29 km de BR-242 até Lençóis, chegando por volta das 18h45.",
+        "✅ <strong>Princípio adotado em 12/10:</strong> toda mudança de base acontece no fim do dia anterior, para que a manhã já comece na cidade do passeio. A travessia de terça (Mucugê → Ibicoara, 15h30 → 16h40) chega com 1h de sol de sobra.",
         "⚠️ <strong>O Pai Inácio fecha a subida às 17h.</strong> Sair da vila do Capão às 14h30.",
         "⚠️ Uma volta ainda encosta no pôr do sol e não entra na exceção: Pratinha → Lençóis na quinta (sair até 16h30)."
       ]
@@ -1829,14 +1826,14 @@
     },
     {
       "emoji": "🏨",
-      "title": "Cinco reservas, e três bases nas três primeiras noites",
+      "title": "Cinco reservas, e uma só base de duas noites",
       "level": "high",
       "items": [
-        "Vale do Capão (17–18), Lençóis (18–19), Mucugê (19–21), Ibicoara (21–22) e Lençóis de novo (22–23).",
-        "⚠️ <strong>É o custo da mudança:</strong> mala desfeita três vezes seguidas no começo da viagem. Vale arrumar uma mochila de uma noite para o Capão e deixar o resto no carro.",
-        "⚠️ A <strong>Mansão Mascarenhas</strong>, que segurava as duas estadias em Lençóis no desenho antigo, <strong>não tem vaga em 18/10</strong>. Hoje quem aparece nas duas janelas é a <strong>Aurora Suítes</strong>.",
-        "💡 No Capão, o <strong>Chalé Diamante</strong> (R$ 221) e o <strong>O Galpão Casa Flor</strong> (R$ 276) têm 2 quartos e resolvem os dois casais em uma reserva só.",
-        "Ibicoara tem poucas pousadas e é uma noite só — continua sendo a reserva que mais vale fazer cedo."
+        "Vale do Capão (17–18), Lençóis (18–19), Mucugê (19–20), <strong>Ibicoara (20–22)</strong> e Lençóis de novo (22–23).",
+        "⚠️ <strong>Quatro camas diferentes nas quatro primeiras noites.</strong> Vale arrumar uma mochila de uma noite para o Capão e para Mucugê, deixando o resto no carro.",
+        "✅ <strong>Ibicoara é a única parada de duas noites</strong> — a quarta é o único dia da viagem em que não se desfaz e refaz mala.",
+        "⚠️ A <strong>Mansão Mascarenhas</strong> não tem vaga em 18/10. Quem aparece nas duas janelas de Lençóis é a <strong>Aurora Suítes</strong>.",
+        "💡 Em cada base há ao menos uma casa ou chalé de dois quartos que resolve os dois casais numa reserva só: Chalé Diamante no Capão (R$ 221), Casinha da Torre em Lençóis (R$ 207), Casa Temporada Josy em Mucugê (R$ 200) e Vila Azul em Ibicoara (R$ 400 as duas noites)."
       ]
     },
     {
@@ -1861,9 +1858,9 @@
   "notes": {
     "index": [
       {
-        "emoji": "🗓️",
-        "title": "O roteiro mudou a primeira noite",
-        "text": "São sete dias, com volta na sexta 23. Em 10/10/2026 o grupo trocou a base do sábado: em vez de Lençóis, o dia 17 vai direto para o <strong>Vale do Capão</strong>, a 3 km da trilha da Fumaça, e o <strong>Pai Inácio passa para o domingo</strong>, na volta da trilha. Nada está reservado ainda, e o que tem hora de verdade (Fumaça, Pai Inácio, Poço Azul, Buracão, Pratinha) está marcado com ⚠️ no próprio bloco."
+        "emoji": "🧭",
+        "title": "O roteiro agora muda de base sempre na véspera",
+        "text": "São sete dias, com volta na sexta 23. Em 12/10/2026 o grupo fechou um princípio: <strong>a troca de cidade acontece no fim do dia anterior</strong>, para que nenhuma manhã seja gasta em estrada antes de um passeio. Foi o que levou o sábado direto ao Vale do Capão e a tarde de terça a Ibicoara. Nada está reservado ainda, e o que tem hora de verdade (Fumaça, Pai Inácio, Poço Azul, Buracão, Pratinha) está marcado com ⚠️ no próprio bloco."
       },
       {
         "emoji": "🍽️",
@@ -1878,9 +1875,9 @@
         "text": "É o padrão do grupo, categoria intermediária. O preço de cada card é <strong>do quarto</strong>, para a estadia inteira daquela base — o valor entre parênteses é a soma dos dois, só para dimensionar o gasto. Onde a acomodação é uma casa ou chalé de dois quartos, o preço já é dos dois casais juntos, e o card diz isso."
       },
       {
-        "emoji": "🥾",
-        "title": "A primeira noite mudou de lugar",
-        "text": "O sábado 17 agora termina no <strong>Vale do Capão</strong>, a 3 km da trilha da Fumaça, e Lençóis passa a ser a noite de domingo. São três bases em três noites — o custo da mudança —, mas o domingo perdeu 3h de carro e o despertador das 5h30. Cotações de <strong>10/10/2026</strong>."
+        "emoji": "🧭",
+        "title": "Cinco bases, uma só com duas noites",
+        "text": "A troca de cidade é sempre no fim do dia anterior. Isso dá <strong>Capão (17), Lençóis (18), Mucugê (19), Ibicoara (20 e 21) e Lençóis (22)</strong> — quatro camas nas quatro primeiras noites, e Ibicoara como a única parada dupla. Cotações de <strong>10 e 12/10/2026</strong>."
       },
       {
         "emoji": "🔁",

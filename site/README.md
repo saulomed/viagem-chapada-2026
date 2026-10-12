@@ -9,6 +9,7 @@ Roteiro interativo da viagem a Chapada Diamantina, Bahia (17/10 a 23/10).
 - `index.html` — 🗓️ Roteiro
 - `hospedagem.html` — 🏨 Hospedagem
 - `mapa.html` — 🌍 Mapa
+- `resumo.html` — ⚡ Resumo
 - `atracoes.html` — 📸 Atrações
 - `restaurantes.html` — 🍽️ Restaurantes
 
