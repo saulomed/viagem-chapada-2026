@@ -204,9 +204,9 @@
       "kind": "agregador"
     },
     "booking-lencois-dom": {
-      "label": "Booking — Lençóis, 18–19/10 (domingo), 1 quarto, 2 adultos",
+      "label": "Booking — Lençóis, 18–19/10 (domingo), 1 quarto, 2 adultos · revisto em 12/10/2026, quando a Mansão Mascarenhas voltou a ter vaga",
       "url": "https://www.booking.com/searchresults.pt-br.html?ss=Len%C3%A7%C3%B3is%2C+Bahia%2C+Brasil&checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1",
-      "consultadoEm": "2026-10-10",
+      "consultadoEm": "2026-10-12",
       "kind": "agregador"
     }
   },
@@ -980,7 +980,8 @@
               "source": "booking-capao"
             },
             "rating": "9,3 Booking (61 avaliações)",
-            "url": "https://www.booking.com/hotel/br/sabor-da-trilha-suites.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/sabor-da-trilha-suites.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1",
+            "breakfast": false
           },
           {
             "name": "Casa do Capão",
@@ -991,7 +992,8 @@
               "source": "booking-capao"
             },
             "rating": "9,5 Booking (42 avaliações)",
-            "url": "https://www.booking.com/hotel/br/casa-do-capao.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/casa-do-capao.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1",
+            "breakfast": false
           },
           {
             "name": "Pousada e Hostel Pé no Mato",
@@ -1002,7 +1004,8 @@
               "source": "booking-capao"
             },
             "rating": "8,8 Booking (346 avaliações)",
-            "url": "https://www.booking.com/hotel/br/pousada-pa-c-no-mato.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/pousada-pa-c-no-mato.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1",
+            "breakfast": false
           },
           {
             "name": "Chalé Diamante",
@@ -1013,7 +1016,8 @@
               "source": "booking-capao"
             },
             "rating": "9,0 Booking (72 avaliações)",
-            "url": "https://www.booking.com/hotel/br/chale-proximo-a-vila-do-vale-do-capao-bahia.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/chale-proximo-a-vila-do-vale-do-capao-bahia.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1",
+            "breakfast": false
           },
           {
             "name": "Pousada Bela Vista do Capão",
@@ -1024,7 +1028,8 @@
               "source": "booking-capao"
             },
             "rating": "9,6 Booking (141 avaliações)",
-            "url": "https://www.booking.com/hotel/br/pousada-bela-vista-do-capao.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/pousada-bela-vista-do-capao.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1",
+            "breakfast": false
           },
           {
             "name": "Pousada Tarumim",
@@ -1035,7 +1040,8 @@
               "source": "booking-capao"
             },
             "rating": "9,5 Booking (113 avaliações)",
-            "url": "https://www.booking.com/hotel/br/pousada-tarumim.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/pousada-tarumim.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1",
+            "breakfast": true
           },
           {
             "name": "O Galpão Casa Flor",
@@ -1046,7 +1052,8 @@
               "source": "booking-capao"
             },
             "rating": "9,6 Booking (20 avaliações)",
-            "url": "https://www.booking.com/hotel/br/o-galpao-casa-flor.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/o-galpao-casa-flor.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1",
+            "breakfast": false
           },
           {
             "name": "Entre Montanhas Capão",
@@ -1057,7 +1064,8 @@
               "source": "booking-capao"
             },
             "rating": "9,3 Booking (126 avaliações)",
-            "url": "https://www.booking.com/hotel/br/entre-montanhas-capao.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/entre-montanhas-capao.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1",
+            "breakfast": true
           },
           {
             "name": "Pousada Terras do Poente",
@@ -1068,7 +1076,8 @@
               "source": "booking-capao"
             },
             "rating": "9,6 Booking (59 avaliações)",
-            "url": "https://www.booking.com/hotel/br/pousada-terras-do-poente.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/pousada-terras-do-poente.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1",
+            "breakfast": true
           },
           {
             "name": "Pousada Zazen",
@@ -1079,7 +1088,8 @@
               "source": "booking-capao"
             },
             "rating": "9,6 Booking (256 avaliações)",
-            "url": "https://www.booking.com/hotel/br/pousada-zazen.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/pousada-zazen.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1",
+            "breakfast": true
           },
           {
             "name": "Pousada do Capão",
@@ -1096,7 +1106,8 @@
                 "label": "Site da pousada",
                 "url": "https://www.pousadadocapao.com.br/"
               }
-            ]
+            ],
+            "breakfast": true
           }
         ]
       },
@@ -1122,7 +1133,8 @@
               "source": "booking-lencois-dom"
             },
             "rating": "9,6 Booking (10 avaliações)",
-            "url": "https://www.booking.com/hotel/br/luz-lencois.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/luz-lencois.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1",
+            "breakfast": false
           },
           {
             "name": "Visite Chapäda Hospedaria",
@@ -1133,7 +1145,8 @@
               "source": "booking-lencois-dom"
             },
             "rating": "9,4 Booking (118 avaliações)",
-            "url": "https://www.booking.com/hotel/br/hostel-trip.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/hostel-trip.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1",
+            "breakfast": false
           },
           {
             "name": "Pousada Piçarras",
@@ -1144,7 +1157,8 @@
               "source": "booking-lencois-dom"
             },
             "rating": "9,0 Booking (174 avaliações)",
-            "url": "https://www.booking.com/hotel/br/www-pousadapicarras-com-br.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/www-pousadapicarras-com-br.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1",
+            "breakfast": true
           },
           {
             "name": "Suítes da Villa — Hospedaria",
@@ -1155,7 +1169,8 @@
               "source": "booking-lencois-dom"
             },
             "rating": "8,8 Booking (98 avaliações)",
-            "url": "https://www.booking.com/hotel/br/suites-da-villa.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/suites-da-villa.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1",
+            "breakfast": false
           },
           {
             "name": "Chapada Casas da Izete",
@@ -1166,18 +1181,20 @@
               "source": "booking-lencois-dom"
             },
             "rating": "9,1 Booking (271 avaliações)",
-            "url": "https://www.booking.com/hotel/br/lencois-da-chapada-casas.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/lencois-da-chapada-casas.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1",
+            "breakfast": true
           },
           {
             "name": "Aurora Suítes",
-            "desc": "Quarto família a 800 m do centro, café incluído, sem pré-pagamento. <strong>Tem vaga também na noite de 22/10</strong> — é a candidata para segurar as duas estadias em Lençóis.",
+            "desc": "Quarto família a 800 m do centro, sem pré-pagamento. <strong>Tem vaga também na noite de 22/10</strong> — é a candidata para segurar as duas estadias em Lençóis.",
             "price": {
               "text": "R$ 198 o quarto · 1 noite (R$ 396 os dois casais)",
               "status": "cotado",
               "source": "booking-lencois-dom"
             },
             "rating": "9,3 Booking (92 avaliações)",
-            "url": "https://www.booking.com/hotel/br/aurora-suites-chapada-diamantina.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/aurora-suites-chapada-diamantina.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1",
+            "breakfast": false
           },
           {
             "name": "Chalé Orion",
@@ -1188,7 +1205,8 @@
               "source": "booking-lencois-dom"
             },
             "rating": "9,5 Booking (44 avaliações)",
-            "url": "https://www.booking.com/hotel/br/complexo-halley-lencois.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/complexo-halley-lencois.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1",
+            "breakfast": false
           },
           {
             "name": "Casinha da Torre",
@@ -1199,7 +1217,20 @@
               "source": "booking-lencois-dom"
             },
             "rating": "9,4 Booking (14 avaliações)",
-            "url": "https://www.booking.com/hotel/br/casinha-da-torre.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/casinha-da-torre.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1",
+            "breakfast": false
+          },
+          {
+            "name": "Mansão Mascarenhas",
+            "desc": "Duplo deluxe com varanda a 500 m do centro, café incluído e duas unidades no mesmo preço. <strong>Voltou a ter vaga em 18/10</strong> — na consulta de 10/10 estava esgotada. É a pousada de nota mais alta que aparece nas duas estadias de Lençóis.",
+            "price": {
+              "text": "R$ 345 o quarto · 1 noite (R$ 690 os dois casais)",
+              "status": "cotado",
+              "source": "booking-lencois-dom"
+            },
+            "rating": "9,7 Booking (143 avaliações)",
+            "breakfast": true,
+            "url": "https://www.booking.com/hotel/br/mansao-mascarenhas.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1"
           },
           {
             "name": "Pousada Vila Serrano",
@@ -1216,7 +1247,8 @@
                 "label": "Site da pousada",
                 "url": "https://www.vilaserrano.com/"
               }
-            ]
+            ],
+            "breakfast": true
           },
           {
             "name": "Hotel de Lençóis",
@@ -1227,7 +1259,8 @@
               "source": "booking-lencois-dom"
             },
             "rating": "9,6 Booking (671 avaliações)",
-            "url": "https://www.booking.com/hotel/br/de-lenassois.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/de-lenassois.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1",
+            "breakfast": true
           }
         ]
       },
@@ -1253,7 +1286,8 @@
               "source": "booking-mucuge"
             },
             "rating": "9,2 Booking (298 avaliações)",
-            "url": "https://www.booking.com/hotel/br/jardim-das-orquideas.pt-br.html?checkin=2026-10-19&checkout=2026-10-20&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/jardim-das-orquideas.pt-br.html?checkin=2026-10-19&checkout=2026-10-20&group_adults=2&no_rooms=1",
+            "breakfast": false
           },
           {
             "name": "Casa Temporada Josy",
@@ -1264,7 +1298,8 @@
               "source": "booking-mucuge"
             },
             "rating": "9,8 Booking (4 avaliações)",
-            "url": "https://www.booking.com/hotel/br/casa-temporada-josy.pt-br.html?checkin=2026-10-19&checkout=2026-10-20&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/casa-temporada-josy.pt-br.html?checkin=2026-10-19&checkout=2026-10-20&group_adults=2&no_rooms=1",
+            "breakfast": false
           },
           {
             "name": "Tiny House — Refúgio Aconchegante",
@@ -1275,7 +1310,8 @@
               "source": "booking-mucuge"
             },
             "rating": "9,8 Booking (23 avaliações)",
-            "url": "https://www.booking.com/hotel/br/tiny-house-mucuge.pt-br.html?checkin=2026-10-19&checkout=2026-10-20&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/tiny-house-mucuge.pt-br.html?checkin=2026-10-19&checkout=2026-10-20&group_adults=2&no_rooms=1",
+            "breakfast": false
           },
           {
             "name": "Hospedaria Casa da Lia",
@@ -1286,7 +1322,8 @@
               "source": "booking-mucuge"
             },
             "rating": "9,0 Booking (56 avaliações)",
-            "url": "https://www.booking.com/hotel/br/casa-da-lia-mucuge.pt-br.html?checkin=2026-10-19&checkout=2026-10-20&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/casa-da-lia-mucuge.pt-br.html?checkin=2026-10-19&checkout=2026-10-20&group_adults=2&no_rooms=1",
+            "breakfast": false
           },
           {
             "name": "Casa Siles 2",
@@ -1297,11 +1334,12 @@
               "source": "booking-mucuge"
             },
             "rating": "9,4 Booking (18 avaliações)",
-            "url": "https://www.booking.com/hotel/br/casa-siles-2.pt-br.html?checkin=2026-10-19&checkout=2026-10-20&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/casa-siles-2.pt-br.html?checkin=2026-10-19&checkout=2026-10-20&group_adults=2&no_rooms=1",
+            "breakfast": false
           },
           {
             "name": "Casa di Vó",
-            "desc": "Quarto família a 500 m do centro, com café da manhã incluído. Cinco unidades no mesmo preço.",
+            "desc": "Quarto família a 500 m do centro. Cinco unidades no mesmo preço. ⚠️ A cotação anterior trazia café incluído, mas a checagem de 12/10 não mostrou — <strong>confirmar na reserva</strong>.",
             "price": {
               "text": "R$ 350 o quarto · 1 noite (R$ 700 os dois casais)",
               "status": "cotado",
@@ -1319,7 +1357,8 @@
               "source": "booking-mucuge"
             },
             "rating": "9,5 Booking (454 avaliações)",
-            "url": "https://www.booking.com/hotel/br/escalada-hospedagens-e-eventos.pt-br.html?checkin=2026-10-19&checkout=2026-10-20&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/escalada-hospedagens-e-eventos.pt-br.html?checkin=2026-10-19&checkout=2026-10-20&group_adults=2&no_rooms=1",
+            "breakfast": true
           },
           {
             "name": "Pousada Monte Azul",
@@ -1330,7 +1369,8 @@
               "source": "booking-mucuge"
             },
             "rating": "9,0 Booking (588 avaliações)",
-            "url": "https://www.booking.com/hotel/br/pousada-monte-azul.pt-br.html?checkin=2026-10-19&checkout=2026-10-20&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/pousada-monte-azul.pt-br.html?checkin=2026-10-19&checkout=2026-10-20&group_adults=2&no_rooms=1",
+            "breakfast": true
           },
           {
             "name": "Casa Aconchegante no Centro Histórico",
@@ -1341,7 +1381,8 @@
               "source": "booking-mucuge"
             },
             "rating": "9,8 Booking (23 avaliações)",
-            "url": "https://www.booking.com/hotel/br/casa-dona-vera.pt-br.html?checkin=2026-10-19&checkout=2026-10-20&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/casa-dona-vera.pt-br.html?checkin=2026-10-19&checkout=2026-10-20&group_adults=2&no_rooms=1",
+            "breakfast": false
           }
         ]
       },
@@ -1367,7 +1408,8 @@
               "source": "booking-ibicoara"
             },
             "rating": "10 Booking (1 avaliação)",
-            "url": "https://www.booking.com/hotel/br/hostel-flor-da-chapada-ibicoara.pt-br.html?checkin=2026-10-20&checkout=2026-10-22&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/hostel-flor-da-chapada-ibicoara.pt-br.html?checkin=2026-10-20&checkout=2026-10-22&group_adults=2&no_rooms=1",
+            "breakfast": false
           },
           {
             "name": "Canto Ybykuara — Natural Guest House",
@@ -1378,7 +1420,8 @@
               "source": "booking-ibicoara"
             },
             "rating": "9,2 Booking (34 avaliações)",
-            "url": "https://www.booking.com/hotel/br/canto-ybykuara-natural-guest-house.pt-br.html?checkin=2026-10-20&checkout=2026-10-22&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/canto-ybykuara-natural-guest-house.pt-br.html?checkin=2026-10-20&checkout=2026-10-22&group_adults=2&no_rooms=1",
+            "breakfast": false
           },
           {
             "name": "Casa Arte Rupestre",
@@ -1389,7 +1432,8 @@
               "source": "booking-ibicoara"
             },
             "rating": "9,6 Booking (22 avaliações)",
-            "url": "https://www.booking.com/hotel/br/casa-arte-rupestre.pt-br.html?checkin=2026-10-20&checkout=2026-10-22&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/casa-arte-rupestre.pt-br.html?checkin=2026-10-20&checkout=2026-10-22&group_adults=2&no_rooms=1",
+            "breakfast": false
           },
           {
             "name": "Chalé Canto do Sabiá",
@@ -1400,7 +1444,8 @@
               "source": "booking-ibicoara"
             },
             "rating": "8,9 Booking (24 avaliações)",
-            "url": "https://www.booking.com/hotel/br/chale-canto-do-sabia-ibicoara.pt-br.html?checkin=2026-10-20&checkout=2026-10-22&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/chale-canto-do-sabia-ibicoara.pt-br.html?checkin=2026-10-20&checkout=2026-10-22&group_adults=2&no_rooms=1",
+            "breakfast": true
           },
           {
             "name": "Calango Hostel",
@@ -1411,7 +1456,8 @@
               "source": "booking-ibicoara"
             },
             "rating": "9,7 Booking (26 avaliações)",
-            "url": "https://www.booking.com/hotel/br/calango-hostel-ibicoara.pt-br.html?checkin=2026-10-20&checkout=2026-10-22&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/calango-hostel-ibicoara.pt-br.html?checkin=2026-10-20&checkout=2026-10-22&group_adults=2&no_rooms=1",
+            "breakfast": false
           },
           {
             "name": "Vila Azul — Casa Completa",
@@ -1422,7 +1468,8 @@
               "source": "booking-ibicoara"
             },
             "rating": "10 Booking (2 avaliações)",
-            "url": "https://www.booking.com/hotel/br/vila-azul-casa-completa-em-ibicoara.pt-br.html?checkin=2026-10-20&checkout=2026-10-22&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/vila-azul-casa-completa-em-ibicoara.pt-br.html?checkin=2026-10-20&checkout=2026-10-22&group_adults=2&no_rooms=1",
+            "breakfast": false
           },
           {
             "name": "Vila Sincorá",
@@ -1433,7 +1480,8 @@
               "source": "booking-ibicoara"
             },
             "rating": "9,3 Booking (40 avaliações)",
-            "url": "https://www.booking.com/hotel/br/vila-sincora.pt-br.html?checkin=2026-10-20&checkout=2026-10-22&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/vila-sincora.pt-br.html?checkin=2026-10-20&checkout=2026-10-22&group_adults=2&no_rooms=1",
+            "breakfast": false
           },
           {
             "name": "Casa Jatobá",
@@ -1444,7 +1492,8 @@
               "source": "booking-ibicoara"
             },
             "rating": "9,8 Booking (6 avaliações)",
-            "url": "https://www.booking.com/hotel/br/casa-jatoba-ibicoara.pt-br.html?checkin=2026-10-20&checkout=2026-10-22&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/casa-jatoba-ibicoara.pt-br.html?checkin=2026-10-20&checkout=2026-10-22&group_adults=2&no_rooms=1",
+            "breakfast": false
           },
           {
             "name": "Chalé Mascarenhas",
@@ -1455,7 +1504,8 @@
               "source": "booking-ibicoara"
             },
             "rating": "9,5 Booking (15 avaliações)",
-            "url": "https://www.booking.com/hotel/br/chale-mascarenhas.pt-br.html?checkin=2026-10-20&checkout=2026-10-22&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/chale-mascarenhas.pt-br.html?checkin=2026-10-20&checkout=2026-10-22&group_adults=2&no_rooms=1",
+            "breakfast": false
           }
         ]
       },
@@ -1474,7 +1524,7 @@
         "options": [
           {
             "name": "Vila Caribé",
-            "desc": "A 700 m do centro, café incluído. É a mesma casa da primeira estadia — mas agora só tem vaga nesta noite; está esgotada em 17–19.",
+            "desc": "A 700 m do centro. ⚠️ A cotação anterior trazia café incluído, mas a checagem de 12/10 não mostrou — <strong>confirmar na reserva</strong>. É a mesma casa da primeira estadia — mas agora só tem vaga nesta noite; está esgotada em 17–19.",
             "price": {
               "text": "R$ 229 o quarto · 1 noite (R$ 458 os dois casais)",
               "status": "cotado",
@@ -1492,7 +1542,8 @@
               "source": "booking-lencois-2"
             },
             "rating": "9,0 Booking (129 avaliações)",
-            "url": "https://www.booking.com/hotel/br/pousada-da-rita.pt-br.html?checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/pousada-da-rita.pt-br.html?checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1",
+            "breakfast": true
           },
           {
             "name": "Suítes VarandaLu",
@@ -1503,7 +1554,8 @@
               "source": "booking-lencois-2"
             },
             "rating": "9,6 Booking (67 avaliações)",
-            "url": "https://www.booking.com/hotel/br/casa-de-luciana-lencois.pt-br.html?checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/casa-de-luciana-lencois.pt-br.html?checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1",
+            "breakfast": false
           },
           {
             "name": "Villa Allma",
@@ -1514,7 +1566,8 @@
               "source": "booking-lencois-2"
             },
             "rating": "9,7 Booking (494 avaliações)",
-            "url": "https://www.booking.com/hotel/br/jardim-serrano-lencois.pt-br.html?checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/jardim-serrano-lencois.pt-br.html?checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1",
+            "breakfast": true
           },
           {
             "name": "Mansão Mascarenhas",
@@ -1525,7 +1578,8 @@
               "source": "booking-lencois-2"
             },
             "rating": "9,7 Booking (142 avaliações)",
-            "url": "https://www.booking.com/hotel/br/mansao-mascarenhas.pt-br.html?checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/mansao-mascarenhas.pt-br.html?checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1",
+            "breakfast": true
           },
           {
             "name": "Pousada Alto do Cajueiro",
@@ -1536,7 +1590,8 @@
               "source": "booking-lencois-2"
             },
             "rating": "9,1 Booking (740 avaliações)",
-            "url": "https://www.booking.com/hotel/br/pousada-alto-do-cajueiro.pt-br.html?checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/pousada-alto-do-cajueiro.pt-br.html?checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1",
+            "breakfast": true
           },
           {
             "name": "Pouso da Trilha",
@@ -1553,7 +1608,8 @@
                 "label": "Site da pousada",
                 "url": "https://www.pousodatrilha.com.br/"
               }
-            ]
+            ],
+            "breakfast": true
           },
           {
             "name": "Pousada Casa Viva a Vida",
@@ -1564,7 +1620,8 @@
               "source": "booking-lencois-2"
             },
             "rating": "9,7 Booking (266 avaliações)",
-            "url": "https://www.booking.com/hotel/br/casa-viva-a-vida-b-amp-b.pt-br.html?checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/casa-viva-a-vida-b-amp-b.pt-br.html?checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1",
+            "breakfast": false
           },
           {
             "name": "Pousada Vila Serrano",
@@ -1581,7 +1638,8 @@
                 "label": "Site da pousada",
                 "url": "https://vilaserrano.com/"
               }
-            ]
+            ],
+            "breakfast": true
           },
           {
             "name": "Hotel Canto das Águas",
@@ -1598,7 +1656,8 @@
                 "label": "Site do hotel",
                 "url": "https://lencois.com.br/"
               }
-            ]
+            ],
+            "breakfast": false
           }
         ]
       }
@@ -1607,6 +1666,7 @@
       "Os preços são <strong>por quarto de casal</strong>, para a estadia inteira daquela base — é o que cada casal vai pagar na sua própria reserva. O valor entre parênteses é a soma dos dois quartos, só para dimensionar o gasto do grupo.",
       "Cotação refeita na <strong>Booking em 06/10/2026</strong>, nas datas exatas de cada base, 2 adultos em 1 quarto. Alguns valores excluem a taxa municipal de 5%.",
       "Só entram na lista pousadas com <strong>nota acima de 8,5</strong>. Saíram Portal Lençóis (8,0), Cafe Preto (8,3) e Pousada Licuri (8,2).",
+      "A coluna <strong>☕ Café</strong> traz o que a Booking mostrava em <strong>12/10/2026</strong> para o quarto mais barato disponível de cada acomodação. Onde está <strong>? confirmar</strong>, a cotação anterior dizia que incluía e a checagem de hoje não mostrou — vale perguntar na hora de reservar. Café é o que decide a manhã nos dias de saída cedo: domingo (7h), quarta (8h) e sexta (7h).",
       "Padrão do grupo: quarto de casal, categoria intermediária. Onde a pousada não tinha duplo livre, o quarto cotado foi o menor que acomoda o casal — está dito na descrição.",
       "Preço de Booking muda com a procura: use esta lista para escolher e <strong>cote de novo na hora de fechar</strong>.",
       "<strong>Esgotadas em 06/10:</strong> Lençóis 17–19 — Vila Caribé, Pousada da Rita, Alto do Cajueiro e Canto dos Pássaros; Mucugê 19–21 — Encanto da Roça e Diamantino Residence; Ibicoara 21–22 — Terra de Gigantes e Residencial Maria de Lourdes. Reservar cedo.",
@@ -1878,7 +1938,7 @@
         "Vale do Capão (17–18), Lençóis (18–19), Mucugê (19–20), <strong>Ibicoara (20–22)</strong> e Lençóis de novo (22–23).",
         "⚠️ <strong>Quatro camas diferentes nas quatro primeiras noites.</strong> Vale arrumar uma mochila de uma noite para o Capão e para Mucugê, deixando o resto no carro.",
         "✅ <strong>Ibicoara é a única parada de duas noites</strong> — a quarta é o único dia da viagem em que não se desfaz e refaz mala.",
-        "⚠️ A <strong>Mansão Mascarenhas</strong> não tem vaga em 18/10. Quem aparece nas duas janelas de Lençóis é a <strong>Aurora Suítes</strong>.",
+        "✅ A <strong>Mansão Mascarenhas</strong> (9,7) <strong>voltou a ter vaga em 18/10</strong> na checagem de 12/10 — estava esgotada em 10/10. São R$ 345 no domingo e R$ 329 na quinta, com café incluído nas duas: é a opção de nota mais alta que resolve as duas estadias de Lençóis numa pousada só.",
         "💡 Em cada base há ao menos uma casa ou chalé de dois quartos que resolve os dois casais numa reserva só: Chalé Diamante no Capão (R$ 221), Casinha da Torre em Lençóis (R$ 207), Casa Temporada Josy em Mucugê (R$ 200) e Vila Azul em Ibicoara (R$ 400 as duas noites)."
       ]
     },

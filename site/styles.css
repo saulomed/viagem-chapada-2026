@@ -452,6 +452,55 @@ a.fato-selo:hover { opacity: 0.75; }
 .hotel-price { font-family: 'JetBrains Mono', monospace; font-weight: 600; color: var(--accent-text); }
 .hotel-badge { font-size: 0.72rem; background: var(--ok); color: var(--white); padding: 2px 9px; border-radius: 100px; align-self: flex-start; }
 .hotel-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 6px; }
+
+/* tabela de comparação de hospedagem — uma por base */
+.lodging-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 700px; table-layout: fixed; }
+.lodging-table col.c-name { width: 36%; }
+.lodging-table col.c-rating { width: 15%; }
+.lodging-table col.c-bf { width: 14%; }
+.lodging-table col.c-price { width: 20%; }
+.lodging-table col.c-act { width: 15%; }
+.lodging-table thead th {
+  text-align: left; font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--text-light); padding: 10px 12px; border-bottom: 2px solid var(--border);
+  white-space: nowrap; background: var(--bg-alt);
+}
+.lodging-table td { padding: 14px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+.lodging-table tr.hotel-card { background: transparent; border: 0; border-radius: 0; padding: 0; box-shadow: none; display: table-row; }
+.lodging-table tr.hotel-card:hover { background: var(--bg-alt); }
+.lodging-table tr.hotel-card.reserved { background: color-mix(in srgb, var(--ok) 12%, transparent); }
+.lodging-table tr.hotel-card.reserved td:first-child { box-shadow: inset 4px 0 0 var(--ok); }
+
+.lodging-table .lg-name strong { font-size: 0.98rem; font-weight: 600; }
+.lodging-table .lg-name .desc { font-size: 0.84rem; color: var(--text-muted); margin-top: 5px; }
+.lodging-table .lg-rating { color: var(--text-muted); font-size: 0.82rem; line-height: 1.5; }
+.lodging-table .lg-price { font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 0.8rem; line-height: 1.45; color: var(--accent-text); }
+.lodging-table .lg-actions .btn { margin: 0 0 6px; display: block; text-align: center; font-size: 0.76rem; padding: 7px 10px; white-space: normal; }
+.bf { display: inline-block; font-size: 0.75rem; font-weight: 600; padding: 3px 8px; border-radius: 100px; white-space: nowrap; }
+.bf.yes { background: color-mix(in srgb, var(--ok) 18%, transparent); color: var(--ok); }
+.bf.no { background: var(--bg-alt); color: var(--text-light); }
+.bf.maybe { background: color-mix(in srgb, var(--warn) 20%, transparent); color: var(--warn); }
+
+/* no celular a tabela vira uma lista de fichas, sem rolagem lateral */
+@media (max-width: 760px) {
+  .lodging-table { min-width: 0; display: block; table-layout: auto; }
+  .lodging-table colgroup { display: none; }
+  .lodging-table thead { display: none; }
+  .lodging-table tbody, .lodging-table tr.hotel-card { display: block; }
+  .lodging-table tr.hotel-card {
+    border: 1px solid var(--border); border-radius: var(--radius);
+    background: var(--surface); box-shadow: var(--shadow-sm); padding: 16px; margin-bottom: 14px;
+  }
+  .lodging-table tr.hotel-card.reserved { border-color: var(--ok); border-width: 2px; }
+  .lodging-table tr.hotel-card.reserved td:first-child { box-shadow: none; }
+  .lodging-table td { display: block; border: 0; padding: 4px 0; }
+  .lodging-table td.lg-rating::before, .lodging-table td.lg-bf::before, .lodging-table td.lg-price::before {
+    content: attr(data-label) ": "; font-size: 0.74rem; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--text-light); margin-right: 6px;
+  }
+  .lodging-table .lg-actions { padding-top: 10px; }
+  .lodging-table .lg-actions .btn { display: inline-block; margin: 0 8px 6px 0; }
+}
 .btn {
   border: none; cursor: pointer; font-family: inherit; font-size: 0.84rem; font-weight: 600;
   padding: 8px 16px; border-radius: 100px; text-decoration: none; display: inline-block;
