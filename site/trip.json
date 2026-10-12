@@ -210,10 +210,21 @@
       "kind": "agregador"
     },
     "booking-canto-bosque": {
-      "label": "Booking — Pousada Canto No Bosque, Lençóis: indisponível em 18/10, com vaga em 22/10",
+      "label": "Pousada Canto No Bosque, Lençóis — a Booking não tinha vaga em 18/10 em 12/10/2026; a reserva do grupo foi fechada fora dela",
       "url": "https://www.booking.com/hotel/br/pousada-canto-no-bosque.pt-br.html",
       "consultadoEm": "2026-10-12",
       "kind": "agregador"
+    },
+    "reservas-grupo": {
+      "label": "Reservas fechadas pelo grupo — valores, datas e prazos de cancelamento informados por Saulo em 12/10/2026",
+      "consultadoEm": "2026-10-12",
+      "kind": "oficial"
+    },
+    "kabana-pagamento": {
+      "label": "Pousada Kabana de Pedra, Ibicoara — página da Booking: \"Formas de pagamento aceitas: Dinheiro\", com pré-pagamento por transferência bancária",
+      "url": "https://www.booking.com/hotel/br/pousada-kabana-de-pedra.pt-br.html",
+      "consultadoEm": "2026-10-12",
+      "kind": "oficial"
     }
   },
   "days": [
@@ -563,7 +574,8 @@
           "items": [
             "Base das duas próximas noites — <strong>a única da viagem em que não se troca de cama</strong>.",
             "⚠️ Confirmar com o condutor da ACVIB o ponto de encontro de amanhã, agora em Ibicoara mesmo.",
-            "Cidade pequena, de pousadas simples. Volta pela praça e jantar no centro."
+            "Cidade pequena, de pousadas simples. Volta pela praça e jantar no centro.",
+            "⚠️ A <strong>Kabana de Pedra</strong> fica a 3 km do centro, na estrada do Buracão — amanhã isso encurta a saída, mas hoje o jantar é de carro."
           ],
           "attraction": "a-vila-de-ibicoara-a-noite"
         },
@@ -571,8 +583,14 @@
           "time": "19h em diante · NOITE",
           "title": "🌙 Jantar em Ibicoara",
           "items": [
-            "✅ <strong>Amanhã não há corrida.</strong> O carro sai às 8h e a portaria do Buracão fica a 28 km — contra os 7h e 1h15 de asfalto que o roteiro antigo exigia."
-          ]
+            "A pousada fica a <strong>3 km do centro</strong>, na estrada do Buracão: o jantar na vila é de carro.",
+            "🔴 <strong>Kabana de Pedra só aceita dinheiro.</strong> São R$ 1.472 do grupo pelas duas noites, com pré-pagamento por transferência — resolver isso antes de chegar."
+          ],
+          "price": {
+            "text": "R$ 736 o quarto · 2 noites, só em dinheiro",
+            "status": "confirmado",
+            "source": "kabana-pagamento"
+          }
         }
       ]
     },
@@ -664,8 +682,9 @@
           "time": "19h em diante · NOITE",
           "title": "🏘️ Segunda noite em Ibicoara",
           "items": [
-            "Volta pela praça e jantar no centro.",
-            "⚠️ <strong>Quinta é o dia mais longo de estrada no meio da viagem: o carro sai às 7h.</strong> Malas prontas hoje à noite."
+            "Jantar no centro — são 3 km de carro desde a pousada.",
+            "💡 A Kabana tem piscina de borda infinita, e hoje o grupo volta às 17h30: é a tarde mais livre da viagem depois da manhã de segunda.",
+            "⚠️ <strong>Sexta o carro sai às 7h: 520 km e 7h53 até Juazeiro.</strong> Malas prontas hoje à noite."
           ]
         }
       ]
@@ -978,6 +997,20 @@
         ],
         "options": [
           {
+            "name": "Pousada Bela Vista do Capão",
+            "desc": "✅ <strong>Reservada para a noite de sábado 17/10.</strong> Chalé inteiro de 30 m² com vista, a 1,5 km do centro da vila. ⚠️ <strong>Cancelamento grátis só até 17/10</strong> — o próprio dia do check-in. ⚠️ Fica 1,5 km fora da vila: o jantar de sábado exige o carro.",
+            "price": {
+              "text": "R$ 288 o quarto · 1 noite (R$ 576 os dois casais)",
+              "status": "confirmado",
+              "source": "reservas-grupo"
+            },
+            "rating": "9,6 Booking (141 avaliações)",
+            "url": "https://www.booking.com/hotel/br/pousada-bela-vista-do-capao.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1",
+            "breakfast": false,
+            "distance": "1,5 km do centro",
+            "reserved": true
+          },
+          {
             "name": "Hospedagem Sabor da Trilha",
             "desc": "Suíte júnior com varanda a 1,3 km do centro da vila. O mais barato acima de 8,5 — e sobram unidades no mesmo preço.",
             "price": {
@@ -987,7 +1020,8 @@
             },
             "rating": "9,3 Booking (61 avaliações)",
             "url": "https://www.booking.com/hotel/br/sabor-da-trilha-suites.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1",
-            "breakfast": false
+            "breakfast": false,
+            "distance": "1,3 km do centro"
           },
           {
             "name": "Casa do Capão",
@@ -999,7 +1033,8 @@
             },
             "rating": "9,5 Booking (42 avaliações)",
             "url": "https://www.booking.com/hotel/br/casa-do-capao.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1",
-            "breakfast": false
+            "breakfast": false,
+            "distance": "350 m do centro"
           },
           {
             "name": "Pousada e Hostel Pé no Mato",
@@ -1011,7 +1046,8 @@
             },
             "rating": "8,8 Booking (346 avaliações)",
             "url": "https://www.booking.com/hotel/br/pousada-pa-c-no-mato.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1",
-            "breakfast": false
+            "breakfast": false,
+            "distance": "50 m do centro"
           },
           {
             "name": "Chalé Diamante",
@@ -1023,19 +1059,8 @@
             },
             "rating": "9,0 Booking (72 avaliações)",
             "url": "https://www.booking.com/hotel/br/chale-proximo-a-vila-do-vale-do-capao-bahia.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1",
-            "breakfast": false
-          },
-          {
-            "name": "Pousada Bela Vista do Capão",
-            "desc": "Chalé inteiro de 30 m² com cozinha, a 1,5 km do centro. Quatro unidades livres no mesmo preço.",
-            "price": {
-              "text": "R$ 248 o quarto · 1 noite (R$ 496 os dois casais)",
-              "status": "cotado",
-              "source": "booking-capao"
-            },
-            "rating": "9,6 Booking (141 avaliações)",
-            "url": "https://www.booking.com/hotel/br/pousada-bela-vista-do-capao.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1",
-            "breakfast": false
+            "breakfast": false,
+            "distance": "150 m do centro"
           },
           {
             "name": "Pousada Tarumim",
@@ -1047,7 +1072,8 @@
             },
             "rating": "9,5 Booking (113 avaliações)",
             "url": "https://www.booking.com/hotel/br/pousada-tarumim.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1",
-            "breakfast": true
+            "breakfast": true,
+            "distance": "1,4 km do centro"
           },
           {
             "name": "O Galpão Casa Flor",
@@ -1059,7 +1085,8 @@
             },
             "rating": "9,6 Booking (20 avaliações)",
             "url": "https://www.booking.com/hotel/br/o-galpao-casa-flor.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1",
-            "breakfast": false
+            "breakfast": false,
+            "distance": "30 m do centro"
           },
           {
             "name": "Entre Montanhas Capão",
@@ -1071,7 +1098,8 @@
             },
             "rating": "9,3 Booking (126 avaliações)",
             "url": "https://www.booking.com/hotel/br/entre-montanhas-capao.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1",
-            "breakfast": true
+            "breakfast": true,
+            "distance": "400 m do centro"
           },
           {
             "name": "Pousada Terras do Poente",
@@ -1083,7 +1111,8 @@
             },
             "rating": "9,6 Booking (59 avaliações)",
             "url": "https://www.booking.com/hotel/br/pousada-terras-do-poente.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1",
-            "breakfast": true
+            "breakfast": true,
+            "distance": "5 km do centro"
           },
           {
             "name": "Pousada Zazen",
@@ -1095,7 +1124,8 @@
             },
             "rating": "9,6 Booking (256 avaliações)",
             "url": "https://www.booking.com/hotel/br/pousada-zazen.pt-br.html?checkin=2026-10-17&checkout=2026-10-18&group_adults=2&no_rooms=1",
-            "breakfast": true
+            "breakfast": true,
+            "distance": "250 m do centro"
           },
           {
             "name": "Pousada do Capão",
@@ -1113,7 +1143,8 @@
                 "url": "https://www.pousadadocapao.com.br/"
               }
             ],
-            "breakfast": true
+            "breakfast": true,
+            "distance": "1,9 km do centro"
           }
         ]
       },
@@ -1131,6 +1162,32 @@
         ],
         "options": [
           {
+            "name": "Pousada Alto do Cajueiro",
+            "desc": "✅ <strong>Reservada para a noite de domingo 18/10.</strong> Duplo standard a 800 m do centro, com café da manhã. 740 avaliações — o maior volume da lista. É <strong>a mesma pousada da última noite, 22/10</strong>: as duas estadias de Lençóis na mesma casa, sem procurar outra. ⚠️ Cancelamento grátis até 18/10.",
+            "price": {
+              "text": "R$ 259 o quarto · 1 noite (R$ 518 os dois casais)",
+              "status": "confirmado",
+              "source": "reservas-grupo"
+            },
+            "rating": "9,1 Booking (740 avaliações)",
+            "distance": "0,8 km do centro",
+            "breakfast": true,
+            "reserved": true,
+            "url": "https://www.booking.com/hotel/br/pousada-alto-do-cajueiro.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1"
+          },
+          {
+            "name": "Pousada Canto No Bosque",
+            "desc": "Piscina e serviço de quarto, 363 avaliações. <strong>Chegou a ser a escolha do grupo e acabou trocada pela Alto do Cajueiro.</strong> A Booking não tinha vaga nesta data na consulta de 12/10. Fica como registro — ela também aparece na noite de 22/10.",
+            "price": {
+              "text": "sem cotação na Booking para esta data",
+              "status": "estimado",
+              "source": "booking-canto-bosque"
+            },
+            "rating": "8,7 Booking (363 avaliações)",
+            "url": "https://www.booking.com/hotel/br/pousada-canto-no-bosque.pt-br.html",
+            "distance": "0,9 km do centro"
+          },
+          {
             "name": "Hostel Luz",
             "desc": "Quarto duplo com banheiro privativo a 100 m do centro. Casa nova na Booking, com poucas avaliações — mas é o duplo privativo mais barato do centro.",
             "price": {
@@ -1140,7 +1197,8 @@
             },
             "rating": "9,6 Booking (10 avaliações)",
             "url": "https://www.booking.com/hotel/br/luz-lencois.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1",
-            "breakfast": false
+            "breakfast": false,
+            "distance": "100 m do centro"
           },
           {
             "name": "Visite Chapäda Hospedaria",
@@ -1152,7 +1210,8 @@
             },
             "rating": "9,4 Booking (118 avaliações)",
             "url": "https://www.booking.com/hotel/br/hostel-trip.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1",
-            "breakfast": false
+            "breakfast": false,
+            "distance": "350 m do centro"
           },
           {
             "name": "Pousada Piçarras",
@@ -1164,7 +1223,8 @@
             },
             "rating": "9,0 Booking (174 avaliações)",
             "url": "https://www.booking.com/hotel/br/www-pousadapicarras-com-br.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1",
-            "breakfast": true
+            "breakfast": true,
+            "distance": "100 m do centro"
           },
           {
             "name": "Suítes da Villa — Hospedaria",
@@ -1176,7 +1236,8 @@
             },
             "rating": "8,8 Booking (98 avaliações)",
             "url": "https://www.booking.com/hotel/br/suites-da-villa.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1",
-            "breakfast": false
+            "breakfast": false,
+            "distance": "50 m do centro"
           },
           {
             "name": "Chapada Casas da Izete",
@@ -1188,7 +1249,8 @@
             },
             "rating": "9,1 Booking (271 avaliações)",
             "url": "https://www.booking.com/hotel/br/lencois-da-chapada-casas.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1",
-            "breakfast": true
+            "breakfast": true,
+            "distance": "400 m do centro"
           },
           {
             "name": "Aurora Suítes",
@@ -1200,7 +1262,8 @@
             },
             "rating": "9,3 Booking (92 avaliações)",
             "url": "https://www.booking.com/hotel/br/aurora-suites-chapada-diamantina.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1",
-            "breakfast": false
+            "breakfast": false,
+            "distance": "800 m do centro"
           },
           {
             "name": "Chalé Orion",
@@ -1212,7 +1275,8 @@
             },
             "rating": "9,5 Booking (44 avaliações)",
             "url": "https://www.booking.com/hotel/br/complexo-halley-lencois.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1",
-            "breakfast": false
+            "breakfast": false,
+            "distance": "600 m do centro"
           },
           {
             "name": "Casinha da Torre",
@@ -1224,7 +1288,8 @@
             },
             "rating": "9,4 Booking (14 avaliações)",
             "url": "https://www.booking.com/hotel/br/casinha-da-torre.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1",
-            "breakfast": false
+            "breakfast": false,
+            "distance": "800 m do centro"
           },
           {
             "name": "Mansão Mascarenhas",
@@ -1236,7 +1301,8 @@
             },
             "rating": "9,7 Booking (143 avaliações)",
             "breakfast": true,
-            "url": "https://www.booking.com/hotel/br/mansao-mascarenhas.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/mansao-mascarenhas.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1",
+            "distance": "500 m do centro"
           },
           {
             "name": "Pousada Vila Serrano",
@@ -1254,7 +1320,8 @@
                 "url": "https://www.vilaserrano.com/"
               }
             ],
-            "breakfast": true
+            "breakfast": true,
+            "distance": "500 m do centro"
           },
           {
             "name": "Hotel de Lençóis",
@@ -1266,7 +1333,8 @@
             },
             "rating": "9,6 Booking (671 avaliações)",
             "url": "https://www.booking.com/hotel/br/de-lenassois.pt-br.html?checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1",
-            "breakfast": true
+            "breakfast": true,
+            "distance": "500 m do centro"
           }
         ]
       },
@@ -1284,6 +1352,19 @@
         ],
         "options": [
           {
+            "name": "Villa Andorinha — Apto 03",
+            "desc": "✅ <strong>Reservada para a noite de segunda 19/10.</strong> ⭐ <strong>É a única reserva da viagem que já cobre os quatro</strong> — uma diária só, sem dividir em dois quartos. A 350 m do centro histórico, com terraço coberto. ⚠️ Cancelamento grátis até 19/10. ⚠️ A Booking não vende esta data com 1 diária (exige 2 ou mais), então as condições são as da reserva, não as do site.",
+            "price": {
+              "text": "R$ 769,50 o apartamento · 1 noite · já para as 4 pessoas",
+              "status": "confirmado",
+              "source": "reservas-grupo"
+            },
+            "rating": "9,8 Booking (59 avaliações)",
+            "distance": "350 m do centro",
+            "reserved": true,
+            "url": "https://www.booking.com/searchresults.pt-br.html?ss=Villa+Andorinha+Mucug%C3%AA"
+          },
+          {
             "name": "Jardim das Orquídeas",
             "desc": "Apartamento inteiro a <strong>50 m do centro</strong>, o mais central e o mais barato da lista. Quase 300 avaliações sustentando a nota.",
             "price": {
@@ -1293,7 +1374,8 @@
             },
             "rating": "9,2 Booking (298 avaliações)",
             "url": "https://www.booking.com/hotel/br/jardim-das-orquideas.pt-br.html?checkin=2026-10-19&checkout=2026-10-20&group_adults=2&no_rooms=1",
-            "breakfast": false
+            "breakfast": false,
+            "distance": "50 m do centro"
           },
           {
             "name": "Casa Temporada Josy",
@@ -1305,7 +1387,8 @@
             },
             "rating": "9,8 Booking (4 avaliações)",
             "url": "https://www.booking.com/hotel/br/casa-temporada-josy.pt-br.html?checkin=2026-10-19&checkout=2026-10-20&group_adults=2&no_rooms=1",
-            "breakfast": false
+            "breakfast": false,
+            "distance": "0,5 km do centro"
           },
           {
             "name": "Tiny House — Refúgio Aconchegante",
@@ -1317,7 +1400,8 @@
             },
             "rating": "9,8 Booking (23 avaliações)",
             "url": "https://www.booking.com/hotel/br/tiny-house-mucuge.pt-br.html?checkin=2026-10-19&checkout=2026-10-20&group_adults=2&no_rooms=1",
-            "breakfast": false
+            "breakfast": false,
+            "distance": "0,6 km do centro"
           },
           {
             "name": "Hospedaria Casa da Lia",
@@ -1329,7 +1413,8 @@
             },
             "rating": "9,0 Booking (56 avaliações)",
             "url": "https://www.booking.com/hotel/br/casa-da-lia-mucuge.pt-br.html?checkin=2026-10-19&checkout=2026-10-20&group_adults=2&no_rooms=1",
-            "breakfast": false
+            "breakfast": false,
+            "distance": "0,5 km do centro"
           },
           {
             "name": "Casa Siles 2",
@@ -1341,7 +1426,8 @@
             },
             "rating": "9,4 Booking (18 avaliações)",
             "url": "https://www.booking.com/hotel/br/casa-siles-2.pt-br.html?checkin=2026-10-19&checkout=2026-10-20&group_adults=2&no_rooms=1",
-            "breakfast": false
+            "breakfast": false,
+            "distance": "0,8 km do centro"
           },
           {
             "name": "Casa di Vó",
@@ -1352,7 +1438,8 @@
               "source": "booking-mucuge"
             },
             "rating": "9,4 Booking (277 avaliações)",
-            "url": "https://www.booking.com/hotel/br/casa-di-vo-mucuge1.pt-br.html?checkin=2026-10-19&checkout=2026-10-20&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/casa-di-vo-mucuge1.pt-br.html?checkin=2026-10-19&checkout=2026-10-20&group_adults=2&no_rooms=1",
+            "distance": "500 m do centro"
           },
           {
             "name": "Escalada Hospedagens",
@@ -1364,7 +1451,8 @@
             },
             "rating": "9,5 Booking (454 avaliações)",
             "url": "https://www.booking.com/hotel/br/escalada-hospedagens-e-eventos.pt-br.html?checkin=2026-10-19&checkout=2026-10-20&group_adults=2&no_rooms=1",
-            "breakfast": true
+            "breakfast": true,
+            "distance": "450 m do centro"
           },
           {
             "name": "Pousada Monte Azul",
@@ -1376,7 +1464,8 @@
             },
             "rating": "9,0 Booking (588 avaliações)",
             "url": "https://www.booking.com/hotel/br/pousada-monte-azul.pt-br.html?checkin=2026-10-19&checkout=2026-10-20&group_adults=2&no_rooms=1",
-            "breakfast": true
+            "breakfast": true,
+            "distance": "500 m do centro"
           },
           {
             "name": "Casa Aconchegante no Centro Histórico",
@@ -1388,7 +1477,8 @@
             },
             "rating": "9,8 Booking (23 avaliações)",
             "url": "https://www.booking.com/hotel/br/casa-dona-vera.pt-br.html?checkin=2026-10-19&checkout=2026-10-20&group_adults=2&no_rooms=1",
-            "breakfast": false
+            "breakfast": false,
+            "distance": "20 m do centro"
           }
         ]
       },
@@ -1406,6 +1496,20 @@
         ],
         "options": [
           {
+            "name": "Pousada Kabana de Pedra",
+            "desc": "✅ <strong>Reservada para as noites de terça 20 e quarta 21/10.</strong> Piscina de borda infinita e espreguiçadeiras, a 3 km do centro, <strong>na estrada do Buracão</strong> — encurta a saída de quarta. 🔴 <strong>Só aceita dinheiro</strong>, com pré-pagamento por transferência: são R$ 1.472 do grupo pelas duas noites. ⚠️ Cancelamento grátis até 20/10. ⚠️ A 3 km do centro, o jantar nas duas noites exige o carro.",
+            "price": {
+              "text": "R$ 736 o quarto · 2 noites (R$ 368 a diária) · R$ 1.472 os dois casais",
+              "status": "confirmado",
+              "source": "reservas-grupo"
+            },
+            "rating": "9,0 Booking (141 avaliações)",
+            "distance": "3 km do centro",
+            "breakfast": true,
+            "reserved": true,
+            "url": "https://www.booking.com/hotel/br/pousada-kabana-de-pedra.pt-br.html"
+          },
+          {
             "name": "Quarto Oliveira",
             "desc": "Quarto família com banheiro privativo a 400 m do centro. O mais barato das duas noites.",
             "price": {
@@ -1415,7 +1519,8 @@
             },
             "rating": "10 Booking (1 avaliação)",
             "url": "https://www.booking.com/hotel/br/hostel-flor-da-chapada-ibicoara.pt-br.html?checkin=2026-10-20&checkout=2026-10-22&group_adults=2&no_rooms=1",
-            "breakfast": false
+            "breakfast": false,
+            "distance": "400 m do centro"
           },
           {
             "name": "Canto Ybykuara — Natural Guest House",
@@ -1427,7 +1532,8 @@
             },
             "rating": "9,2 Booking (34 avaliações)",
             "url": "https://www.booking.com/hotel/br/canto-ybykuara-natural-guest-house.pt-br.html?checkin=2026-10-20&checkout=2026-10-22&group_adults=2&no_rooms=1",
-            "breakfast": false
+            "breakfast": false,
+            "distance": "5,4 km do centro"
           },
           {
             "name": "Casa Arte Rupestre",
@@ -1439,7 +1545,8 @@
             },
             "rating": "9,6 Booking (22 avaliações)",
             "url": "https://www.booking.com/hotel/br/casa-arte-rupestre.pt-br.html?checkin=2026-10-20&checkout=2026-10-22&group_adults=2&no_rooms=1",
-            "breakfast": false
+            "breakfast": false,
+            "distance": "500 m do centro"
           },
           {
             "name": "Chalé Canto do Sabiá",
@@ -1451,7 +1558,8 @@
             },
             "rating": "8,9 Booking (24 avaliações)",
             "url": "https://www.booking.com/hotel/br/chale-canto-do-sabia-ibicoara.pt-br.html?checkin=2026-10-20&checkout=2026-10-22&group_adults=2&no_rooms=1",
-            "breakfast": true
+            "breakfast": true,
+            "distance": "6,1 km do centro"
           },
           {
             "name": "Calango Hostel",
@@ -1463,7 +1571,8 @@
             },
             "rating": "9,7 Booking (26 avaliações)",
             "url": "https://www.booking.com/hotel/br/calango-hostel-ibicoara.pt-br.html?checkin=2026-10-20&checkout=2026-10-22&group_adults=2&no_rooms=1",
-            "breakfast": false
+            "breakfast": false,
+            "distance": "300 m do centro"
           },
           {
             "name": "Vila Azul — Casa Completa",
@@ -1475,7 +1584,8 @@
             },
             "rating": "10 Booking (2 avaliações)",
             "url": "https://www.booking.com/hotel/br/vila-azul-casa-completa-em-ibicoara.pt-br.html?checkin=2026-10-20&checkout=2026-10-22&group_adults=2&no_rooms=1",
-            "breakfast": false
+            "breakfast": false,
+            "distance": "8,1 km do centro"
           },
           {
             "name": "Vila Sincorá",
@@ -1487,7 +1597,8 @@
             },
             "rating": "9,3 Booking (40 avaliações)",
             "url": "https://www.booking.com/hotel/br/vila-sincora.pt-br.html?checkin=2026-10-20&checkout=2026-10-22&group_adults=2&no_rooms=1",
-            "breakfast": false
+            "breakfast": false,
+            "distance": "9,9 km do centro"
           },
           {
             "name": "Casa Jatobá",
@@ -1499,7 +1610,8 @@
             },
             "rating": "9,8 Booking (6 avaliações)",
             "url": "https://www.booking.com/hotel/br/casa-jatoba-ibicoara.pt-br.html?checkin=2026-10-20&checkout=2026-10-22&group_adults=2&no_rooms=1",
-            "breakfast": false
+            "breakfast": false,
+            "distance": "1,3 km do centro"
           },
           {
             "name": "Chalé Mascarenhas",
@@ -1511,7 +1623,8 @@
             },
             "rating": "9,5 Booking (15 avaliações)",
             "url": "https://www.booking.com/hotel/br/chale-mascarenhas.pt-br.html?checkin=2026-10-20&checkout=2026-10-22&group_adults=2&no_rooms=1",
-            "breakfast": false
+            "breakfast": false,
+            "distance": "11,9 km do centro"
           }
         ]
       },
@@ -1529,6 +1642,20 @@
         ],
         "options": [
           {
+            "name": "Pousada Alto do Cajueiro",
+            "desc": "✅ <strong>Reservada para a noite de quinta 22/10.</strong> Duplo standard a 800 m do centro, com café da manhã. <strong>A mesma pousada da noite de 18/10</strong> — as duas estadias de Lençóis resolvidas na mesma casa. ⚠️ <strong>Cancelamento grátis só até 20/10</strong>, dois dias antes do check-in: é o prazo mais apertado das cinco reservas.",
+            "price": {
+              "text": "R$ 259 o quarto · 1 noite (R$ 518 os dois casais)",
+              "status": "confirmado",
+              "source": "reservas-grupo"
+            },
+            "rating": "9,1 Booking (740 avaliações)",
+            "url": "https://www.booking.com/hotel/br/pousada-alto-do-cajueiro.pt-br.html?checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1",
+            "breakfast": true,
+            "distance": "0,8 km do centro",
+            "reserved": true
+          },
+          {
             "name": "Vila Caribé",
             "desc": "A 700 m do centro. ⚠️ A cotação anterior trazia café incluído, mas a checagem de 12/10 não mostrou — <strong>confirmar na reserva</strong>. É a mesma casa da primeira estadia — mas agora só tem vaga nesta noite; está esgotada em 17–19.",
             "price": {
@@ -1537,7 +1664,8 @@
               "source": "booking-lencois-2"
             },
             "rating": "9,6 Booking (20 avaliações)",
-            "url": "https://www.booking.com/hotel/br/vila-caribe.pt-br.html?checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/vila-caribe.pt-br.html?checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1",
+            "distance": "0,7 km do centro"
           },
           {
             "name": "Pousada da Rita",
@@ -1549,7 +1677,8 @@
             },
             "rating": "9,0 Booking (129 avaliações)",
             "url": "https://www.booking.com/hotel/br/pousada-da-rita.pt-br.html?checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1",
-            "breakfast": true
+            "breakfast": true,
+            "distance": "50 m do centro"
           },
           {
             "name": "Suítes VarandaLu",
@@ -1561,7 +1690,8 @@
             },
             "rating": "9,6 Booking (67 avaliações)",
             "url": "https://www.booking.com/hotel/br/casa-de-luciana-lencois.pt-br.html?checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1",
-            "breakfast": false
+            "breakfast": false,
+            "distance": "350 m do centro"
           },
           {
             "name": "Villa Allma",
@@ -1573,11 +1703,12 @@
             },
             "rating": "9,7 Booking (494 avaliações)",
             "url": "https://www.booking.com/hotel/br/jardim-serrano-lencois.pt-br.html?checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1",
-            "breakfast": true
+            "breakfast": true,
+            "distance": "700 m do centro"
           },
           {
             "name": "Pousada Canto No Bosque",
-            "desc": "Duplo básico, com piscina e serviço de quarto. 363 avaliações — o maior volume de avaliação entre as opções desta noite, sinal de pousada rodada. Tem mais uma unidade no mesmo preço, então resolve os dois casais. <strong>Indicação do grupo.</strong> ⚠️ O preço é o único da lista com imposto cobrado à parte: R$ 278 + R$ 48.",
+            "desc": "Piscina e serviço de quarto, 363 avaliações. Chegou a ser considerada para o domingo e o grupo ficou com a Alto do Cajueiro nas duas noites. Duplo básico, com mais uma unidade no mesmo preço. ⚠️ Único preço da lista com imposto à parte: R$ 278 + R$ 48.",
             "price": {
               "text": "R$ 326 o quarto · 1 noite, com impostos (R$ 652 os dois casais)",
               "status": "cotado",
@@ -1585,7 +1716,8 @@
             },
             "rating": "8,7 Booking (363 avaliações)",
             "breakfast": false,
-            "url": "https://www.booking.com/hotel/br/pousada-canto-no-bosque.pt-br.html?checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1"
+            "url": "https://www.booking.com/hotel/br/pousada-canto-no-bosque.pt-br.html?checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1",
+            "distance": "0,9 km do centro"
           },
           {
             "name": "Mansão Mascarenhas",
@@ -1597,19 +1729,8 @@
             },
             "rating": "9,7 Booking (142 avaliações)",
             "url": "https://www.booking.com/hotel/br/mansao-mascarenhas.pt-br.html?checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1",
-            "breakfast": true
-          },
-          {
-            "name": "Pousada Alto do Cajueiro",
-            "desc": "Quarto duplo standard a 800 m do centro, com cancelamento grátis. A pousada com mais avaliações de Lençóis — e fechada para a primeira estadia.",
-            "price": {
-              "text": "R$ 333 o quarto · 1 noite (R$ 666 os dois casais)",
-              "status": "cotado",
-              "source": "booking-lencois-2"
-            },
-            "rating": "9,1 Booking (740 avaliações)",
-            "url": "https://www.booking.com/hotel/br/pousada-alto-do-cajueiro.pt-br.html?checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1",
-            "breakfast": true
+            "breakfast": true,
+            "distance": "500 m do centro"
           },
           {
             "name": "Pouso da Trilha",
@@ -1627,7 +1748,8 @@
                 "url": "https://www.pousodatrilha.com.br/"
               }
             ],
-            "breakfast": true
+            "breakfast": true,
+            "distance": "50 m do centro"
           },
           {
             "name": "Pousada Casa Viva a Vida",
@@ -1639,7 +1761,8 @@
             },
             "rating": "9,7 Booking (266 avaliações)",
             "url": "https://www.booking.com/hotel/br/casa-viva-a-vida-b-amp-b.pt-br.html?checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1",
-            "breakfast": false
+            "breakfast": false,
+            "distance": "700 m do centro"
           },
           {
             "name": "Pousada Vila Serrano",
@@ -1657,7 +1780,8 @@
                 "url": "https://vilaserrano.com/"
               }
             ],
-            "breakfast": true
+            "breakfast": true,
+            "distance": "500 m do centro"
           },
           {
             "name": "Hotel Canto das Águas",
@@ -1675,24 +1799,20 @@
                 "url": "https://lencois.com.br/"
               }
             ],
-            "breakfast": false
+            "breakfast": false,
+            "distance": "300 m do centro"
           }
         ]
       }
     ],
     "pendencias": [
-      "Os preços são <strong>por quarto de casal</strong>, para a estadia inteira daquela base — é o que cada casal vai pagar na sua própria reserva. O valor entre parênteses é a soma dos dois quartos, só para dimensionar o gasto do grupo.",
-      "Cotação refeita na <strong>Booking em 06/10/2026</strong>, nas datas exatas de cada base, 2 adultos em 1 quarto. Alguns valores excluem a taxa municipal de 5%.",
-      "Só entram na lista pousadas com <strong>nota acima de 8,5</strong>. Saíram Portal Lençóis (8,0), Cafe Preto (8,3) e Pousada Licuri (8,2).",
-      "A coluna <strong>☕ Café</strong> traz o que a Booking mostrava em <strong>12/10/2026</strong> para o quarto mais barato disponível de cada acomodação. Onde está <strong>? confirmar</strong>, a cotação anterior dizia que incluía e a checagem de hoje não mostrou — vale perguntar na hora de reservar. Café é o que decide a manhã nos dias de saída cedo: domingo (7h), quarta (8h) e sexta (7h).",
-      "Padrão do grupo: quarto de casal, categoria intermediária. Onde a pousada não tinha duplo livre, o quarto cotado foi o menor que acomoda o casal — está dito na descrição.",
-      "Preço de Booking muda com a procura: use esta lista para escolher e <strong>cote de novo na hora de fechar</strong>.",
-      "<strong>Esgotadas em 06/10:</strong> Lençóis 17–19 — Vila Caribé, Pousada da Rita, Alto do Cajueiro e Canto dos Pássaros; Mucugê 19–21 — Encanto da Roça e Diamantino Residence; Ibicoara 21–22 — Terra de Gigantes e Residencial Maria de Lourdes. Reservar cedo.",
-      "Lençóis aparece em duas estadias (17–19 e 22–23). <strong>Mansão Mascarenhas</strong> e <strong>Casa Viva a Vida</strong> têm vaga nas duas janelas; Vila Caribé só em 22–23, e Vila das Estrelas e Hospedagem do Sítio só em 17–19.",
-      "Ibicoara é a reserva mais urgente: uma noite só, cidade pequena, e as opções centrais têm poucos quartos.",
-      "A Kabana de Pedra cancela grátis e cobra por transferência bancária antecipada, em dinheiro. Decidir com folga.",
-      "Como cada casal reserva por conta própria, vale combinar a pousada antes e reservar no mesmo dia: em várias delas sobram um ou dois quartos no preço cotado.",
-      "A <strong>Pousada Canto No Bosque</strong> (8,7, 363 avaliações), indicada pelo grupo, foi conferida em 12/10: <strong>está indisponível na noite de 18/10</strong> e só tem vaga na de <strong>22/10</strong>, a R$ 326 com impostos. Entrou na lista da última noite. Para o domingo, a Booking só oferece 16–17/10 — fora das datas da viagem."
+      "✅ <strong>As cinco reservas estão fechadas.</strong> A linha reservada aparece em destaque no topo de cada base, com o preço confirmado e o prazo de cancelamento. As demais seguem na tabela como alternativa, caso alguma precise ser trocada.",
+      "Os preços das reservas são os <strong>informados pelo grupo</strong>. Os das outras linhas vêm da Booking nas datas de cada base e são retrato do dia da consulta — servem para comparar, não para congelar.",
+      "Salvo em Mucugê, o preço é <strong>por quarto de casal</strong>: é o que cada casal paga na sua própria reserva, e o valor entre parênteses é a soma dos dois quartos. <strong>Em Mucugê a reserva é uma só e já cobre os quatro.</strong>",
+      "A coluna <strong>📍 Do centro</strong> é a distância que o agregador publica, em linha reta. A coluna <strong>☕ Café</strong> traz o que a Booking mostrava em <strong>12/10/2026</strong> para o quarto mais barato de cada acomodação — nas reservas fechadas, vale o que está na reserva. Onde está <strong>? confirmar</strong>, a cotação anterior dizia que incluía e a checagem de hoje não mostrou.",
+      "Só entram na lista pousadas com <strong>nota acima de 8,5</strong>.",
+      "🔴 A <strong>Kabana de Pedra só aceita dinheiro</strong>, com pré-pagamento por transferência — R$ 1.472 do grupo pelas duas noites de Ibicoara.",
+      "⚠️ O prazo mais curto é o da última noite: a reserva de <strong>22/10 cancela até 20/10</strong>. As outras quatro cancelam no próprio dia da chegada."
     ]
   },
   "transport": {},
@@ -1707,9 +1827,13 @@
       "items": [
         {
           "id": "capao-hotel",
-          "text": "Reservar a noite de 17/10 em Caeté-Açu",
+          "text": "Reservar a noite de 17/10 em Caeté-Açu — ✅ Bela Vista do Capão, R$ 288",
           "autoKey": "capao",
           "autoType": "booking"
+        },
+        {
+          "id": "capao-belavista-cafe",
+          "text": "Confirmar com a Bela Vista do Capão se a diária de R$ 288 inclui café — a Booking mostrava o quarto mais barato sem café, e domingo o café é às 7h"
         },
         {
           "id": "capao-guia-fumaca",
@@ -1724,6 +1848,10 @@
           "text": "Confirmar com a pousada qual restaurante da vila abre no sábado à noite e até que horas"
         },
         {
+          "id": "capao-pousada-distancia",
+          "text": "A Bela Vista fica a 1,5 km da vila: confirmar com a pousada o jantar de sábado e se vale ir de carro"
+        },
+        {
           "id": "capao-dinheiro",
           "text": "Sacar dinheiro e abastecer em Palmeiras antes de subir a serra — não há posto nem caixa na vila"
         }
@@ -1736,13 +1864,17 @@
       "items": [
         {
           "id": "lencois-hotel-1",
-          "text": "Reservar a noite de 18/10 (domingo, depois da Fumaça)",
+          "text": "Reservar a noite de 18/10 — ✅ Pousada Alto do Cajueiro, R$ 259",
           "autoKey": "lencois",
           "autoType": "booking"
         },
         {
+          "id": "lencois-canto-bosque-dados",
+          "text": "Avisar o grupo que a Canto No Bosque saiu: as duas noites de Lençóis ficaram na Alto do Cajueiro"
+        },
+        {
           "id": "lencois-hotel-2",
-          "text": "Reservar a noite de 22/10 — de preferência na mesma pousada (a Aurora Suítes tem vaga nas duas)",
+          "text": "Reservar a noite de 22/10 — ✅ Alto do Cajueiro de novo, R$ 259 · ⚠️ cancela só até 20/10",
           "autoKey": "lencois-volta",
           "autoType": "booking"
         },
@@ -1767,9 +1899,13 @@
       "items": [
         {
           "id": "mucuge-hotel",
-          "text": "Reservar a noite de 19/10",
+          "text": "Reservar a noite de 19/10 — ✅ Villa Andorinha Apto 03, R$ 769,50 já para os quatro",
           "autoKey": "mucuge",
           "autoType": "booking"
+        },
+        {
+          "id": "mucuge-andorinha-cafe",
+          "text": "Confirmar com a Villa Andorinha se a diária inclui café da manhã — é apartamento, e a Booking não informa"
         },
         {
           "id": "mucuge-poco-azul",
@@ -1792,9 +1928,17 @@
       "items": [
         {
           "id": "ibicoara-hotel",
-          "text": "Reservar as noites de 20 e 21/10",
+          "text": "Reservar as noites de 20 e 21/10 — ✅ Kabana de Pedra, R$ 368 a diária nas duas noites",
           "autoKey": "ibicoara",
           "autoType": "booking"
+        },
+        {
+          "id": "ibicoara-kabana-dinheiro",
+          "text": "🔴 Kabana de Pedra só aceita dinheiro: confirmar se a transferência antecipada quita tudo ou se é preciso levar espécie (R$ 1.472 do grupo)"
+        },
+        {
+          "id": "ibicoara-kabana-jantar",
+          "text": "A pousada fica a 3 km do centro: combinar se jantar lá ou ir de carro à vila nas duas noites"
         },
         {
           "id": "mucuge-guia-buracao",
@@ -1861,12 +2005,13 @@
       ]
     },
     {
-      "emoji": "⛽",
-      "title": "Sábado 17: abastecer e sacar em Palmeiras, antes de subir a serra",
+      "emoji": "💵",
+      "title": "Dinheiro vivo: o Capão e a Kabana de Pedra não aceitam cartão",
       "level": "high",
       "items": [
-        "<strong>Não há posto de combustível no Vale do Capão</strong> nem na estrada da serra. O último é em Palmeiras, ~20 km antes — e o tanque ainda precisa cobrir o domingo inteiro até Lençóis.",
-        "<strong>Não há caixa eletrônico confiável na vila.</strong> Guia, restaurante e artesanato costumam só aceitar espécie, e só o guia da Fumaça são R$ 250. Sacar em Palmeiras.",
+        "🔴 <strong>A Pousada Kabana de Pedra, em Ibicoara, só aceita dinheiro</strong>, com pré-pagamento por transferência bancária. São <strong>R$ 1.472 do grupo</strong> pelas duas noites — confirmar com a pousada se a transferência antecipada já quita tudo ou se sobra saldo para pagar em espécie na chegada.",
+        "<strong>Não há caixa eletrônico confiável no Vale do Capão.</strong> Guia, restaurante e artesanato costumam só aceitar espécie, e só o guia da Fumaça são R$ 250. O último caixa é em <strong>Palmeiras</strong>, ~20 km antes.",
+        "<strong>Não há posto de combustível no Vale do Capão</strong> nem na estrada da serra. O último é em Palmeiras — e o tanque ainda precisa cobrir o domingo inteiro até Lençóis.",
         "<strong>Sinal de celular fraco ou inexistente</strong> em Caeté-Açu. Wi-Fi existe nas pousadas — combinar guia e café da manhã assim que chegar.",
         "A estrada Palmeiras → Capão era de terra até 2024 e foi asfaltada em 2025: hoje são ~20 km de asfalto novo, ~40 min. É o que tornou esta base possível.",
         "💡 Voltagem 220V, e é melhor não estacionar nas ruas internas da vila."
@@ -1950,16 +2095,28 @@
       ]
     },
     {
+      "emoji": "🚗",
+      "title": "Duas das pousadas reservadas ficam fora do centro",
+      "level": "medium",
+      "items": [
+        "<strong>Bela Vista do Capão — 1,5 km da vila de Caeté-Açu.</strong> O jantar de sábado exige o carro, e a vila janta cedo. Confirmar com a pousada, ao chegar, qual restaurante abre e até que horas.",
+        "<strong>Kabana de Pedra — 3 km do centro de Ibicoara, na estrada do Buracão.</strong> Os jantares de terça e quarta exigem o carro. Em compensação, ela encurta a saída de quarta para o Buracão e tem piscina de borda infinita — a terça chega às 16h40 e a quarta volta às 17h30, as duas únicas tardes da viagem que sobram.",
+        "💡 As outras três ficam a 350 m, 800 m e 800 m do centro: tudo a pé."
+      ]
+    },
+    {
       "emoji": "🏨",
-      "title": "Cinco reservas, e uma só base de duas noites",
+      "title": "As cinco reservas estão fechadas — agora o que importa são os prazos",
       "level": "high",
       "items": [
-        "Vale do Capão (17–18), Lençóis (18–19), Mucugê (19–20), <strong>Ibicoara (20–22)</strong> e Lençóis de novo (22–23).",
-        "⚠️ <strong>Quatro camas diferentes nas quatro primeiras noites.</strong> Vale arrumar uma mochila de uma noite para o Capão e para Mucugê, deixando o resto no carro.",
-        "✅ <strong>Ibicoara é a única parada de duas noites</strong> — a quarta é o único dia da viagem em que não se desfaz e refaz mala.",
-        "✅ A <strong>Mansão Mascarenhas</strong> (9,7) <strong>voltou a ter vaga em 18/10</strong> na checagem de 12/10 — estava esgotada em 10/10. São R$ 345 no domingo e R$ 329 na quinta, com café incluído nas duas: é a opção de nota mais alta que resolve as duas estadias de Lençóis numa pousada só.",
-        "💡 Em cada base há ao menos uma casa ou chalé de dois quartos que resolve os dois casais numa reserva só: Chalé Diamante no Capão (R$ 221), Casinha da Torre em Lençóis (R$ 207), Casa Temporada Josy em Mucugê (R$ 200) e Vila Azul em Ibicoara (R$ 400 as duas noites).",
-        "⚠️ A <strong>Canto No Bosque</strong>, indicada pelo grupo, <strong>não tem vaga em 18/10</strong> — só na última noite, 22/10. Se o grupo quiser essa pousada, é nessa noite."
+        "✅ <strong>17/10 Vale do Capão</strong> — Pousada Bela Vista do Capão · R$ 288 a diária do quarto · cancela até <strong>17/10</strong>",
+        "✅ <strong>18/10 Lençóis</strong> — Pousada Alto do Cajueiro · R$ 259 · cancela até <strong>18/10</strong>",
+        "✅ <strong>19/10 Mucugê</strong> — Villa Andorinha Apto 03 · R$ 769,50 <strong>já para os quatro</strong> · cancela até <strong>19/10</strong>",
+        "✅ <strong>20 e 21/10 Ibicoara</strong> — Pousada Kabana de Pedra · R$ 368 a diária, as duas noites · cancela até <strong>20/10</strong>",
+        "✅ <strong>22/10 Lençóis</strong> — Pousada Alto do Cajueiro de novo · R$ 259 · cancela até <strong>20/10</strong>",
+        "⚠️ <strong>O prazo mais apertado é o da última noite:</strong> a reserva de 22/10 cancela até <strong>20/10</strong>, dois dias antes do check-in. Todas as outras cancelam no próprio dia da chegada.",
+        "💰 <strong>Total das seis diárias: R$ 3.853,50</strong> — R$ 1.926,75 por casal. Só a de Mucugê é uma reserva única para os quatro; nas outras cada casal paga o seu quarto.",
+        "🛏️ As duas estadias de Lençóis ficaram na <strong>mesma pousada</strong>, e Ibicoara segue como a única base de duas noites: é o único dia da viagem em que não se desfaz e refaz mala."
       ]
     },
     {
