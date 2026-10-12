@@ -61,3 +61,17 @@ As linhas continuam sendo `.hotel-card[data-hotel]` com `data-location`, `data-n
 
 - Booking.com — buscas por cidade nas datas de cada base (Vale do Capão 17–18/10, Lençóis 18–19/10, Mucugê 19–20/10, Ibicoara 20–22/10, Lençóis 22–23/10), 1 quarto, 2 adultos — consultadas em 12/10/2026
 - Booking.com — buscas por nome das 22 acomodações que não apareceram nas buscas por cidade — consultadas em 12/10/2026
+
+---
+
+## Adendo — Pousada Canto No Bosque (indicação do grupo, 12/10/2026)
+
+O grupo indicou a **Pousada Canto No Bosque**, em Lençóis, que não estava na lista. Conferida na Booking em 12/10/2026:
+
+- **Nota 8,7 com 363 avaliações** — passa no corte de 8,5 do grupo, e é o maior volume de avaliação entre as opções da última noite. Tem piscina e serviço de quarto.
+- **Noite de 18/10 (domingo): indisponível.** A Booking só oferece 16–17/10, a partir de R$ 472,62 — fora das datas da viagem. Por isso ela não apareceu nas buscas anteriores e não entra na primeira estadia de Lençóis.
+- **Noite de 22/10 (quinta): disponível.** Quarto Duplo Básico, 1 cama de casal, **R$ 278 + R$ 48 de impostos = R$ 326**, com mais uma unidade no mesmo preço — resolve os dois casais. **Sem café da manhã** no quarto cotado.
+
+É a única da lista cujo imposto vem cobrado à parte; o preço no site já aparece somado, com a ressalva escrita.
+
+Entrou na tabela de **Lençóis — última noite**, entre a Villa Allma (R$ 310) e a Mansão Mascarenhas (R$ 329). O alerta das reservas registra que ela não serve para o domingo.

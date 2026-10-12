@@ -208,6 +208,12 @@
       "url": "https://www.booking.com/searchresults.pt-br.html?ss=Len%C3%A7%C3%B3is%2C+Bahia%2C+Brasil&checkin=2026-10-18&checkout=2026-10-19&group_adults=2&no_rooms=1",
       "consultadoEm": "2026-10-12",
       "kind": "agregador"
+    },
+    "booking-canto-bosque": {
+      "label": "Booking — Pousada Canto No Bosque, Lençóis: indisponível em 18/10, com vaga em 22/10",
+      "url": "https://www.booking.com/hotel/br/pousada-canto-no-bosque.pt-br.html",
+      "consultadoEm": "2026-10-12",
+      "kind": "agregador"
     }
   },
   "days": [
@@ -1570,6 +1576,18 @@
             "breakfast": true
           },
           {
+            "name": "Pousada Canto No Bosque",
+            "desc": "Duplo básico, com piscina e serviço de quarto. 363 avaliações — o maior volume de avaliação entre as opções desta noite, sinal de pousada rodada. Tem mais uma unidade no mesmo preço, então resolve os dois casais. <strong>Indicação do grupo.</strong> ⚠️ O preço é o único da lista com imposto cobrado à parte: R$ 278 + R$ 48.",
+            "price": {
+              "text": "R$ 326 o quarto · 1 noite, com impostos (R$ 652 os dois casais)",
+              "status": "cotado",
+              "source": "booking-canto-bosque"
+            },
+            "rating": "8,7 Booking (363 avaliações)",
+            "breakfast": false,
+            "url": "https://www.booking.com/hotel/br/pousada-canto-no-bosque.pt-br.html?checkin=2026-10-22&checkout=2026-10-23&group_adults=2&no_rooms=1"
+          },
+          {
             "name": "Mansão Mascarenhas",
             "desc": "O mesmo quarto duplo deluxe da primeira estadia, a 500 m do centro, pela metade da diária. Disponível nas duas janelas.",
             "price": {
@@ -1673,7 +1691,8 @@
       "Lençóis aparece em duas estadias (17–19 e 22–23). <strong>Mansão Mascarenhas</strong> e <strong>Casa Viva a Vida</strong> têm vaga nas duas janelas; Vila Caribé só em 22–23, e Vila das Estrelas e Hospedagem do Sítio só em 17–19.",
       "Ibicoara é a reserva mais urgente: uma noite só, cidade pequena, e as opções centrais têm poucos quartos.",
       "A Kabana de Pedra cancela grátis e cobra por transferência bancária antecipada, em dinheiro. Decidir com folga.",
-      "Como cada casal reserva por conta própria, vale combinar a pousada antes e reservar no mesmo dia: em várias delas sobram um ou dois quartos no preço cotado."
+      "Como cada casal reserva por conta própria, vale combinar a pousada antes e reservar no mesmo dia: em várias delas sobram um ou dois quartos no preço cotado.",
+      "A <strong>Pousada Canto No Bosque</strong> (8,7, 363 avaliações), indicada pelo grupo, foi conferida em 12/10: <strong>está indisponível na noite de 18/10</strong> e só tem vaga na de <strong>22/10</strong>, a R$ 326 com impostos. Entrou na lista da última noite. Para o domingo, a Booking só oferece 16–17/10 — fora das datas da viagem."
     ]
   },
   "transport": {},
@@ -1939,7 +1958,8 @@
         "⚠️ <strong>Quatro camas diferentes nas quatro primeiras noites.</strong> Vale arrumar uma mochila de uma noite para o Capão e para Mucugê, deixando o resto no carro.",
         "✅ <strong>Ibicoara é a única parada de duas noites</strong> — a quarta é o único dia da viagem em que não se desfaz e refaz mala.",
         "✅ A <strong>Mansão Mascarenhas</strong> (9,7) <strong>voltou a ter vaga em 18/10</strong> na checagem de 12/10 — estava esgotada em 10/10. São R$ 345 no domingo e R$ 329 na quinta, com café incluído nas duas: é a opção de nota mais alta que resolve as duas estadias de Lençóis numa pousada só.",
-        "💡 Em cada base há ao menos uma casa ou chalé de dois quartos que resolve os dois casais numa reserva só: Chalé Diamante no Capão (R$ 221), Casinha da Torre em Lençóis (R$ 207), Casa Temporada Josy em Mucugê (R$ 200) e Vila Azul em Ibicoara (R$ 400 as duas noites)."
+        "💡 Em cada base há ao menos uma casa ou chalé de dois quartos que resolve os dois casais numa reserva só: Chalé Diamante no Capão (R$ 221), Casinha da Torre em Lençóis (R$ 207), Casa Temporada Josy em Mucugê (R$ 200) e Vila Azul em Ibicoara (R$ 400 as duas noites).",
+        "⚠️ A <strong>Canto No Bosque</strong>, indicada pelo grupo, <strong>não tem vaga em 18/10</strong> — só na última noite, 22/10. Se o grupo quiser essa pousada, é nessa noite."
       ]
     },
     {
