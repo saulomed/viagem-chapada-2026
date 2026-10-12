@@ -159,7 +159,7 @@ def ficha(nome):
 DIAS = [
     {
         'id': 'd1', 'rotulo': 'Sáb 17', 'titulo': 'A estrada até o Capão',
-        'ancora': 'Juazeiro → Vale do Capão, 526 km · 8h31. Chegada por volta das 16h — o dia acaba no check-in, e o Pai Inácio passou para domingo.',
+        'ancora': 'Juazeiro → Vale do Capão, 526 km · 8h31. Chegada por volta das 16h30 — o dia acaba no check-in, e o Pai Inácio passou para domingo.',
         'opcoes': [
             {'nome': 'Jantar na vila de Caeté-Açu', 'rec': 1, 'tipo': 'leve', 'status': 'escolhida',
              'onde': 'Vale do Capão · só em espécie',
@@ -202,14 +202,14 @@ DIAS = [
              'desc': 'Flutuação sobre uma caverna alagada de 20 m de profundidade e água transparente, com o feixe de sol atravessando a água entre 12h30 e 14h. A taxa de R$ 30 inclui colete e máscara, e exige banho antes de entrar para tirar o protetor solar. <strong>A permanência é curta — 20 a 30 minutos por grupo</strong>. A janela do fenômeno fecha em 20/10: se a segunda amanhecer nublada, a terça ainda serve, a ~1h30 de Mucugê.'},
             {'nome': 'Centro histórico de Mucugê', 'rec': 2, 'tipo': 'leve', 'status': 'escolhida',
              'onde': 'Mucugê, a pé',
-             'desc': 'Conjunto tombado pelo IPHAN em 1980: cerca de 300 casas térreas e 10 sobrados do século XIX em três ruas planas. Chegando por volta das 16h, dá para percorrer tudo a pé com a luz do fim de tarde — e ver o Cemitério Bizantino iluminado na entrada da cidade depois do jantar.'},
+             'desc': 'Conjunto tombado pelo IPHAN em 1980: cerca de 300 casas térreas e 10 sobrados do século XIX em três ruas planas. Chegando por volta das 16h, dá para percorrer tudo a pé com a luz do fim de tarde — e ver o Cemitério Bizantino iluminado na entrada da cidade depois do jantar. É a única noite aqui.'},
             {'nome': 'Jantar no Paraguassu', 'rec': 2, 'tipo': 'leve', 'status': 'disponivel',
              'onde': 'Rua Caetité, no centro histórico · 19h às 23h',
              'desc': 'Cozinha contemporânea do chef André Chequer, no hotel Refúgio na Serra, dentro da área tombada '
                      '— o jantar mais elaborado do eixo sul do roteiro, e a poucos passos da pousada. '
                      '<strong>O menu degustação é tradicional aos sábados, e o grupo não passa nenhum sábado em Mucugê</strong>, '
                      'então aqui vale o cardápio normal. Serve almoço das 12h às 15h e jantar das 19h às 23h. '
-                     'Vale para as duas noites em Mucugê, a de segunda e a de terça.'},
+                     '<strong>É a única noite em Mucugê</strong> — a de segunda. Na terça, às 15h30, o carro já sai para Ibicoara.'},
             {'nome': 'Igreja Matriz de Santa Isabel', 'rec': 3, 'tipo': 'leve', 'status': 'disponivel',
              'onde': 'Mucugê',
              'desc': 'Meados do século XIX, ao lado do centro. Custa 20 minutos.'},
@@ -217,7 +217,7 @@ DIAS = [
     },
     {
         'id': 'd4', 'rotulo': 'Ter 20', 'titulo': 'Garimpo, cemitério e cachoeiras',
-        'ancora': 'Nenhuma. Tudo a até 2 km do centro de Mucugê — o dia leve entre a Fumaça e o Buracão.',
+        'ancora': 'Manhã inteira a até 2 km do centro de Mucugê. Às 15h30 o carro sai para Ibicoara — 78,2 km · 1h06 — e a base muda hoje, para a quarta começar perto do Buracão.',
         'opcoes': [
             {'nome': 'Parque Municipal de Mucugê — museu, Piabinha e Tiburtino', 'rec': 1, 'tipo': 'principal', 'status': 'escolhida',
              'onde': 'Mucugê · R$ 20 · 8h30 às 17h30',
@@ -227,15 +227,15 @@ DIAS = [
              'desc': 'Mausoléus brancos em estilo bizantino, com torres e cruzes em miniatura, encravados ao pé do paredão de pedra — construído entre 1850 e 1886, é apontado como único das Américas nesse estilo. Entrada gratuita, sem guia, visita rápida. Os relatos o descrevem como o ponto mais singular de Mucugê, e ele recebe iluminação à noite.'},
             {'nome': 'Poço Azul, se a segunda nublar', 'rec': 2, 'tipo': 'principal', 'status': 'disponivel',
              'onde': '~66 km · ~1h30',
-             'desc': 'O plano B do dia 19. A janela dos raios vai até 20/10, então a terça ainda serve: sair de Mucugê por volta das 10h45 e voltar no meio da tarde. O parque municipal passa para a manhã, que abre às 8h30.'},
+             'desc': 'O plano B do dia 19. A janela dos raios vai até 20/10, então a terça ainda serve: sair de Mucugê por volta das 10h45 e voltar no meio da tarde. <strong>Mas hoje a terça também carrega a mudança de base</strong> — o carro sai para Ibicoara às 15h30. Acionando o plano B, o que cai é o Parque Municipal, não o deslocamento.'},
             {'nome': 'Café Igaraçu — do plantio à xícara', 'rec': 3, 'tipo': 'principal', 'status': 'disponivel',
              'onde': 'Distrito de Cascavel · a partir de R$ 100',
-             'desc': 'Vivência guiada do processo do café na Fazenda Matos — plantio, colheita, torra e degustação no cafezal com bolos e biscoitos. Fica entre Mucugê e Ibicoara, com os últimos 10 km por estrada de terra entre eucaliptos, e <strong>exige agendamento</strong>. Mais completa que a do Sítio Canjerana, mas mais cara e mais longe — só vale se a tarde de terça sobrar e o grupo quiser o café com mais profundidade.'},
+             'desc': 'Vivência guiada do processo do café na Fazenda Matos — plantio, colheita, torra e degustação no cafezal com bolos e biscoitos. Fica entre Mucugê e Ibicoara, com os últimos 10 km por estrada de terra entre eucaliptos, e <strong>exige agendamento</strong>. Mais completa que a do Sítio Canjerana, mas mais cara e mais longe. <strong>A tarde de terça já não sobra</strong> — às 15h30 o carro sai para Ibicoara —, mas o sítio fica justamente nesse caminho: só entra trocando o Cemitério Bizantino por ele, e com agendamento.'},
         ],
     },
     {
         'id': 'd5', 'rotulo': 'Qua 21', 'titulo': 'Buracão e Ibicoara',
-        'ancora': 'Mucugê → Ibicoara ~1h15, e mais 28 km de terra até a portaria. O Buracão só aceita entrada até as 11h.',
+        'ancora': 'Dormindo em Ibicoara desde terça: saída às 8h e 28 km de terra até a portaria, chegando às 9h. O Buracão só aceita entrada até as 11h — hoje a margem é de duas horas.',
         'opcoes': [
             {'nome': 'Cachoeira do Buracão', 'rec': 1, 'tipo': 'principal', 'status': 'escolhida',
              'onde': '28 km de terra de Ibicoara',
@@ -280,17 +280,20 @@ DIAS = [
     },
     {
         'id': 'd7', 'rotulo': 'Sex 23', 'titulo': 'Volta para casa',
-        'ancora': 'Lençóis → Juazeiro, 489 km · ~7h10. Saindo às 8h, chega-se por volta das 16h.',
+        'ancora': 'Lençóis → Morro do Chapéu → Jacobina → Juazeiro: 520 km · 7h53, remedidos no Maps em 12/10. Saindo às 7h, chega-se entre 16h30 e 17h30.',
         'opcoes': [
-            {'nome': 'Sair às 8h direto para casa', 'rec': 1, 'tipo': 'principal', 'status': 'escolhida',
-             'onde': '—',
-             'desc': 'Chegada por volta das 16h com o almoço incluído, ainda com sol — e a sexta à noite já em casa.'},
+            {'nome': 'Sair às 7h por Morro do Chapéu e Jacobina', 'rec': 1, 'tipo': 'principal', 'status': 'escolhida',
+             'onde': '520 km · 7h53',
+             'desc': 'O plano. A revisão de 12/10 achou o erro: os 489 km e 7h10 que o roteiro trazia são da rota direta pela BR-242, que não passa por Morro do Chapéu. Pelo caminho planejado são <strong>520 km e 7h53</strong> — Lençóis → Morro do Chapéu 176 km · 2h40, → Jacobina 108 km · 1h30, → Juazeiro <strong>236 km · 3h43</strong>. Por isso a saída desceu para as 7h: a chegada fica entre 16h30 e 17h30, ainda com sol.'},
+            {'nome': 'Voltar direto pela BR-242', 'rec': 2, 'tipo': 'principal', 'status': 'disponivel',
+             'onde': '489 km · ~7h',
+             'desc': 'O mesmo corredor da ida, ao contrário: 31 km e quase uma hora a menos. Sem Morro do Chapéu, sem Ferro Doido e sem Jacobina — o almoço passa a ser em Senhor do Bonfim ou Capim Grosso. Saindo às 8h, chegada por volta das 16h15.'},
             {'nome': 'Sushi à noite em Juazeiro', 'rec': 1, 'tipo': 'leve', 'status': 'escolhida',
              'onde': 'Juazeiro',
              'desc': 'O jantar da chegada. O resto do fim de semana — rio, ilhas, jetski, churrasco — está no arquivo do fim de semana.'},
             {'nome': 'Almoço em Jacobina', 'rec': 2, 'tipo': 'leve', 'status': 'ambigua',
-             'onde': '~4h30 depois da saída',
-             'desc': 'O encaixe natural de horário e a melhor estrutura da rota, com metade do caminho já feita. <strong>Falta escolher o restaurante.</strong>'},
+             'onde': '284 km depois da saída · por volta das 12h30',
+             'desc': 'O encaixe natural de horário e a melhor estrutura da rota. <strong>Falta escolher o restaurante.</strong> E abastecer aqui: depois de Jacobina são 236 km seguidos até Juazeiro.'},
             {'nome': 'Senhor do Bonfim, almoço mais tarde', 'rec': 3, 'tipo': 'leve', 'status': 'disponivel',
              'onde': '~1h depois de Jacobina',
              'desc': 'Alternativa a Jacobina para quem preferir esticar mais antes de parar.'},
@@ -299,7 +302,7 @@ DIAS = [
              'desc': 'Cratera com mata nativa no fundo. Parada rápida, se já estiver parando em Morro do Chapéu.'},
             {'nome': 'Cachoeira do Ferro Doido', 'rec': 4, 'tipo': 'leve', 'status': 'disponivel',
              'onde': 'Morro do Chapéu, 18 km do centro',
-             'desc': 'Cânion de mais de 100 m com quedas em degraus, a 650 m de caminhada do estacionamento — dez minutos, esforço leve. Morro do Chapéu está na estrada de casa, e a cachoeira abre de segunda a sexta. <strong>Mas a recomendação não se sustenta em outubro:</strong> os relatos são consistentes em dizer que só vale na estação chuvosa, porque fora dela é raro ter água — e outubro fecha a estação seca. Some-se a isso a falta de sinalização e de estrutura de segurança no local. Vale como aposta de 40 minutos, não como programa contado.'},
+             'desc': 'Cânion de mais de 100 m com quedas em degraus, a 650 m de caminhada do estacionamento — dez minutos, esforço leve. Morro do Chapéu está na estrada de casa, e a cachoeira abre de segunda a sexta. <strong>Mas a recomendação não se sustenta em outubro:</strong> os relatos são consistentes em dizer que só vale na estação chuvosa, porque fora dela é raro ter água — e outubro fecha a estação seca. Some-se a isso a falta de sinalização e de estrutura de segurança no local. Vale como aposta de 40 minutos, não como programa contado — e ela <strong>custa cerca de 1h ao dia</strong>, porque fica 18 km adiante do centro de Morro do Chapéu.'},
         ],
     },
 ]

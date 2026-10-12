@@ -47,10 +47,10 @@ PROGRAMA = {
     1: [('06h30', '🚗', '<strong>Pega a estrada.</strong> BR-407 → BR-242 → BA-849',
          '526 km · 8h31 de volante', 'estrada'),
         ('~12h', '🍽️', 'Almoço e abastecimento no caminho',
-         'Senhor do Bonfim ou Jacobina', ''),
-        ('15h30', '⛽', '<strong>Parada obrigatória:</strong> último posto e último caixa',
+         'Senhor do Bonfim ou Capim Grosso — Jacobina fica 48 km fora da ida', ''),
+        ('15h15', '⛽', '<strong>Parada obrigatória:</strong> último posto e último caixa',
          'Palmeiras (sede)', 'hora'),
-        ('16h', '🛏️', 'Check-in', 'Vila de Caeté-Açu, distrito de Palmeiras', ''),
+        ('16h30', '🛏️', 'Check-in', 'Vila de Caeté-Açu, distrito de Palmeiras', ''),
         ('19h', '🍽️', 'Jantar na vila', 'A pé, na vila — só em espécie', '')],
     2: [('07h', '☕', 'Café combinado na véspera', 'Pousada no Capão', ''),
         ('07h30', '🚗', '3 km até a portaria', 'Estrada Caeté-Açu → Palmeiras', 'estrada'),
@@ -71,7 +71,7 @@ PROGRAMA = {
          '· 20 a 30 min por grupo', 'Nova Redenção', 'hora'),
         ('~12h', '🍽️', 'Almoço no APA Restaurante, anexo ao poço', 'Poço Azul', ''),
         ('14h15', '🚗', '~66 km · ~1h30 — parte do acesso é de terra', 'BA-245 → BA-142', 'estrada'),
-        ('16h', '🛏️', 'Check-in e centro histórico a pé', 'Mucugê', ''),
+        ('16h', '🛏️', 'Check-in e centro histórico a pé — <strong>a única noite em Mucugê</strong>', 'Mucugê', ''),
         ('Após o jantar', '⛪', 'Cemitério Bizantino iluminado', 'Entrada da cidade', '')],
     4: [('08h30–12h30', '⛏️', '<strong>Parque Municipal</strong>: Museu Vivo do Garimpo, '
          'Cachoeira da Piabinha e Cachoeira do Tiburtino · um ingresso cobre tudo',
@@ -93,7 +93,7 @@ PROGRAMA = {
          'plano · queda de 85 m no cânion · <strong>última entrada 11h, com 2h de margem</strong>',
          'Distrito de Cascavel, município de Ibicoara', 'hora'),
         ('13h–14h', '🚗', 'Volta, 28 km de terra com sol alto', 'Até Ibicoara', ''),
-        ('14h–15h', '🍽️', 'Almoço tardio', 'Centro de Ibicoara', ''),
+        ('14h–15h15', '🍽️', 'Almoço tardio', 'Centro de Ibicoara', ''),
         ('15h30–17h30', '🍓', '<strong>Sítio Canjerana</strong> · morango, cafezal e '
          'degustação · exige agendamento', 'Beira da rodovia, minutos do centro', ''),
         ('19h', '🍽️', 'Jantar', 'Ibicoara', '')],
@@ -106,13 +106,18 @@ PROGRAMA = {
         ('16h–16h30', '🚗', 'Sair nesta janela · ~46 km · ~1h', 'Pratinha → Lençóis', 'estrada'),
         ('~17h30', '🛏️', 'Check-in', 'Centro de Lençóis', ''),
         ('19h', '🍽️', 'Jantar de despedida', 'A pé, centro de Lençóis', '')],
-    7: [('08h', '🚗', '<strong>Pega a estrada</strong> · 489 km · ~7h10',
+    7: [('07h', '🚗', '<strong>Pega a estrada</strong> · <strong>520 km · 7h53</strong> · '
+         'BA-142 e BA-144 por Morro do Chapéu e Jacobina',
          'Lençóis → Juazeiro', 'estrada'),
-        ('10h45–11h30', '💦', 'Ferro Doido — parada opcional de ~40 min, '
-         '<strong>provavelmente seco em outubro</strong>',
+        ('09h40', '⛰️', 'Morro do Chapéu · 176 km · 2h40', 'BA-144', ''),
+        ('09h40–10h45', '💦', 'Ferro Doido — parada opcional, 18 km adiante · '
+         '<strong>custa ~1h ao dia e provavelmente está seco em outubro</strong>',
          '18 km do centro de Morro do Chapéu', ''),
-        ('13h–14h', '🍽️', 'Almoço', 'Jacobina', ''),
-        ('~16h', '🏠', 'Chegada', 'Juazeiro', '')],
+        ('12h30–13h45', '🍽️', 'Almoço e último abastecimento · 108 km · 1h30', 'Jacobina', ''),
+        ('13h45', '🚗', '<strong>O trecho mais longo da volta</strong> · 236 km · 3h43',
+         'Jacobina → Juazeiro, pela BA-131 e BR-407', 'estrada'),
+        ('16h30 a 17h30', '🏠', 'Chegada — com o Ferro Doido, 17h30; sem ele, 16h30',
+         'Juazeiro', 'hora')],
 }
 
 # Observação curta por dia, exibida sob o cabeçalho do card.
@@ -123,7 +128,7 @@ RECADO = {
     4: 'A mudança de base acontece no fim do dia, com uma hora de sol de sobra.',
     5: 'O único dia em que não se desfaz a mala.',
     6: 'O dia mais longo de estrada no meio da viagem.',
-    7: 'Chegada com sol, e o fim de semana em casa começa aí.',
+    7: 'A volta é 1h mais longa do que o roteiro dizia — por isso a saída é às 7h.',
 }
 
 
