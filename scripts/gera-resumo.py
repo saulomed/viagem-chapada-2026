@@ -44,27 +44,31 @@ CASA = 'Casa, em Juazeiro'
 # destaque: 'estrada' pinta a linha de saída do carro; 'hora' marca prazo duro.
 # ─────────────────────────────────────────────────────────────────────────────
 PROGRAMA = {
-    1: [('06h30', '🚗', '<strong>Pega a estrada.</strong> BR-407 → BR-242 → BA-849',
-         '526 km · 8h31 de volante', 'estrada'),
+    1: [('06h30', '🚗', '<strong>Pega a estrada.</strong> BR-407 → BR-242',
+         '489 km · 7h38 de volante', 'estrada'),
         ('~12h', '🍽️', 'Almoço e abastecimento no caminho',
          'Senhor do Bonfim ou Capim Grosso — Jacobina fica 48 km fora da ida', ''),
-        ('15h15', '⛽', '<strong>Parada obrigatória:</strong> último posto e último caixa',
-         'Palmeiras (sede)', 'hora'),
-        ('16h30', '🛏️', 'Check-in', 'Vila de Caeté-Açu, distrito de Palmeiras', ''),
-        ('19h', '🍽️', 'Jantar na vila', 'A pé, na vila — só em espécie', '')],
-    2: [('07h', '☕', 'Café combinado na véspera', 'Pousada no Capão', ''),
-        ('07h30', '🚗', '3 km até a portaria', 'Estrada Caeté-Açu → Palmeiras', 'estrada'),
-        ('08h–13h', '🥾', '<strong>Cachoeira da Fumaça por cima</strong> · 6 km por sentido, '
-         '2 km de subida · guia obrigatório', 'Portaria a 3 km da vila, Vale do Capão', 'hora'),
-        ('13h–14h30', '🍽️', 'Almoço', 'Vila de Caeté-Açu', ''),
-        ('14h30', '🚗', '<strong>Pega a estrada</strong> · 47 km · ~1h',
-         'Serra até Palmeiras + BR-242', 'estrada'),
-        ('15h45–17h50', '⛰️', '<strong>Morro do Pai Inácio</strong> · subida liberada '
+        ('~15h', '🛏️', 'Check-in — <strong>duas noites na mesma pousada</strong>',
+         'Hospedagem do Sítio, 0,6 km do centro de Lençóis', ''),
+        ('15h–18h', '😌', 'Tarde livre, sem hora marcada', 'Lençóis', ''),
+        ('19h', '🍽️', 'Jantar e centro histórico', 'A pé, centro de Lençóis', '')],
+    2: [('07h30', '🚗', '<strong>Pega a estrada</strong> · 67,1 km · 1h22',
+         'Lençóis → Iraquara, pela BR-242', 'estrada'),
+        ('09h–11h', '🕳️', '<strong>Gruta da Lapa Doce</strong> · visita guiada · '
+         '<strong>no domingo, último grupo às 12h</strong>', 'Iraquara', 'hora'),
+        ('11h–12h', '🍽️', 'Almoço', 'Restaurante da Lapa Doce', ''),
+        ('12h15–13h30', '💎', '<strong>Caverna Torrinha</strong> · circuito de até ~1h15',
+         'Iraquara, 2,7 km da Lapa Doce', ''),
+        ('13h30', '🚗', 'Volta · 64,0 km · 1h21', 'Torrinha → Lençóis', 'estrada'),
+        ('14h50–15h45', '🏨', 'Pausa na pousada', 'Lençóis', ''),
+        ('15h45', '🚗', '<strong>Pega a estrada</strong> · 29,2 km · 44 min',
+         'Lençóis → Pai Inácio, pela BR-242', 'estrada'),
+        ('16h30–17h50', '⛰️', '<strong>Morro do Pai Inácio</strong> · subida liberada '
          '<strong>só até 17h</strong> · pôr do sol 17h42',
          'Beira da BR-242, município de Palmeiras', 'hora'),
-        ('17h50–18h45', '🌙', '29 km de BR-242 no escuro — a única exceção aceita',
+        ('17h50–18h30', '🌙', '29 km de BR-242 no escuro — a única exceção aceita',
          'Até Lençóis', ''),
-        ('19h30', '🍽️', 'Jantar e centro histórico', 'A pé, centro de Lençóis', '')],
+        ('19h', '🍽️', 'Jantar', 'A pé, centro de Lençóis', '')],
     3: [('09h30', '🚗', '<strong>Pega a estrada</strong> com as malas · ~95 km · 1h40',
          'Lençóis → Nova Redenção', 'estrada'),
         ('11h30–14h', '💧', '<strong>Poço Azul</strong> · raios na água <strong>12h30–14h</strong> '
@@ -97,14 +101,12 @@ PROGRAMA = {
         ('15h30–17h30', '🍓', '<strong>Sítio Canjerana</strong> · morango, cafezal e '
          'degustação · exige agendamento', 'Beira da rodovia, minutos do centro', ''),
         ('19h', '🍽️', 'Jantar', 'Ibicoara', '')],
-    6: [('07h', '🚗', '<strong>Pega a estrada</strong> · ~215–230 km · ~4h15 · BA-142 por '
-         'Mucugê e Andaraí, depois BR-242', 'Ibicoara → Iraquara', 'estrada'),
-        ('11h15', '🔀', 'Ponto de decisão: a Lapa Doce entra <strong>só</strong> se chegarem '
-         'até esta hora', 'Iraquara', 'hora'),
-        ('11h30–16h', '💦', '<strong>Fazenda Pratinha e Gruta Azul</strong> · das 12h às 15h30 '
-         'cobre todas as janelas de luz · entrada até 16h', 'Iraquara, 10,8 km da Lapa Doce', 'hora'),
-        ('16h–16h30', '🚗', 'Sair nesta janela · ~46 km · ~1h', 'Pratinha → Lençóis', 'estrada'),
-        ('~17h30', '🛏️', 'Check-in', 'Centro de Lençóis', ''),
+    6: [('08h', '🚗', '<strong>Pega a estrada</strong> · 248 km · 3h49 · BA-142 por '
+         'Mucugê e Andaraí, depois BR-242 — nada de atalho pela serra', 'Ibicoara → Iraquara', 'estrada'),
+        ('12h–16h', '💦', '<strong>Fazenda Pratinha e Gruta Azul</strong> · das 12h às 15h30 '
+         'cobre todas as janelas de luz · entrada até 16h', 'Iraquara', 'hora'),
+        ('16h', '🚗', 'Sair na hora · 48,0 km · 1h10', 'Pratinha → Lençóis', 'estrada'),
+        ('~17h10', '🛏️', 'Check-in', 'Pousada Alto do Cajueiro, 0,8 km do centro de Lençóis', ''),
         ('19h', '🍽️', 'Jantar de despedida', 'A pé, centro de Lençóis', '')],
     7: [('07h', '🚗', '<strong>Pega a estrada</strong> · <strong>520 km · 7h53</strong> · '
          'BA-142 e BA-144 por Morro do Chapéu e Jacobina',
@@ -122,12 +124,12 @@ PROGRAMA = {
 
 # Observação curta por dia, exibida sob o cabeçalho do card.
 RECADO = {
-    1: 'Dia inteiro de estrada: a tarde acaba no check-in.',
-    2: 'Dorme-se a 3 km da trilha — por isso o despertador é às 7h, e não às 5h30.',
+    1: 'Estrada de manhã, e a tarde de boa em Lençóis.',
+    2: 'Dois relógios: a Lapa Doce fecha cedo no domingo, e a subida do Pai Inácio só vai até as 17h.',
     3: 'A única hora que manda no dia é 12h30, no Poço Azul.',
     4: 'A mudança de base acontece no fim do dia, com uma hora de sol de sobra.',
-    5: 'O único dia em que não se desfaz a mala.',
-    6: 'O dia mais longo de estrada no meio da viagem.',
+    5: 'Como o domingo, um dia em que não se desfaz a mala.',
+    6: 'O dia mais longo de estrada no meio da viagem — e só a Pratinha no programa.',
     7: 'A volta é 1h mais longa do que o roteiro dizia — por isso a saída é às 7h.',
 }
 
@@ -217,7 +219,7 @@ corpo = (
       '<h2 class="res-h2">🛏️ As camas da viagem</h2>'
       '<p class="res-intro">A regra do roteiro: <strong>a troca de cidade acontece sempre no fim '
       'do dia anterior</strong>, para que nenhuma manhã seja gasta em estrada antes de um passeio. '
-      'São cinco bases, e só Ibicoara tem duas noites.</p>'
+      'São quatro cidades, e duas bases têm duas noites: Lençóis na chegada e Ibicoara.</p>'
     + tabela_camas
     + '</section>'
     + '<section class="section">'

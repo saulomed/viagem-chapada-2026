@@ -187,6 +187,13 @@ img { max-width: 100%; }
 }
 
 .hero-content { position: relative; z-index: 2; max-width: 900px; }
+/* marca do grupo (meta.logo): adesivo acima do título. A sombra é o que
+   separa o contorno branco de uma foto clara ao fundo. */
+.hero-logo {
+  display: block; width: clamp(110px, 20vw, 170px); height: auto; margin: 0 0 18px;
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,0.35));
+  transform: rotate(-4deg); transform-origin: left bottom;
+}
 .hero-eyebrow {
   font-size: 0.82rem; letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--white); opacity: 0.85; margin-bottom: 16px; font-weight: 500;
@@ -257,6 +264,17 @@ img { max-width: 100%; }
   scroll-padding-inline: 16px;
 }
 .nav-inner::-webkit-scrollbar { display: none; }
+.nav-logo {
+  flex: 0 0 auto; display: inline-flex; align-items: center;
+  min-height: 44px; padding: 0 10px 0 2px; margin-right: 4px;
+  border-right: 1px solid var(--border); border-radius: 0;
+}
+.nav-logo img { width: 40px; height: 40px; object-fit: contain; display: block; transition: transform .18s; }
+.nav-logo:hover img { transform: rotate(-6deg) scale(1.06); }
+@media (prefers-reduced-motion: reduce) {
+  .hero-logo { transform: none; }
+  .nav-logo:hover img { transform: none; }
+}
 .nav-btn {
   flex: 0 0 auto; border: none; background: transparent; cursor: pointer;
   font-family: inherit; font-size: 0.88rem; font-weight: 500; color: var(--text-muted);

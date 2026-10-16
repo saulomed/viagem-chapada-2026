@@ -135,11 +135,19 @@
   }
 
   // ═══════════ reservas de hospedagem ═══════════
+  // Uma reserva marcada no aparelho (ou no estado sincronizado) só vale se a
+  // base ainda existir e a pousada ainda estiver na lista dela. Quando o roteiro
+  // troca de hospedagem, a marcação antiga não pode esconder a reserva nova do
+  // trip.json — nem ticar o checklist com o nome da pousada cancelada.
   function getBookings() {
     var raw = readJSON(K.bookings, {});
     var out = {};
     Object.keys(raw).forEach(function (loc) {
-      out[loc] = Array.isArray(raw[loc]) ? raw[loc] : [raw[loc]];
+      var location = (D.lodging && D.lodging.locations || []).find(function (l) { return l.id === loc; });
+      if (!location) return;
+      var names = (location.options || []).map(function (o) { return o.name; });
+      out[loc] = (Array.isArray(raw[loc]) ? raw[loc] : [raw[loc]])
+        .filter(function (b) { return b && names.indexOf(b.name) >= 0; });
     });
     return out;
   }

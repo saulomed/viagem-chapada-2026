@@ -48,9 +48,7 @@ for _e in trip['meta'].get('extraPages') or []:
 # base -> (rótulo, emoji, linha de contexto no cabeçalho do bloco)
 CIDADES = [
     ('lencois', 'Lençóis', '🏛️',
-     'Dias 2 e 6 · o maior polo de comida da viagem, tudo a pé no centro histórico.'),
-    ('capao', 'Vale do Capão (Caeté-Açu)', '🥾',
-     'Dias 1 e 2 · jantar na noite de chegada e almoço depois da Fumaça, a 3 km da portaria. A vila janta cedo e só aceita espécie.'),
+     'Dias 1, 2 e 6 · o maior polo de comida da viagem, tudo a pé no centro histórico. São três jantares aqui.'),
     ('poco-azul', 'Poço Azul / Nova Redenção', '💧',
      'Dia 3 · almoço na chegada, entre a flutuação e a estrada para Mucugê. <strong>Só há uma opção confiável aqui</strong> — a busca de 12/10 não achou nenhum segundo restaurante avaliado em Nova Redenção. Se o APA estiver fechado, o plano B é esticar até Mucugê e almoçar lá, por volta das 15h45.'),
     ('mucuge', 'Mucugê', '⛏️',
@@ -58,7 +56,7 @@ CIDADES = [
     ('ibicoara', 'Ibicoara', '🏞️',
      'Dias 4 e 5 · jantar na noite de chegada, almoço na volta do Buracão e a última noite depois do Sítio Canjerana.'),
     ('iraquara', 'Iraquara / Pratinha', '🕳️',
-     'Dia 6 · almoço na Fazenda Pratinha ou no caminho das grutas.'),
+     'Dias 2 e 6 · o almoço de domingo no restaurante da Lapa Doce, entre as duas grutas, e o de quinta dentro da Fazenda Pratinha.'),
     ('estrada', 'Estrada · Morro do Chapéu, Jacobina e Senhor do Bonfim', '🚗',
      'Dia 7 (e almoço da ida, no dia 1) · as paradas de estrada. Na ida o caminho passa por Senhor do Bonfim e Capim Grosso; Jacobina e Morro do Chapéu só na volta.'),
     ('juazeiro', 'Juazeiro / Petrolina', '🏠',
@@ -270,66 +268,6 @@ RESTAURANTES = [
       local='Entrega na pousada', dias='18h–0h, quarta a segunda',
       tags=['Delivery'], insta='dovaledelivery', delivery=True),
 
-    # ── Vale do Capão ────────────────────────────────────────────────────────
-    R('Pizzaria Capão Grande', 'capao', 'pizza', ['almoco', 'jantar'], 2,
-      'A pizza integral de forno a lenha que virou lenda no Capão, com apenas '
-      'dois sabores: cenoura com queijo e banana com mel e queijo. Dá para pedir '
-      'metade de cada e ver a pizza sair do forno direto para a mesa. Ótima '
-      'depois de um dia de trilha.',
-      local='Vila do Capão', tags=['Forno a lenha', 'Vegetariano'], top=True,
-      vegetariano=True),
-
-    R('Bistrô Orquídea Negra', 'capao', 'contemporanea', ['jantar'], 3,
-      'Cozinha criativa da chef Jakie Lessa, misturando Itália, França, Brasil, '
-      'Espanha e África, com carta de vinhos. O jantar mais elaborado do vale, '
-      'para quem quiser comemorar o dia da Fumaça.',
-      local='Vila do Capão', tags=['Carta de vinhos', 'Reserva recomendada'],
-      top=True),
-
-    R('Ôxe! Restô', 'capao', 'regional', ['almoco', 'jantar'], 2,
-      'O sabor do nordeste no Capão, em pratos generosos que agradam quem acabou '
-      'de subir a Fumaça e quer comida de verdade.',
-      local='Vila do Capão', tags=['Cozinha nordestina']),
-
-    R('Gatto Sete Bistrô', 'capao', 'contemporanea', ['jantar'], 2,
-      'Bistrô concorrido da vila, com pratos bem executados e ambiente '
-      'aconchegante. Entra bem como jantar leve antes da volta para Lençóis.',
-      local='Vila do Capão', tags=['Bistrô'], top=True),
-
-    R('Charrúa Restaurante', 'capao', 'carne', ['almoco', 'jantar'], 2,
-      'Parrilla uruguaia no meio da Chapada, a mais bem avaliada do vale. Para '
-      'quem quiser um corte no almoço do dia da Fumaça.',
-      local='Vila do Capão', tags=['Parrilla']),
-
-    R('Herbívoras Bistrô', 'capao', 'vegetariana', ['almoco', 'jantar'], 2,
-      'Cozinha vegetariana e vegana criativa, uma das razões de o Capão ser '
-      'conhecido pela comida saudável. Resolve o almoço de quem não come carne.',
-      local='Vila do Capão', tags=['Vegetariano', 'Vegano'],
-      vegetariano=True),
-
-    R('Natural Bistrô', 'capao', 'vegetariana', ['almoco'], 2,
-      'Refeições leves e naturais, com ingredientes frescos da região. Alternativa '
-      'tranquila na vila, a poucos minutos da portaria da Fumaça.',
-      local='Vila do Capão', tags=['Saudável', 'Vegetariano'],
-      vegetariano=True),
-
-    R('Comida Caseira da Dona Beli', 'capao', 'caseira', ['almoco'], 1,
-      'Comida caseira de fogão simples, no esquema que fez a fama do Capão: '
-      'prato do dia barato e bem servido.',
-      local='Vila do Capão', tags=['Preço justo'], vegetariano=True),
-
-    R('Pastel de palmito de jaca', 'capao', 'lanche', ['petisco'], 1,
-      'O quitute-símbolo do Capão, vendido nas lanchonetes aos pés da trilha da '
-      'Fumaça. Melhor deixar para a volta, quando bate o cansaço — também tem '
-      'queijo, carne e açaí.',
-      local='Início da trilha da Fumaça', tags=['Típico da região'],
-      vegetariano=True),
-
-    R('Terroá Cafés Especiais', 'capao', 'cafe', ['cafe', 'petisco'], 1,
-      'Cafés especiais da região para começar o dia antes da trilha ou fechar a '
-      'tarde na vila.',
-      local='Vila do Capão', tags=['☕ Café especial']),
-
     # ── Poço Azul / Nova Redenção ────────────────────────────────────────────
     R('APA Restaurante & Cia', 'poco-azul', 'caseira', ['almoco', 'jantar'], 1,
       'A 200 metros do Poço Azul, é o almoço natural do dia da flutuação. Comida '
@@ -480,10 +418,10 @@ RESTAURANTES = [
 
     R('Restaurante da Lapa Doce', 'iraquara', 'selfservice', ['almoco'], 1,
       'No complexo da Gruta da Lapa Doce, funciona no esquema de buffet — prático '
-      'e barato para quem emendar a gruta com a Pratinha. Só faz sentido se a '
-      'Lapa Doce entrar no dia 22.',
-      local='Complexo da Lapa Doce', tags=['Buffet', 'Só se a Lapa Doce entrar'],
-      vegetariano=True),
+      'e barato. É o almoço de domingo, entre a Lapa Doce e a Torrinha, que fica '
+      'a 2,7 km.',
+      local='Complexo da Lapa Doce', tags=['Buffet', 'Domingo 18'],
+      no_roteiro=True, vegetariano=True),
 
     R('Restaurante Paulistano', 'iraquara', 'regional', ['almoco', 'jantar'], 1,
       'Entre os mais bem avaliados de Iraquara, boa parada de estrada se a fome '
@@ -586,22 +524,19 @@ FONTES = [
      'casa por casa em Lençóis: pratos, horários e faixa de preço'),
     ('Melhores Destinos — Onde comer na Chapada Diamantina',
      'https://guia.melhoresdestinos.com.br/onde-comer-na-chapada-diamantina-221-2879-p.html',
-     'panorama de Lençóis, Capão, Mucugê e dos restaurantes dentro dos atrativos'),
+     'panorama de Lençóis, Mucugê e dos restaurantes dentro dos atrativos'),
     ('Guia Chapada Diamantina — 8 restaurantes elegantes',
      'https://www.guiachapadadiamantina.com.br/10-restaurantes-elegantes-chapada-diamantina-2/',
-     'Cozinha Aberta, Orquídea Negra, Paraguassu e Roda d’Água'),
+     'Cozinha Aberta, Paraguassu e Roda d’Água'),
     ('CNN Viagem & Gastronomia — Onde os chefs comem: André Chequer',
      'https://www.cnnbrasil.com.br/viagemegastronomia/gastronomia/onde-os-chefs-comem-com-andre-chequer-na-chapada-diamantina/',
      'as indicações do chef do Paraguassu para Mucugê'),
-    ('Portal Vale do Capão — Bares e restaurantes',
-     'https://portalvaledocapao.com.br/guia-comercial/bares-restaurantes/',
-     'guia comercial da vila, com os tipos de cozinha'),
     ('Fazenda Pratinha — Restaurantes',
      'https://www.fazendapratinha.com.br/restaurantes/',
      'Restaurante Gruta Azul e João de Barro, dentro da fazenda'),
     ('TripAdvisor — listas por cidade',
      'https://www.tripadvisor.com.br/Restaurants-g635725-Lencois_State_of_Bahia.html',
-     'ranking e avaliações de Lençóis, Mucugê, Ibicoara, Capão, Morro do Chapéu e Jacobina'),
+     'ranking e avaliações de Lençóis, Mucugê, Ibicoara, Morro do Chapéu e Jacobina'),
     ('Instagram dos estabelecimentos', None,
      'cardápio, horário e disponibilidade do dia — cada card tem o perfil quando existe'),
 ]
@@ -783,7 +718,7 @@ corpo = (
       '<h2 class="section-title">Escolher o jantar estando já na cidade</h2>'
       '<p class="section-desc">Os filtros se combinam: dá para pedir, por exemplo, '
       '<em>só os regionais de Mucugê que servem jantar</em>, ou <em>um almoço barato '
-      'no Vale do Capão</em>. A busca por texto procura no nome, no prato, no bairro e no '
+      'em Ibicoara</em>. A busca por texto procura no nome, no prato, no bairro e no '
       'tipo de cozinha. As bases seguem a ordem do roteiro, para bater com o dia em que '
       'vocês estão lá.</p>'
       '<p class="section-desc">Cada card traz onde fica, em que refeições encaixa, a '
@@ -810,15 +745,15 @@ corpo = (
       'fecham bem tarde. O 💡 está no card quando encontramos o horário publicado.</li>'
       '<li>Segunda e terça são as folgas mais comuns na Chapada. Lençóis tem poucas '
       'fechadas nesses dias; nas cidades menores, vale confirmar antes de sair.</li>'
-      '<li>O jantar de domingo 18 em Lençóis é o mais apertado: o carro sai às 6h15 '
-      'para a Fumaça, então jantem cedo e perto da pousada.</li>'
+      '<li>O jantar de sábado 17 em Lençóis é o mais apertado: no domingo o carro sai às 7h30 '
+      'para as grutas, então jantem cedo e perto da pousada.</li>'
       '</ul></div>'
       '<div class="info-card fade-in"><h3>💳 Dinheiro e reserva</h3>'
       '<ul class="rest-lista">'
       '<li>Os restaurantes mais concorridos (Cozinha Aberta, Paraguassu, Espaço Gourmet '
       'Fazenda Produtiva) pedem reserva — vale ligar ou chamar no Instagram na véspera.</li>'
-      '<li>Em vilas pequenas, como o Capão e Ibicoara, alguns estabelecimentos só '
-      'aceitam dinheiro. Reforce o caixa antes de subir a serra.</li>'
+      '<li>Em cidades pequenas, como Ibicoara e Iraquara, alguns estabelecimentos só '
+      'aceitam dinheiro. Reforce o caixa em Lençóis ou Mucugê.</li>'
       '<li>O almoço dentro dos atrativos (Poço Azul, Pratinha, Lapa Doce) resolve o '
       'dia sem deslocamento — está listado nas bases de cada trecho.</li>'
       '</ul></div>'
@@ -828,7 +763,7 @@ corpo = (
       'com 🥗 reúnem as casas com pratos vegetarianos confirmados.</li>'
       '<li>Palmito de jaca, godó de banana verde e cortado de palma são quitutes da '
       'região que quase não se acham fora daqui. Vale provar ao menos uma vez.</li>'
-      '<li>O eixo sul fecha cedo; Lençóis e o Capão são os lugares de esticar a noite '
+      '<li>O eixo sul fecha cedo; Lençóis é o lugar de esticar a noite '
       'com música ao vivo.</li>'
       '</ul></div>'
       '</div>'
